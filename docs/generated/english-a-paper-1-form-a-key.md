@@ -1,0 +1,64 @@
+# English A Practice Paper 1 - Form A: Reviewer Key
+
+Status: review candidate - not approved for learners
+
+- **1. A** - The passage explicitly states the library’s purpose is twofold: to promote reading and to strengthen local resilience.
+- **2. B** - The passage describes specific storm-related services: providing updates and device charging, indicating a practical role.
+- **3. C** - Organisers aim to strengthen resilience and expand access; mobile outreach would extend resources and resilience to settlements.
+- **4. D** - The passage lists 600 laptop sessions in last year’s usage statistics.
+- **5. A** - Posting notices in multiple languages is a direct example of efforts to include diverse community members.
+- **6. B** - The passage mentions scheduling meetings at different times to accommodate shift-workers; offering varied volunteer times follows the same inclusive practice.
+- **7. C** - The passage lists retired teachers, university students, and fishermen as volunteers; professional examiners are not listed.
+- **8. D** - The passage states volunteers report community ownership as the most valuable asset, indicating pride and shared ownership.
+- **9. A** - Friday accepts plastics (#1 and #2) and small electronics, and its note specifically addresses chargers. Saturday also accepts mixed items but is not a weekday.
+- **10. B** - The table lists Sunday as Closed.
+- **11. C** - The Monday row lists bulk paper collection on the first Monday of each month.
+- **12. D** - The Monday special service is bulk paper collection on the first Monday monthly, suitable for large amounts of paper/cardboard.
+- **13. A** - The Wednesday Accepted Items column lists Glass and Cans.
+- **14. B** - The table lists special services (bulk collection, glass crushing, e-waste drop-off) and a community swap table, indicating active engagement strategies.
+- **15. C** - Wednesday hours are 12:00–18:00, which include times after 16:00; Monday (ends 12:00) and Friday (ends 15:00) do not, Saturday hours end at 13:00.
+- **16. D** - ‘Volunteers’ is plural and correctly pairs with the plural verb ‘are organising.’
+- **17. A** - ‘Revise’ (to change or improve) fits the context of modifying a proposal based on feedback.
+- **18. B** - This sentence summarises benefits and closes the paragraph by restating the main points in a generalised way appropriate for a conclusion.
+- **19. C** - The introductory phrase ‘Before the meeting’ is correctly followed by a comma.
+- **20. D** - This sentence is polite, formal, and clear—suitable for a public notice.
+- **21. A** - This sentence correctly uses commas after an introductory phrase and between items in a list; the coordinating conjunction precedes the final item.
+- **22. B** - The past continuous 'was reading' shows an ongoing past action, interrupted by the simple past 'went out', which marks the shorter action.
+- **23. C** - This sentence clearly states the main idea and previews specific supporting points (green space, produce, cooperation), making it effective as a topic sentence.
+- **24. D** - Comparative 'steeper' correctly compares two items introduced by 'than'.
+- **25. A** - The singular antecedent 'Each student' is matched by the singular pronouns 'his or her', maintaining number agreement.
+- **26. B** - The simile suggests that laughter masks an underlying quiet or sadness, implying melancholy, while 'wears' indicates a maintained outward composure—a resilient act.
+- **27. C** - The comparison to 'birds learning to be brave' suggests tentative practice and emerging confidence; the cracked whistle indicates imperfection but persistence.
+- **28. D** - The metaphor of folding into a pocket suggests containment and intimacy, summarizing the market's transition into evening and offering a peaceful conclusion reflecting the poem's observational tone.
+- **29. A** - Describing faces as maps with creases and routes suggests that experiences (laughter, grief) leave lasting, readable traces—supporting the interpretation of visible life-history.
+- **30. B** - The smoke is given human-like behaviour by being described as asking a 'lazy question,' which is personification.
+- **31. C** - The speaker notices intimate details—children's shadows, vendors' silences, small acts—presented with warmth and attention, indicating affection and observation.
+- **32. D** - 'Patient' attributes calm endurance to the light, while 'gold' evokes warm colour and value; together they create an image of dependable, comforting illumination.
+- **33. A** - The poem highlights everyday interactions—vendors, children, shared routines—that together form communal continuity, a recurring focus throughout the stanzas.
+- **34. B** - Marla's hesitation about the neighbor and her reflection on accepting a story show she appreciates the chair's past and wants to join that continuity by placing it in her yard.
+- **35. C** - The hidden heart, worn smooth by palms, serves as a subtle marker of love and remembrance, suggesting ordinary objects can carry intimate histories.
+- **36. D** - The narrator describes Marla's actions and inner reflections but does not shift into other characters' interiors, giving intimacy with slight narrative distance.
+- **37. A** - Listing small, mundane items shows how the chair bears evidence of many small lives and moments, supporting the theme of continuity and quiet witness.
+- **38. B** - Positioning the chair beneath a fruit tree evokes growth, seasons, falling leaves and shelter; these images align with themes of continuity, memory, and the passage of time.
+- **39. C** - Regular use and attention to surrounding offerings (toy truck, greetings from neighbors) indicate emotional investment and attachment.
+- **40. D** - The conclusion emphasises Marla becoming part of the chair's story and receiving a 'small inheritance' of continuity, suggesting belonging is formed through engaged participation in communal memory.
+- **41. A** - Future perfect (will have created) indicates completion by a future time.
+- **42. B** - The author lists environmental functions and community benefits to support the claim that green spaces are essential infrastructure.
+- **43. C** - The editorial emphasises planning, maintenance and community education; the main risk is that one-time planting without maintenance won't deliver long-term benefits.
+- **44. D** - The author mentions stabilising soil, tempering heat, improving air quality and supporting pollinators; revenue is not listed.
+- **45. A** - The author uses calm argumentation, practical proposals and a direct appeal to vote, aiming to persuade officials to act.
+- **46. B** - This indicator links the proposed action (planting and maintenance) to tangible environmental and health outcomes as discussed in the editorial.
+- **47. C** - 'Quiet infrastructure' implies essential but understated services supporting daily life, matching the author's examples.
+- **48. D** - The sequence of problem-argument-solution with specific benefits and a feasible proposal enhances persuasion.
+- **49. A** - This sentence is a concise, forward-looking appeal matching the editorial’s reasoned tone and call to action on long-term benefits.
+- **50. B** - 'At Market Square' correctly indicates the meeting point location.
+- **51. C** - Providing a measurable fact appeals to reason and supports the campaign's environmental claims.
+- **52. D** - Translations or universal icons convey logistical details without relying on English fluency, increasing participation.
+- **53. A** - The 'How to help' section explicitly lists volunteering to plant as an option.
+- **54. B** - Local meeting place and emphasis on community imply the poster targets nearby residents.
+- **55. C** - Connecting the donation to tangible community and intergenerational benefits makes the ask more compelling and justifies the $10 cost.
+- **56. D** - The poster lists 'When: Saturday, 9am–1pm,' so volunteers should arrive at 9am.
+- **57. A** - A call to action typically directs the audience to specific steps; this section provides those steps clearly.
+- **58. B** - 'But' introduces a contrast between planting now and the long time to maturity; this fits the sentence's meaning.
+- **59. C** - This phrase uses formal, polite register suitable for official notices.
+- **60. D** - The plural of 'tree' is 'trees,' which fits grammatically and semantically.

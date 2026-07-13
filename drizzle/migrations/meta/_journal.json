@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1783902403524,
+      "tag": "0000_backend_foundation",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1783907750442,
+      "tag": "0001_institution_normalization",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1783908399906,
+      "tag": "0002_outbox_deduplication",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,3457 @@
+{
+  "id": "english-a-p1-2025-form-a-review-candidate",
+  "subject": "English A",
+  "paper": 1,
+  "syllabusVersion": "CXC-01-G-SYLL-25",
+  "durationSeconds": 5400,
+  "totalMarks": 60,
+  "questionCount": 60,
+  "status": "review_pending",
+  "rights": "original_generated_candidate",
+  "generatorModel": "openai/gpt-5-mini",
+  "modules": [
+    {
+      "module": 1,
+      "discourse": "Informative Discourse",
+      "stimuli": [
+        {
+          "id": "M1-StimA",
+          "kind": "informative_passage",
+          "title": "Seawall Library: A Community Lifeline",
+          "content": "Seawall Library began as a small collection of donated books in a coastal community hall. Over the past five years it has expanded into a volunteer-run space offering free access to books, internet, and weekly workshops for all ages. Organisers emphasise that the library’s purpose is twofold: to promote reading and to strengthen local resilience. The town faces seasonal storms that occasionally damage homes and disrupt schooling. During these events, the library has become an information hub where residents gather to receive updates, recharge devices, and attend emergency-preparedness talks.\n\nThe library’s volunteer team includes retired teachers, university students, and fishermen who help with outreach. Funding comes from small grants, local business donations, and a monthly community fundraising market. The market sells crafts, second-hand books, and homemade foods; profits cover utilities and new materials. Volunteers report that community ownership—people recognising the library as belonging to everyone—is the project’s most valuable asset.\n\nOrganisers also track usage statistics to plan services. Last year they recorded 4,200 library visits, 600 laptop sessions, and 120 participants in workshops. Younger children attend story hours while teenagers often use the internet for school research. Some adults participate in literacy classes and small business advice sessions. The team hopes to expand hours and add mobile outreach to nearby fishing settlements, but they need steady funding and more volunteers to sustain growth.\n\nThe library’s leadership is careful to include diverse voices in planning. Meetings are scheduled at different times to accommodate shift-workers, and notices are posted in English and in the community creole. Organisers welcome suggestions and invite residents to monthly ‘idea forums’ where improvements are discussed openly. They believe the library, by offering both practical resources and social space, contributes to long-term community well-being.",
+          "visualSpec": null,
+          "rights": "original_generated_candidate"
+        },
+        {
+          "id": "M1-StimB",
+          "kind": "visual_information",
+          "title": "Coastal Town Recycling & Drop-Off Schedule",
+          "content": null,
+          "visualSpec": {
+            "type": "table",
+            "title": "Recycling Centre Opening Hours & Accepted Items",
+            "headers": [
+              "Day",
+              "Opening Hours",
+              "Accepted Items",
+              "Special Service"
+            ],
+            "rows": [
+              [
+                "Monday",
+                "8:00–12:00",
+                "Paper, Cardboard",
+                "Bulk paper collection (first Monday monthly)"
+              ],
+              [
+                "Wednesday",
+                "12:00–18:00",
+                "Glass, Cans",
+                "Glass crushing service"
+              ],
+              [
+                "Friday",
+                "9:00–15:00",
+                "Plastics (label #1 & #2), Small Electronics",
+                "E-waste drop-off (bring chargers separately)"
+              ],
+              [
+                "Saturday",
+                "9:00–13:00",
+                "Mixed items accepted (all of the above)",
+                "Community swap table (second Saturday)"
+              ],
+              [
+                "Sunday",
+                "Closed",
+                "—",
+                "—"
+              ]
+            ]
+          },
+          "rights": "original_generated_candidate"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ENGA-P1-M1-Q01",
+          "number": 1,
+          "itemType": "comprehension",
+          "stimulusId": "M1-StimA",
+          "objective": "identify_main_idea",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "What is the primary purpose of Seawall Library as described in the passage?",
+          "options": [
+            "To promote reading and strengthen local resilience",
+            "To serve as a for-profit bookshop",
+            "To become a tourist attraction",
+            "To offer formal school examinations"
+          ],
+          "correctOption": "A",
+          "correctAnswer": "To promote reading and strengthen local resilience",
+          "answerRationale": "The passage explicitly states the library’s purpose is twofold: to promote reading and to strengthen local resilience.",
+          "distractorRationales": [
+            "Incorrect: the passage describes the library as volunteer-run and free, not for-profit.",
+            "Incorrect: tourism is not mentioned as a goal in the passage.",
+            "Incorrect: the passage mentions workshops and classes but not formal exams."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 1,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q02",
+          "number": 2,
+          "itemType": "comprehension",
+          "stimulusId": "M1-StimA",
+          "objective": "analyse_supporting_details",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which detail best supports the claim that the library plays a practical role during storms?",
+          "options": [
+            "It expanded from a small collection of donated books",
+            "It becomes an information hub where residents receive updates and recharge devices",
+            "Volunteers include retired teachers and fishermen",
+            "Organisers post notices in English and creole"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "It becomes an information hub where residents receive updates and recharge devices",
+          "answerRationale": "The passage describes specific storm-related services: providing updates and device charging, indicating a practical role.",
+          "distractorRationales": [
+            "Incorrect: expansion describes growth, not storm-related activities.",
+            "Incorrect: this notes volunteer composition but not the library’s practical storm role.",
+            "Incorrect: inclusive communication is important but does not specifically show storm support."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 2,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q03",
+          "number": 3,
+          "itemType": "comprehension",
+          "stimulusId": "M1-StimA",
+          "objective": "evaluate_implications",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "If the library successfully starts a mobile outreach to nearby fishing settlements, which likely long-term effect would best align with the organisers’ goals?",
+          "options": [
+            "A decline in market sales at the library’s fundraising market",
+            "A reduction in volunteer involvement in the main library",
+            "Increased community resilience and broader access to educational resources",
+            "A shift toward charging membership fees"
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Increased community resilience and broader access to educational resources",
+          "answerRationale": "Organisers aim to strengthen resilience and expand access; mobile outreach would extend resources and resilience to settlements.",
+          "distractorRationales": [
+            "Incorrect: no evidence suggests mobile outreach would decrease local market sales.",
+            "Incorrect: while possible, the passage gives no basis to predict reduced involvement.",
+            "Incorrect: the passage emphasizes free access; introducing fees contradicts stated goals without support."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 3,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q04",
+          "number": 4,
+          "itemType": "comprehension",
+          "stimulusId": "M1-StimA",
+          "objective": "retrieve_explicit_information",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "How many laptop sessions did the library record last year?",
+          "options": [
+            "4,200 laptop sessions",
+            "120 laptop sessions",
+            "1,200 laptop sessions",
+            "600 laptop sessions"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "600 laptop sessions",
+          "answerRationale": "The passage lists 600 laptop sessions in last year’s usage statistics.",
+          "distractorRationales": [
+            "Incorrect: 4,200 refers to total library visits, not laptop sessions.",
+            "Incorrect: 120 refers to workshop participants.",
+            "Incorrect: 1,200 is not mentioned in the usage statistics."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 4,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q05",
+          "number": 5,
+          "itemType": "comprehension",
+          "stimulusId": "M1-StimA",
+          "objective": "analyse_tone_and_intention",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which phrase from the passage most clearly shows the organisers’ effort to be inclusive?",
+          "options": [
+            "Notices are posted in English and in the community creole",
+            "The market sells crafts, second-hand books, and homemade foods",
+            "Last year they recorded 4,200 library visits",
+            "Volunteers report that community ownership is the project’s most valuable asset"
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Notices are posted in English and in the community creole",
+          "answerRationale": "Posting notices in multiple languages is a direct example of efforts to include diverse community members.",
+          "distractorRationales": [
+            "Incorrect: this describes fundraising activities, not explicit inclusion measures.",
+            "Incorrect: usage numbers indicate popularity but not deliberate inclusivity steps.",
+            "Incorrect: community ownership reflects value but the language about notices directly shows inclusion."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 5,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q06",
+          "number": 6,
+          "itemType": "comprehension",
+          "stimulusId": "M1-StimA",
+          "objective": "create_solutions_based_on_text",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Recommend one practical step the library could take to attract more volunteers from shift-workers, based on the passage’s information.",
+          "options": [
+            "Require volunteers to attend weekday morning training only",
+            "Offer volunteer shifts during varied times, including evenings and weekends",
+            "Limit volunteer roles to retired community members",
+            "Charge a small fee for all volunteers"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Offer volunteer shifts during varied times, including evenings and weekends",
+          "answerRationale": "The passage mentions scheduling meetings at different times to accommodate shift-workers; offering varied volunteer times follows the same inclusive practice.",
+          "distractorRationales": [
+            "Incorrect: this would exclude shift-workers, contrary to the passage’s accommodation efforts.",
+            "Incorrect: limiting roles would reduce inclusivity and contradict aims to broaden volunteer base.",
+            "Incorrect: charging volunteers is impractical and conflicts with volunteer recruitment goals."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 6,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q07",
+          "number": 7,
+          "itemType": "comprehension",
+          "stimulusId": "M1-StimA",
+          "objective": "understand_detail_inference",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which group is NOT listed among the library volunteers?",
+          "options": [
+            "Retired teachers",
+            "University students",
+            "Professional examiners from outside the community",
+            "Fishermen"
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Professional examiners from outside the community",
+          "answerRationale": "The passage lists retired teachers, university students, and fishermen as volunteers; professional examiners are not listed.",
+          "distractorRationales": [
+            "Incorrect: retired teachers are explicitly listed as volunteers.",
+            "Incorrect: university students are explicitly listed as volunteers.",
+            "Incorrect: fishermen are explicitly listed as volunteers."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 7,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q08",
+          "number": 8,
+          "itemType": "comprehension",
+          "stimulusId": "M1-StimA",
+          "objective": "analyse_author_perspective",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "How does the passage suggest the community feels about the library?",
+          "options": [
+            "They see it as a private club for donors only",
+            "They are largely unaware of its existence",
+            "They believe it should be replaced by a commercial centre",
+            "They view it as belonging to everyone and value it highly"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "They view it as belonging to everyone and value it highly",
+          "answerRationale": "The passage states volunteers report community ownership as the most valuable asset, indicating pride and shared ownership.",
+          "distractorRationales": [
+            "Incorrect: the passage emphasises free access and community ownership, not exclusivity.",
+            "Incorrect: high visit numbers and community markets indicate awareness and engagement.",
+            "Incorrect: there is no suggestion in the passage that the community wants a commercial replacement."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 8,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q09",
+          "number": 9,
+          "itemType": "comprehension",
+          "stimulusId": "M1-StimB",
+          "objective": "understand_visual_information",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "On which WEEKDAY can a resident drop off old chargers and plastic bottles in a single visit?",
+          "options": [
+            "Friday",
+            "Monday",
+            "Wednesday",
+            "Saturday"
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Friday",
+          "answerRationale": "Friday accepts plastics (#1 and #2) and small electronics, and its note specifically addresses chargers. Saturday also accepts mixed items but is not a weekday.",
+          "distractorRationales": [
+            "Incorrect: Monday accepts only paper and cardboard.",
+            "Incorrect: Wednesday accepts glass and cans, not plastics or electronics.",
+            "Incorrect: while Saturday accepts mixed items, the e-waste drop-off with charger-specific instruction is listed on Friday."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 9,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q10",
+          "number": 10,
+          "itemType": "comprehension",
+          "stimulusId": "M1-StimB",
+          "objective": "retrieve_explicit_information",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "On which day is the recycling centre closed?",
+          "options": [
+            "Monday",
+            "Sunday",
+            "Wednesday",
+            "Friday"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Sunday",
+          "answerRationale": "The table lists Sunday as Closed.",
+          "distractorRationales": [
+            "Incorrect: Monday hours are 8:00–12:00 and the centre is open.",
+            "Incorrect: Wednesday hours are 12:00–18:00 and the centre is open.",
+            "Incorrect: Friday hours are 9:00–15:00 and the centre is open."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 10,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q11",
+          "number": 11,
+          "itemType": "comprehension",
+          "stimulusId": "M1-StimB",
+          "objective": "analyse_data_for_patterns",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which special service is offered on the first Monday of each month?",
+          "options": [
+            "Glass crushing service",
+            "Community swap table",
+            "Bulk paper collection (first Monday monthly)",
+            "E-waste drop-off"
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Bulk paper collection (first Monday monthly)",
+          "answerRationale": "The Monday row lists bulk paper collection on the first Monday of each month.",
+          "distractorRationales": [
+            "Incorrect: no monthly limitation is indicated for glass crushing on Wednesdays.",
+            "Incorrect: the swap table occurs on the second Saturday, which is weekly in pattern monthly but not described as once per month only.",
+            "Incorrect: e-waste drop-off is listed on Fridays without a monthly frequency qualifier."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 11,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q12",
+          "number": 12,
+          "itemType": "comprehension",
+          "stimulusId": "M1-StimB",
+          "objective": "create_action_plan_from_visuals",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "A school group wants to bring a large amount of cardboard to the recycling centre for disposal. Which instruction from the schedule should they follow to ensure proper handling?",
+          "options": [
+            "Bring it on Wednesday for the glass crushing service",
+            "Bring it on Friday during e-waste drop-off",
+            "Bring it on Sunday when the centre is closed",
+            "Bring it on the first Monday for the bulk paper collection"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "Bring it on the first Monday for the bulk paper collection",
+          "answerRationale": "The Monday special service is bulk paper collection on the first Monday monthly, suitable for large amounts of paper/cardboard.",
+          "distractorRationales": [
+            "Incorrect: Wednesday services relate to glass and cans, not cardboard.",
+            "Incorrect: Friday focuses on plastics and small electronics, not cardboard.",
+            "Incorrect: the centre is closed on Sunday; this would not ensure handling."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 12,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q13",
+          "number": 13,
+          "itemType": "comprehension",
+          "stimulusId": "M1-StimB",
+          "objective": "understand_labels_and_terms",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which item is explicitly accepted on Wednesday?",
+          "options": [
+            "Glass",
+            "Plastics (label #1 & #2)",
+            "Paper",
+            "Small Electronics"
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Glass",
+          "answerRationale": "The Wednesday Accepted Items column lists Glass and Cans.",
+          "distractorRationales": [
+            "Incorrect: plastics are accepted on Friday, not Wednesday.",
+            "Incorrect: paper is accepted on Monday.",
+            "Incorrect: small electronics are accepted on Friday."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 13,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q14",
+          "number": 14,
+          "itemType": "comprehension",
+          "stimulusId": "M1-StimB",
+          "objective": "analyse_implicit_information",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "What can be inferred about the centre’s approach to community engagement from the schedule?",
+          "options": [
+            "They restrict services to commercial waste only",
+            "They offer special services and community activities to encourage participation",
+            "They operate every day to maximize convenience",
+            "They prioritize expensive materials over common recyclables"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "They offer special services and community activities to encourage participation",
+          "answerRationale": "The table lists special services (bulk collection, glass crushing, e-waste drop-off) and a community swap table, indicating active engagement strategies.",
+          "distractorRationales": [
+            "Incorrect: services and community activities target residents, not only commercial waste.",
+            "Incorrect: the centre is closed on Sunday, so it does not operate daily.",
+            "Incorrect: the schedule accepts common recyclables like paper, glass, plastics, and electronics equally."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 14,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q15",
+          "number": 15,
+          "itemType": "comprehension",
+          "stimulusId": "M1-StimB",
+          "objective": "evaluating_contradictions",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "If a resident can only visit after 16:00, which weekday offers a suitable time for drop-off?",
+          "options": [
+            "Monday",
+            "Friday",
+            "Wednesday",
+            "Saturday"
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Wednesday",
+          "answerRationale": "Wednesday hours are 12:00–18:00, which include times after 16:00; Monday (ends 12:00) and Friday (ends 15:00) do not, Saturday hours end at 13:00.",
+          "distractorRationales": [
+            "Incorrect: Monday closes at 12:00, before 16:00.",
+            "Incorrect: Friday closes at 15:00, before 16:00.",
+            "Incorrect: Saturday closes at 13:00, before 16:00."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 15,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q16",
+          "number": 16,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "grammar_subject_verb_agreement",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the grammatically correct sentence.",
+          "options": [
+            "The volunteers is organising a community market this Saturday.",
+            "The volunteers were organises a community market this Saturday.",
+            "The volunteers organising a community market this Saturday.",
+            "The volunteers are organising a community market this Saturday."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "The volunteers are organising a community market this Saturday.",
+          "answerRationale": "‘Volunteers’ is plural and correctly pairs with the plural verb ‘are organising.’",
+          "distractorRationales": [
+            "Incorrect: singular verb ‘is’ does not agree with plural subject ‘volunteers.’",
+            "Incorrect: tense and verb form are incorrect (‘were organises’).",
+            "Incorrect: missing auxiliary verb to form a complete clause."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 16,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q17",
+          "number": 17,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "vocabulary_word_choice",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Select the word that best completes the sentence: The committee decided to ______ the proposal after hearing community feedback.",
+          "options": [
+            "revise",
+            "abolish",
+            "evade",
+            "fabricate"
+          ],
+          "correctOption": "A",
+          "correctAnswer": "revise",
+          "answerRationale": "‘Revise’ (to change or improve) fits the context of modifying a proposal based on feedback.",
+          "distractorRationales": [
+            "Incorrect: ‘abolish’ means to formally end something, which does not match the context of modifying a proposal.",
+            "Incorrect: ‘evade’ means to avoid, unrelated to deciding on a proposal.",
+            "Incorrect: ‘fabricate’ means to invent or lie, which does not fit the context."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 17,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q18",
+          "number": 18,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "writing_coherence_paragraphing",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which sentence best serves as a concluding sentence for a paragraph about the benefits of community libraries?",
+          "options": [
+            "The donation box is located beside the library door and is emptied every Friday.",
+            "By offering free resources and a welcoming space, community libraries help improve education and social cohesion.",
+            "Many volunteers attend the monthly meeting to discuss shelving arrangements.",
+            "A list of available books includes fiction, biographies, and local history titles."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "By offering free resources and a welcoming space, community libraries help improve education and social cohesion.",
+          "answerRationale": "This sentence summarises benefits and closes the paragraph by restating the main points in a generalised way appropriate for a conclusion.",
+          "distractorRationales": [
+            "Incorrect: this is a specific detail, not a concluding summary of benefits.",
+            "Incorrect: this focuses on a procedural detail rather than concluding benefits.",
+            "Incorrect: this lists contents and does not conclude the paragraph about benefits."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 18,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q19",
+          "number": 19,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "punctuation_commas_clauses",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the sentence with correct comma usage.",
+          "options": [
+            "Before the meeting the organiser checked the attendance list.",
+            "Before, the meeting the organiser checked the attendance list.",
+            "Before the meeting, the organiser checked the attendance list.",
+            "Before the meeting the, organiser checked the attendance list."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Before the meeting, the organiser checked the attendance list.",
+          "answerRationale": "The introductory phrase ‘Before the meeting’ is correctly followed by a comma.",
+          "distractorRationales": [
+            "Incorrect: missing comma after the introductory phrase.",
+            "Incorrect: comma misplacement interrupts the phrase.",
+            "Incorrect: comma is incorrectly placed within the clause."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 19,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-M1-Q20",
+          "number": 20,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "style_register_tone",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which sentence uses the most appropriate formal tone for a public notice?",
+          "options": [
+            "Hey everyone, the centre's shut on Sunday so don't come!",
+            "The centre closed Sunday, maintenance happens.",
+            "Closed Sunday — maintenance time.",
+            "Please note that the recycling centre will be closed on Sunday for maintenance."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "Please note that the recycling centre will be closed on Sunday for maintenance.",
+          "answerRationale": "This sentence is polite, formal, and clear—suitable for a public notice.",
+          "distractorRationales": [
+            "Incorrect: informal language and exclamation are unsuitable for a formal notice.",
+            "Incorrect: this is terse and grammatically awkward for formal public communication.",
+            "Incorrect: this is too brief and lacks the formal courtesy expected in a notice."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 20,
+          "module": 1
+        }
+      ]
+    },
+    {
+      "module": 2,
+      "discourse": "Literary Discourse",
+      "stimuli": [
+        {
+          "id": "M2-stimA",
+          "kind": "original_poem",
+          "title": "Market at Dusk",
+          "content": "By the time the sun unthreads itself from the roof\nof the last hot day, the stalls begin to breathe—\ncloths loosen, and scarves fold like small flags.\nA woman tips a basket; pomegranates rattle\nin their paper nests. The vendor who laughs\nall morning wears silence like a new coat.\nChildren run shadows across the cobbles,\nkicking small stubborn dust into the air.\nA boy with a cracked plastic whistle practices\ncalls that sound like birds learning to be brave.\nSmoke from a grill curls, a lazy question,\nand someone hums a tune that remembers rain.\nA streetlight awakens, blinks at the pigeons,\nthen settles into patient gold. Two men barter\nover a lamp whose glass is full of stories;\nan old woman leans over a cup of mint tea,\ncounting coins in her palm as if they were stars.\nEvery face is a small map—creases, routes,\na line that reads where laughter cut through grief.\nWe pass like brief pages of the same book,\nholding our paper bags, our brief promises,\nand the market folds its day into a pocket of dusk.",
+          "visualSpec": null,
+          "rights": "original_generated_candidate"
+        },
+        {
+          "id": "M2-stimB",
+          "kind": "literary_extract",
+          "title": "The Gardener's Chair",
+          "content": "Marla found the chair under the crabapple tree the day after the storm. It had been a plain wooden chair once—its back slats smoothed by hands long gone, its legs slightly splayed from years of someone leaning back on a summer afternoon. Now the paint flaked in pale green curls and a single gardenia petal lay asleep on the seat.\n\nShe hesitated before she lifted it, thinking of the neighbor who had tended this yard for decades and who, this spring, had moved to a small apartment with a view of the bus stop and the laundromat. The house opposite was quieter now; its curtains rarely opened. Marla remembered the old man in a floppy hat with his slow, deliberate movements as he coaxed tomatoes from the earth. He had hummed to the seedlings as if they were children learning to walk.\n\nTaking the chair into her own yard felt like accepting a story. Marla set it beneath the plum tree where the late afternoon light pooled in dappled coins. She sat and felt the give of old wood cupping her weight; it fit to the curve of her back as if it had been waiting. She closed her eyes and let the silence of the street — punctuated by the distant rumble of a bus and the occasional bark — fold around her.\n\nShe began to come here daily. Sometimes she brought a book she never opened, other times a mug of coffee that went lukewarm as she watched a lone sparrow hop along the fence. The chair collected small things: a ribbon caught in the armrest, a smear of soil where a seed pod had burst, the faint spiral of a snail's trail. Neighbors started to notice. A little boy placed a toy truck near the chair’s foot. A woman waved when she passed with her grocery bag, and once, a teenager lingered long enough to ask if the seat was taken.\n\nThat was when Marla learned the chair had a history. The teenager, whose hair smelled of the salon down the block, told a small tale about how the old gardener had carved a tiny heart into the underside of the seat, a secret token, he said, for anyone who’d ever loved a garden. Marla knelt and ran her finger along the grain; there, worn smooth by time and palms, was the shallow heart, nearly invisible.\n\nShe thought of how objects hold quiet witness: how the chair had seen the gardener plant seeds and mourn his wife's brief illness, how it had cradled anniversaries and small reconciliations, how its legs had dug into the soil on a windy day when a stray cat sought shelter beneath. The chair seemed to keep each memory like a layer of varnish — not exactly visible, but felt in the way it softened the edges of a hard day.\n\nAutumn came and the garden went gold. The chair stayed under the plum tree, now a stage for falling leaves and the occasional snowflake. One evening, as Marla sat with her scarf pulled tight and the city lights pricking awake, she understood something simple: that by sitting in that chair, by accepting its history, she had become part of the same quiet story. The chair had offered her a small inheritance — not of money or land, but a continuity, a place where days could be stitched together and made to mean more than a hurry.",
+          "visualSpec": null,
+          "rights": "original_generated_candidate"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ENGA-P1-M2-Q01",
+          "number": 21,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "Test recognition of standard punctuation use in complex sentences",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the sentence that uses commas correctly.",
+          "options": [
+            "After the meeting ended, we walked to the café, ordered coffee, and discussed plans.",
+            "After the meeting ended we walked to the café ordered coffee and discussed plans.",
+            "After the meeting ended, we walked to the café ordered coffee and discussed plans.",
+            "After the meeting, ended we walked to the café, ordered coffee and discussed plans."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "After the meeting ended, we walked to the café, ordered coffee, and discussed plans.",
+          "answerRationale": "This sentence correctly uses commas after an introductory phrase and between items in a list; the coordinating conjunction precedes the final item.",
+          "distractorRationales": [
+            "Missing comma after introductory phrase and missing commas in the series make the sentence less clear.",
+            "Comma after the introductory phrase is present but commas separating list items are missing, causing ambiguity.",
+            "Comma incorrectly placed between subject and verb ('meeting, ended') which is grammatically incorrect."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 1,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q02",
+          "number": 22,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "Test ability to identify correct verb tense for past ongoing action interrupted by another past action",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which sentence correctly expresses an ongoing past action that was interrupted by a shorter past action?",
+          "options": [
+            "I read when the lights went out.",
+            "I was reading when the lights went out.",
+            "I had read when the lights had gone out.",
+            "I am reading when the lights went out."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "I was reading when the lights went out.",
+          "answerRationale": "The past continuous 'was reading' shows an ongoing past action, interrupted by the simple past 'went out', which marks the shorter action.",
+          "distractorRationales": [
+            "Both verbs are simple past; this does not clearly show an ongoing action interrupted by another.",
+            "Past perfect for both actions suggests completion prior to another past point, not an interruption of an ongoing action.",
+            "Mixes present continuous with past simple, which is inconsistent and incorrect for a past interruption."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 2,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q03",
+          "number": 23,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "Test ability to craft a concise topic sentence for a short paragraph",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Select the most effective topic sentence for a paragraph about the benefits of community gardens.",
+          "options": [
+            "Many people like to garden in their free time.",
+            "Community gardens are places where vegetables sometimes grow.",
+            "Community gardens strengthen neighbourhoods by providing green space, fresh produce, and opportunities for neighbours to work together.",
+            "Gardening requires tools, time, and patience."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Community gardens strengthen neighbourhoods by providing green space, fresh produce, and opportunities for neighbours to work together.",
+          "answerRationale": "This sentence clearly states the main idea and previews specific supporting points (green space, produce, cooperation), making it effective as a topic sentence.",
+          "distractorRationales": [
+            "Too general and doesn't focus on community gardens or preview benefits.",
+            "Vague and underplays the social and environmental benefits.",
+            "Focuses on gardening process, not the specific advantages of community gardens."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 3,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q04",
+          "number": 24,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "Test correct use of comparative and superlative adjectives",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the sentence that correctly uses comparative form.",
+          "options": [
+            "This trail is more steep than the one by the river.",
+            "This trail is steepest than the one by the river.",
+            "This trail is as steep than the one by the river.",
+            "This trail is steeper than the one by the river."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "This trail is steeper than the one by the river.",
+          "answerRationale": "Comparative 'steeper' correctly compares two items introduced by 'than'.",
+          "distractorRationales": [
+            "Incorrect comparative formation; 'steeper' is correct for one-syllable adjective.",
+            "Superlative 'steepest' is incorrectly used to compare two items.",
+            "Mixes 'as...as' structure incorrectly with 'than'; ungrammatical."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 4,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q05",
+          "number": 25,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "Assess ability to choose correct pronoun for clarity and agreement",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which sentence uses pronouns that clearly agree with their antecedents?",
+          "options": [
+            "Each student must submit his or her assignment by Friday.",
+            "Each student must submit their assignment by Friday.",
+            "All students must submit his assignment by Friday.",
+            "Each students must submit their assignments by Friday."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Each student must submit his or her assignment by Friday.",
+          "answerRationale": "The singular antecedent 'Each student' is matched by the singular pronouns 'his or her', maintaining number agreement.",
+          "distractorRationales": [
+            "Commonly accepted informally but grammatically the singular 'Each student' is mismatched with plural 'their'.",
+            "Plural 'All students' mismatched with singular 'his'.",
+            "Plural noun 'students' with 'Each' is incorrect; number agreement is faulty."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 5,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q06",
+          "number": 26,
+          "itemType": "comprehension",
+          "stimulusId": "M2-stimA",
+          "objective": "Identify tone in a poem stanza",
+          "profile": "evaluating_creating",
+          "difficulty": "medium",
+          "stem": "What tone does the line 'The vendor who laughs all morning wears silence like a new coat.' most clearly convey?",
+          "options": [
+            "Playful and carefree",
+            "Melancholic with a hint of resilience",
+            "Angry and bitter",
+            "Indifferent and detached"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Melancholic with a hint of resilience",
+          "answerRationale": "The simile suggests that laughter masks an underlying quiet or sadness, implying melancholy, while 'wears' indicates a maintained outward composure—a resilient act.",
+          "distractorRationales": [
+            "The image of wearing silence contradicts a purely playful tone; it implies hidden feeling.",
+            "There is no clear anger or bitterness in the phrasing; 'laughs' and 'wears' point elsewhere.",
+            "The line implies emotional complexity rather than simple indifference; 'laughs' and 'silence' suggest conscious performance."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 6,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q07",
+          "number": 27,
+          "itemType": "comprehension",
+          "stimulusId": "M2-stimA",
+          "objective": "Understand imagery and its effect",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "In the poem, what does 'a boy with a cracked plastic whistle practices / calls that sound like birds learning to be brave' primarily suggest?",
+          "options": [
+            "The boy prefers bird sounds to music.",
+            "The whistle is broken and cannot make sound.",
+            "The boy is practicing confidently though he is still inexperienced.",
+            "The boy frightens the birds with loud sounds."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "The boy is practicing confidently though he is still inexperienced.",
+          "answerRationale": "The comparison to 'birds learning to be brave' suggests tentative practice and emerging confidence; the cracked whistle indicates imperfection but persistence.",
+          "distractorRationales": [
+            "The line compares his calls to birds but does not state a preference.",
+            "It is described as 'cracked' but still producing calls, so it is not silent.",
+            "The simile suggests gentle learning, not frightening noise."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 7,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q08",
+          "number": 28,
+          "itemType": "comprehension",
+          "stimulusId": "M2-stimA",
+          "objective": "Analyse structure and how it shapes meaning",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "How does the poem's closing image 'the market folds its day into a pocket of dusk' function in relation to the rest of the poem?",
+          "options": [
+            "It introduces a sudden conflict that reverses the poem's mood.",
+            "It highlights the chaos that follows after dark.",
+            "It criticizes the market for closing too early.",
+            "It provides a gentle closure that unites the day's activities into a calm, contained ending."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "It provides a gentle closure that unites the day's activities into a calm, contained ending.",
+          "answerRationale": "The metaphor of folding into a pocket suggests containment and intimacy, summarizing the market's transition into evening and offering a peaceful conclusion reflecting the poem's observational tone.",
+          "distractorRationales": [
+            "The image is calm and summarizing, not conflictive or mood-reversing.",
+            "The folding into a pocket implies order and calm rather than chaos.",
+            "There is no critical tone about closing time; the line is more reflective and gentle."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 8,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q09",
+          "number": 29,
+          "itemType": "comprehension",
+          "stimulusId": "M2-stimA",
+          "objective": "Create interpretation based on figurative language",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which interpretation best explains the meaning of 'Every face is a small map—creases, routes, / a line that reads where laughter cut through grief'?",
+          "options": [
+            "People's faces record their personal histories, where joy and sorrow have left visible marks.",
+            "Faces are maps used to navigate the market's stalls.",
+            "Laughter removes all signs of grief from a face.",
+            "People intentionally paint maps on their faces for celebration."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "People's faces record their personal histories, where joy and sorrow have left visible marks.",
+          "answerRationale": "Describing faces as maps with creases and routes suggests that experiences (laughter, grief) leave lasting, readable traces—supporting the interpretation of visible life-history.",
+          "distractorRationales": [
+            "Literal navigation isn't implied; the metaphor relates to personal history, not directions.",
+            "The line indicates both laughter and grief coexist as marks, not that one erases the other.",
+            "No suggestion of literal painted maps or celebratory face-painting exists in the poem."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 9,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q10",
+          "number": 30,
+          "itemType": "comprehension",
+          "stimulusId": "M2-stimA",
+          "objective": "Understand sound devices and their effect",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which literary device is most evident in the line 'Smoke from a grill curls, a lazy question'?",
+          "options": [
+            "Alliteration",
+            "Personification",
+            "Onomatopoeia",
+            "Irony"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Personification",
+          "answerRationale": "The smoke is given human-like behaviour by being described as asking a 'lazy question,' which is personification.",
+          "distractorRationales": [
+            "While there is some repetition of consonants, the main device is assigning a human action to smoke.",
+            "No word imitates a sound; 'curls' and 'question' are not onomatopoetic.",
+            "There is no evident contradiction or ironic contrast in this line."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 10,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q11",
+          "number": 31,
+          "itemType": "comprehension",
+          "stimulusId": "M2-stimA",
+          "objective": "Analyse speaker perspective and attitude",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which best describes the speaker's attitude toward the market scene overall?",
+          "options": [
+            "Dismissive and impatient, focusing on the market's flaws.",
+            "Fearful and anxious about the crowd.",
+            "Affectionate and observant, noting small details with warmth.",
+            "Neutral and purely factual without value judgments."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Affectionate and observant, noting small details with warmth.",
+          "answerRationale": "The speaker notices intimate details—children's shadows, vendors' silences, small acts—presented with warmth and attention, indicating affection and observation.",
+          "distractorRationales": [
+            "The poem does not show impatience or dismissal; it is detailed and gentle.",
+            "No signs of fear or anxiety appear; imagery is calming and reflective.",
+            "The language carries emotional colouring (e.g., 'patient gold'), not purely factual neutrality."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 11,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q12",
+          "number": 32,
+          "itemType": "comprehension",
+          "stimulusId": "M2-stimA",
+          "objective": "Evaluate effectiveness of a line's diction",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Why is the phrase 'patient gold' effective in describing the streetlight?",
+          "options": [
+            "It emphasizes how expensive the streetlight is.",
+            "It suggests the light is slow to turn on.",
+            "It implies the light is made of actual gold metal.",
+            "It conveys warmth and steadiness, suggesting the light is both gentle and reliable."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "It conveys warmth and steadiness, suggesting the light is both gentle and reliable.",
+          "answerRationale": "'Patient' attributes calm endurance to the light, while 'gold' evokes warm colour and value; together they create an image of dependable, comforting illumination.",
+          "distractorRationales": [
+            "'Gold' is metaphorical for colour and warmth, not literal cost.",
+            "While 'patient' implies slowness, in context it indicates steadiness rather than a delay in activation.",
+            "Metaphorical language describes appearance and mood, not material composition."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 12,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q13",
+          "number": 33,
+          "itemType": "comprehension",
+          "stimulusId": "M2-stimA",
+          "objective": "Understand theme development across the poem",
+          "profile": "understanding",
+          "difficulty": "medium",
+          "stem": "Which theme is most prominent in the poem?",
+          "options": [
+            "The small, human acts that create community and continuity.",
+            "The destructive power of nature on urban spaces.",
+            "The political struggle between vendors and authorities.",
+            "The wealth and extravagance of the market traders."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "The small, human acts that create community and continuity.",
+          "answerRationale": "The poem highlights everyday interactions—vendors, children, shared routines—that together form communal continuity, a recurring focus throughout the stanzas.",
+          "distractorRationales": [
+            "Nature's destructive power is not a focus; the poem emphasizes human routines and warmth.",
+            "No political conflict is presented; the tone is observational and intimate.",
+            "The poem portrays modest, everyday details rather than wealth or extravagance."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 13,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q14",
+          "number": 34,
+          "itemType": "comprehension",
+          "stimulusId": "M2-stimB",
+          "objective": "Analyse character action and implication",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "What does Marla's decision to move the chair into her yard most strongly indicate about her character?",
+          "options": [
+            "She wants to sell the chair for profit.",
+            "She values connection with local history and seeks continuity.",
+            "She intends to repair the chair and return it to the original owner.",
+            "She dislikes modern furniture and prefers antiques for status."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "She values connection with local history and seeks continuity.",
+          "answerRationale": "Marla's hesitation about the neighbor and her reflection on accepting a story show she appreciates the chair's past and wants to join that continuity by placing it in her yard.",
+          "distractorRationales": [
+            "No evidence suggests monetary motives; her actions are sentimental and reflective.",
+            "No plan to return is mentioned; she makes the chair part of her space.",
+            "Her motivation appears emotional and relational, not status-driven."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 14,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q15",
+          "number": 35,
+          "itemType": "comprehension",
+          "stimulusId": "M2-stimB",
+          "objective": "Create interpretation of symbolism",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which interpretation of the carved heart under the chair is most convincing?",
+          "options": [
+            "It proves the chair once belonged to a famous artist.",
+            "It is a warning sign meant to deter thieves.",
+            "It symbolizes private memories and personal care preserved through ordinary objects.",
+            "It indicates the chair was carved by the teenager who told the story."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "It symbolizes private memories and personal care preserved through ordinary objects.",
+          "answerRationale": "The hidden heart, worn smooth by palms, serves as a subtle marker of love and remembrance, suggesting ordinary objects can carry intimate histories.",
+          "distractorRationales": [
+            "Nothing in the text links the heart to fame or artistic ownership.",
+            "A heart symbolically represents affection, not a deterrent; no warning context is provided.",
+            "The teenager recounts the story but does not claim to be the carver; context suggests an older origin."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 15,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q16",
+          "number": 36,
+          "itemType": "comprehension",
+          "stimulusId": "M2-stimB",
+          "objective": "Understand narrative perspective and its effect",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "From which perspective is the extract told and what effect does this create?",
+          "options": [
+            "First-person, giving direct access to Marla's inner voice.",
+            "Omniscient third-person that reports all characters' inner thoughts equally.",
+            "Second-person, addressing the reader as 'you' and involving them directly.",
+            "Third-person limited, creating a close but slightly external view of Marla's thoughts and actions."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "Third-person limited, creating a close but slightly external view of Marla's thoughts and actions.",
+          "answerRationale": "The narrator describes Marla's actions and inner reflections but does not shift into other characters' interiors, giving intimacy with slight narrative distance.",
+          "distractorRationales": [
+            "The narrative uses third-person pronouns and an external narrator, not first-person 'I'.",
+            "The extract focuses mainly on Marla's perspective, not others', so it is not fully omniscient.",
+            "The text does not use second-person direction; it stays with third-person description."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 16,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q17",
+          "number": 37,
+          "itemType": "comprehension",
+          "stimulusId": "M2-stimB",
+          "objective": "Analyse motif and how small details develop theme",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "How do the small items the chair 'collected' (ribbon, soil smear, snail's trail) contribute to the extract's theme?",
+          "options": [
+            "They emphasize how ordinary objects accumulate traces of daily life, reinforcing continuity and memory.",
+            "They suggest the chair was neglected and worthless.",
+            "They indicate the chair was used primarily as storage.",
+            "They reveal that the chair belonged to a traveling performer."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "They emphasize how ordinary objects accumulate traces of daily life, reinforcing continuity and memory.",
+          "answerRationale": "Listing small, mundane items shows how the chair bears evidence of many small lives and moments, supporting the theme of continuity and quiet witness.",
+          "distractorRationales": [
+            "The details are presented with fondness and meaning, not as signs of worthlessness.",
+            "The items are incidental remnants, not evidence of purposeful storage use.",
+            "No suggestion connects these items to a performer's lifestyle; they're everyday domestic traces."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 17,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q18",
+          "number": 38,
+          "itemType": "comprehension",
+          "stimulusId": "M2-stimB",
+          "objective": "Create a reasoned judgement about the author's use of setting",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Assess why the author places the chair under the plum tree and how that choice deepens the narrative.",
+          "options": [
+            "The tree is used mainly to hide the chair from passersby.",
+            "The plum tree setting provides a sheltered, intimate spot where seasonal change is visible, linking the chair to cycles of life and promoting reflection.",
+            "The author wants to emphasize that Marla dislikes sunlight.",
+            "The plum tree proves the garden is older than the house."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "The plum tree setting provides a sheltered, intimate spot where seasonal change is visible, linking the chair to cycles of life and promoting reflection.",
+          "answerRationale": "Positioning the chair beneath a fruit tree evokes growth, seasons, falling leaves and shelter; these images align with themes of continuity, memory, and the passage of time.",
+          "distractorRationales": [
+            "The text describes the chair as visible and noticed by neighbors, so concealment is not the primary function.",
+            "No indication is given that Marla avoids sunlight; the spot is chosen for comfort and meaning.",
+            "No comparison of ages is offered; the tree's role is symbolic and atmospheric, not chronological evidence."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 18,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q19",
+          "number": 39,
+          "itemType": "comprehension",
+          "stimulusId": "M2-stimB",
+          "objective": "Understand how characterization is revealed through action",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "What small action best shows Marla's growing attachment to the chair?",
+          "options": [
+            "She paints the chair bright red and puts it in the garage.",
+            "She sells the chair to a collector for a large sum.",
+            "She sits in it daily and notices small details like a toy truck placed near its foot.",
+            "She locks the chair away to protect it from the weather."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "She sits in it daily and notices small details like a toy truck placed near its foot.",
+          "answerRationale": "Regular use and attention to surrounding offerings (toy truck, greetings from neighbors) indicate emotional investment and attachment.",
+          "distractorRationales": [
+            "No painting or storage in a garage is mentioned; she keeps the chair outdoors under the plum tree.",
+            "No sale is described; her actions are sentimental and keeping.",
+            "She leaves it outside where it collects leaves and snow, not hidden away."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 19,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-M2-Q20",
+          "number": 40,
+          "itemType": "comprehension",
+          "stimulusId": "M2-stimB",
+          "objective": "Analyse the extract's final message and implied theme",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which statement best captures the extract's concluding message about belonging?",
+          "options": [
+            "Belonging is only possible through legal ownership of property.",
+            "Belonging requires renouncing one's past to fit into a new community.",
+            "Belonging is determined solely by how long one has lived in a place.",
+            "Belonging can be created by accepting shared memories and participating in everyday rituals."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "Belonging can be created by accepting shared memories and participating in everyday rituals.",
+          "answerRationale": "The conclusion emphasises Marla becoming part of the chair's story and receiving a 'small inheritance' of continuity, suggesting belonging is formed through engaged participation in communal memory.",
+          "distractorRationales": [
+            "The extract focuses on emotional and narrative continuity, not legal ownership.",
+            "Marla incorporates the chair's history into her life rather than abandoning her past.",
+            "The text values acts of attention and acceptance over mere duration of residence."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 20,
+          "module": 2
+        }
+      ]
+    },
+    {
+      "module": 3,
+      "discourse": "Persuasive Discourse",
+      "stimuli": [
+        {
+          "id": "M3-A",
+          "kind": "persuasive_extract",
+          "title": "Editorial: A Town That Plants Its Future",
+          "content": "When the council proposed cutting funding for community green spaces, I thought of the old mango grove at the foot of Cedar Hill. It was where children learned how seasons change, where elders greeted the day with familiar paths, and where, in a storm, the whole neighbourhood found shelter. Green spaces are not luxuries; they are the quiet infrastructure of a healthy town. They stabilise soil, temper heat islands, improve air quality and support pollinators that keep our gardens productive.\n\nCutting their funding saves pennies today but costs us dearly in health, biodiversity and community connection. Instead of withdrawing support, the council should adopt a planting plan that engages local schools and businesses. A modest annual budget can leverage volunteers and corporate sponsorship to maintain existing parks and create pocket gardens in empty lots. With planning, maintenance and community education, the benefits multiply: fewer heat-related illnesses, more opportunities for recreation, and stronger bonds among neighbours.\n\nI urge council members to think long-term. Vote to protect and expand our green infrastructure; it is an investment in the town’s resilience and in the everyday wellbeing of all residents.",
+          "visualSpec": null,
+          "rights": "original_generated_candidate"
+        },
+        {
+          "id": "M3-B",
+          "kind": "visual_persuasive",
+          "title": "Poster: 'Shade for Life' Community Tree-Planting Campaign",
+          "content": null,
+          "visualSpec": {
+            "type": "notice",
+            "title": "Shade for Life: Plant a Tree, Protect Our Town",
+            "headers": [
+              "When: Saturday, 9am–1pm",
+              "Where: Meet at Market Square",
+              "Bring: Water, gloves, enthusiasm"
+            ],
+            "rows": [
+              [
+                "Main message",
+                "Planting trees cools streets, improves air, and brings neighbours together."
+              ],
+              [
+                "How to help",
+                "Volunteer to plant, donate tools, or sponsor a sapling for $10."
+              ],
+              [
+                "Impact fact",
+                "One mature tree can reduce local temperatures by up to 2°C and store carbon."
+              ],
+              [
+                "Contact",
+                "signup@shadeforlife.org | 555-0123"
+              ]
+            ]
+          },
+          "rights": "original_generated_candidate"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ENGA-P1-M3-Q01",
+          "number": 41,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "identify correct verb form",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the sentence with the correct verb form to complete: \"By next spring, the community ____ three new pocket gardens.\"",
+          "options": [
+            "will have created",
+            "will create",
+            "creates",
+            "had created"
+          ],
+          "correctOption": "A",
+          "correctAnswer": "will have created",
+          "answerRationale": "Future perfect (will have created) indicates completion by a future time.",
+          "distractorRationales": [
+            "Simple future indicates an action in the future but not necessarily completed by that time.",
+            "Present simple is incorrect for a finished action by a future point.",
+            "Past perfect refers to a past time before another past event, not a future deadline."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 1,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q02",
+          "number": 42,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "analyse the author's main reason",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "According to the editorial, why does the author argue that green spaces should not be treated as luxuries?",
+          "options": [
+            "Because green spaces are the most profitable town investments.",
+            "Because they provide practical environmental and social benefits such as stabilising soil, tempering heat, improving air quality and fostering community connections.",
+            "Because only children can learn outside in green areas.",
+            "Because parks require no maintenance once planted."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Because they provide practical environmental and social benefits such as stabilising soil, tempering heat, improving air quality and fostering community connections.",
+          "answerRationale": "The author lists environmental functions and community benefits to support the claim that green spaces are essential infrastructure.",
+          "distractorRationales": [
+            "Profitability is not mentioned; the editorial emphasises public health and ecological benefits.",
+            "While children are mentioned, the author refers to benefits for many groups, not only children.",
+            "The piece argues for planning and maintenance, so this is incorrect."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 2,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q03",
+          "number": 43,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "evaluate suggested strategy",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Evaluate the council proposal the author offers (engaging schools and businesses with modest budget). Which potential weakness must the council address to make this strategy effective?",
+          "options": [
+            "Relying solely on professional landscapers to plant every tree.",
+            "Planting only in affluent neighbourhoods to attract donations.",
+            "Ensuring ongoing maintenance and coordination so volunteer and sponsorship efforts are sustained beyond initial planting.",
+            "Asking schools to finance the entire budget."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Ensuring ongoing maintenance and coordination so volunteer and sponsorship efforts are sustained beyond initial planting.",
+          "answerRationale": "The editorial emphasises planning, maintenance and community education; the main risk is that one-time planting without maintenance won't deliver long-term benefits.",
+          "distractorRationales": [
+            "The author advocates volunteer engagement and sponsorship, not exclusive reliance on professionals.",
+            "Author argues for community-wide benefits and inclusion, not selective planting.",
+            "The proposal suggests a modest budget leveraging volunteers and sponsors, not shifting full costs to schools."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 3,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q04",
+          "number": 44,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "understand explicit information",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which of the following is NOT listed by the author as a benefit of green spaces?",
+          "options": [
+            "Tempering heat islands",
+            "Supporting pollinators",
+            "Improving air quality",
+            "Generating direct revenue for the council"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "Generating direct revenue for the council",
+          "answerRationale": "The author mentions stabilising soil, tempering heat, improving air quality and supporting pollinators; revenue is not listed.",
+          "distractorRationales": [
+            "Tempering heat islands is explicitly mentioned as a benefit.",
+            "Supporting pollinators is explicitly mentioned.",
+            "Improving air quality is explicitly mentioned."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 4,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q05",
+          "number": 45,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "analyse tone and audience",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "What tone does the author adopt toward council members, and what effect is that tone likely intended to have?",
+          "options": [
+            "Reasoned and persuasive, intended to prompt practical action and long-term thinking from council members.",
+            "Hostile and accusatory, intended to shame council into submission.",
+            "Indifferent and neutral, intended only to inform residents.",
+            "Playful and casual, intended to entertain readers."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Reasoned and persuasive, intended to prompt practical action and long-term thinking from council members.",
+          "answerRationale": "The author uses calm argumentation, practical proposals and a direct appeal to vote, aiming to persuade officials to act.",
+          "distractorRationales": [
+            "The editorial is not hostile; it proposes solutions and appeals to responsibility rather than shaming.",
+            "The author urges action and votes, so the tone is not merely neutral.",
+            "The piece is serious and civic-minded, not playful."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 5,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q06",
+          "number": 46,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "create an implementation suggestion",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Propose one measurable indicator the council could use to judge the success of the proposed planting plan.",
+          "options": [
+            "Counting the total number of volunteers who attended the planting day only.",
+            "Number of trees and pocket gardens established and surviving after two years, combined with reductions in local heat-related emergency visits.",
+            "Measuring only the amount of sponsorship money raised during the first month.",
+            "Recording how many council meetings mention green spaces."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Number of trees and pocket gardens established and surviving after two years, combined with reductions in local heat-related emergency visits.",
+          "answerRationale": "This indicator links the proposed action (planting and maintenance) to tangible environmental and health outcomes as discussed in the editorial.",
+          "distractorRationales": [
+            "Volunteer attendance alone does not measure long-term survival or environmental/health impact.",
+            "Initial funding does not indicate sustained ecological or community benefits.",
+            "Meeting mentions reflect discussion not direct environmental or wellbeing outcomes."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 6,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q07",
+          "number": 47,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "understand implied meaning",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "When the author refers to green spaces as 'quiet infrastructure,' what is implied?",
+          "options": [
+            "That green spaces are noisy and disruptive.",
+            "That parks should be replaced by visible infrastructure like bridges.",
+            "That green spaces perform vital, everyday functions for the town even though they are not always noticed like roads or utilities.",
+            "That only infrastructure workers care for green spaces."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "That green spaces perform vital, everyday functions for the town even though they are not always noticed like roads or utilities.",
+          "answerRationale": "'Quiet infrastructure' implies essential but understated services supporting daily life, matching the author's examples.",
+          "distractorRationales": [
+            "The adjective 'quiet' implies the opposite of noisy; the statement does not suggest disruption.",
+            "The author argues to protect green spaces, not replace them with visible infrastructure.",
+            "The phrase does not imply exclusive care by workers; the author mentions volunteers and community involvement."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 7,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q08",
+          "number": 48,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "analyse structure used for persuasion",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which structural move strengthens the author's argument in the editorial?",
+          "options": [
+            "Presenting unrelated anecdotes without connecting them to a plan.",
+            "Using only statistical data without any local examples.",
+            "Avoiding any call to action to remain neutral.",
+            "Listing concrete environmental and social benefits, then offering a practical, low-cost plan that engages community partners."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "Listing concrete environmental and social benefits, then offering a practical, low-cost plan that engages community partners.",
+          "answerRationale": "The sequence of problem-argument-solution with specific benefits and a feasible proposal enhances persuasion.",
+          "distractorRationales": [
+            "The editorial connects anecdotes to a broader argument and a plan, not unrelated stories.",
+            "The author balances local imagery (mango grove) with general benefits, not only statistics.",
+            "The author explicitly urges council members to vote to protect green infrastructure."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 8,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q09",
+          "number": 49,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "create a persuasive closing line",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which closing sentence best replicates the author’s persuasive intent and tone?",
+          "options": [
+            "\"Support this plan: protect our parks today so our town thrives tomorrow.\"",
+            "\"We should leave decisions about parks to private companies.\"",
+            "\"Green spaces are nice if there is extra money left over.\"",
+            "\"I do not care whether the council votes for parks.\""
+          ],
+          "correctOption": "A",
+          "correctAnswer": "\"Support this plan: protect our parks today so our town thrives tomorrow.\"",
+          "answerRationale": "This sentence is a concise, forward-looking appeal matching the editorial’s reasoned tone and call to action on long-term benefits.",
+          "distractorRationales": [
+            "This contradicts the author’s call for public protection and community involvement.",
+            "This diminishes their importance and conflicts with the editorial’s argument.",
+            "This is apathetic and inconsistent with the author urging action."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 9,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q10",
+          "number": 50,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "choose correct preposition",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Select the correct preposition: \"The planting event will meet volunteers ___ Market Square.\"",
+          "options": [
+            "in",
+            "at",
+            "on",
+            "into"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "at",
+          "answerRationale": "'At Market Square' correctly indicates the meeting point location.",
+          "distractorRationales": [
+            "'In Market Square' could be possible but 'at' is the standard preposition for meeting points.",
+            "'On Market Square' is less common and implies being on a surface rather than meeting at a location.",
+            "'Into' implies movement inside, not appropriate for a meeting place phrase."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 10,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q11",
+          "number": 51,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "analyse persuasive techniques in visual text",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which persuasive technique is most prominent in the poster's 'Impact fact' stating that one mature tree can reduce local temperatures by up to 2°C and store carbon?",
+          "options": [
+            "Appeal to authority by quoting experts.",
+            "Emotional anecdote about a family under a tree.",
+            "Use of factual appeal (statistics) to persuade through evidence of environmental benefit.",
+            "Use of rhetorical question to engage readers."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Use of factual appeal (statistics) to persuade through evidence of environmental benefit.",
+          "answerRationale": "Providing a measurable fact appeals to reason and supports the campaign's environmental claims.",
+          "distractorRationales": [
+            "No expert is quoted; the technique is a factual/statistical appeal rather than authority.",
+            "The poster uses a statistic, not a personal anecdote.",
+            "There is no rhetorical question in the 'Impact fact'; it's a declarative statistic."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 11,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q12",
+          "number": 52,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "evaluate campaign accessibility",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Assess one change to the poster that would improve accessibility for non-English speakers in a diverse community.",
+          "options": [
+            "Remove the contact email and leave only a phone number.",
+            "Change the date to a weekday evening.",
+            "Add more environmental jargon to explain carbon storage.",
+            "Include brief translations or icons for key details (time, place, what to bring) to ensure essential information is understood by non-English readers."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "Include brief translations or icons for key details (time, place, what to bring) to ensure essential information is understood by non-English readers.",
+          "answerRationale": "Translations or universal icons convey logistical details without relying on English fluency, increasing participation.",
+          "distractorRationales": [
+            "A phone number alone may not help non-English speakers; translations are more effective for basic details.",
+            "Changing timing may affect participation but does not address language accessibility.",
+            "More jargon would reduce accessibility rather than improve it."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 12,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q13",
+          "number": 53,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "understand explicit detail",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "What is one way people are invited to support the campaign, according to the poster?",
+          "options": [
+            "Volunteer to plant.",
+            "Buy mature trees from the council.",
+            "Attend a lecture on tree biology.",
+            "Sign a petition to remove trees."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Volunteer to plant.",
+          "answerRationale": "The 'How to help' section explicitly lists volunteering to plant as an option.",
+          "distractorRationales": [
+            "The poster asks for sponsoring a sapling, not buying mature trees.",
+            "No lecture is mentioned; the poster promotes a planting event.",
+            "This contradicts the poster's pro-tree-planting message."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 13,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q14",
+          "number": 54,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "analyse implied audience",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Who is the poster’s primary target audience, and which element best indicates this?",
+          "options": [
+            "International tourists, indicated by the mention of carbon storage.",
+            "Local residents and neighbours, indicated by the meeting location 'Market Square' and the community-focused wording like 'brings neighbours together.'",
+            "Professional botanists, indicated by the scientific temperature reduction claim.",
+            "Children only, indicated by 'Bring: gloves.'"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Local residents and neighbours, indicated by the meeting location 'Market Square' and the community-focused wording like 'brings neighbours together.'",
+          "answerRationale": "Local meeting place and emphasis on community imply the poster targets nearby residents.",
+          "distractorRationales": [
+            "Carbon storage is global in relevance but the poster's local meeting details point to residents, not tourists.",
+            "The statistic is accessible to the general public; the event is volunteer-focused, not professional-only.",
+            "Gloves are for any volunteers; the poster does not limit participation to children."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 14,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q15",
+          "number": 55,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "create a persuasive improvement",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Suggest one persuasive revision to the poster text that would most likely increase donations for saplings.",
+          "options": [
+            "Replace the donation option with a request for corporate volunteers only.",
+            "Remove the price and say 'donate if you feel like it.'",
+            "Add a short, relatable line such as 'Sponsor a sapling for a child’s future — $10 gives shade and cleaner air for years,' linking donation amount to concrete benefits.",
+            "Include a long scientific paragraph about carbon cycles."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Add a short, relatable line such as 'Sponsor a sapling for a child’s future — $10 gives shade and cleaner air for years,' linking donation amount to concrete benefits.",
+          "answerRationale": "Connecting the donation to tangible community and intergenerational benefits makes the ask more compelling and justifies the $10 cost.",
+          "distractorRationales": [
+            "Limiting donors to corporate volunteers would reduce individual giving opportunities.",
+            "Omitting a suggested amount usually lowers donation levels compared to a clear ask.",
+            "A long technical paragraph would likely discourage quick donations and reduce persuasive impact."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 15,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q16",
+          "number": 56,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "understand logistical information",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "What time should volunteers arrive for the planting event?",
+          "options": [
+            "1pm",
+            "12pm",
+            "8am",
+            "9am"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "9am",
+          "answerRationale": "The poster lists 'When: Saturday, 9am–1pm,' so volunteers should arrive at 9am.",
+          "distractorRationales": [
+            "1pm is the event end time, not the start time.",
+            "12pm is within the event period but not the start time.",
+            "8am is not stated on the poster; the event begins at 9am."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 16,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q17",
+          "number": 57,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "analyse use of call to action",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which element of the poster functions as the clearest call to action, and why?",
+          "options": [
+            "The 'How to help' section because it lists specific actions (volunteer, donate tools, sponsor a sapling) that readers can take immediately.",
+            "The title alone, because titles always count as calls to action.",
+            "The contact email, because contacts are not actionable.",
+            "The 'Bring: water, gloves' line, because it persuades people to donate money."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "The 'How to help' section because it lists specific actions (volunteer, donate tools, sponsor a sapling) that readers can take immediately.",
+          "answerRationale": "A call to action typically directs the audience to specific steps; this section provides those steps clearly.",
+          "distractorRationales": [
+            "While the title is engaging, it does not provide specific actions like the 'How to help' section does.",
+            "The contact is a means of follow-up but the 'How to help' gives immediate, concrete actions.",
+            "This line advises volunteers on preparations; it does not specifically encourage donations."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 17,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q18",
+          "number": 58,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "select appropriate conjunction",
+          "profile": "evaluating_creating",
+          "difficulty": "medium",
+          "stem": "Choose the conjunction that best completes: \"We can plant saplings now, ____ they will take years to reach maturity.\"",
+          "options": [
+            "because",
+            "but",
+            "so",
+            "unless"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "but",
+          "answerRationale": "'But' introduces a contrast between planting now and the long time to maturity; this fits the sentence's meaning.",
+          "distractorRationales": [
+            "'Because' would indicate cause, which does not match the intended contrast.",
+            "'So' would suggest a result; here a contrast is intended.",
+            "'Unless' introduces a condition and doesn't fit the contrastive statement."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 18,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q19",
+          "number": 59,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "recognise appropriate register",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which phrase is most appropriate for a formal town-council notice?",
+          "options": [
+            "Hey guys, let’s tell the council to do this!",
+            "Do it now or else!",
+            "We request the council’s consideration of this proposal.",
+            "Buy into this plan, folks."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "We request the council’s consideration of this proposal.",
+          "answerRationale": "This phrase uses formal, polite register suitable for official notices.",
+          "distractorRationales": [
+            "Informal and colloquial, inappropriate for a formal notice.",
+            "Threatening and informal; unsuitable for formal communication.",
+            "Casual and promotional, not the expected formal register for a council notice."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 19,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-M3-Q20",
+          "number": 60,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "choose correct plural form",
+          "profile": "analysing",
+          "difficulty": "easy",
+          "stem": "Select the correct plural form: \"One mature tree reduces heat; many ____ reduce heat across a neighbourhood.\"",
+          "options": [
+            "tree",
+            "treeses",
+            "tree's",
+            "trees"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "trees",
+          "answerRationale": "The plural of 'tree' is 'trees,' which fits grammatically and semantically.",
+          "distractorRationales": [
+            "Singular form does not match 'many'.",
+            "Incorrect plural formation.",
+            "Incorrect possessive form, not a plural."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 20,
+          "module": 3
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ENGA-P1-M1-Q01",
+      "number": 1,
+      "itemType": "comprehension",
+      "stimulusId": "M1-StimA",
+      "objective": "identify_main_idea",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "What is the primary purpose of Seawall Library as described in the passage?",
+      "options": [
+        "To promote reading and strengthen local resilience",
+        "To serve as a for-profit bookshop",
+        "To become a tourist attraction",
+        "To offer formal school examinations"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "To promote reading and strengthen local resilience",
+      "answerRationale": "The passage explicitly states the library’s purpose is twofold: to promote reading and to strengthen local resilience.",
+      "distractorRationales": [
+        "Incorrect: the passage describes the library as volunteer-run and free, not for-profit.",
+        "Incorrect: tourism is not mentioned as a goal in the passage.",
+        "Incorrect: the passage mentions workshops and classes but not formal exams."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 1,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q02",
+      "number": 2,
+      "itemType": "comprehension",
+      "stimulusId": "M1-StimA",
+      "objective": "analyse_supporting_details",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which detail best supports the claim that the library plays a practical role during storms?",
+      "options": [
+        "It expanded from a small collection of donated books",
+        "It becomes an information hub where residents receive updates and recharge devices",
+        "Volunteers include retired teachers and fishermen",
+        "Organisers post notices in English and creole"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "It becomes an information hub where residents receive updates and recharge devices",
+      "answerRationale": "The passage describes specific storm-related services: providing updates and device charging, indicating a practical role.",
+      "distractorRationales": [
+        "Incorrect: expansion describes growth, not storm-related activities.",
+        "Incorrect: this notes volunteer composition but not the library’s practical storm role.",
+        "Incorrect: inclusive communication is important but does not specifically show storm support."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 2,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q03",
+      "number": 3,
+      "itemType": "comprehension",
+      "stimulusId": "M1-StimA",
+      "objective": "evaluate_implications",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "If the library successfully starts a mobile outreach to nearby fishing settlements, which likely long-term effect would best align with the organisers’ goals?",
+      "options": [
+        "A decline in market sales at the library’s fundraising market",
+        "A reduction in volunteer involvement in the main library",
+        "Increased community resilience and broader access to educational resources",
+        "A shift toward charging membership fees"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Increased community resilience and broader access to educational resources",
+      "answerRationale": "Organisers aim to strengthen resilience and expand access; mobile outreach would extend resources and resilience to settlements.",
+      "distractorRationales": [
+        "Incorrect: no evidence suggests mobile outreach would decrease local market sales.",
+        "Incorrect: while possible, the passage gives no basis to predict reduced involvement.",
+        "Incorrect: the passage emphasizes free access; introducing fees contradicts stated goals without support."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 3,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q04",
+      "number": 4,
+      "itemType": "comprehension",
+      "stimulusId": "M1-StimA",
+      "objective": "retrieve_explicit_information",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "How many laptop sessions did the library record last year?",
+      "options": [
+        "4,200 laptop sessions",
+        "120 laptop sessions",
+        "1,200 laptop sessions",
+        "600 laptop sessions"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "600 laptop sessions",
+      "answerRationale": "The passage lists 600 laptop sessions in last year’s usage statistics.",
+      "distractorRationales": [
+        "Incorrect: 4,200 refers to total library visits, not laptop sessions.",
+        "Incorrect: 120 refers to workshop participants.",
+        "Incorrect: 1,200 is not mentioned in the usage statistics."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 4,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q05",
+      "number": 5,
+      "itemType": "comprehension",
+      "stimulusId": "M1-StimA",
+      "objective": "analyse_tone_and_intention",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which phrase from the passage most clearly shows the organisers’ effort to be inclusive?",
+      "options": [
+        "Notices are posted in English and in the community creole",
+        "The market sells crafts, second-hand books, and homemade foods",
+        "Last year they recorded 4,200 library visits",
+        "Volunteers report that community ownership is the project’s most valuable asset"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Notices are posted in English and in the community creole",
+      "answerRationale": "Posting notices in multiple languages is a direct example of efforts to include diverse community members.",
+      "distractorRationales": [
+        "Incorrect: this describes fundraising activities, not explicit inclusion measures.",
+        "Incorrect: usage numbers indicate popularity but not deliberate inclusivity steps.",
+        "Incorrect: community ownership reflects value but the language about notices directly shows inclusion."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 5,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q06",
+      "number": 6,
+      "itemType": "comprehension",
+      "stimulusId": "M1-StimA",
+      "objective": "create_solutions_based_on_text",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Recommend one practical step the library could take to attract more volunteers from shift-workers, based on the passage’s information.",
+      "options": [
+        "Require volunteers to attend weekday morning training only",
+        "Offer volunteer shifts during varied times, including evenings and weekends",
+        "Limit volunteer roles to retired community members",
+        "Charge a small fee for all volunteers"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Offer volunteer shifts during varied times, including evenings and weekends",
+      "answerRationale": "The passage mentions scheduling meetings at different times to accommodate shift-workers; offering varied volunteer times follows the same inclusive practice.",
+      "distractorRationales": [
+        "Incorrect: this would exclude shift-workers, contrary to the passage’s accommodation efforts.",
+        "Incorrect: limiting roles would reduce inclusivity and contradict aims to broaden volunteer base.",
+        "Incorrect: charging volunteers is impractical and conflicts with volunteer recruitment goals."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 6,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q07",
+      "number": 7,
+      "itemType": "comprehension",
+      "stimulusId": "M1-StimA",
+      "objective": "understand_detail_inference",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which group is NOT listed among the library volunteers?",
+      "options": [
+        "Retired teachers",
+        "University students",
+        "Professional examiners from outside the community",
+        "Fishermen"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Professional examiners from outside the community",
+      "answerRationale": "The passage lists retired teachers, university students, and fishermen as volunteers; professional examiners are not listed.",
+      "distractorRationales": [
+        "Incorrect: retired teachers are explicitly listed as volunteers.",
+        "Incorrect: university students are explicitly listed as volunteers.",
+        "Incorrect: fishermen are explicitly listed as volunteers."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 7,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q08",
+      "number": 8,
+      "itemType": "comprehension",
+      "stimulusId": "M1-StimA",
+      "objective": "analyse_author_perspective",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "How does the passage suggest the community feels about the library?",
+      "options": [
+        "They see it as a private club for donors only",
+        "They are largely unaware of its existence",
+        "They believe it should be replaced by a commercial centre",
+        "They view it as belonging to everyone and value it highly"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "They view it as belonging to everyone and value it highly",
+      "answerRationale": "The passage states volunteers report community ownership as the most valuable asset, indicating pride and shared ownership.",
+      "distractorRationales": [
+        "Incorrect: the passage emphasises free access and community ownership, not exclusivity.",
+        "Incorrect: high visit numbers and community markets indicate awareness and engagement.",
+        "Incorrect: there is no suggestion in the passage that the community wants a commercial replacement."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 8,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q09",
+      "number": 9,
+      "itemType": "comprehension",
+      "stimulusId": "M1-StimB",
+      "objective": "understand_visual_information",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "On which WEEKDAY can a resident drop off old chargers and plastic bottles in a single visit?",
+      "options": [
+        "Friday",
+        "Monday",
+        "Wednesday",
+        "Saturday"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Friday",
+      "answerRationale": "Friday accepts plastics (#1 and #2) and small electronics, and its note specifically addresses chargers. Saturday also accepts mixed items but is not a weekday.",
+      "distractorRationales": [
+        "Incorrect: Monday accepts only paper and cardboard.",
+        "Incorrect: Wednesday accepts glass and cans, not plastics or electronics.",
+        "Incorrect: while Saturday accepts mixed items, the e-waste drop-off with charger-specific instruction is listed on Friday."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 9,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q10",
+      "number": 10,
+      "itemType": "comprehension",
+      "stimulusId": "M1-StimB",
+      "objective": "retrieve_explicit_information",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "On which day is the recycling centre closed?",
+      "options": [
+        "Monday",
+        "Sunday",
+        "Wednesday",
+        "Friday"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Sunday",
+      "answerRationale": "The table lists Sunday as Closed.",
+      "distractorRationales": [
+        "Incorrect: Monday hours are 8:00–12:00 and the centre is open.",
+        "Incorrect: Wednesday hours are 12:00–18:00 and the centre is open.",
+        "Incorrect: Friday hours are 9:00–15:00 and the centre is open."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 10,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q11",
+      "number": 11,
+      "itemType": "comprehension",
+      "stimulusId": "M1-StimB",
+      "objective": "analyse_data_for_patterns",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which special service is offered on the first Monday of each month?",
+      "options": [
+        "Glass crushing service",
+        "Community swap table",
+        "Bulk paper collection (first Monday monthly)",
+        "E-waste drop-off"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Bulk paper collection (first Monday monthly)",
+      "answerRationale": "The Monday row lists bulk paper collection on the first Monday of each month.",
+      "distractorRationales": [
+        "Incorrect: no monthly limitation is indicated for glass crushing on Wednesdays.",
+        "Incorrect: the swap table occurs on the second Saturday, which is weekly in pattern monthly but not described as once per month only.",
+        "Incorrect: e-waste drop-off is listed on Fridays without a monthly frequency qualifier."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 11,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q12",
+      "number": 12,
+      "itemType": "comprehension",
+      "stimulusId": "M1-StimB",
+      "objective": "create_action_plan_from_visuals",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "A school group wants to bring a large amount of cardboard to the recycling centre for disposal. Which instruction from the schedule should they follow to ensure proper handling?",
+      "options": [
+        "Bring it on Wednesday for the glass crushing service",
+        "Bring it on Friday during e-waste drop-off",
+        "Bring it on Sunday when the centre is closed",
+        "Bring it on the first Monday for the bulk paper collection"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Bring it on the first Monday for the bulk paper collection",
+      "answerRationale": "The Monday special service is bulk paper collection on the first Monday monthly, suitable for large amounts of paper/cardboard.",
+      "distractorRationales": [
+        "Incorrect: Wednesday services relate to glass and cans, not cardboard.",
+        "Incorrect: Friday focuses on plastics and small electronics, not cardboard.",
+        "Incorrect: the centre is closed on Sunday; this would not ensure handling."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 12,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q13",
+      "number": 13,
+      "itemType": "comprehension",
+      "stimulusId": "M1-StimB",
+      "objective": "understand_labels_and_terms",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which item is explicitly accepted on Wednesday?",
+      "options": [
+        "Glass",
+        "Plastics (label #1 & #2)",
+        "Paper",
+        "Small Electronics"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Glass",
+      "answerRationale": "The Wednesday Accepted Items column lists Glass and Cans.",
+      "distractorRationales": [
+        "Incorrect: plastics are accepted on Friday, not Wednesday.",
+        "Incorrect: paper is accepted on Monday.",
+        "Incorrect: small electronics are accepted on Friday."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 13,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q14",
+      "number": 14,
+      "itemType": "comprehension",
+      "stimulusId": "M1-StimB",
+      "objective": "analyse_implicit_information",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "What can be inferred about the centre’s approach to community engagement from the schedule?",
+      "options": [
+        "They restrict services to commercial waste only",
+        "They offer special services and community activities to encourage participation",
+        "They operate every day to maximize convenience",
+        "They prioritize expensive materials over common recyclables"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "They offer special services and community activities to encourage participation",
+      "answerRationale": "The table lists special services (bulk collection, glass crushing, e-waste drop-off) and a community swap table, indicating active engagement strategies.",
+      "distractorRationales": [
+        "Incorrect: services and community activities target residents, not only commercial waste.",
+        "Incorrect: the centre is closed on Sunday, so it does not operate daily.",
+        "Incorrect: the schedule accepts common recyclables like paper, glass, plastics, and electronics equally."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 14,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q15",
+      "number": 15,
+      "itemType": "comprehension",
+      "stimulusId": "M1-StimB",
+      "objective": "evaluating_contradictions",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "If a resident can only visit after 16:00, which weekday offers a suitable time for drop-off?",
+      "options": [
+        "Monday",
+        "Friday",
+        "Wednesday",
+        "Saturday"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Wednesday",
+      "answerRationale": "Wednesday hours are 12:00–18:00, which include times after 16:00; Monday (ends 12:00) and Friday (ends 15:00) do not, Saturday hours end at 13:00.",
+      "distractorRationales": [
+        "Incorrect: Monday closes at 12:00, before 16:00.",
+        "Incorrect: Friday closes at 15:00, before 16:00.",
+        "Incorrect: Saturday closes at 13:00, before 16:00."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 15,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q16",
+      "number": 16,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "grammar_subject_verb_agreement",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the grammatically correct sentence.",
+      "options": [
+        "The volunteers is organising a community market this Saturday.",
+        "The volunteers were organises a community market this Saturday.",
+        "The volunteers organising a community market this Saturday.",
+        "The volunteers are organising a community market this Saturday."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "The volunteers are organising a community market this Saturday.",
+      "answerRationale": "‘Volunteers’ is plural and correctly pairs with the plural verb ‘are organising.’",
+      "distractorRationales": [
+        "Incorrect: singular verb ‘is’ does not agree with plural subject ‘volunteers.’",
+        "Incorrect: tense and verb form are incorrect (‘were organises’).",
+        "Incorrect: missing auxiliary verb to form a complete clause."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 16,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q17",
+      "number": 17,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "vocabulary_word_choice",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Select the word that best completes the sentence: The committee decided to ______ the proposal after hearing community feedback.",
+      "options": [
+        "revise",
+        "abolish",
+        "evade",
+        "fabricate"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "revise",
+      "answerRationale": "‘Revise’ (to change or improve) fits the context of modifying a proposal based on feedback.",
+      "distractorRationales": [
+        "Incorrect: ‘abolish’ means to formally end something, which does not match the context of modifying a proposal.",
+        "Incorrect: ‘evade’ means to avoid, unrelated to deciding on a proposal.",
+        "Incorrect: ‘fabricate’ means to invent or lie, which does not fit the context."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 17,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q18",
+      "number": 18,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "writing_coherence_paragraphing",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which sentence best serves as a concluding sentence for a paragraph about the benefits of community libraries?",
+      "options": [
+        "The donation box is located beside the library door and is emptied every Friday.",
+        "By offering free resources and a welcoming space, community libraries help improve education and social cohesion.",
+        "Many volunteers attend the monthly meeting to discuss shelving arrangements.",
+        "A list of available books includes fiction, biographies, and local history titles."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "By offering free resources and a welcoming space, community libraries help improve education and social cohesion.",
+      "answerRationale": "This sentence summarises benefits and closes the paragraph by restating the main points in a generalised way appropriate for a conclusion.",
+      "distractorRationales": [
+        "Incorrect: this is a specific detail, not a concluding summary of benefits.",
+        "Incorrect: this focuses on a procedural detail rather than concluding benefits.",
+        "Incorrect: this lists contents and does not conclude the paragraph about benefits."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 18,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q19",
+      "number": 19,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "punctuation_commas_clauses",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the sentence with correct comma usage.",
+      "options": [
+        "Before the meeting the organiser checked the attendance list.",
+        "Before, the meeting the organiser checked the attendance list.",
+        "Before the meeting, the organiser checked the attendance list.",
+        "Before the meeting the, organiser checked the attendance list."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Before the meeting, the organiser checked the attendance list.",
+      "answerRationale": "The introductory phrase ‘Before the meeting’ is correctly followed by a comma.",
+      "distractorRationales": [
+        "Incorrect: missing comma after the introductory phrase.",
+        "Incorrect: comma misplacement interrupts the phrase.",
+        "Incorrect: comma is incorrectly placed within the clause."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 19,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M1-Q20",
+      "number": 20,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "style_register_tone",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which sentence uses the most appropriate formal tone for a public notice?",
+      "options": [
+        "Hey everyone, the centre's shut on Sunday so don't come!",
+        "The centre closed Sunday, maintenance happens.",
+        "Closed Sunday — maintenance time.",
+        "Please note that the recycling centre will be closed on Sunday for maintenance."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Please note that the recycling centre will be closed on Sunday for maintenance.",
+      "answerRationale": "This sentence is polite, formal, and clear—suitable for a public notice.",
+      "distractorRationales": [
+        "Incorrect: informal language and exclamation are unsuitable for a formal notice.",
+        "Incorrect: this is terse and grammatically awkward for formal public communication.",
+        "Incorrect: this is too brief and lacks the formal courtesy expected in a notice."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 20,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-M2-Q01",
+      "number": 21,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Test recognition of standard punctuation use in complex sentences",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the sentence that uses commas correctly.",
+      "options": [
+        "After the meeting ended, we walked to the café, ordered coffee, and discussed plans.",
+        "After the meeting ended we walked to the café ordered coffee and discussed plans.",
+        "After the meeting ended, we walked to the café ordered coffee and discussed plans.",
+        "After the meeting, ended we walked to the café, ordered coffee and discussed plans."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "After the meeting ended, we walked to the café, ordered coffee, and discussed plans.",
+      "answerRationale": "This sentence correctly uses commas after an introductory phrase and between items in a list; the coordinating conjunction precedes the final item.",
+      "distractorRationales": [
+        "Missing comma after introductory phrase and missing commas in the series make the sentence less clear.",
+        "Comma after the introductory phrase is present but commas separating list items are missing, causing ambiguity.",
+        "Comma incorrectly placed between subject and verb ('meeting, ended') which is grammatically incorrect."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 1,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q02",
+      "number": 22,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Test ability to identify correct verb tense for past ongoing action interrupted by another past action",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which sentence correctly expresses an ongoing past action that was interrupted by a shorter past action?",
+      "options": [
+        "I read when the lights went out.",
+        "I was reading when the lights went out.",
+        "I had read when the lights had gone out.",
+        "I am reading when the lights went out."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "I was reading when the lights went out.",
+      "answerRationale": "The past continuous 'was reading' shows an ongoing past action, interrupted by the simple past 'went out', which marks the shorter action.",
+      "distractorRationales": [
+        "Both verbs are simple past; this does not clearly show an ongoing action interrupted by another.",
+        "Past perfect for both actions suggests completion prior to another past point, not an interruption of an ongoing action.",
+        "Mixes present continuous with past simple, which is inconsistent and incorrect for a past interruption."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 2,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q03",
+      "number": 23,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Test ability to craft a concise topic sentence for a short paragraph",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Select the most effective topic sentence for a paragraph about the benefits of community gardens.",
+      "options": [
+        "Many people like to garden in their free time.",
+        "Community gardens are places where vegetables sometimes grow.",
+        "Community gardens strengthen neighbourhoods by providing green space, fresh produce, and opportunities for neighbours to work together.",
+        "Gardening requires tools, time, and patience."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Community gardens strengthen neighbourhoods by providing green space, fresh produce, and opportunities for neighbours to work together.",
+      "answerRationale": "This sentence clearly states the main idea and previews specific supporting points (green space, produce, cooperation), making it effective as a topic sentence.",
+      "distractorRationales": [
+        "Too general and doesn't focus on community gardens or preview benefits.",
+        "Vague and underplays the social and environmental benefits.",
+        "Focuses on gardening process, not the specific advantages of community gardens."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 3,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q04",
+      "number": 24,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Test correct use of comparative and superlative adjectives",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the sentence that correctly uses comparative form.",
+      "options": [
+        "This trail is more steep than the one by the river.",
+        "This trail is steepest than the one by the river.",
+        "This trail is as steep than the one by the river.",
+        "This trail is steeper than the one by the river."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "This trail is steeper than the one by the river.",
+      "answerRationale": "Comparative 'steeper' correctly compares two items introduced by 'than'.",
+      "distractorRationales": [
+        "Incorrect comparative formation; 'steeper' is correct for one-syllable adjective.",
+        "Superlative 'steepest' is incorrectly used to compare two items.",
+        "Mixes 'as...as' structure incorrectly with 'than'; ungrammatical."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 4,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q05",
+      "number": 25,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Assess ability to choose correct pronoun for clarity and agreement",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which sentence uses pronouns that clearly agree with their antecedents?",
+      "options": [
+        "Each student must submit his or her assignment by Friday.",
+        "Each student must submit their assignment by Friday.",
+        "All students must submit his assignment by Friday.",
+        "Each students must submit their assignments by Friday."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Each student must submit his or her assignment by Friday.",
+      "answerRationale": "The singular antecedent 'Each student' is matched by the singular pronouns 'his or her', maintaining number agreement.",
+      "distractorRationales": [
+        "Commonly accepted informally but grammatically the singular 'Each student' is mismatched with plural 'their'.",
+        "Plural 'All students' mismatched with singular 'his'.",
+        "Plural noun 'students' with 'Each' is incorrect; number agreement is faulty."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 5,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q06",
+      "number": 26,
+      "itemType": "comprehension",
+      "stimulusId": "M2-stimA",
+      "objective": "Identify tone in a poem stanza",
+      "profile": "evaluating_creating",
+      "difficulty": "medium",
+      "stem": "What tone does the line 'The vendor who laughs all morning wears silence like a new coat.' most clearly convey?",
+      "options": [
+        "Playful and carefree",
+        "Melancholic with a hint of resilience",
+        "Angry and bitter",
+        "Indifferent and detached"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Melancholic with a hint of resilience",
+      "answerRationale": "The simile suggests that laughter masks an underlying quiet or sadness, implying melancholy, while 'wears' indicates a maintained outward composure—a resilient act.",
+      "distractorRationales": [
+        "The image of wearing silence contradicts a purely playful tone; it implies hidden feeling.",
+        "There is no clear anger or bitterness in the phrasing; 'laughs' and 'wears' point elsewhere.",
+        "The line implies emotional complexity rather than simple indifference; 'laughs' and 'silence' suggest conscious performance."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 6,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q07",
+      "number": 27,
+      "itemType": "comprehension",
+      "stimulusId": "M2-stimA",
+      "objective": "Understand imagery and its effect",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "In the poem, what does 'a boy with a cracked plastic whistle practices / calls that sound like birds learning to be brave' primarily suggest?",
+      "options": [
+        "The boy prefers bird sounds to music.",
+        "The whistle is broken and cannot make sound.",
+        "The boy is practicing confidently though he is still inexperienced.",
+        "The boy frightens the birds with loud sounds."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "The boy is practicing confidently though he is still inexperienced.",
+      "answerRationale": "The comparison to 'birds learning to be brave' suggests tentative practice and emerging confidence; the cracked whistle indicates imperfection but persistence.",
+      "distractorRationales": [
+        "The line compares his calls to birds but does not state a preference.",
+        "It is described as 'cracked' but still producing calls, so it is not silent.",
+        "The simile suggests gentle learning, not frightening noise."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 7,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q08",
+      "number": 28,
+      "itemType": "comprehension",
+      "stimulusId": "M2-stimA",
+      "objective": "Analyse structure and how it shapes meaning",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "How does the poem's closing image 'the market folds its day into a pocket of dusk' function in relation to the rest of the poem?",
+      "options": [
+        "It introduces a sudden conflict that reverses the poem's mood.",
+        "It highlights the chaos that follows after dark.",
+        "It criticizes the market for closing too early.",
+        "It provides a gentle closure that unites the day's activities into a calm, contained ending."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "It provides a gentle closure that unites the day's activities into a calm, contained ending.",
+      "answerRationale": "The metaphor of folding into a pocket suggests containment and intimacy, summarizing the market's transition into evening and offering a peaceful conclusion reflecting the poem's observational tone.",
+      "distractorRationales": [
+        "The image is calm and summarizing, not conflictive or mood-reversing.",
+        "The folding into a pocket implies order and calm rather than chaos.",
+        "There is no critical tone about closing time; the line is more reflective and gentle."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 8,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q09",
+      "number": 29,
+      "itemType": "comprehension",
+      "stimulusId": "M2-stimA",
+      "objective": "Create interpretation based on figurative language",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which interpretation best explains the meaning of 'Every face is a small map—creases, routes, / a line that reads where laughter cut through grief'?",
+      "options": [
+        "People's faces record their personal histories, where joy and sorrow have left visible marks.",
+        "Faces are maps used to navigate the market's stalls.",
+        "Laughter removes all signs of grief from a face.",
+        "People intentionally paint maps on their faces for celebration."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "People's faces record their personal histories, where joy and sorrow have left visible marks.",
+      "answerRationale": "Describing faces as maps with creases and routes suggests that experiences (laughter, grief) leave lasting, readable traces—supporting the interpretation of visible life-history.",
+      "distractorRationales": [
+        "Literal navigation isn't implied; the metaphor relates to personal history, not directions.",
+        "The line indicates both laughter and grief coexist as marks, not that one erases the other.",
+        "No suggestion of literal painted maps or celebratory face-painting exists in the poem."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 9,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q10",
+      "number": 30,
+      "itemType": "comprehension",
+      "stimulusId": "M2-stimA",
+      "objective": "Understand sound devices and their effect",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which literary device is most evident in the line 'Smoke from a grill curls, a lazy question'?",
+      "options": [
+        "Alliteration",
+        "Personification",
+        "Onomatopoeia",
+        "Irony"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Personification",
+      "answerRationale": "The smoke is given human-like behaviour by being described as asking a 'lazy question,' which is personification.",
+      "distractorRationales": [
+        "While there is some repetition of consonants, the main device is assigning a human action to smoke.",
+        "No word imitates a sound; 'curls' and 'question' are not onomatopoetic.",
+        "There is no evident contradiction or ironic contrast in this line."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 10,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q11",
+      "number": 31,
+      "itemType": "comprehension",
+      "stimulusId": "M2-stimA",
+      "objective": "Analyse speaker perspective and attitude",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which best describes the speaker's attitude toward the market scene overall?",
+      "options": [
+        "Dismissive and impatient, focusing on the market's flaws.",
+        "Fearful and anxious about the crowd.",
+        "Affectionate and observant, noting small details with warmth.",
+        "Neutral and purely factual without value judgments."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Affectionate and observant, noting small details with warmth.",
+      "answerRationale": "The speaker notices intimate details—children's shadows, vendors' silences, small acts—presented with warmth and attention, indicating affection and observation.",
+      "distractorRationales": [
+        "The poem does not show impatience or dismissal; it is detailed and gentle.",
+        "No signs of fear or anxiety appear; imagery is calming and reflective.",
+        "The language carries emotional colouring (e.g., 'patient gold'), not purely factual neutrality."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 11,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q12",
+      "number": 32,
+      "itemType": "comprehension",
+      "stimulusId": "M2-stimA",
+      "objective": "Evaluate effectiveness of a line's diction",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Why is the phrase 'patient gold' effective in describing the streetlight?",
+      "options": [
+        "It emphasizes how expensive the streetlight is.",
+        "It suggests the light is slow to turn on.",
+        "It implies the light is made of actual gold metal.",
+        "It conveys warmth and steadiness, suggesting the light is both gentle and reliable."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "It conveys warmth and steadiness, suggesting the light is both gentle and reliable.",
+      "answerRationale": "'Patient' attributes calm endurance to the light, while 'gold' evokes warm colour and value; together they create an image of dependable, comforting illumination.",
+      "distractorRationales": [
+        "'Gold' is metaphorical for colour and warmth, not literal cost.",
+        "While 'patient' implies slowness, in context it indicates steadiness rather than a delay in activation.",
+        "Metaphorical language describes appearance and mood, not material composition."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 12,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q13",
+      "number": 33,
+      "itemType": "comprehension",
+      "stimulusId": "M2-stimA",
+      "objective": "Understand theme development across the poem",
+      "profile": "understanding",
+      "difficulty": "medium",
+      "stem": "Which theme is most prominent in the poem?",
+      "options": [
+        "The small, human acts that create community and continuity.",
+        "The destructive power of nature on urban spaces.",
+        "The political struggle between vendors and authorities.",
+        "The wealth and extravagance of the market traders."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "The small, human acts that create community and continuity.",
+      "answerRationale": "The poem highlights everyday interactions—vendors, children, shared routines—that together form communal continuity, a recurring focus throughout the stanzas.",
+      "distractorRationales": [
+        "Nature's destructive power is not a focus; the poem emphasizes human routines and warmth.",
+        "No political conflict is presented; the tone is observational and intimate.",
+        "The poem portrays modest, everyday details rather than wealth or extravagance."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 13,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q14",
+      "number": 34,
+      "itemType": "comprehension",
+      "stimulusId": "M2-stimB",
+      "objective": "Analyse character action and implication",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "What does Marla's decision to move the chair into her yard most strongly indicate about her character?",
+      "options": [
+        "She wants to sell the chair for profit.",
+        "She values connection with local history and seeks continuity.",
+        "She intends to repair the chair and return it to the original owner.",
+        "She dislikes modern furniture and prefers antiques for status."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "She values connection with local history and seeks continuity.",
+      "answerRationale": "Marla's hesitation about the neighbor and her reflection on accepting a story show she appreciates the chair's past and wants to join that continuity by placing it in her yard.",
+      "distractorRationales": [
+        "No evidence suggests monetary motives; her actions are sentimental and reflective.",
+        "No plan to return is mentioned; she makes the chair part of her space.",
+        "Her motivation appears emotional and relational, not status-driven."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 14,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q15",
+      "number": 35,
+      "itemType": "comprehension",
+      "stimulusId": "M2-stimB",
+      "objective": "Create interpretation of symbolism",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which interpretation of the carved heart under the chair is most convincing?",
+      "options": [
+        "It proves the chair once belonged to a famous artist.",
+        "It is a warning sign meant to deter thieves.",
+        "It symbolizes private memories and personal care preserved through ordinary objects.",
+        "It indicates the chair was carved by the teenager who told the story."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "It symbolizes private memories and personal care preserved through ordinary objects.",
+      "answerRationale": "The hidden heart, worn smooth by palms, serves as a subtle marker of love and remembrance, suggesting ordinary objects can carry intimate histories.",
+      "distractorRationales": [
+        "Nothing in the text links the heart to fame or artistic ownership.",
+        "A heart symbolically represents affection, not a deterrent; no warning context is provided.",
+        "The teenager recounts the story but does not claim to be the carver; context suggests an older origin."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 15,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q16",
+      "number": 36,
+      "itemType": "comprehension",
+      "stimulusId": "M2-stimB",
+      "objective": "Understand narrative perspective and its effect",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "From which perspective is the extract told and what effect does this create?",
+      "options": [
+        "First-person, giving direct access to Marla's inner voice.",
+        "Omniscient third-person that reports all characters' inner thoughts equally.",
+        "Second-person, addressing the reader as 'you' and involving them directly.",
+        "Third-person limited, creating a close but slightly external view of Marla's thoughts and actions."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Third-person limited, creating a close but slightly external view of Marla's thoughts and actions.",
+      "answerRationale": "The narrator describes Marla's actions and inner reflections but does not shift into other characters' interiors, giving intimacy with slight narrative distance.",
+      "distractorRationales": [
+        "The narrative uses third-person pronouns and an external narrator, not first-person 'I'.",
+        "The extract focuses mainly on Marla's perspective, not others', so it is not fully omniscient.",
+        "The text does not use second-person direction; it stays with third-person description."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 16,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q17",
+      "number": 37,
+      "itemType": "comprehension",
+      "stimulusId": "M2-stimB",
+      "objective": "Analyse motif and how small details develop theme",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "How do the small items the chair 'collected' (ribbon, soil smear, snail's trail) contribute to the extract's theme?",
+      "options": [
+        "They emphasize how ordinary objects accumulate traces of daily life, reinforcing continuity and memory.",
+        "They suggest the chair was neglected and worthless.",
+        "They indicate the chair was used primarily as storage.",
+        "They reveal that the chair belonged to a traveling performer."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "They emphasize how ordinary objects accumulate traces of daily life, reinforcing continuity and memory.",
+      "answerRationale": "Listing small, mundane items shows how the chair bears evidence of many small lives and moments, supporting the theme of continuity and quiet witness.",
+      "distractorRationales": [
+        "The details are presented with fondness and meaning, not as signs of worthlessness.",
+        "The items are incidental remnants, not evidence of purposeful storage use.",
+        "No suggestion connects these items to a performer's lifestyle; they're everyday domestic traces."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 17,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q18",
+      "number": 38,
+      "itemType": "comprehension",
+      "stimulusId": "M2-stimB",
+      "objective": "Create a reasoned judgement about the author's use of setting",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Assess why the author places the chair under the plum tree and how that choice deepens the narrative.",
+      "options": [
+        "The tree is used mainly to hide the chair from passersby.",
+        "The plum tree setting provides a sheltered, intimate spot where seasonal change is visible, linking the chair to cycles of life and promoting reflection.",
+        "The author wants to emphasize that Marla dislikes sunlight.",
+        "The plum tree proves the garden is older than the house."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "The plum tree setting provides a sheltered, intimate spot where seasonal change is visible, linking the chair to cycles of life and promoting reflection.",
+      "answerRationale": "Positioning the chair beneath a fruit tree evokes growth, seasons, falling leaves and shelter; these images align with themes of continuity, memory, and the passage of time.",
+      "distractorRationales": [
+        "The text describes the chair as visible and noticed by neighbors, so concealment is not the primary function.",
+        "No indication is given that Marla avoids sunlight; the spot is chosen for comfort and meaning.",
+        "No comparison of ages is offered; the tree's role is symbolic and atmospheric, not chronological evidence."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 18,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q19",
+      "number": 39,
+      "itemType": "comprehension",
+      "stimulusId": "M2-stimB",
+      "objective": "Understand how characterization is revealed through action",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "What small action best shows Marla's growing attachment to the chair?",
+      "options": [
+        "She paints the chair bright red and puts it in the garage.",
+        "She sells the chair to a collector for a large sum.",
+        "She sits in it daily and notices small details like a toy truck placed near its foot.",
+        "She locks the chair away to protect it from the weather."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "She sits in it daily and notices small details like a toy truck placed near its foot.",
+      "answerRationale": "Regular use and attention to surrounding offerings (toy truck, greetings from neighbors) indicate emotional investment and attachment.",
+      "distractorRationales": [
+        "No painting or storage in a garage is mentioned; she keeps the chair outdoors under the plum tree.",
+        "No sale is described; her actions are sentimental and keeping.",
+        "She leaves it outside where it collects leaves and snow, not hidden away."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 19,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M2-Q20",
+      "number": 40,
+      "itemType": "comprehension",
+      "stimulusId": "M2-stimB",
+      "objective": "Analyse the extract's final message and implied theme",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which statement best captures the extract's concluding message about belonging?",
+      "options": [
+        "Belonging is only possible through legal ownership of property.",
+        "Belonging requires renouncing one's past to fit into a new community.",
+        "Belonging is determined solely by how long one has lived in a place.",
+        "Belonging can be created by accepting shared memories and participating in everyday rituals."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Belonging can be created by accepting shared memories and participating in everyday rituals.",
+      "answerRationale": "The conclusion emphasises Marla becoming part of the chair's story and receiving a 'small inheritance' of continuity, suggesting belonging is formed through engaged participation in communal memory.",
+      "distractorRationales": [
+        "The extract focuses on emotional and narrative continuity, not legal ownership.",
+        "Marla incorporates the chair's history into her life rather than abandoning her past.",
+        "The text values acts of attention and acceptance over mere duration of residence."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 20,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-M3-Q01",
+      "number": 41,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "identify correct verb form",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the sentence with the correct verb form to complete: \"By next spring, the community ____ three new pocket gardens.\"",
+      "options": [
+        "will have created",
+        "will create",
+        "creates",
+        "had created"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "will have created",
+      "answerRationale": "Future perfect (will have created) indicates completion by a future time.",
+      "distractorRationales": [
+        "Simple future indicates an action in the future but not necessarily completed by that time.",
+        "Present simple is incorrect for a finished action by a future point.",
+        "Past perfect refers to a past time before another past event, not a future deadline."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 1,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q02",
+      "number": 42,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "analyse the author's main reason",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "According to the editorial, why does the author argue that green spaces should not be treated as luxuries?",
+      "options": [
+        "Because green spaces are the most profitable town investments.",
+        "Because they provide practical environmental and social benefits such as stabilising soil, tempering heat, improving air quality and fostering community connections.",
+        "Because only children can learn outside in green areas.",
+        "Because parks require no maintenance once planted."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Because they provide practical environmental and social benefits such as stabilising soil, tempering heat, improving air quality and fostering community connections.",
+      "answerRationale": "The author lists environmental functions and community benefits to support the claim that green spaces are essential infrastructure.",
+      "distractorRationales": [
+        "Profitability is not mentioned; the editorial emphasises public health and ecological benefits.",
+        "While children are mentioned, the author refers to benefits for many groups, not only children.",
+        "The piece argues for planning and maintenance, so this is incorrect."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 2,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q03",
+      "number": 43,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "evaluate suggested strategy",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Evaluate the council proposal the author offers (engaging schools and businesses with modest budget). Which potential weakness must the council address to make this strategy effective?",
+      "options": [
+        "Relying solely on professional landscapers to plant every tree.",
+        "Planting only in affluent neighbourhoods to attract donations.",
+        "Ensuring ongoing maintenance and coordination so volunteer and sponsorship efforts are sustained beyond initial planting.",
+        "Asking schools to finance the entire budget."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Ensuring ongoing maintenance and coordination so volunteer and sponsorship efforts are sustained beyond initial planting.",
+      "answerRationale": "The editorial emphasises planning, maintenance and community education; the main risk is that one-time planting without maintenance won't deliver long-term benefits.",
+      "distractorRationales": [
+        "The author advocates volunteer engagement and sponsorship, not exclusive reliance on professionals.",
+        "Author argues for community-wide benefits and inclusion, not selective planting.",
+        "The proposal suggests a modest budget leveraging volunteers and sponsors, not shifting full costs to schools."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 3,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q04",
+      "number": 44,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "understand explicit information",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which of the following is NOT listed by the author as a benefit of green spaces?",
+      "options": [
+        "Tempering heat islands",
+        "Supporting pollinators",
+        "Improving air quality",
+        "Generating direct revenue for the council"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Generating direct revenue for the council",
+      "answerRationale": "The author mentions stabilising soil, tempering heat, improving air quality and supporting pollinators; revenue is not listed.",
+      "distractorRationales": [
+        "Tempering heat islands is explicitly mentioned as a benefit.",
+        "Supporting pollinators is explicitly mentioned.",
+        "Improving air quality is explicitly mentioned."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 4,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q05",
+      "number": 45,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "analyse tone and audience",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "What tone does the author adopt toward council members, and what effect is that tone likely intended to have?",
+      "options": [
+        "Reasoned and persuasive, intended to prompt practical action and long-term thinking from council members.",
+        "Hostile and accusatory, intended to shame council into submission.",
+        "Indifferent and neutral, intended only to inform residents.",
+        "Playful and casual, intended to entertain readers."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Reasoned and persuasive, intended to prompt practical action and long-term thinking from council members.",
+      "answerRationale": "The author uses calm argumentation, practical proposals and a direct appeal to vote, aiming to persuade officials to act.",
+      "distractorRationales": [
+        "The editorial is not hostile; it proposes solutions and appeals to responsibility rather than shaming.",
+        "The author urges action and votes, so the tone is not merely neutral.",
+        "The piece is serious and civic-minded, not playful."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 5,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q06",
+      "number": 46,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "create an implementation suggestion",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Propose one measurable indicator the council could use to judge the success of the proposed planting plan.",
+      "options": [
+        "Counting the total number of volunteers who attended the planting day only.",
+        "Number of trees and pocket gardens established and surviving after two years, combined with reductions in local heat-related emergency visits.",
+        "Measuring only the amount of sponsorship money raised during the first month.",
+        "Recording how many council meetings mention green spaces."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Number of trees and pocket gardens established and surviving after two years, combined with reductions in local heat-related emergency visits.",
+      "answerRationale": "This indicator links the proposed action (planting and maintenance) to tangible environmental and health outcomes as discussed in the editorial.",
+      "distractorRationales": [
+        "Volunteer attendance alone does not measure long-term survival or environmental/health impact.",
+        "Initial funding does not indicate sustained ecological or community benefits.",
+        "Meeting mentions reflect discussion not direct environmental or wellbeing outcomes."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 6,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q07",
+      "number": 47,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "understand implied meaning",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "When the author refers to green spaces as 'quiet infrastructure,' what is implied?",
+      "options": [
+        "That green spaces are noisy and disruptive.",
+        "That parks should be replaced by visible infrastructure like bridges.",
+        "That green spaces perform vital, everyday functions for the town even though they are not always noticed like roads or utilities.",
+        "That only infrastructure workers care for green spaces."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "That green spaces perform vital, everyday functions for the town even though they are not always noticed like roads or utilities.",
+      "answerRationale": "'Quiet infrastructure' implies essential but understated services supporting daily life, matching the author's examples.",
+      "distractorRationales": [
+        "The adjective 'quiet' implies the opposite of noisy; the statement does not suggest disruption.",
+        "The author argues to protect green spaces, not replace them with visible infrastructure.",
+        "The phrase does not imply exclusive care by workers; the author mentions volunteers and community involvement."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 7,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q08",
+      "number": 48,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "analyse structure used for persuasion",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which structural move strengthens the author's argument in the editorial?",
+      "options": [
+        "Presenting unrelated anecdotes without connecting them to a plan.",
+        "Using only statistical data without any local examples.",
+        "Avoiding any call to action to remain neutral.",
+        "Listing concrete environmental and social benefits, then offering a practical, low-cost plan that engages community partners."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Listing concrete environmental and social benefits, then offering a practical, low-cost plan that engages community partners.",
+      "answerRationale": "The sequence of problem-argument-solution with specific benefits and a feasible proposal enhances persuasion.",
+      "distractorRationales": [
+        "The editorial connects anecdotes to a broader argument and a plan, not unrelated stories.",
+        "The author balances local imagery (mango grove) with general benefits, not only statistics.",
+        "The author explicitly urges council members to vote to protect green infrastructure."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 8,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q09",
+      "number": 49,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "create a persuasive closing line",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which closing sentence best replicates the author’s persuasive intent and tone?",
+      "options": [
+        "\"Support this plan: protect our parks today so our town thrives tomorrow.\"",
+        "\"We should leave decisions about parks to private companies.\"",
+        "\"Green spaces are nice if there is extra money left over.\"",
+        "\"I do not care whether the council votes for parks.\""
+      ],
+      "correctOption": "A",
+      "correctAnswer": "\"Support this plan: protect our parks today so our town thrives tomorrow.\"",
+      "answerRationale": "This sentence is a concise, forward-looking appeal matching the editorial’s reasoned tone and call to action on long-term benefits.",
+      "distractorRationales": [
+        "This contradicts the author’s call for public protection and community involvement.",
+        "This diminishes their importance and conflicts with the editorial’s argument.",
+        "This is apathetic and inconsistent with the author urging action."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 9,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q10",
+      "number": 50,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "choose correct preposition",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Select the correct preposition: \"The planting event will meet volunteers ___ Market Square.\"",
+      "options": [
+        "in",
+        "at",
+        "on",
+        "into"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "at",
+      "answerRationale": "'At Market Square' correctly indicates the meeting point location.",
+      "distractorRationales": [
+        "'In Market Square' could be possible but 'at' is the standard preposition for meeting points.",
+        "'On Market Square' is less common and implies being on a surface rather than meeting at a location.",
+        "'Into' implies movement inside, not appropriate for a meeting place phrase."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 10,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q11",
+      "number": 51,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "analyse persuasive techniques in visual text",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which persuasive technique is most prominent in the poster's 'Impact fact' stating that one mature tree can reduce local temperatures by up to 2°C and store carbon?",
+      "options": [
+        "Appeal to authority by quoting experts.",
+        "Emotional anecdote about a family under a tree.",
+        "Use of factual appeal (statistics) to persuade through evidence of environmental benefit.",
+        "Use of rhetorical question to engage readers."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Use of factual appeal (statistics) to persuade through evidence of environmental benefit.",
+      "answerRationale": "Providing a measurable fact appeals to reason and supports the campaign's environmental claims.",
+      "distractorRationales": [
+        "No expert is quoted; the technique is a factual/statistical appeal rather than authority.",
+        "The poster uses a statistic, not a personal anecdote.",
+        "There is no rhetorical question in the 'Impact fact'; it's a declarative statistic."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 11,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q12",
+      "number": 52,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "evaluate campaign accessibility",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Assess one change to the poster that would improve accessibility for non-English speakers in a diverse community.",
+      "options": [
+        "Remove the contact email and leave only a phone number.",
+        "Change the date to a weekday evening.",
+        "Add more environmental jargon to explain carbon storage.",
+        "Include brief translations or icons for key details (time, place, what to bring) to ensure essential information is understood by non-English readers."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Include brief translations or icons for key details (time, place, what to bring) to ensure essential information is understood by non-English readers.",
+      "answerRationale": "Translations or universal icons convey logistical details without relying on English fluency, increasing participation.",
+      "distractorRationales": [
+        "A phone number alone may not help non-English speakers; translations are more effective for basic details.",
+        "Changing timing may affect participation but does not address language accessibility.",
+        "More jargon would reduce accessibility rather than improve it."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 12,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q13",
+      "number": 53,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "understand explicit detail",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "What is one way people are invited to support the campaign, according to the poster?",
+      "options": [
+        "Volunteer to plant.",
+        "Buy mature trees from the council.",
+        "Attend a lecture on tree biology.",
+        "Sign a petition to remove trees."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Volunteer to plant.",
+      "answerRationale": "The 'How to help' section explicitly lists volunteering to plant as an option.",
+      "distractorRationales": [
+        "The poster asks for sponsoring a sapling, not buying mature trees.",
+        "No lecture is mentioned; the poster promotes a planting event.",
+        "This contradicts the poster's pro-tree-planting message."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 13,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q14",
+      "number": 54,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "analyse implied audience",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Who is the poster’s primary target audience, and which element best indicates this?",
+      "options": [
+        "International tourists, indicated by the mention of carbon storage.",
+        "Local residents and neighbours, indicated by the meeting location 'Market Square' and the community-focused wording like 'brings neighbours together.'",
+        "Professional botanists, indicated by the scientific temperature reduction claim.",
+        "Children only, indicated by 'Bring: gloves.'"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Local residents and neighbours, indicated by the meeting location 'Market Square' and the community-focused wording like 'brings neighbours together.'",
+      "answerRationale": "Local meeting place and emphasis on community imply the poster targets nearby residents.",
+      "distractorRationales": [
+        "Carbon storage is global in relevance but the poster's local meeting details point to residents, not tourists.",
+        "The statistic is accessible to the general public; the event is volunteer-focused, not professional-only.",
+        "Gloves are for any volunteers; the poster does not limit participation to children."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 14,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q15",
+      "number": 55,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "create a persuasive improvement",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Suggest one persuasive revision to the poster text that would most likely increase donations for saplings.",
+      "options": [
+        "Replace the donation option with a request for corporate volunteers only.",
+        "Remove the price and say 'donate if you feel like it.'",
+        "Add a short, relatable line such as 'Sponsor a sapling for a child’s future — $10 gives shade and cleaner air for years,' linking donation amount to concrete benefits.",
+        "Include a long scientific paragraph about carbon cycles."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Add a short, relatable line such as 'Sponsor a sapling for a child’s future — $10 gives shade and cleaner air for years,' linking donation amount to concrete benefits.",
+      "answerRationale": "Connecting the donation to tangible community and intergenerational benefits makes the ask more compelling and justifies the $10 cost.",
+      "distractorRationales": [
+        "Limiting donors to corporate volunteers would reduce individual giving opportunities.",
+        "Omitting a suggested amount usually lowers donation levels compared to a clear ask.",
+        "A long technical paragraph would likely discourage quick donations and reduce persuasive impact."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 15,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q16",
+      "number": 56,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "understand logistical information",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "What time should volunteers arrive for the planting event?",
+      "options": [
+        "1pm",
+        "12pm",
+        "8am",
+        "9am"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "9am",
+      "answerRationale": "The poster lists 'When: Saturday, 9am–1pm,' so volunteers should arrive at 9am.",
+      "distractorRationales": [
+        "1pm is the event end time, not the start time.",
+        "12pm is within the event period but not the start time.",
+        "8am is not stated on the poster; the event begins at 9am."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 16,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q17",
+      "number": 57,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "analyse use of call to action",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which element of the poster functions as the clearest call to action, and why?",
+      "options": [
+        "The 'How to help' section because it lists specific actions (volunteer, donate tools, sponsor a sapling) that readers can take immediately.",
+        "The title alone, because titles always count as calls to action.",
+        "The contact email, because contacts are not actionable.",
+        "The 'Bring: water, gloves' line, because it persuades people to donate money."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "The 'How to help' section because it lists specific actions (volunteer, donate tools, sponsor a sapling) that readers can take immediately.",
+      "answerRationale": "A call to action typically directs the audience to specific steps; this section provides those steps clearly.",
+      "distractorRationales": [
+        "While the title is engaging, it does not provide specific actions like the 'How to help' section does.",
+        "The contact is a means of follow-up but the 'How to help' gives immediate, concrete actions.",
+        "This line advises volunteers on preparations; it does not specifically encourage donations."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 17,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q18",
+      "number": 58,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "select appropriate conjunction",
+      "profile": "evaluating_creating",
+      "difficulty": "medium",
+      "stem": "Choose the conjunction that best completes: \"We can plant saplings now, ____ they will take years to reach maturity.\"",
+      "options": [
+        "because",
+        "but",
+        "so",
+        "unless"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "but",
+      "answerRationale": "'But' introduces a contrast between planting now and the long time to maturity; this fits the sentence's meaning.",
+      "distractorRationales": [
+        "'Because' would indicate cause, which does not match the intended contrast.",
+        "'So' would suggest a result; here a contrast is intended.",
+        "'Unless' introduces a condition and doesn't fit the contrastive statement."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 18,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q19",
+      "number": 59,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "recognise appropriate register",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which phrase is most appropriate for a formal town-council notice?",
+      "options": [
+        "Hey guys, let’s tell the council to do this!",
+        "Do it now or else!",
+        "We request the council’s consideration of this proposal.",
+        "Buy into this plan, folks."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "We request the council’s consideration of this proposal.",
+      "answerRationale": "This phrase uses formal, polite register suitable for official notices.",
+      "distractorRationales": [
+        "Informal and colloquial, inappropriate for a formal notice.",
+        "Threatening and informal; unsuitable for formal communication.",
+        "Casual and promotional, not the expected formal register for a council notice."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 19,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-M3-Q20",
+      "number": 60,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "choose correct plural form",
+      "profile": "analysing",
+      "difficulty": "easy",
+      "stem": "Select the correct plural form: \"One mature tree reduces heat; many ____ reduce heat across a neighbourhood.\"",
+      "options": [
+        "tree",
+        "treeses",
+        "tree's",
+        "trees"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "trees",
+      "answerRationale": "The plural of 'tree' is 'trees,' which fits grammatically and semantically.",
+      "distractorRationales": [
+        "Singular form does not match 'many'.",
+        "Incorrect plural formation.",
+        "Incorrect possessive form, not a plural."
+      ],
+      "status": "review_pending",
+      "moduleQuestionNumber": 20,
+      "module": 3
+    }
+  ],
+  "answerKey": {
+    "1": "A",
+    "2": "B",
+    "3": "C",
+    "4": "D",
+    "5": "A",
+    "6": "B",
+    "7": "C",
+    "8": "D",
+    "9": "A",
+    "10": "B",
+    "11": "C",
+    "12": "D",
+    "13": "A",
+    "14": "B",
+    "15": "C",
+    "16": "D",
+    "17": "A",
+    "18": "B",
+    "19": "C",
+    "20": "D",
+    "21": "A",
+    "22": "B",
+    "23": "C",
+    "24": "D",
+    "25": "A",
+    "26": "B",
+    "27": "C",
+    "28": "D",
+    "29": "A",
+    "30": "B",
+    "31": "C",
+    "32": "D",
+    "33": "A",
+    "34": "B",
+    "35": "C",
+    "36": "D",
+    "37": "A",
+    "38": "B",
+    "39": "C",
+    "40": "D",
+    "41": "A",
+    "42": "B",
+    "43": "C",
+    "44": "D",
+    "45": "A",
+    "46": "B",
+    "47": "C",
+    "48": "D",
+    "49": "A",
+    "50": "B",
+    "51": "C",
+    "52": "D",
+    "53": "A",
+    "54": "B",
+    "55": "C",
+    "56": "D",
+    "57": "A",
+    "58": "B",
+    "59": "C",
+    "60": "D"
+  }
+}

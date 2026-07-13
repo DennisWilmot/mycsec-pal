@@ -1,0 +1,535 @@
+{
+  "batchId": "ENGA_M2_BATCH_001",
+  "subject": "English A",
+  "paper": 1,
+  "module": 2,
+  "stimuli": [
+    {
+      "id": "stimA",
+      "kind": "original_poem",
+      "title": "Market at Dusk",
+      "content": "By the time the sun unthreads itself from the roof\nof the last hot day, the stalls begin to breathe—\ncloths loosen, and scarves fold like small flags.\nA woman tips a basket; pomegranates rattle\nin their paper nests. The vendor who laughs\nall morning wears silence like a new coat.\nChildren run shadows across the cobbles,\nkicking small stubborn dust into the air.\nA boy with a cracked plastic whistle practices\ncalls that sound like birds learning to be brave.\nSmoke from a grill curls, a lazy question,\nand someone hums a tune that remembers rain.\nA streetlight awakens, blinks at the pigeons,\nthen settles into patient gold. Two men barter\nover a lamp whose glass is full of stories;\nan old woman leans over a cup of mint tea,\ncounting coins in her palm as if they were stars.\nEvery face is a small map—creases, routes,\na line that reads where laughter cut through grief.\nWe pass like brief pages of the same book,\nholding our paper bags, our brief promises,\nand the market folds its day into a pocket of dusk.",
+      "visualSpec": null,
+      "rights": "original_generated_candidate"
+    },
+    {
+      "id": "stimB",
+      "kind": "literary_extract",
+      "title": "The Gardener's Chair",
+      "content": "Marla found the chair under the crabapple tree the day after the storm. It had been a plain wooden chair once—its back slats smoothed by hands long gone, its legs slightly splayed from years of someone leaning back on a summer afternoon. Now the paint flaked in pale green curls and a single gardenia petal lay asleep on the seat.\n\nShe hesitated before she lifted it, thinking of the neighbor who had tended this yard for decades and who, this spring, had moved to a small apartment with a view of the bus stop and the laundromat. The house opposite was quieter now; its curtains rarely opened. Marla remembered the old man in a floppy hat with his slow, deliberate movements as he coaxed tomatoes from the earth. He had hummed to the seedlings as if they were children learning to walk.\n\nTaking the chair into her own yard felt like accepting a story. Marla set it beneath the plum tree where the late afternoon light pooled in dappled coins. She sat and felt the give of old wood cupping her weight; it fit to the curve of her back as if it had been waiting. She closed her eyes and let the silence of the street — punctuated by the distant rumble of a bus and the occasional bark — fold around her.\n\nShe began to come here daily. Sometimes she brought a book she never opened, other times a mug of coffee that went lukewarm as she watched a lone sparrow hop along the fence. The chair collected small things: a ribbon caught in the armrest, a smear of soil where a seed pod had burst, the faint spiral of a snail's trail. Neighbors started to notice. A little boy placed a toy truck near the chair’s foot. A woman waved when she passed with her grocery bag, and once, a teenager lingered long enough to ask if the seat was taken.\n\nThat was when Marla learned the chair had a history. The teenager, whose hair smelled of the salon down the block, told a small tale about how the old gardener had carved a tiny heart into the underside of the seat, a secret token, he said, for anyone who’d ever loved a garden. Marla knelt and ran her finger along the grain; there, worn smooth by time and palms, was the shallow heart, nearly invisible.\n\nShe thought of how objects hold quiet witness: how the chair had seen the gardener plant seeds and mourn his wife's brief illness, how it had cradled anniversaries and small reconciliations, how its legs had dug into the soil on a windy day when a stray cat sought shelter beneath. The chair seemed to keep each memory like a layer of varnish — not exactly visible, but felt in the way it softened the edges of a hard day.\n\nAutumn came and the garden went gold. The chair stayed under the plum tree, now a stage for falling leaves and the occasional snowflake. One evening, as Marla sat with her scarf pulled tight and the city lights pricking awake, she understood something simple: that by sitting in that chair, by accepting its history, she had become part of the same quiet story. The chair had offered her a small inheritance — not of money or land, but a continuity, a place where days could be stitched together and made to mean more than a hurry.",
+      "visualSpec": null,
+      "rights": "original_generated_candidate"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "number": 1,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Test recognition of standard punctuation use in complex sentences",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the sentence that uses commas correctly.",
+      "options": [
+        "After the meeting ended, we walked to the café, ordered coffee, and discussed plans.",
+        "After the meeting ended we walked to the café ordered coffee and discussed plans.",
+        "After the meeting ended, we walked to the café ordered coffee and discussed plans.",
+        "After the meeting, ended we walked to the café, ordered coffee and discussed plans."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "After the meeting ended, we walked to the café, ordered coffee, and discussed plans.",
+      "answerRationale": "This sentence correctly uses commas after an introductory phrase and between items in a list; the coordinating conjunction precedes the final item.",
+      "distractorRationales": [
+        "Missing comma after introductory phrase and missing commas in the series make the sentence less clear.",
+        "Comma after the introductory phrase is present but commas separating list items are missing, causing ambiguity.",
+        "Comma incorrectly placed between subject and verb ('meeting, ended') which is grammatically incorrect."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q2",
+      "number": 2,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Test ability to identify correct verb tense for past ongoing action interrupted by another past action",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which sentence correctly expresses an ongoing past action that was interrupted by a shorter past action?",
+      "options": [
+        "I read when the lights went out.",
+        "I was reading when the lights went out.",
+        "I had read when the lights had gone out.",
+        "I am reading when the lights went out."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "I was reading when the lights went out.",
+      "answerRationale": "The past continuous 'was reading' shows an ongoing past action, interrupted by the simple past 'went out', which marks the shorter action.",
+      "distractorRationales": [
+        "Both verbs are simple past; this does not clearly show an ongoing action interrupted by another.",
+        "Past perfect for both actions suggests completion prior to another past point, not an interruption of an ongoing action.",
+        "Mixes present continuous with past simple, which is inconsistent and incorrect for a past interruption."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q3",
+      "number": 3,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Test ability to craft a concise topic sentence for a short paragraph",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Select the most effective topic sentence for a paragraph about the benefits of community gardens.",
+      "options": [
+        "Many people like to garden in their free time.",
+        "Community gardens are places where vegetables sometimes grow.",
+        "Community gardens strengthen neighbourhoods by providing green space, fresh produce, and opportunities for neighbours to work together.",
+        "Gardening requires tools, time, and patience."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Community gardens strengthen neighbourhoods by providing green space, fresh produce, and opportunities for neighbours to work together.",
+      "answerRationale": "This sentence clearly states the main idea and previews specific supporting points (green space, produce, cooperation), making it effective as a topic sentence.",
+      "distractorRationales": [
+        "Too general and doesn't focus on community gardens or preview benefits.",
+        "Vague and underplays the social and environmental benefits.",
+        "Focuses on gardening process, not the specific advantages of community gardens."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q4",
+      "number": 4,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Test correct use of comparative and superlative adjectives",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the sentence that correctly uses comparative form.",
+      "options": [
+        "This trail is more steep than the one by the river.",
+        "This trail is steepest than the one by the river.",
+        "This trail is as steep than the one by the river.",
+        "This trail is steeper than the one by the river."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "This trail is steeper than the one by the river.",
+      "answerRationale": "Comparative 'steeper' correctly compares two items introduced by 'than'.",
+      "distractorRationales": [
+        "Incorrect comparative formation; 'steeper' is correct for one-syllable adjective.",
+        "Superlative 'steepest' is incorrectly used to compare two items.",
+        "Mixes 'as...as' structure incorrectly with 'than'; ungrammatical."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q5",
+      "number": 5,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Assess ability to choose correct pronoun for clarity and agreement",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which sentence uses pronouns that clearly agree with their antecedents?",
+      "options": [
+        "Each student must submit his or her assignment by Friday.",
+        "Each student must submit their assignment by Friday.",
+        "All students must submit his assignment by Friday.",
+        "Each students must submit their assignments by Friday."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Each student must submit his or her assignment by Friday.",
+      "answerRationale": "The singular antecedent 'Each student' is matched by the singular pronouns 'his or her', maintaining number agreement.",
+      "distractorRationales": [
+        "Commonly accepted informally but grammatically the singular 'Each student' is mismatched with plural 'their'.",
+        "Plural 'All students' mismatched with singular 'his'.",
+        "Plural noun 'students' with 'Each' is incorrect; number agreement is faulty."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q6",
+      "number": 6,
+      "itemType": "comprehension",
+      "stimulusId": "stimA",
+      "objective": "Identify tone in a poem stanza",
+      "profile": "evaluating_creating",
+      "difficulty": "medium",
+      "stem": "What tone does the line 'The vendor who laughs all morning wears silence like a new coat.' most clearly convey?",
+      "options": [
+        "Playful and carefree",
+        "Melancholic with a hint of resilience",
+        "Angry and bitter",
+        "Indifferent and detached"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Melancholic with a hint of resilience",
+      "answerRationale": "The simile suggests that laughter masks an underlying quiet or sadness, implying melancholy, while 'wears' indicates a maintained outward composure—a resilient act.",
+      "distractorRationales": [
+        "The image of wearing silence contradicts a purely playful tone; it implies hidden feeling.",
+        "There is no clear anger or bitterness in the phrasing; 'laughs' and 'wears' point elsewhere.",
+        "The line implies emotional complexity rather than simple indifference; 'laughs' and 'silence' suggest conscious performance."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q7",
+      "number": 7,
+      "itemType": "comprehension",
+      "stimulusId": "stimA",
+      "objective": "Understand imagery and its effect",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "In the poem, what does 'a boy with a cracked plastic whistle practices / calls that sound like birds learning to be brave' primarily suggest?",
+      "options": [
+        "The boy prefers bird sounds to music.",
+        "The whistle is broken and cannot make sound.",
+        "The boy is practicing confidently though he is still inexperienced.",
+        "The boy frightens the birds with loud sounds."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "The boy is practicing confidently though he is still inexperienced.",
+      "answerRationale": "The comparison to 'birds learning to be brave' suggests tentative practice and emerging confidence; the cracked whistle indicates imperfection but persistence.",
+      "distractorRationales": [
+        "The line compares his calls to birds but does not state a preference.",
+        "It is described as 'cracked' but still producing calls, so it is not silent.",
+        "The simile suggests gentle learning, not frightening noise."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q8",
+      "number": 8,
+      "itemType": "comprehension",
+      "stimulusId": "stimA",
+      "objective": "Analyse structure and how it shapes meaning",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "How does the poem's closing image 'the market folds its day into a pocket of dusk' function in relation to the rest of the poem?",
+      "options": [
+        "It introduces a sudden conflict that reverses the poem's mood.",
+        "It highlights the chaos that follows after dark.",
+        "It criticizes the market for closing too early.",
+        "It provides a gentle closure that unites the day's activities into a calm, contained ending."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "It provides a gentle closure that unites the day's activities into a calm, contained ending.",
+      "answerRationale": "The metaphor of folding into a pocket suggests containment and intimacy, summarizing the market's transition into evening and offering a peaceful conclusion reflecting the poem's observational tone.",
+      "distractorRationales": [
+        "The image is calm and summarizing, not conflictive or mood-reversing.",
+        "The folding into a pocket implies order and calm rather than chaos.",
+        "There is no critical tone about closing time; the line is more reflective and gentle."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q9",
+      "number": 9,
+      "itemType": "comprehension",
+      "stimulusId": "stimA",
+      "objective": "Create interpretation based on figurative language",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which interpretation best explains the meaning of 'Every face is a small map—creases, routes, / a line that reads where laughter cut through grief'?",
+      "options": [
+        "People's faces record their personal histories, where joy and sorrow have left visible marks.",
+        "Faces are maps used to navigate the market's stalls.",
+        "Laughter removes all signs of grief from a face.",
+        "People intentionally paint maps on their faces for celebration."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "People's faces record their personal histories, where joy and sorrow have left visible marks.",
+      "answerRationale": "Describing faces as maps with creases and routes suggests that experiences (laughter, grief) leave lasting, readable traces—supporting the interpretation of visible life-history.",
+      "distractorRationales": [
+        "Literal navigation isn't implied; the metaphor relates to personal history, not directions.",
+        "The line indicates both laughter and grief coexist as marks, not that one erases the other.",
+        "No suggestion of literal painted maps or celebratory face-painting exists in the poem."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q10",
+      "number": 10,
+      "itemType": "comprehension",
+      "stimulusId": "stimA",
+      "objective": "Understand sound devices and their effect",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which literary device is most evident in the line 'Smoke from a grill curls, a lazy question'?",
+      "options": [
+        "Alliteration",
+        "Personification",
+        "Onomatopoeia",
+        "Irony"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Personification",
+      "answerRationale": "The smoke is given human-like behaviour by being described as asking a 'lazy question,' which is personification.",
+      "distractorRationales": [
+        "While there is some repetition of consonants, the main device is assigning a human action to smoke.",
+        "No word imitates a sound; 'curls' and 'question' are not onomatopoetic.",
+        "There is no evident contradiction or ironic contrast in this line."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q11",
+      "number": 11,
+      "itemType": "comprehension",
+      "stimulusId": "stimA",
+      "objective": "Analyse speaker perspective and attitude",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which best describes the speaker's attitude toward the market scene overall?",
+      "options": [
+        "Dismissive and impatient, focusing on the market's flaws.",
+        "Fearful and anxious about the crowd.",
+        "Affectionate and observant, noting small details with warmth.",
+        "Neutral and purely factual without value judgments."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Affectionate and observant, noting small details with warmth.",
+      "answerRationale": "The speaker notices intimate details—children's shadows, vendors' silences, small acts—presented with warmth and attention, indicating affection and observation.",
+      "distractorRationales": [
+        "The poem does not show impatience or dismissal; it is detailed and gentle.",
+        "No signs of fear or anxiety appear; imagery is calming and reflective.",
+        "The language carries emotional colouring (e.g., 'patient gold'), not purely factual neutrality."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q12",
+      "number": 12,
+      "itemType": "comprehension",
+      "stimulusId": "stimA",
+      "objective": "Evaluate effectiveness of a line's diction",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Why is the phrase 'patient gold' effective in describing the streetlight?",
+      "options": [
+        "It emphasizes how expensive the streetlight is.",
+        "It suggests the light is slow to turn on.",
+        "It implies the light is made of actual gold metal.",
+        "It conveys warmth and steadiness, suggesting the light is both gentle and reliable."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "It conveys warmth and steadiness, suggesting the light is both gentle and reliable.",
+      "answerRationale": "'Patient' attributes calm endurance to the light, while 'gold' evokes warm colour and value; together they create an image of dependable, comforting illumination.",
+      "distractorRationales": [
+        "'Gold' is metaphorical for colour and warmth, not literal cost.",
+        "While 'patient' implies slowness, in context it indicates steadiness rather than a delay in activation.",
+        "Metaphorical language describes appearance and mood, not material composition."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q13",
+      "number": 13,
+      "itemType": "comprehension",
+      "stimulusId": "stimA",
+      "objective": "Understand theme development across the poem",
+      "profile": "understanding",
+      "difficulty": "medium",
+      "stem": "Which theme is most prominent in the poem?",
+      "options": [
+        "The small, human acts that create community and continuity.",
+        "The destructive power of nature on urban spaces.",
+        "The political struggle between vendors and authorities.",
+        "The wealth and extravagance of the market traders."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "The small, human acts that create community and continuity.",
+      "answerRationale": "The poem highlights everyday interactions—vendors, children, shared routines—that together form communal continuity, a recurring focus throughout the stanzas.",
+      "distractorRationales": [
+        "Nature's destructive power is not a focus; the poem emphasizes human routines and warmth.",
+        "No political conflict is presented; the tone is observational and intimate.",
+        "The poem portrays modest, everyday details rather than wealth or extravagance."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q14",
+      "number": 14,
+      "itemType": "comprehension",
+      "stimulusId": "stimB",
+      "objective": "Analyse character action and implication",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "What does Marla's decision to move the chair into her yard most strongly indicate about her character?",
+      "options": [
+        "She wants to sell the chair for profit.",
+        "She values connection with local history and seeks continuity.",
+        "She intends to repair the chair and return it to the original owner.",
+        "She dislikes modern furniture and prefers antiques for status."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "She values connection with local history and seeks continuity.",
+      "answerRationale": "Marla's hesitation about the neighbor and her reflection on accepting a story show she appreciates the chair's past and wants to join that continuity by placing it in her yard.",
+      "distractorRationales": [
+        "No evidence suggests monetary motives; her actions are sentimental and reflective.",
+        "No plan to return is mentioned; she makes the chair part of her space.",
+        "Her motivation appears emotional and relational, not status-driven."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q15",
+      "number": 15,
+      "itemType": "comprehension",
+      "stimulusId": "stimB",
+      "objective": "Create interpretation of symbolism",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which interpretation of the carved heart under the chair is most convincing?",
+      "options": [
+        "It proves the chair once belonged to a famous artist.",
+        "It is a warning sign meant to deter thieves.",
+        "It symbolizes private memories and personal care preserved through ordinary objects.",
+        "It indicates the chair was carved by the teenager who told the story."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "It symbolizes private memories and personal care preserved through ordinary objects.",
+      "answerRationale": "The hidden heart, worn smooth by palms, serves as a subtle marker of love and remembrance, suggesting ordinary objects can carry intimate histories.",
+      "distractorRationales": [
+        "Nothing in the text links the heart to fame or artistic ownership.",
+        "A heart symbolically represents affection, not a deterrent; no warning context is provided.",
+        "The teenager recounts the story but does not claim to be the carver; context suggests an older origin."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q16",
+      "number": 16,
+      "itemType": "comprehension",
+      "stimulusId": "stimB",
+      "objective": "Understand narrative perspective and its effect",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "From which perspective is the extract told and what effect does this create?",
+      "options": [
+        "First-person, giving direct access to Marla's inner voice.",
+        "Omniscient third-person that reports all characters' inner thoughts equally.",
+        "Second-person, addressing the reader as 'you' and involving them directly.",
+        "Third-person limited, creating a close but slightly external view of Marla's thoughts and actions."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Third-person limited, creating a close but slightly external view of Marla's thoughts and actions.",
+      "answerRationale": "The narrator describes Marla's actions and inner reflections but does not shift into other characters' interiors, giving intimacy with slight narrative distance.",
+      "distractorRationales": [
+        "The narrative uses third-person pronouns and an external narrator, not first-person 'I'.",
+        "The extract focuses mainly on Marla's perspective, not others', so it is not fully omniscient.",
+        "The text does not use second-person direction; it stays with third-person description."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q17",
+      "number": 17,
+      "itemType": "comprehension",
+      "stimulusId": "stimB",
+      "objective": "Analyse motif and how small details develop theme",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "How do the small items the chair 'collected' (ribbon, soil smear, snail's trail) contribute to the extract's theme?",
+      "options": [
+        "They emphasize how ordinary objects accumulate traces of daily life, reinforcing continuity and memory.",
+        "They suggest the chair was neglected and worthless.",
+        "They indicate the chair was used primarily as storage.",
+        "They reveal that the chair belonged to a traveling performer."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "They emphasize how ordinary objects accumulate traces of daily life, reinforcing continuity and memory.",
+      "answerRationale": "Listing small, mundane items shows how the chair bears evidence of many small lives and moments, supporting the theme of continuity and quiet witness.",
+      "distractorRationales": [
+        "The details are presented with fondness and meaning, not as signs of worthlessness.",
+        "The items are incidental remnants, not evidence of purposeful storage use.",
+        "No suggestion connects these items to a performer's lifestyle; they're everyday domestic traces."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q18",
+      "number": 18,
+      "itemType": "comprehension",
+      "stimulusId": "stimB",
+      "objective": "Create a reasoned judgement about the author's use of setting",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Assess why the author places the chair under the plum tree and how that choice deepens the narrative.",
+      "options": [
+        "The tree is used mainly to hide the chair from passersby.",
+        "The plum tree setting provides a sheltered, intimate spot where seasonal change is visible, linking the chair to cycles of life and promoting reflection.",
+        "The author wants to emphasize that Marla dislikes sunlight.",
+        "The plum tree proves the garden is older than the house."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "The plum tree setting provides a sheltered, intimate spot where seasonal change is visible, linking the chair to cycles of life and promoting reflection.",
+      "answerRationale": "Positioning the chair beneath a fruit tree evokes growth, seasons, falling leaves and shelter; these images align with themes of continuity, memory, and the passage of time.",
+      "distractorRationales": [
+        "The text describes the chair as visible and noticed by neighbors, so concealment is not the primary function.",
+        "No indication is given that Marla avoids sunlight; the spot is chosen for comfort and meaning.",
+        "No comparison of ages is offered; the tree's role is symbolic and atmospheric, not chronological evidence."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q19",
+      "number": 19,
+      "itemType": "comprehension",
+      "stimulusId": "stimB",
+      "objective": "Understand how characterization is revealed through action",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "What small action best shows Marla's growing attachment to the chair?",
+      "options": [
+        "She paints the chair bright red and puts it in the garage.",
+        "She sells the chair to a collector for a large sum.",
+        "She sits in it daily and notices small details like a toy truck placed near its foot.",
+        "She locks the chair away to protect it from the weather."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "She sits in it daily and notices small details like a toy truck placed near its foot.",
+      "answerRationale": "Regular use and attention to surrounding offerings (toy truck, greetings from neighbors) indicate emotional investment and attachment.",
+      "distractorRationales": [
+        "No painting or storage in a garage is mentioned; she keeps the chair outdoors under the plum tree.",
+        "No sale is described; her actions are sentimental and keeping.",
+        "She leaves it outside where it collects leaves and snow, not hidden away."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q20",
+      "number": 20,
+      "itemType": "comprehension",
+      "stimulusId": "stimB",
+      "objective": "Analyse the extract's final message and implied theme",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which statement best captures the extract's concluding message about belonging?",
+      "options": [
+        "Belonging is only possible through legal ownership of property.",
+        "Belonging requires renouncing one's past to fit into a new community.",
+        "Belonging is determined solely by how long one has lived in a place.",
+        "Belonging can be created by accepting shared memories and participating in everyday rituals."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Belonging can be created by accepting shared memories and participating in everyday rituals.",
+      "answerRationale": "The conclusion emphasises Marla becoming part of the chair's story and receiving a 'small inheritance' of continuity, suggesting belonging is formed through engaged participation in communal memory.",
+      "distractorRationales": [
+        "The extract focuses on emotional and narrative continuity, not legal ownership.",
+        "Marla incorporates the chair's history into her life rather than abandoning her past.",
+        "The text values acts of attention and acceptance over mere duration of residence."
+      ],
+      "status": "review_pending"
+    }
+  ],
+  "validationNotes": [
+    "Stimulus A is an original poem of 22 lines.",
+    "Stimulus B is an original prose extract of 612 words.",
+    "Five discrete language items (Q1–Q5) have stimulusId null.",
+    "Fifteen comprehension items reference stimuli: Q6–Q13 -> stimA (8 items), Q14–Q20 -> stimB (7 items).",
+    "Profile schedule order matches requested sequence.",
+    "Each multiple-choice item has one defensible correct answer with three distractors and an answer rationale.",
+    "Rights marked as original_generated_candidate."
+  ]
+}

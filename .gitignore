@@ -1,0 +1,17 @@
+# Dependencies and build output
+node_modules/
+.next/
+*.tsbuildinfo
+
+# Local source corpus and extraction artefacts (not runtime assets)
+tmp/
+public/CSEC Pastpapers/
+01RPT2024CSECMayJuneMathematicsSubjectReportv1.pdf
+
+# Local environment secrets
+.env
+.env.local
+.env.*.local
+
+# Operating system files
+.DS_Store

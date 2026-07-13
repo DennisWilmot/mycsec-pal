@@ -1,0 +1,344 @@
+{
+  "id": "CSEC-ENGA-P2-2025-ORIG-001",
+  "subject": "English A",
+  "paper": 2,
+  "syllabusVersion": "CXC-01-G-SYLL-25",
+  "summaryTasks": [
+    {
+      "id": "Q1",
+      "number": 1,
+      "module": 1,
+      "discourse": "informative",
+      "extractTitle": "Community Garden: Growing Food and Connections",
+      "extract": "The morning sun warmed the raised beds as neighbours arrived with gloves and laughter. The community garden had started as a small pilot project two years earlier, an idea born at a parish meeting to address food access and create shared space. Now, it occupied the unused strip beside the primary school and produced vegetables, herbs and fruit that supplemented many households' meals. Volunteers followed a simple rotation of tasks: watering, weeding, mulching and harvesting, and newcomers were paired with experienced gardeners who taught planting techniques and composting.\n\nAside from food, the garden offered practical lessons. Schoolchildren visited weekly to observe plant life cycles and measure growth, connecting classroom lessons to the soil. Young people learning construction skills helped build benches and raised beds, supervised by a retired carpenter. Members kept records of planting dates, yields and weather patterns to plan the next season. These logs revealed that staggered planting and intercropping reduced pest problems and lengthened harvest periods.\n\nFunding came from small grants, bake sales and donations from local businesses. The group maintained a modest budget for seeds, tools and irrigation repairs. When heavy rains damaged the shed, volunteers organised a weekend repair and raised the funds needed, reinforcing community resilience. A share system distributed surplus produce: families in need received weekly boxes, while contributors took home what they had grown.\n\nThe garden also became a meeting place. Informal conversations flourished among age groups, and cultural exchange occurred as elders introduced traditional recipes and younger members experimented with new varieties. Monthly potlucks celebrated harvest milestones and created occasions to discuss other neighbourhood concerns. The organisers hoped the garden model might be replicated in other districts, seeing it as a low-cost, high-impact approach to improving nutrition, fostering skills and strengthening social ties.",
+      "purposePrompt": "State the writer's main purpose in this informative extract. (3 marks)",
+      "purposeAnswer": "To inform readers about how a local community garden provides food, practical skills and social benefits to neighbourhood residents.",
+      "summaryPrompt": "Using the extract, summarise in no more than 50 words how the community garden benefits the neighbourhood. Use three clear points.",
+      "acceptedPoints": [
+        "Produces food that supplements household meals and distributes surplus to families in need.",
+        "Provides practical learning opportunities for children and young people (gardening, construction, composting).",
+        "Strengthens community ties through shared activities, meetings and cultural exchange (potlucks, mutual support).",
+        "Relies on community funding and volunteer organisation, showing local resilience and potential for replication."
+      ],
+      "sampleSummary": "The community garden supplies vegetables to families and shares surplus with those in need, offers hands-on learning for children and young people (gardening and construction), and strengthens social ties through shared work, cultural exchange and community-led funding and repairs.",
+      "rights": "original_generated_candidate",
+      "marks": 10,
+      "maxSummaryWords": 50,
+      "rubric": {
+        "maxMarks": 10,
+        "criteria": [
+          {
+            "id": "purpose-or-setting",
+            "profile": "analysing",
+            "marks": 3,
+            "rule": "Accurately addresses the required purpose or setting task."
+          },
+          {
+            "id": "three-supported-points",
+            "profile": "understanding",
+            "marks": 3,
+            "rule": "Awards one mark for each of three distinct supported points in the learner’s own words."
+          },
+          {
+            "id": "summary-language",
+            "profile": "evaluating_creating",
+            "marks": 4,
+            "rule": "Assesses concise expression, cohesion, grammar, mechanics and sentence linkages within the 50-word limit."
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "number": 3,
+      "module": 2,
+      "discourse": "literary",
+      "extractTitle": "The Night Ferry",
+      "extract": "The ferry cut a slow, steady path through the dark, the island's lights receding into a ribbon of orange behind it. On deck, the air smelled of salt and diesel; the breeze moved the loose pages of a newspaper someone had abandoned. Passengers clustered under the awning, wrapped in jackets despite the warmth of the day. A lone street lamp on the quay flickered as gulls circled, their cries intermittently swallowed by the engine's hum.\n\nMarla leaned on the rail, hands chilled by the spray. Ahead, the sea opened into a flat, starless plain. She thought of the thin letter in her bag and the farewell she had practised in the mirror until it sounded like someone else's voice. Around her, families murmured, fishermen slept in a tangle of nets, and a boy pointed at phosphorescence lighting the ferry's wake like a line of lanterns. The vessel's lights cast strangers' faces into gold and shadow; a man with tired eyes hummed an old tune.\n\nInside, the corridor smelled of wet rubber and coffee. The cabin door bore stickers from other voyages, sun-faded and curling at the edges. Marla remembered nights on this route years ago, when the crossings were filled with laughter and songs, before the long quiet that followed a closure at the port. Now the ferry felt smaller, more intimate, as if events onboard drew people inward. She tightened the strap on her bag and rehearsed the first words she would say at morning's meeting.\n\nBeyond the bow, the horizon remained a low, uncertain line. The motion of the sea was steady but indifferent. Marla thought of the land she was leaving and the unknown she sailed toward; that sense of being suspended between two worlds thinned the certainty out of her breath. The ferry's horn sounded, a slow, longing note that seemed to agree with all the goodbyes carried in passengers' pockets.",
+      "purposePrompt": "Describe the setting of this passage in three details. (3 marks)",
+      "purposeAnswer": "A night ferry crossing with sea and engine sounds, dim island lights behind, cool salty air on deck and an intimate, quiet atmosphere among diverse passengers.",
+      "summaryPrompt": "Using the extract, summarise in no more than 50 words three experiences Marla has during the crossing. Use three concise points.",
+      "acceptedPoints": [
+        "She stands on deck feeling the chill spray and contemplates a farewell letter and leaving the island.",
+        "She notices other passengers and small details (boy pointing at phosphorescence, a man humming), highlighting intimacy and quiet.",
+        "She recalls past crossings and feels suspended between the familiar land and an uncertain future, rehearsing what she will say.",
+        "She is affected by sensory details: smells of salt, diesel, wet rubber and the ferry's horn, creating mood and reflection."
+      ],
+      "sampleSummary": "Marla stands on deck chilled by spray while rehearsing a farewell letter, observes intimate passenger details (phosphorescent wake, a humming man), and remembers past crossings, feeling suspended between the island she leaves and an uncertain future.",
+      "rights": "original_generated_candidate",
+      "marks": 10,
+      "maxSummaryWords": 50,
+      "rubric": {
+        "maxMarks": 10,
+        "criteria": [
+          {
+            "id": "purpose-or-setting",
+            "profile": "analysing",
+            "marks": 3,
+            "rule": "Accurately addresses the required purpose or setting task."
+          },
+          {
+            "id": "three-supported-points",
+            "profile": "understanding",
+            "marks": 3,
+            "rule": "Awards one mark for each of three distinct supported points in the learner’s own words."
+          },
+          {
+            "id": "summary-language",
+            "profile": "evaluating_creating",
+            "marks": 4,
+            "rule": "Assesses concise expression, cohesion, grammar, mechanics and sentence linkages within the 50-word limit."
+          }
+        ]
+      }
+    },
+    {
+      "id": "carib_p2_q6_2026_001",
+      "number": 6,
+      "module": 3,
+      "discourse": "persuasive",
+      "extractTitle": "Start Later, Learn Better: Why Caribbean Schools Should Shift High School Timetables",
+      "extract": "Across the Caribbean, high-school students are routinely expected to be alert and productive in classes that begin as early as 7:00 a.m. Yet biological research and local experience both show that most teenagers need more sleep and naturally fall asleep later than younger children or adults. By moving the official start of the school day to 8:30 a.m., schools would help students sleep longer, learn more effectively and stay safer on the roads.\n\nFirst, more sleep improves concentration and memory. When teenagers get adequate rest, they are better able to focus on lessons, retain information and perform well on tests. Several regional schools that piloted later starts reported fewer inattentive students and improvements in test scores after the change.\n\nSecond, later starts reduce the risk of accidents. Early-morning travel—often in darkness on rural roads—has contributed to crashes involving young drivers and pedestrians. Starting school later pushes commutes into daylight, lowering accident rates and keeping students safer.\n\nThird, better-rested students experience improved mental health. Chronic sleep deprivation increases irritability, anxiety and depression among adolescents. Schools that allow a later start create an environment where students are less stressed and more emotionally stable, supporting both learning and wellbeing.\n\nSome argue that a later start would conflict with after-school sports, jobs and family obligations. This is a valid concern, but schools can adapt by slightly adjusting extracurricular schedules, shortening non-essential meetings and coordinating with community partners so that most activities still fit into students’ days.\n\nChange requires leadership. School administrators, parents and students should form committees to review local timetables, consult health experts and run short-term trials. If these pilots show benefits, boards should adopt later start times across the district. The evidence is clear: shifting the school day later is a manageable step that will yield safer, healthier and more successful students. Act now—ask your school board to pilot a later start this term.",
+      "purposePrompt": "What is the writer's purpose in this extract?",
+      "purposeAnswer": "To persuade Caribbean secondary-school stakeholders to adopt later school start times to improve students’ sleep, safety, mental health and academic performance.",
+      "summaryPrompt": "Summarize the passage in your own words.",
+      "acceptedPoints": [
+        "Later school start times (e.g., 8:30 a.m.) help teenagers get more sleep, which improves concentration, memory and test performance.",
+        "Starting school later reduces early-morning travel in darkness and lowers the risk of accidents involving students.",
+        "Adequate sleep from later starts leads to better mental health, reducing irritability, anxiety and depression among adolescents.",
+        "Scheduling concerns about extracurriculars and jobs can be managed by adjusting activity times and coordinating with community partners.",
+        "Stakeholders should form committees and run pilot trials to evaluate and implement later start times across districts."
+      ],
+      "sampleSummary": "The writer urges Caribbean schools to start later so teens get more sleep, boosting learning, safety and mental health; scheduling issues can be managed, and stakeholders should run pilots to adopt the change.",
+      "rights": "original_generated_candidate",
+      "marks": 10,
+      "maxSummaryWords": 50,
+      "rubric": {
+        "maxMarks": 10,
+        "criteria": [
+          {
+            "id": "purpose-or-setting",
+            "profile": "analysing",
+            "marks": 3,
+            "rule": "Accurately addresses the required purpose or setting task."
+          },
+          {
+            "id": "three-supported-points",
+            "profile": "understanding",
+            "marks": 3,
+            "rule": "Awards one mark for each of three distinct supported points in the learner’s own words."
+          },
+          {
+            "id": "summary-language",
+            "profile": "evaluating_creating",
+            "marks": 4,
+            "rule": "Assesses concise expression, cohesion, grammar, mechanics and sentence linkages within the 50-word limit."
+          }
+        ]
+      }
+    }
+  ],
+  "writingTasks": [
+    {
+      "id": "Q2",
+      "number": 2,
+      "module": 1,
+      "kind": "informative_exposition",
+      "choiceGroup": null,
+      "scenario": "Your town council plans to install a series of shade structures and water fountains along the main pedestrian route to encourage walking and reduce heat-related discomfort. They have invited community feedback before finalising the design and locations.",
+      "task": "Write a formal report to the Town Council (approx. 400–450 words) advising on suitable locations, proposed designs, maintenance considerations and community engagement strategies. Include clear recommendations and use an appropriate report format for council members and planners.",
+      "requiredContent": [
+        "Locations: at least three specific, justified spots along the pedestrian route.",
+        "Design suggestions: shade type(s), water fountain features, accessibility and vandal-resistant options.",
+        "Maintenance and budget considerations: routine maintenance plan, cost-saving ideas, funding suggestions.",
+        "Community engagement: ways to consult residents, involve local groups and address concerns.",
+        "Clear recommendations and a brief conclusion."
+      ],
+      "audience": "Town Council members and local planners",
+      "purpose": "To inform council decision-making with practical, community-aware proposals and clear recommendations",
+      "suggestedWords": {
+        "minimum": 400,
+        "maximum": 450
+      },
+      "visualSpec": null,
+      "rights": "original_generated_candidate",
+      "marks": 30,
+      "rubric": {
+        "maxMarks": 30,
+        "criteria": [
+          {
+            "id": "content-accuracy",
+            "profile": "understanding",
+            "marks": 7
+          },
+          {
+            "id": "format-audience-sequence",
+            "profile": "analysing",
+            "marks": 7
+          },
+          {
+            "id": "clarity-coherence-language",
+            "profile": "evaluating_creating",
+            "marks": 16
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "number": 4,
+      "module": 2,
+      "kind": "narrative_picture",
+      "choiceGroup": "narrative-choice",
+      "scenario": "Picture prompt — write a story inspired by the image description below. Your narrative should be 400–450 words. Standard English required; dialect allowed in dialogue.",
+      "task": "Write a story of 400–450 words inspired by the picture prompt. Focus on character development, sensory detail and a clear narrative arc (beginning, turning point, resolution).",
+      "requiredContent": [
+        "Include the central image elements in the story.",
+        "Show the protagonist's internal change or decision at the turning point.",
+        "Use sensory description to create atmosphere.",
+        "Conclude with a resolution that responds to the central conflict."
+      ],
+      "audience": "General readers",
+      "purpose": "To entertain and explore character through a scene suggested by the picture",
+      "suggestedWords": {
+        "minimum": 400,
+        "maximum": 450
+      },
+      "visualSpec": {
+        "type": "picture_prompt",
+        "description": "A narrow coastal lane at dusk: a lone bicycle leaning against a weathered stone wall, a tin roof glowing with the last orange of sunset, a closed wooden gate slightly ajar with light spilling from within, and footprints leading away into the shadowed path toward the sea.",
+        "elements": [
+          "narrow coastal lane at dusk",
+          "bicycle leaning against weathered stone wall",
+          "tin roof glowing orange",
+          "closed wooden gate slightly ajar with light inside",
+          "footprints leading toward the sea"
+        ],
+        "altText": "Dusk on a narrow coastal lane with a bicycle by a stone wall, a glowing tin roof, an ajar wooden gate, and footprints leading toward the sea."
+      },
+      "rights": "original_generated_candidate",
+      "marks": 30,
+      "rubric": {
+        "maxMarks": 30,
+        "criteria": [
+          {
+            "id": "language-narrative-understanding",
+            "profile": "understanding",
+            "marks": 7
+          },
+          {
+            "id": "organization-sequencing",
+            "profile": "analysing",
+            "marks": 7
+          },
+          {
+            "id": "stimulus-plot-characterization-style",
+            "profile": "evaluating_creating",
+            "marks": 16
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "number": 5,
+      "module": 2,
+      "kind": "narrative_sentence",
+      "choiceGroup": "narrative-choice",
+      "scenario": "When the letter arrived stamped from the mainland, Amaya realised the summer would no longer be ordinary.",
+      "task": "Begin with the sentence provided and continue it as a complete story of 400–450 words, with a clear beginning, turning point and resolution. Standard English is required, but dialect may be used in dialogue.",
+      "requiredContent": [
+        "Use the provided opening sentence as the first line.",
+        "Develop a believable protagonist and at least one other character.",
+        "Include a turning point that forces a decision or change.",
+        "End with a resolution that ties back to the opening sentence."
+      ],
+      "audience": "General readers",
+      "purpose": "To entertain and show narrative skill using the given opening line",
+      "suggestedWords": {
+        "minimum": 400,
+        "maximum": 450
+      },
+      "visualSpec": null,
+      "rights": "original_generated_candidate",
+      "marks": 30,
+      "rubric": {
+        "maxMarks": 30,
+        "criteria": [
+          {
+            "id": "language-narrative-understanding",
+            "profile": "understanding",
+            "marks": 7
+          },
+          {
+            "id": "organization-sequencing",
+            "profile": "analysing",
+            "marks": 7
+          },
+          {
+            "id": "stimulus-plot-characterization-style",
+            "profile": "evaluating_creating",
+            "marks": 16
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q7",
+      "number": 7,
+      "module": 3,
+      "kind": "persuasive_essay",
+      "choiceGroup": null,
+      "scenario": "A local youth organisation claims that community service should be a requirement for all secondary school students to graduate, arguing it builds responsibility and civic awareness.",
+      "task": "Write a persuasive essay of 250–300 words arguing either for or against the motion that community service should be compulsory for graduation. Structure your essay in at least five paragraphs, using evidence, examples and a clear conclusion.",
+      "requiredContent": [
+        "State your position clearly in the introduction.",
+        "Provide at least two reasons with supporting examples or evidence.",
+        "Acknowledge and refute one opposing view.",
+        "Conclude with a strong summary and call to action or recommendation."
+      ],
+      "audience": "School administrators, students and parents",
+      "purpose": "To persuade the school community about compulsory community service as a graduation requirement",
+      "suggestedWords": {
+        "minimum": 250,
+        "maximum": 300
+      },
+      "visualSpec": null,
+      "rights": "original_generated_candidate",
+      "marks": 30,
+      "rubric": {
+        "maxMarks": 30,
+        "criteria": [
+          {
+            "id": "language-persuasive-understanding",
+            "profile": "understanding",
+            "marks": 7
+          },
+          {
+            "id": "argument-organization",
+            "profile": "analysing",
+            "marks": 7
+          },
+          {
+            "id": "position-evidence-audience-persuasion",
+            "profile": "evaluating_creating",
+            "marks": 16
+          }
+        ]
+      }
+    }
+  ],
+  "validationNotes": [
+    "Each extract is original and 300–450 words long.",
+    "Each extract contains at least four independently expressible accepted points listed under acceptedPoints.",
+    "Each summary sample is an independent wording of points from its extract and is no more than 50 words.",
+    "Q2 requires a formal report of 400–450 words with specified content for council members.",
+    "Q4 and Q5 form a narrative choice: Q4 uses an original picture prompt; Q5 uses the provided opening sentence. Both require 400–450 words.",
+    "Q7 requires a persuasive essay of 250–300 words in at least five paragraphs, balanced and age-appropriate.",
+    "All contexts are Caribbean-relevant without requiring specialised local knowledge; content avoids unsafe, traumatic or discriminatory material.",
+    "All material is original and does not reproduce or closely paraphrase past papers, specimen items or subject reports."
+  ],
+  "durationSeconds": 9900,
+  "totalMarksAnswered": 120,
+  "status": "review_pending"
+}

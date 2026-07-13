@@ -1,0 +1,559 @@
+{
+  "batchId": "EA-M3-2026-001",
+  "subject": "English A",
+  "paper": 1,
+  "module": 3,
+  "stimuli": [
+    {
+      "id": "A",
+      "kind": "persuasive_extract",
+      "title": "Editorial: A Town That Plants Its Future",
+      "content": "When the council proposed cutting funding for community green spaces, I thought of the old mango grove at the foot of Cedar Hill. It was where children learned how seasons change, where elders greeted the day with familiar paths, and where, in a storm, the whole neighbourhood found shelter. Green spaces are not luxuries; they are the quiet infrastructure of a healthy town. They stabilise soil, temper heat islands, improve air quality and support pollinators that keep our gardens productive.\n\nCutting their funding saves pennies today but costs us dearly in health, biodiversity and community connection. Instead of withdrawing support, the council should adopt a planting plan that engages local schools and businesses. A modest annual budget can leverage volunteers and corporate sponsorship to maintain existing parks and create pocket gardens in empty lots. With planning, maintenance and community education, the benefits multiply: fewer heat-related illnesses, more opportunities for recreation, and stronger bonds among neighbours.\n\nI urge council members to think long-term. Vote to protect and expand our green infrastructure; it is an investment in the town’s resilience and in the everyday wellbeing of all residents.",
+      "visualSpec": null,
+      "rights": "original_generated_candidate"
+    },
+    {
+      "id": "B",
+      "kind": "visual_persuasive",
+      "title": "Poster: 'Shade for Life' Community Tree-Planting Campaign",
+      "content": null,
+      "visualSpec": {
+        "type": "notice",
+        "title": "Shade for Life: Plant a Tree, Protect Our Town",
+        "headers": [
+          "When: Saturday, 9am–1pm",
+          "Where: Meet at Market Square",
+          "Bring: Water, gloves, enthusiasm"
+        ],
+        "rows": [
+          [
+            "Main message",
+            "Planting trees cools streets, improves air, and brings neighbours together."
+          ],
+          [
+            "How to help",
+            "Volunteer to plant, donate tools, or sponsor a sapling for $10."
+          ],
+          [
+            "Impact fact",
+            "One mature tree can reduce local temperatures by up to 2°C and store carbon."
+          ],
+          [
+            "Contact",
+            "signup@shadeforlife.org | 555-0123"
+          ]
+        ]
+      },
+      "rights": "original_generated_candidate"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "number": 1,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "identify correct verb form",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the sentence with the correct verb form to complete: \"By next spring, the community ____ three new pocket gardens.\"",
+      "options": [
+        "will have created",
+        "will create",
+        "creates",
+        "had created"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "will have created",
+      "answerRationale": "Future perfect (will have created) indicates completion by a future time.",
+      "distractorRationales": [
+        "Simple future indicates an action in the future but not necessarily completed by that time.",
+        "Present simple is incorrect for a finished action by a future point.",
+        "Past perfect refers to a past time before another past event, not a future deadline."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q2",
+      "number": 2,
+      "itemType": "comprehension",
+      "stimulusId": "A",
+      "objective": "analyse the author's main reason",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "According to the editorial, why does the author argue that green spaces should not be treated as luxuries?",
+      "options": [
+        "Because green spaces are the most profitable town investments.",
+        "Because they provide practical environmental and social benefits such as stabilising soil, tempering heat, improving air quality and fostering community connections.",
+        "Because only children can learn outside in green areas.",
+        "Because parks require no maintenance once planted."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Because they provide practical environmental and social benefits such as stabilising soil, tempering heat, improving air quality and fostering community connections.",
+      "answerRationale": "The author lists environmental functions and community benefits to support the claim that green spaces are essential infrastructure.",
+      "distractorRationales": [
+        "Profitability is not mentioned; the editorial emphasises public health and ecological benefits.",
+        "While children are mentioned, the author refers to benefits for many groups, not only children.",
+        "The piece argues for planning and maintenance, so this is incorrect."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q3",
+      "number": 3,
+      "itemType": "comprehension",
+      "stimulusId": "A",
+      "objective": "evaluate suggested strategy",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Evaluate the council proposal the author offers (engaging schools and businesses with modest budget). Which potential weakness must the council address to make this strategy effective?",
+      "options": [
+        "Relying solely on professional landscapers to plant every tree.",
+        "Planting only in affluent neighbourhoods to attract donations.",
+        "Ensuring ongoing maintenance and coordination so volunteer and sponsorship efforts are sustained beyond initial planting.",
+        "Asking schools to finance the entire budget."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Ensuring ongoing maintenance and coordination so volunteer and sponsorship efforts are sustained beyond initial planting.",
+      "answerRationale": "The editorial emphasises planning, maintenance and community education; the main risk is that one-time planting without maintenance won't deliver long-term benefits.",
+      "distractorRationales": [
+        "The author advocates volunteer engagement and sponsorship, not exclusive reliance on professionals.",
+        "Author argues for community-wide benefits and inclusion, not selective planting.",
+        "The proposal suggests a modest budget leveraging volunteers and sponsors, not shifting full costs to schools."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q4",
+      "number": 4,
+      "itemType": "comprehension",
+      "stimulusId": "A",
+      "objective": "understand explicit information",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which of the following is NOT listed by the author as a benefit of green spaces?",
+      "options": [
+        "Tempering heat islands",
+        "Supporting pollinators",
+        "Improving air quality",
+        "Generating direct revenue for the council"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Generating direct revenue for the council",
+      "answerRationale": "The author mentions stabilising soil, tempering heat, improving air quality and supporting pollinators; revenue is not listed.",
+      "distractorRationales": [
+        "Tempering heat islands is explicitly mentioned as a benefit.",
+        "Supporting pollinators is explicitly mentioned.",
+        "Improving air quality is explicitly mentioned."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q5",
+      "number": 5,
+      "itemType": "comprehension",
+      "stimulusId": "A",
+      "objective": "analyse tone and audience",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "What tone does the author adopt toward council members, and what effect is that tone likely intended to have?",
+      "options": [
+        "Reasoned and persuasive, intended to prompt practical action and long-term thinking from council members.",
+        "Hostile and accusatory, intended to shame council into submission.",
+        "Indifferent and neutral, intended only to inform residents.",
+        "Playful and casual, intended to entertain readers."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Reasoned and persuasive, intended to prompt practical action and long-term thinking from council members.",
+      "answerRationale": "The author uses calm argumentation, practical proposals and a direct appeal to vote, aiming to persuade officials to act.",
+      "distractorRationales": [
+        "The editorial is not hostile; it proposes solutions and appeals to responsibility rather than shaming.",
+        "The author urges action and votes, so the tone is not merely neutral.",
+        "The piece is serious and civic-minded, not playful."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q6",
+      "number": 6,
+      "itemType": "comprehension",
+      "stimulusId": "A",
+      "objective": "create an implementation suggestion",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Propose one measurable indicator the council could use to judge the success of the proposed planting plan.",
+      "options": [
+        "Counting the total number of volunteers who attended the planting day only.",
+        "Number of trees and pocket gardens established and surviving after two years, combined with reductions in local heat-related emergency visits.",
+        "Measuring only the amount of sponsorship money raised during the first month.",
+        "Recording how many council meetings mention green spaces."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Number of trees and pocket gardens established and surviving after two years, combined with reductions in local heat-related emergency visits.",
+      "answerRationale": "This indicator links the proposed action (planting and maintenance) to tangible environmental and health outcomes as discussed in the editorial.",
+      "distractorRationales": [
+        "Volunteer attendance alone does not measure long-term survival or environmental/health impact.",
+        "Initial funding does not indicate sustained ecological or community benefits.",
+        "Meeting mentions reflect discussion not direct environmental or wellbeing outcomes."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q7",
+      "number": 7,
+      "itemType": "comprehension",
+      "stimulusId": "A",
+      "objective": "understand implied meaning",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "When the author refers to green spaces as 'quiet infrastructure,' what is implied?",
+      "options": [
+        "That green spaces are noisy and disruptive.",
+        "That parks should be replaced by visible infrastructure like bridges.",
+        "That green spaces perform vital, everyday functions for the town even though they are not always noticed like roads or utilities.",
+        "That only infrastructure workers care for green spaces."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "That green spaces perform vital, everyday functions for the town even though they are not always noticed like roads or utilities.",
+      "answerRationale": "'Quiet infrastructure' implies essential but understated services supporting daily life, matching the author's examples.",
+      "distractorRationales": [
+        "The adjective 'quiet' implies the opposite of noisy; the statement does not suggest disruption.",
+        "The author argues to protect green spaces, not replace them with visible infrastructure.",
+        "The phrase does not imply exclusive care by workers; the author mentions volunteers and community involvement."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q8",
+      "number": 8,
+      "itemType": "comprehension",
+      "stimulusId": "A",
+      "objective": "analyse structure used for persuasion",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which structural move strengthens the author's argument in the editorial?",
+      "options": [
+        "Presenting unrelated anecdotes without connecting them to a plan.",
+        "Using only statistical data without any local examples.",
+        "Avoiding any call to action to remain neutral.",
+        "Listing concrete environmental and social benefits, then offering a practical, low-cost plan that engages community partners."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Listing concrete environmental and social benefits, then offering a practical, low-cost plan that engages community partners.",
+      "answerRationale": "The sequence of problem-argument-solution with specific benefits and a feasible proposal enhances persuasion.",
+      "distractorRationales": [
+        "The editorial connects anecdotes to a broader argument and a plan, not unrelated stories.",
+        "The author balances local imagery (mango grove) with general benefits, not only statistics.",
+        "The author explicitly urges council members to vote to protect green infrastructure."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q9",
+      "number": 9,
+      "itemType": "comprehension",
+      "stimulusId": "A",
+      "objective": "create a persuasive closing line",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which closing sentence best replicates the author’s persuasive intent and tone?",
+      "options": [
+        "\"Support this plan: protect our parks today so our town thrives tomorrow.\"",
+        "\"We should leave decisions about parks to private companies.\"",
+        "\"Green spaces are nice if there is extra money left over.\"",
+        "\"I do not care whether the council votes for parks.\""
+      ],
+      "correctOption": "A",
+      "correctAnswer": "\"Support this plan: protect our parks today so our town thrives tomorrow.\"",
+      "answerRationale": "This sentence is a concise, forward-looking appeal matching the editorial’s reasoned tone and call to action on long-term benefits.",
+      "distractorRationales": [
+        "This contradicts the author’s call for public protection and community involvement.",
+        "This diminishes their importance and conflicts with the editorial’s argument.",
+        "This is apathetic and inconsistent with the author urging action."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q10",
+      "number": 10,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "choose correct preposition",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Select the correct preposition: \"The planting event will meet volunteers ___ Market Square.\"",
+      "options": [
+        "in",
+        "at",
+        "on",
+        "into"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "at",
+      "answerRationale": "'At Market Square' correctly indicates the meeting point location.",
+      "distractorRationales": [
+        "'In Market Square' could be possible but 'at' is the standard preposition for meeting points.",
+        "'On Market Square' is less common and implies being on a surface rather than meeting at a location.",
+        "'Into' implies movement inside, not appropriate for a meeting place phrase."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q11",
+      "number": 11,
+      "itemType": "comprehension",
+      "stimulusId": "B",
+      "objective": "analyse persuasive techniques in visual text",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which persuasive technique is most prominent in the poster's 'Impact fact' stating that one mature tree can reduce local temperatures by up to 2°C and store carbon?",
+      "options": [
+        "Appeal to authority by quoting experts.",
+        "Emotional anecdote about a family under a tree.",
+        "Use of factual appeal (statistics) to persuade through evidence of environmental benefit.",
+        "Use of rhetorical question to engage readers."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Use of factual appeal (statistics) to persuade through evidence of environmental benefit.",
+      "answerRationale": "Providing a measurable fact appeals to reason and supports the campaign's environmental claims.",
+      "distractorRationales": [
+        "No expert is quoted; the technique is a factual/statistical appeal rather than authority.",
+        "The poster uses a statistic, not a personal anecdote.",
+        "There is no rhetorical question in the 'Impact fact'; it's a declarative statistic."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q12",
+      "number": 12,
+      "itemType": "comprehension",
+      "stimulusId": "B",
+      "objective": "evaluate campaign accessibility",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Assess one change to the poster that would improve accessibility for non-English speakers in a diverse community.",
+      "options": [
+        "Remove the contact email and leave only a phone number.",
+        "Change the date to a weekday evening.",
+        "Add more environmental jargon to explain carbon storage.",
+        "Include brief translations or icons for key details (time, place, what to bring) to ensure essential information is understood by non-English readers."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Include brief translations or icons for key details (time, place, what to bring) to ensure essential information is understood by non-English readers.",
+      "answerRationale": "Translations or universal icons convey logistical details without relying on English fluency, increasing participation.",
+      "distractorRationales": [
+        "A phone number alone may not help non-English speakers; translations are more effective for basic details.",
+        "Changing timing may affect participation but does not address language accessibility.",
+        "More jargon would reduce accessibility rather than improve it."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q13",
+      "number": 13,
+      "itemType": "comprehension",
+      "stimulusId": "B",
+      "objective": "understand explicit detail",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "What is one way people are invited to support the campaign, according to the poster?",
+      "options": [
+        "Volunteer to plant.",
+        "Buy mature trees from the council.",
+        "Attend a lecture on tree biology.",
+        "Sign a petition to remove trees."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Volunteer to plant.",
+      "answerRationale": "The 'How to help' section explicitly lists volunteering to plant as an option.",
+      "distractorRationales": [
+        "The poster asks for sponsoring a sapling, not buying mature trees.",
+        "No lecture is mentioned; the poster promotes a planting event.",
+        "This contradicts the poster's pro-tree-planting message."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q14",
+      "number": 14,
+      "itemType": "comprehension",
+      "stimulusId": "B",
+      "objective": "analyse implied audience",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Who is the poster’s primary target audience, and which element best indicates this?",
+      "options": [
+        "International tourists, indicated by the mention of carbon storage.",
+        "Local residents and neighbours, indicated by the meeting location 'Market Square' and the community-focused wording like 'brings neighbours together.'",
+        "Professional botanists, indicated by the scientific temperature reduction claim.",
+        "Children only, indicated by 'Bring: gloves.'"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Local residents and neighbours, indicated by the meeting location 'Market Square' and the community-focused wording like 'brings neighbours together.'",
+      "answerRationale": "Local meeting place and emphasis on community imply the poster targets nearby residents.",
+      "distractorRationales": [
+        "Carbon storage is global in relevance but the poster's local meeting details point to residents, not tourists.",
+        "The statistic is accessible to the general public; the event is volunteer-focused, not professional-only.",
+        "Gloves are for any volunteers; the poster does not limit participation to children."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q15",
+      "number": 15,
+      "itemType": "comprehension",
+      "stimulusId": "B",
+      "objective": "create a persuasive improvement",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Suggest one persuasive revision to the poster text that would most likely increase donations for saplings.",
+      "options": [
+        "Replace the donation option with a request for corporate volunteers only.",
+        "Remove the price and say 'donate if you feel like it.'",
+        "Add a short, relatable line such as 'Sponsor a sapling for a child’s future — $10 gives shade and cleaner air for years,' linking donation amount to concrete benefits.",
+        "Include a long scientific paragraph about carbon cycles."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Add a short, relatable line such as 'Sponsor a sapling for a child’s future — $10 gives shade and cleaner air for years,' linking donation amount to concrete benefits.",
+      "answerRationale": "Connecting the donation to tangible community and intergenerational benefits makes the ask more compelling and justifies the $10 cost.",
+      "distractorRationales": [
+        "Limiting donors to corporate volunteers would reduce individual giving opportunities.",
+        "Omitting a suggested amount usually lowers donation levels compared to a clear ask.",
+        "A long technical paragraph would likely discourage quick donations and reduce persuasive impact."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q16",
+      "number": 16,
+      "itemType": "comprehension",
+      "stimulusId": "B",
+      "objective": "understand logistical information",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "What time should volunteers arrive for the planting event?",
+      "options": [
+        "1pm",
+        "12pm",
+        "8am",
+        "9am"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "9am",
+      "answerRationale": "The poster lists 'When: Saturday, 9am–1pm,' so volunteers should arrive at 9am.",
+      "distractorRationales": [
+        "1pm is the event end time, not the start time.",
+        "12pm is within the event period but not the start time.",
+        "8am is not stated on the poster; the event begins at 9am."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q17",
+      "number": 17,
+      "itemType": "comprehension",
+      "stimulusId": "B",
+      "objective": "analyse use of call to action",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which element of the poster functions as the clearest call to action, and why?",
+      "options": [
+        "The 'How to help' section because it lists specific actions (volunteer, donate tools, sponsor a sapling) that readers can take immediately.",
+        "The title alone, because titles always count as calls to action.",
+        "The contact email, because contacts are not actionable.",
+        "The 'Bring: water, gloves' line, because it persuades people to donate money."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "The 'How to help' section because it lists specific actions (volunteer, donate tools, sponsor a sapling) that readers can take immediately.",
+      "answerRationale": "A call to action typically directs the audience to specific steps; this section provides those steps clearly.",
+      "distractorRationales": [
+        "While the title is engaging, it does not provide specific actions like the 'How to help' section does.",
+        "The contact is a means of follow-up but the 'How to help' gives immediate, concrete actions.",
+        "This line advises volunteers on preparations; it does not specifically encourage donations."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q18",
+      "number": 18,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "select appropriate conjunction",
+      "profile": "evaluating_creating",
+      "difficulty": "medium",
+      "stem": "Choose the conjunction that best completes: \"We can plant saplings now, ____ they will take years to reach maturity.\"",
+      "options": [
+        "because",
+        "but",
+        "so",
+        "unless"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "but",
+      "answerRationale": "'But' introduces a contrast between planting now and the long time to maturity; this fits the sentence's meaning.",
+      "distractorRationales": [
+        "'Because' would indicate cause, which does not match the intended contrast.",
+        "'So' would suggest a result; here a contrast is intended.",
+        "'Unless' introduces a condition and doesn't fit the contrastive statement."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q19",
+      "number": 19,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "recognise appropriate register",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which phrase is most appropriate for a formal town-council notice?",
+      "options": [
+        "Hey guys, let’s tell the council to do this!",
+        "Do it now or else!",
+        "We request the council’s consideration of this proposal.",
+        "Buy into this plan, folks."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "We request the council’s consideration of this proposal.",
+      "answerRationale": "This phrase uses formal, polite register suitable for official notices.",
+      "distractorRationales": [
+        "Informal and colloquial, inappropriate for a formal notice.",
+        "Threatening and informal; unsuitable for formal communication.",
+        "Casual and promotional, not the expected formal register for a council notice."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q20",
+      "number": 20,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "choose correct plural form",
+      "profile": "analysing",
+      "difficulty": "easy",
+      "stem": "Select the correct plural form: \"One mature tree reduces heat; many ____ reduce heat across a neighbourhood.\"",
+      "options": [
+        "tree",
+        "treeses",
+        "tree's",
+        "trees"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "trees",
+      "answerRationale": "The plural of 'tree' is 'trees,' which fits grammatically and semantically.",
+      "distractorRationales": [
+        "Singular form does not match 'many'.",
+        "Incorrect plural formation.",
+        "Incorrect possessive form, not a plural."
+      ],
+      "status": "review_pending"
+    }
+  ],
+  "validationNotes": [
+    "Stimulus A is an original editorial of moderate length and includes explicit arguments and a call to action.",
+    "Stimulus B is a declarative poster notice specified as visualSpec with headers and rows indicating main message, logistics and contact.",
+    "Question distribution: 8 comprehension items for Stimulus A (Q2–Q9), 7 comprehension items for Stimulus B (Q11–Q17), and 5 discrete language items (Q1, Q10, Q18–Q20).",
+    "Profiles follow the exact requested schedule for Q1–Q20.",
+    "Each item contains one defensible correct answer supported by the stimulus or standard grammar usage; distractors include plausible but incorrect alternatives with rationales."
+  ]
+}

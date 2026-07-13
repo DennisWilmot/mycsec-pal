@@ -1,0 +1,574 @@
+{
+  "batchId": "CA2026-ENGA-M1-001",
+  "subject": "English A",
+  "paper": 1,
+  "module": 1,
+  "stimuli": [
+    {
+      "id": "StimA",
+      "kind": "informative_passage",
+      "title": "Seawall Library: A Community Lifeline",
+      "content": "Seawall Library began as a small collection of donated books in a coastal community hall. Over the past five years it has expanded into a volunteer-run space offering free access to books, internet, and weekly workshops for all ages. Organisers emphasise that the library’s purpose is twofold: to promote reading and to strengthen local resilience. The town faces seasonal storms that occasionally damage homes and disrupt schooling. During these events, the library has become an information hub where residents gather to receive updates, recharge devices, and attend emergency-preparedness talks.\n\nThe library’s volunteer team includes retired teachers, university students, and fishermen who help with outreach. Funding comes from small grants, local business donations, and a monthly community fundraising market. The market sells crafts, second-hand books, and homemade foods; profits cover utilities and new materials. Volunteers report that community ownership—people recognising the library as belonging to everyone—is the project’s most valuable asset.\n\nOrganisers also track usage statistics to plan services. Last year they recorded 4,200 library visits, 600 laptop sessions, and 120 participants in workshops. Younger children attend story hours while teenagers often use the internet for school research. Some adults participate in literacy classes and small business advice sessions. The team hopes to expand hours and add mobile outreach to nearby fishing settlements, but they need steady funding and more volunteers to sustain growth.\n\nThe library’s leadership is careful to include diverse voices in planning. Meetings are scheduled at different times to accommodate shift-workers, and notices are posted in English and in the community creole. Organisers welcome suggestions and invite residents to monthly ‘idea forums’ where improvements are discussed openly. They believe the library, by offering both practical resources and social space, contributes to long-term community well-being.",
+      "visualSpec": null,
+      "rights": "original_generated_candidate"
+    },
+    {
+      "id": "StimB",
+      "kind": "visual_information",
+      "title": "Coastal Town Recycling & Drop-Off Schedule",
+      "content": null,
+      "visualSpec": {
+        "type": "table",
+        "title": "Recycling Centre Opening Hours & Accepted Items",
+        "headers": [
+          "Day",
+          "Opening Hours",
+          "Accepted Items",
+          "Special Service"
+        ],
+        "rows": [
+          [
+            "Monday",
+            "8:00–12:00",
+            "Paper, Cardboard",
+            "Bulk paper collection (first Monday monthly)"
+          ],
+          [
+            "Wednesday",
+            "12:00–18:00",
+            "Glass, Cans",
+            "Glass crushing service"
+          ],
+          [
+            "Friday",
+            "9:00–15:00",
+            "Plastics (label #1 & #2), Small Electronics",
+            "E-waste drop-off (bring chargers separately)"
+          ],
+          [
+            "Saturday",
+            "9:00–13:00",
+            "Mixed items accepted (all of the above)",
+            "Community swap table (second Saturday)"
+          ],
+          [
+            "Sunday",
+            "Closed",
+            "—",
+            "—"
+          ]
+        ]
+      },
+      "rights": "original_generated_candidate"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "number": 1,
+      "itemType": "comprehension",
+      "stimulusId": "StimA",
+      "objective": "identify_main_idea",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "What is the primary purpose of Seawall Library as described in the passage?",
+      "options": [
+        "To promote reading and strengthen local resilience",
+        "To serve as a for-profit bookshop",
+        "To become a tourist attraction",
+        "To offer formal school examinations"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "To promote reading and strengthen local resilience",
+      "answerRationale": "The passage explicitly states the library’s purpose is twofold: to promote reading and to strengthen local resilience.",
+      "distractorRationales": [
+        "Incorrect: the passage describes the library as volunteer-run and free, not for-profit.",
+        "Incorrect: tourism is not mentioned as a goal in the passage.",
+        "Incorrect: the passage mentions workshops and classes but not formal exams."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q2",
+      "number": 2,
+      "itemType": "comprehension",
+      "stimulusId": "StimA",
+      "objective": "analyse_supporting_details",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which detail best supports the claim that the library plays a practical role during storms?",
+      "options": [
+        "It expanded from a small collection of donated books",
+        "It becomes an information hub where residents receive updates and recharge devices",
+        "Volunteers include retired teachers and fishermen",
+        "Organisers post notices in English and creole"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "It becomes an information hub where residents receive updates and recharge devices",
+      "answerRationale": "The passage describes specific storm-related services: providing updates and device charging, indicating a practical role.",
+      "distractorRationales": [
+        "Incorrect: expansion describes growth, not storm-related activities.",
+        "Incorrect: this notes volunteer composition but not the library’s practical storm role.",
+        "Incorrect: inclusive communication is important but does not specifically show storm support."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q3",
+      "number": 3,
+      "itemType": "comprehension",
+      "stimulusId": "StimA",
+      "objective": "evaluate_implications",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "If the library successfully starts a mobile outreach to nearby fishing settlements, which likely long-term effect would best align with the organisers’ goals?",
+      "options": [
+        "A decline in market sales at the library’s fundraising market",
+        "A reduction in volunteer involvement in the main library",
+        "Increased community resilience and broader access to educational resources",
+        "A shift toward charging membership fees"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Increased community resilience and broader access to educational resources",
+      "answerRationale": "Organisers aim to strengthen resilience and expand access; mobile outreach would extend resources and resilience to settlements.",
+      "distractorRationales": [
+        "Incorrect: no evidence suggests mobile outreach would decrease local market sales.",
+        "Incorrect: while possible, the passage gives no basis to predict reduced involvement.",
+        "Incorrect: the passage emphasizes free access; introducing fees contradicts stated goals without support."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q4",
+      "number": 4,
+      "itemType": "comprehension",
+      "stimulusId": "StimA",
+      "objective": "retrieve_explicit_information",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "How many laptop sessions did the library record last year?",
+      "options": [
+        "4,200 laptop sessions",
+        "120 laptop sessions",
+        "1,200 laptop sessions",
+        "600 laptop sessions"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "600 laptop sessions",
+      "answerRationale": "The passage lists 600 laptop sessions in last year’s usage statistics.",
+      "distractorRationales": [
+        "Incorrect: 4,200 refers to total library visits, not laptop sessions.",
+        "Incorrect: 120 refers to workshop participants.",
+        "Incorrect: 1,200 is not mentioned in the usage statistics."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q5",
+      "number": 5,
+      "itemType": "comprehension",
+      "stimulusId": "StimA",
+      "objective": "analyse_tone_and_intention",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which phrase from the passage most clearly shows the organisers’ effort to be inclusive?",
+      "options": [
+        "Notices are posted in English and in the community creole",
+        "The market sells crafts, second-hand books, and homemade foods",
+        "Last year they recorded 4,200 library visits",
+        "Volunteers report that community ownership is the project’s most valuable asset"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Notices are posted in English and in the community creole",
+      "answerRationale": "Posting notices in multiple languages is a direct example of efforts to include diverse community members.",
+      "distractorRationales": [
+        "Incorrect: this describes fundraising activities, not explicit inclusion measures.",
+        "Incorrect: usage numbers indicate popularity but not deliberate inclusivity steps.",
+        "Incorrect: community ownership reflects value but the language about notices directly shows inclusion."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q6",
+      "number": 6,
+      "itemType": "comprehension",
+      "stimulusId": "StimA",
+      "objective": "create_solutions_based_on_text",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Recommend one practical step the library could take to attract more volunteers from shift-workers, based on the passage’s information.",
+      "options": [
+        "Require volunteers to attend weekday morning training only",
+        "Offer volunteer shifts during varied times, including evenings and weekends",
+        "Limit volunteer roles to retired community members",
+        "Charge a small fee for all volunteers"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Offer volunteer shifts during varied times, including evenings and weekends",
+      "answerRationale": "The passage mentions scheduling meetings at different times to accommodate shift-workers; offering varied volunteer times follows the same inclusive practice.",
+      "distractorRationales": [
+        "Incorrect: this would exclude shift-workers, contrary to the passage’s accommodation efforts.",
+        "Incorrect: limiting roles would reduce inclusivity and contradict aims to broaden volunteer base.",
+        "Incorrect: charging volunteers is impractical and conflicts with volunteer recruitment goals."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q7",
+      "number": 7,
+      "itemType": "comprehension",
+      "stimulusId": "StimA",
+      "objective": "understand_detail_inference",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which group is NOT listed among the library volunteers?",
+      "options": [
+        "Retired teachers",
+        "University students",
+        "Professional examiners from outside the community",
+        "Fishermen"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Professional examiners from outside the community",
+      "answerRationale": "The passage lists retired teachers, university students, and fishermen as volunteers; professional examiners are not listed.",
+      "distractorRationales": [
+        "Incorrect: retired teachers are explicitly listed as volunteers.",
+        "Incorrect: university students are explicitly listed as volunteers.",
+        "Incorrect: fishermen are explicitly listed as volunteers."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q8",
+      "number": 8,
+      "itemType": "comprehension",
+      "stimulusId": "StimA",
+      "objective": "analyse_author_perspective",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "How does the passage suggest the community feels about the library?",
+      "options": [
+        "They see it as a private club for donors only",
+        "They are largely unaware of its existence",
+        "They believe it should be replaced by a commercial centre",
+        "They view it as belonging to everyone and value it highly"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "They view it as belonging to everyone and value it highly",
+      "answerRationale": "The passage states volunteers report community ownership as the most valuable asset, indicating pride and shared ownership.",
+      "distractorRationales": [
+        "Incorrect: the passage emphasises free access and community ownership, not exclusivity.",
+        "Incorrect: high visit numbers and community markets indicate awareness and engagement.",
+        "Incorrect: there is no suggestion in the passage that the community wants a commercial replacement."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q9",
+      "number": 9,
+      "itemType": "comprehension",
+      "stimulusId": "StimB",
+      "objective": "understand_visual_information",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "On which WEEKDAY can a resident drop off old chargers and plastic bottles in a single visit?",
+      "options": [
+        "Friday",
+        "Monday",
+        "Wednesday",
+        "Saturday"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Friday",
+      "answerRationale": "Friday accepts plastics (#1 and #2) and small electronics, and its note specifically addresses chargers. Saturday also accepts mixed items but is not a weekday.",
+      "distractorRationales": [
+        "Incorrect: Monday accepts only paper and cardboard.",
+        "Incorrect: Wednesday accepts glass and cans, not plastics or electronics.",
+        "Incorrect: while Saturday accepts mixed items, the e-waste drop-off with charger-specific instruction is listed on Friday."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q10",
+      "number": 10,
+      "itemType": "comprehension",
+      "stimulusId": "StimB",
+      "objective": "retrieve_explicit_information",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "On which day is the recycling centre closed?",
+      "options": [
+        "Monday",
+        "Sunday",
+        "Wednesday",
+        "Friday"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Sunday",
+      "answerRationale": "The table lists Sunday as Closed.",
+      "distractorRationales": [
+        "Incorrect: Monday hours are 8:00–12:00 and the centre is open.",
+        "Incorrect: Wednesday hours are 12:00–18:00 and the centre is open.",
+        "Incorrect: Friday hours are 9:00–15:00 and the centre is open."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q11",
+      "number": 11,
+      "itemType": "comprehension",
+      "stimulusId": "StimB",
+      "objective": "analyse_data_for_patterns",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which special service is offered on the first Monday of each month?",
+      "options": [
+        "Glass crushing service",
+        "Community swap table",
+        "Bulk paper collection (first Monday monthly)",
+        "E-waste drop-off"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Bulk paper collection (first Monday monthly)",
+      "answerRationale": "The Monday row lists bulk paper collection on the first Monday of each month.",
+      "distractorRationales": [
+        "Incorrect: no monthly limitation is indicated for glass crushing on Wednesdays.",
+        "Incorrect: the swap table occurs on the second Saturday, which is weekly in pattern monthly but not described as once per month only.",
+        "Incorrect: e-waste drop-off is listed on Fridays without a monthly frequency qualifier."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q12",
+      "number": 12,
+      "itemType": "comprehension",
+      "stimulusId": "StimB",
+      "objective": "create_action_plan_from_visuals",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "A school group wants to bring a large amount of cardboard to the recycling centre for disposal. Which instruction from the schedule should they follow to ensure proper handling?",
+      "options": [
+        "Bring it on Wednesday for the glass crushing service",
+        "Bring it on Friday during e-waste drop-off",
+        "Bring it on Sunday when the centre is closed",
+        "Bring it on the first Monday for the bulk paper collection"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Bring it on the first Monday for the bulk paper collection",
+      "answerRationale": "The Monday special service is bulk paper collection on the first Monday monthly, suitable for large amounts of paper/cardboard.",
+      "distractorRationales": [
+        "Incorrect: Wednesday services relate to glass and cans, not cardboard.",
+        "Incorrect: Friday focuses on plastics and small electronics, not cardboard.",
+        "Incorrect: the centre is closed on Sunday; this would not ensure handling."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q13",
+      "number": 13,
+      "itemType": "comprehension",
+      "stimulusId": "StimB",
+      "objective": "understand_labels_and_terms",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which item is explicitly accepted on Wednesday?",
+      "options": [
+        "Glass",
+        "Plastics (label #1 & #2)",
+        "Paper",
+        "Small Electronics"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Glass",
+      "answerRationale": "The Wednesday Accepted Items column lists Glass and Cans.",
+      "distractorRationales": [
+        "Incorrect: plastics are accepted on Friday, not Wednesday.",
+        "Incorrect: paper is accepted on Monday.",
+        "Incorrect: small electronics are accepted on Friday."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q14",
+      "number": 14,
+      "itemType": "comprehension",
+      "stimulusId": "StimB",
+      "objective": "analyse_implicit_information",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "What can be inferred about the centre’s approach to community engagement from the schedule?",
+      "options": [
+        "They restrict services to commercial waste only",
+        "They offer special services and community activities to encourage participation",
+        "They operate every day to maximize convenience",
+        "They prioritize expensive materials over common recyclables"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "They offer special services and community activities to encourage participation",
+      "answerRationale": "The table lists special services (bulk collection, glass crushing, e-waste drop-off) and a community swap table, indicating active engagement strategies.",
+      "distractorRationales": [
+        "Incorrect: services and community activities target residents, not only commercial waste.",
+        "Incorrect: the centre is closed on Sunday, so it does not operate daily.",
+        "Incorrect: the schedule accepts common recyclables like paper, glass, plastics, and electronics equally."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q15",
+      "number": 15,
+      "itemType": "comprehension",
+      "stimulusId": "StimB",
+      "objective": "evaluating_contradictions",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "If a resident can only visit after 16:00, which weekday offers a suitable time for drop-off?",
+      "options": [
+        "Monday",
+        "Friday",
+        "Wednesday",
+        "Saturday"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Wednesday",
+      "answerRationale": "Wednesday hours are 12:00–18:00, which include times after 16:00; Monday (ends 12:00) and Friday (ends 15:00) do not, Saturday hours end at 13:00.",
+      "distractorRationales": [
+        "Incorrect: Monday closes at 12:00, before 16:00.",
+        "Incorrect: Friday closes at 15:00, before 16:00.",
+        "Incorrect: Saturday closes at 13:00, before 16:00."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q16",
+      "number": 16,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "grammar_subject_verb_agreement",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the grammatically correct sentence.",
+      "options": [
+        "The volunteers is organising a community market this Saturday.",
+        "The volunteers were organises a community market this Saturday.",
+        "The volunteers organising a community market this Saturday.",
+        "The volunteers are organising a community market this Saturday."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "The volunteers are organising a community market this Saturday.",
+      "answerRationale": "‘Volunteers’ is plural and correctly pairs with the plural verb ‘are organising.’",
+      "distractorRationales": [
+        "Incorrect: singular verb ‘is’ does not agree with plural subject ‘volunteers.’",
+        "Incorrect: tense and verb form are incorrect (‘were organises’).",
+        "Incorrect: missing auxiliary verb to form a complete clause."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q17",
+      "number": 17,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "vocabulary_word_choice",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Select the word that best completes the sentence: The committee decided to ______ the proposal after hearing community feedback.",
+      "options": [
+        "revise",
+        "abolish",
+        "evade",
+        "fabricate"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "revise",
+      "answerRationale": "‘Revise’ (to change or improve) fits the context of modifying a proposal based on feedback.",
+      "distractorRationales": [
+        "Incorrect: ‘abolish’ means to formally end something, which does not match the context of modifying a proposal.",
+        "Incorrect: ‘evade’ means to avoid, unrelated to deciding on a proposal.",
+        "Incorrect: ‘fabricate’ means to invent or lie, which does not fit the context."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q18",
+      "number": 18,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "writing_coherence_paragraphing",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which sentence best serves as a concluding sentence for a paragraph about the benefits of community libraries?",
+      "options": [
+        "The donation box is located beside the library door and is emptied every Friday.",
+        "By offering free resources and a welcoming space, community libraries help improve education and social cohesion.",
+        "Many volunteers attend the monthly meeting to discuss shelving arrangements.",
+        "A list of available books includes fiction, biographies, and local history titles."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "By offering free resources and a welcoming space, community libraries help improve education and social cohesion.",
+      "answerRationale": "This sentence summarises benefits and closes the paragraph by restating the main points in a generalised way appropriate for a conclusion.",
+      "distractorRationales": [
+        "Incorrect: this is a specific detail, not a concluding summary of benefits.",
+        "Incorrect: this focuses on a procedural detail rather than concluding benefits.",
+        "Incorrect: this lists contents and does not conclude the paragraph about benefits."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q19",
+      "number": 19,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "punctuation_commas_clauses",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the sentence with correct comma usage.",
+      "options": [
+        "Before the meeting the organiser checked the attendance list.",
+        "Before, the meeting the organiser checked the attendance list.",
+        "Before the meeting, the organiser checked the attendance list.",
+        "Before the meeting the, organiser checked the attendance list."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Before the meeting, the organiser checked the attendance list.",
+      "answerRationale": "The introductory phrase ‘Before the meeting’ is correctly followed by a comma.",
+      "distractorRationales": [
+        "Incorrect: missing comma after the introductory phrase.",
+        "Incorrect: comma misplacement interrupts the phrase.",
+        "Incorrect: comma is incorrectly placed within the clause."
+      ],
+      "status": "review_pending"
+    },
+    {
+      "id": "Q20",
+      "number": 20,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "style_register_tone",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which sentence uses the most appropriate formal tone for a public notice?",
+      "options": [
+        "Hey everyone, the centre's shut on Sunday so don't come!",
+        "The centre closed Sunday, maintenance happens.",
+        "Closed Sunday — maintenance time.",
+        "Please note that the recycling centre will be closed on Sunday for maintenance."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Please note that the recycling centre will be closed on Sunday for maintenance.",
+      "answerRationale": "This sentence is polite, formal, and clear—suitable for a public notice.",
+      "distractorRationales": [
+        "Incorrect: informal language and exclamation are unsuitable for a formal notice.",
+        "Incorrect: this is terse and grammatically awkward for formal public communication.",
+        "Incorrect: this is too brief and lacks the formal courtesy expected in a notice."
+      ],
+      "status": "review_pending"
+    }
+  ],
+  "validationNotes": [
+    "Stimulus A contains usage statistics and community programme details to support 8 linked comprehension items.",
+    "Stimulus B is a table specifying opening hours, accepted items, and special services to support 7 linked comprehension items.",
+    "Five discrete items (Q16–Q20) assess grammar, vocabulary, composition and register, with no stimulus linkage.",
+    "Question profiles, objectives and difficulties follow the requested schedule and distribution.",
+    "Ensure final layout assigns option letters consistently at test delivery; correct answers are provided as text."
+  ]
+}

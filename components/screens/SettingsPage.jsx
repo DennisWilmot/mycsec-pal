@@ -1,0 +1,108 @@
+'use client';
+
+import { Check, LoaderCircle, UserRound } from 'lucide-react';
+import { useEffect, useMemo, useState } from 'react';
+import AppSidebar from '../AppSidebar';
+import TopUser from '../TopUser';
+
+const countries = [
+  ['AG', 'Antigua and Barbuda'], ['BS', 'The Bahamas'], ['BB', 'Barbados'], ['BZ', 'Belize'],
+  ['DM', 'Dominica'], ['DO', 'Dominican Republic'], ['GD', 'Grenada'], ['GY', 'Guyana'],
+  ['HT', 'Haiti'], ['JM', 'Jamaica'], ['KN', 'Saint Kitts and Nevis'], ['LC', 'Saint Lucia'],
+  ['SR', 'Suriname'], ['TT', 'Trinidad and Tobago'], ['VC', 'Saint Vincent and the Grenadines'],
+];
+
+function messageFrom(response, payload, fallback) {
+  if (payload?.error?.message) return payload.error.message;
+  if (response.status === 401) return 'Sign in again to update your settings.';
+  return fallback;
+}
+
+export default function SettingsPage({ navigate }) {
+  const [profile, setProfile] = useState({ displayName: '', phone: '', countryCode: '', gradeForm: '', institutionName: '' });
+  const [identity, setIdentity] = useState({ email: '', avatarUrl: null });
+  const [catalogue, setCatalogue] = useState([]);
+  const [selectedSubjects, setSelectedSubjects] = useState([]);
+  const [subjectLimit, setSubjectLimit] = useState(5);
+  const [loading, setLoading] = useState(true);
+  const [profileSaving, setProfileSaving] = useState(false);
+  const [subjectsSaving, setSubjectsSaving] = useState(false);
+  const [error, setError] = useState('');
+  const [profileNotice, setProfileNotice] = useState('');
+  const [subjectsNotice, setSubjectsNotice] = useState('');
+
+  useEffect(() => {
+    let active = true;
+    Promise.all([fetch('/api/me/profile'), fetch('/api/catalog/subjects')])
+      .then(async ([profileResponse, catalogueResponse]) => {
+        const [profilePayload, cataloguePayload] = await Promise.all([profileResponse.json().catch(() => ({})), catalogueResponse.json().catch(() => ({}))]);
+        if (!profileResponse.ok) throw new Error(messageFrom(profileResponse, profilePayload, 'We could not load your profile.'));
+        if (!catalogueResponse.ok) throw new Error(messageFrom(catalogueResponse, cataloguePayload, 'We could not load the subject catalogue.'));
+        if (!active) return;
+        const data = profilePayload.data;
+        setProfile({ displayName: data.displayName || '', phone: data.phone || '', countryCode: data.countryCode || '', gradeForm: data.gradeForm || '', institutionName: data.institutionName || data.institution?.name || '' });
+        setIdentity({ email: data.email || '', avatarUrl: data.avatarUrl || null });
+        setSelectedSubjects((data.subjects || []).map((subject) => subject.id));
+        setSubjectLimit(data.subjectLimit || 5);
+        setCatalogue(cataloguePayload.data || []);
+      })
+      .catch((loadError) => active && setError(loadError.message))
+      .finally(() => active && setLoading(false));
+    return () => { active = false; };
+  }, []);
+
+  const initials = useMemo(() => profile.displayName.trim().split(/\s+/).slice(0, 2).map((word) => word[0]).join('').toUpperCase() || 'U', [profile.displayName]);
+  const update = (field, value) => { setProfile((current) => ({ ...current, [field]: value })); setError(''); setProfileNotice(''); };
+
+  const saveProfile = async (event) => {
+    event.preventDefault();
+    if (!profile.displayName.trim()) return setError('Enter your full name.');
+    setProfileSaving(true); setError(''); setProfileNotice('');
+    try {
+      const response = await fetch('/api/me/profile', { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ displayName: profile.displayName.trim(), phone: profile.phone.trim() || null, countryCode: profile.countryCode || null, gradeForm: profile.gradeForm.trim() || null, institutionName: profile.institutionName.trim() || null }) });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(messageFrom(response, payload, 'We could not save your profile.'));
+      const data = payload.data;
+      setProfile((current) => ({ ...current, displayName: data.displayName || current.displayName, phone: data.phone || '', countryCode: data.countryCode || '', gradeForm: data.gradeForm || '', institutionName: data.institutionName || data.institution?.name || current.institutionName }));
+      setProfileNotice('Profile saved.');
+    } catch (saveError) { setError(saveError.message); } finally { setProfileSaving(false); }
+  };
+
+  const toggleSubject = (id) => {
+    setSubjectsNotice(''); setError('');
+    setSelectedSubjects((current) => {
+      if (current.includes(id)) return current.filter((subjectId) => subjectId !== id);
+      if (current.length >= subjectLimit) { setError(`You can select up to ${subjectLimit} subjects.`); return current; }
+      return [...current, id];
+    });
+  };
+
+  const saveSubjects = async () => {
+    if (!selectedSubjects.length) return setError('Choose at least one subject.');
+    setSubjectsSaving(true); setSubjectsNotice(''); setError('');
+    try {
+      const response = await fetch('/api/me/subjects', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subjectIds: selectedSubjects }) });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(messageFrom(response, payload, 'We could not save your subjects.'));
+      setSelectedSubjects((payload.data?.subjects || []).map((subject) => subject.id));
+      setSubjectLimit(payload.data?.subjectLimit || subjectLimit);
+      setSubjectsNotice('Subjects saved.');
+    } catch (saveError) { setError(saveError.message); } finally { setSubjectsSaving(false); }
+  };
+
+  return <div className="app-shell"><AppSidebar active="settings" onNavigate={navigate}/><main className="app-main"><TopUser/><h1 className="app-title">Profile & Settings</h1>
+    {loading && <div className="settings-state" role="status"><LoaderCircle className="spin" size={20}/> Loading your settings…</div>}
+    {!loading && error && <div className="settings-state error" role="alert">{error}</div>}
+    {!loading && <section className="settings-grid">
+      <article className="settings-card"><div className="settings-card-heading"><div><h2>Profile</h2><p>Keep your learner details up to date.</p></div><div className="settings-avatar" aria-label={identity.avatarUrl ? 'Google profile picture' : 'Profile initials'}>{identity.avatarUrl ? <img src={identity.avatarUrl} alt="" referrerPolicy="no-referrer"/> : initials ? <span>{initials}</span> : <UserRound size={22}/>}</div></div>
+        <form onSubmit={saveProfile}><label>Full name<input value={profile.displayName} onChange={(event) => update('displayName', event.target.value)} autoComplete="name"/></label><label>Email address<input value={identity.email} readOnly aria-readonly="true"/><small>Email is managed by your sign-in account.</small></label>
+          <div className="settings-field-row"><label>Phone number<input value={profile.phone} onChange={(event) => update('phone', event.target.value)} autoComplete="tel" placeholder="Optional"/></label><label>Country<select value={profile.countryCode} onChange={(event) => update('countryCode', event.target.value)}><option value="">Choose a country</option>{countries.map(([code, name]) => <option value={code} key={code}>{name}</option>)}</select></label></div>
+          <div className="settings-field-row"><label>Grade or form<input value={profile.gradeForm} onChange={(event) => update('gradeForm', event.target.value)} placeholder="For example, Form 5"/></label><label>School or institution<input value={profile.institutionName} onChange={(event) => update('institutionName', event.target.value)} placeholder="Optional"/></label></div>
+          <div className="settings-actions"><button className="button dark" disabled={profileSaving}>{profileSaving ? <><LoaderCircle className="spin" size={16}/> Saving…</> : 'Save profile'}</button>{profileNotice && <span className="settings-success"><Check size={15}/>{profileNotice}</span>}</div></form>
+      </article>
+      <div className="settings-side-stack"><article className="settings-card"><div className="settings-card-heading"><div><h2>Your subjects</h2><p>{selectedSubjects.length} of {subjectLimit} selected</p></div></div><div className="settings-subject-list">{catalogue.map((subject) => <label className={selectedSubjects.includes(subject.id) ? 'selected' : ''} key={subject.id}><input type="checkbox" checked={selectedSubjects.includes(subject.id)} onChange={() => toggleSubject(subject.id)}/><span>{subject.name}</span>{selectedSubjects.includes(subject.id) && <Check size={16}/>}</label>)}</div><div className="settings-actions"><button type="button" className="button dark" onClick={saveSubjects} disabled={subjectsSaving}>{subjectsSaving ? <><LoaderCircle className="spin" size={16}/> Saving…</> : 'Save subjects'}</button>{subjectsNotice && <span className="settings-success"><Check size={15}/>{subjectsNotice}</span>}</div></article>
+        <article className="settings-card plan-card"><h2>Current access</h2><div className="plan-summary"><div><b>Free MVP access</b><span>Up to {subjectLimit} subjects</span></div><span className="success-pill">Active</span></div><p>You can practise available papers and track your progress. Paid plans and billing are not enabled yet.</p></article>
+      </div>
+    </section>}
+  </main></div>;
+}

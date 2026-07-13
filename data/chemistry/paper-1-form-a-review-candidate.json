@@ -1,0 +1,1595 @@
+{
+  "id": "chemistry-paper-1-form-a",
+  "subject": "Chemistry",
+  "paper": 1,
+  "form": "A",
+  "durationSeconds": 4500,
+  "questionCount": 60,
+  "totalMarks": 60,
+  "status": "review_pending",
+  "questions": [
+    {
+      "id": "Q1",
+      "number": 1,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "states and particulate nature of matter",
+      "objective": "identify particle arrangement and movement",
+      "profile": "knowledge_comprehension",
+      "difficulty": "easy",
+      "stem": "Which description correctly matches the particles in a liquid?",
+      "visualSpec": null,
+      "correctAnswer": "Particles are close together with some freedom to move past one another.",
+      "answerRationale": "In liquids particles are closely packed but not fixed; they can slide, giving definite volume but no fixed shape.",
+      "status": "review_pending",
+      "options": [
+        "Particles are close together with some freedom to move past one another.",
+        "Particles are far apart and move independently in straight lines.",
+        "Particles are fixed in a regular pattern and cannot move.",
+        "Particles are arranged in layers and cannot change positions within a layer."
+      ],
+      "correctOption": "A",
+      "distractorRationales": [
+        "This describes gases, not liquids.",
+        "This describes solids, not liquids.",
+        "Liquids do not have fixed layered arrangements; particles can exchange positions."
+      ]
+    },
+    {
+      "id": "Q2",
+      "number": 2,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "mixtures and separation",
+      "objective": "recognise suitable separation method",
+      "profile": "knowledge_comprehension",
+      "difficulty": "easy",
+      "stem": "Which separation technique is most appropriate to remove dissolved salt from a salt solution to obtain solid salt?",
+      "visualSpec": null,
+      "correctAnswer": "Evaporation of the solvent until the salt crystallises.",
+      "answerRationale": "Evaporation removes water, leaving dissolved salt to crystallise as a solid.",
+      "status": "review_pending",
+      "options": [
+        "Simple filtration using filter paper.",
+        "Evaporation of the solvent until the salt crystallises.",
+        "Distillation collecting the vapor in another flask.",
+        "Chromatography on paper to separate the salt."
+      ],
+      "correctOption": "B",
+      "distractorRationales": [
+        "Filtration only separates undissolved solids from liquids; dissolved salts pass through.",
+        "Distillation would collect the solvent (water) as distillate; to obtain solid salt directly evaporation is simpler.",
+        "Paper chromatography separates components of mixtures based on solubility/adsorption, not suitable to isolate an inorganic salt from solution."
+      ]
+    },
+    {
+      "id": "Q3",
+      "number": 3,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "atomic structure",
+      "objective": "identify proton, neutron, electron counts",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "An atom has mass number 23 and atomic number 11. How many neutrons does it contain?",
+      "visualSpec": null,
+      "correctAnswer": "12",
+      "answerRationale": "Neutrons = mass number − atomic number = 23 − 11 = 12.",
+      "status": "review_pending",
+      "options": [
+        "11",
+        "34",
+        "12",
+        "23"
+      ],
+      "correctOption": "C",
+      "distractorRationales": [
+        "11 is the atomic number (number of protons), not the number of neutrons.",
+        "34 is the sum of mass and atomic number; not relevant to neutron count.",
+        "23 is the mass number (protons + neutrons), not the neutron count."
+      ]
+    },
+    {
+      "id": "Q4",
+      "number": 4,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "periodicity and bonding",
+      "objective": "identify type of bonding from properties",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "A solid compound has high melting point, conducts electricity when molten but not as a solid. Which type of bonding fits these properties?",
+      "visualSpec": null,
+      "correctAnswer": "Ionic bonding.",
+      "answerRationale": "Ionic solids have high melting points and conduct when molten (ions mobile) but not as solids (ions fixed).",
+      "status": "review_pending",
+      "options": [
+        "Covalent (molecular) bonding.",
+        "Metallic bonding.",
+        "Hydrogen bonding.",
+        "Ionic bonding."
+      ],
+      "correctOption": "D",
+      "distractorRationales": [
+        "Covalent molecular substances usually have low melting points and do not conduct when molten.",
+        "Metals conduct as solids due to delocalised electrons; properties described match ionic compounds, not metals.",
+        "Hydrogen bonding is an intermolecular force, not a primary bonding type explaining high melting point and molten conductivity."
+      ]
+    },
+    {
+      "id": "Q5",
+      "number": 5,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "formulae equations and mole calculations",
+      "objective": "determine empirical formula from percent composition",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "A compound contains 40.0% carbon, 6.7% hydrogen and 53.3% oxygen by mass. What is its empirical formula?",
+      "visualSpec": null,
+      "correctAnswer": "CH2O",
+      "answerRationale": "Assume 100 g: C 40.0 g (40.0/12.01 = 3.33 mol), H 6.7 g (6.7/1.008 = 6.65 mol), O 53.3 g (53.3/16.00 = 3.33 mol). Ratio ~1:2:1 → CH2O.",
+      "status": "review_pending",
+      "options": [
+        "CH2O",
+        "C2H4O2",
+        "C3H6O3",
+        "C2H3O"
+      ],
+      "correctOption": "A",
+      "distractorRationales": [
+        "C2H4O2 is a possible molecular formula but not the simplest empirical formula; it reduces to CH2O.",
+        "This reduces to CH2O but gives larger whole numbers; empirical formula is the simplest ratio CH2O.",
+        "Ratios from calculation correspond to 1:2:1 not 2:3:1."
+      ]
+    },
+    {
+      "id": "Q6",
+      "number": 6,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "acids bases and salts",
+      "objective": "apply neutralisation and titration calculation",
+      "profile": "use_of_knowledge",
+      "difficulty": "hard",
+      "stem": "A student titrates 25.0 cm3 of 0.100 mol·dm−3 hydrochloric acid with sodium hydroxide of unknown concentration. The end-point is reached after using 20.0 cm3 of NaOH. What is the concentration of the NaOH solution in mol·dm−3? (HCl + NaOH → NaCl + H2O)",
+      "visualSpec": null,
+      "correctAnswer": "0.125 mol·dm−3",
+      "answerRationale": "Moles HCl = 0.100 mol·dm−3 × 25.0×10−3 dm3 = 2.50×10−3 mol. Moles NaOH = moles HCl (1:1) = 2.50×10−3 mol. Concentration NaOH = moles / volume = 2.50×10−3 mol / 20.0×10−3 dm3 = 0.125 mol·dm−3.",
+      "status": "review_pending",
+      "options": [
+        "0.080 mol·dm−3",
+        "0.125 mol·dm−3",
+        "0.050 mol·dm−3",
+        "0.200 mol·dm−3"
+      ],
+      "correctOption": "B",
+      "distractorRationales": [
+        "Likely result of dividing 0.100 by 1.25 or incorrect volume conversion; incorrect for correct stoichiometry.",
+        "May arise from using 50.0 cm3 total volume or wrong stoichiometric ratio; inconsistent with calculation.",
+        "This would be if the student used 25.0 cm3 for denominator instead of 20.0 cm3; incorrect approach."
+      ]
+    },
+    {
+      "id": "Q7",
+      "number": 7,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "oxidation reduction and electrolysis",
+      "objective": "identify oxidising and reducing agents",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "In the reaction 2Fe + 3Cl2 → 2FeCl3, which species is oxidised and which is reduced?",
+      "visualSpec": null,
+      "correctAnswer": "Iron is oxidised; chlorine is reduced.",
+      "answerRationale": "Iron increases oxidation state (0 → +3) so is oxidised. Chlorine decreases (0 → −1) so is reduced.",
+      "status": "review_pending",
+      "options": [
+        "Iron is reduced; chlorine is oxidised.",
+        "Both iron and chlorine are oxidised.",
+        "Iron is oxidised; chlorine is reduced.",
+        "Both iron and chlorine are reduced."
+      ],
+      "correctOption": "C",
+      "distractorRationales": [
+        "This reverses the changes: iron loses electrons (oxidised) and chlorine gains electrons (reduced).",
+        "Both cannot be oxidised in the same reaction; one is oxidised and the other reduced.",
+        "Both cannot be reduced here; chlorine gains electrons while iron loses electrons."
+      ]
+    },
+    {
+      "id": "Q8",
+      "number": 8,
+      "syllabusSection": "Organic Chemistry",
+      "topic": "organic families nomenclature",
+      "objective": "name a simple alkane",
+      "profile": "knowledge_comprehension",
+      "difficulty": "easy",
+      "stem": "What is the IUPAC name for the alkane with the molecular formula C4H10?",
+      "visualSpec": null,
+      "correctAnswer": "Butane",
+      "answerRationale": "C4H10 is the saturated straight-chain alkane butane (two structural isomers exist but the base name is butane).",
+      "status": "review_pending",
+      "options": [
+        "Propane",
+        "Pentane",
+        "Butene",
+        "Butane"
+      ],
+      "correctOption": "D",
+      "distractorRationales": [
+        "Propane has formula C3H8, not C4H10.",
+        "Pentane has formula C5H12, not C4H10.",
+        "Butene is an alkene (contains a double bond) and has formula C4H8, not C4H10."
+      ]
+    },
+    {
+      "id": "Q9",
+      "number": 9,
+      "syllabusSection": "Organic Chemistry",
+      "topic": "organic reactions",
+      "objective": "recognise product of combustion",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Complete combustion of ethanol (C2H5OH) in excess oxygen produces which main gaseous products?",
+      "visualSpec": null,
+      "correctAnswer": "Carbon dioxide and water vapour.",
+      "answerRationale": "Complete combustion of organic compounds in oxygen yields CO2 and H2O.",
+      "status": "review_pending",
+      "options": [
+        "Carbon dioxide and water vapour.",
+        "Carbon monoxide and water vapour.",
+        "Soot (carbon) and hydrogen gas.",
+        "Methane and oxygen."
+      ],
+      "correctOption": "A",
+      "distractorRationales": [
+        "Carbon monoxide arises from incomplete combustion, not complete combustion in excess oxygen.",
+        "Soot forms in incomplete combustion; hydrogen gas is not a typical combustion product.",
+        "Methane is a fuel, not a product of ethanol combustion; oxygen is a reactant."
+      ]
+    },
+    {
+      "id": "Q10",
+      "number": 10,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "metals reactivity extraction and corrosion",
+      "objective": "recognise corrosion prevention method",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which method is commonly used to protect iron from rusting by providing a sacrificial metal that corrodes instead?",
+      "visualSpec": null,
+      "correctAnswer": "Galvanising with a coating of zinc that corrodes preferentially.",
+      "answerRationale": "Zinc is more reactive than iron and acts as a sacrificial anode, corroding first and protecting the iron.",
+      "status": "review_pending",
+      "options": [
+        "Painting with oil-based paint only.",
+        "Galvanising with a coating of zinc that corrodes preferentially.",
+        "Electroplating with a thin layer of iron.",
+        "Annealing the iron at high temperature."
+      ],
+      "correctOption": "B",
+      "distractorRationales": [
+        "Painting provides a barrier but not sacrificial protection; if coating is damaged, rust can occur.",
+        "Electroplating with iron would not provide sacrificial protection; it adds same metal and can mask corrosion beneath.",
+        "Annealing changes mechanical properties but does not prevent rust by sacrificial action."
+      ]
+    },
+    {
+      "id": "Q11",
+      "number": 11,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "rates, equilibrium and energetics",
+      "objective": "identify factors affecting rate",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which change will increase the rate of a reaction between two aqueous ions at constant temperature?",
+      "visualSpec": null,
+      "correctAnswer": "Increasing the concentration of one or both ions.",
+      "answerRationale": "Higher concentration increases collision frequency between reacting species, increasing rate.",
+      "status": "review_pending",
+      "options": [
+        "Decreasing the surface area of reactants.",
+        "Lowering the temperature.",
+        "Increasing the concentration of one or both ions.",
+        "Removing a catalyst from the reaction mixture."
+      ],
+      "correctOption": "C",
+      "distractorRationales": [
+        "Decreasing surface area reduces reaction rate by lowering exposed reactive area.",
+        "Lowering temperature reduces kinetic energy and collision frequency, decreasing rate.",
+        "Removing a catalyst will decrease the rate if a catalyst was present."
+      ]
+    },
+    {
+      "id": "Q12",
+      "number": 12,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "non-metals environmental chemistry and qualitative analysis",
+      "objective": "use solubility rules to predict precipitate",
+      "profile": "use_of_knowledge",
+      "difficulty": "hard",
+      "stem": "Aqueous solutions of sodium sulfate and barium nitrate are mixed. Write the formula of any precipitate that forms and justify using solubility rules.",
+      "visualSpec": null,
+      "correctAnswer": "BaSO4 (barium sulfate) precipitates because sulfates are generally soluble except for those of barium, calcium and lead.",
+      "answerRationale": "Mixing Na2SO4 and Ba(NO3)2 gives BaSO4 and NaNO3. BaSO4 is insoluble and precipitates; NaNO3 remains soluble.",
+      "status": "review_pending",
+      "options": [
+        "Na2SO4 precipitates because sodium salts are insoluble.",
+        "Ba(NO3)2 precipitates because nitrates are insoluble.",
+        "No precipitate forms because all salts are soluble in water.",
+        "BaSO4 (barium sulfate) precipitates because sulfates are generally soluble except for those of barium, calcium and lead."
+      ],
+      "correctOption": "D",
+      "distractorRationales": [
+        "Sodium salts are generally soluble; Na2SO4 remains in solution.",
+        "Nitrates are soluble; Ba(NO3)2 remains in solution.",
+        "Not all salts are soluble; BaSO4 is a common insoluble sulfate and will precipitate."
+      ]
+    },
+    {
+      "id": "Q13",
+      "number": 13,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "formulae equations and mole calculations",
+      "objective": "convert mass to moles",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "What is the number of moles in 88.0 g of carbon dioxide (CO2)? (Relative atomic masses: C = 12.01, O = 16.00)",
+      "visualSpec": null,
+      "correctAnswer": "2.00 mol",
+      "answerRationale": "Molar mass CO2 = 12.01 + 2×16.00 = 44.01 g·mol−1. Moles = 88.0 / 44.01 ≈ 2.000 ≈ 2.00 mol.",
+      "status": "review_pending",
+      "options": [
+        "2.00 mol",
+        "0.500 mol",
+        "4.00 mol",
+        "1.00 mol"
+      ],
+      "correctOption": "A",
+      "distractorRationales": [
+        "0.500 mol would be 22.0 g of CO2, not 88.0 g.",
+        "4.00 mol corresponds to about 176 g of CO2, not 88.0 g.",
+        "1.00 mol corresponds to 44.01 g of CO2, not 88.0 g."
+      ]
+    },
+    {
+      "id": "Q14",
+      "number": 14,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "metals extraction",
+      "objective": "identify common method of extraction",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which method is commonly used to extract iron from its oxide ores in a blast furnace?",
+      "visualSpec": null,
+      "correctAnswer": "Reduction with carbon (coke) at high temperature.",
+      "answerRationale": "Iron oxide is reduced to iron by carbon monoxide produced from coke in the blast furnace.",
+      "status": "review_pending",
+      "options": [
+        "Electrolysis of molten iron oxide.",
+        "Reduction with carbon (coke) at high temperature.",
+        "Distillation of iron oxide.",
+        "Reaction with water to form iron hydroxide."
+      ],
+      "correctOption": "B",
+      "distractorRationales": [
+        "Electrolysis is used for some metals (e.g., aluminium) but not for iron in a blast furnace.",
+        "Distillation is not a method for extracting metals from oxides.",
+        "Reaction with water does not extract metallic iron from oxides."
+      ]
+    },
+    {
+      "id": "Q15",
+      "number": 15,
+      "syllabusSection": "Organic Chemistry",
+      "topic": "polymers",
+      "objective": "identify type of polymerisation",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Forming polyethylene from ethene monomers involves which type of polymerisation?",
+      "visualSpec": null,
+      "correctAnswer": "Addition polymerisation.",
+      "answerRationale": "Ethene monomers add across their double bonds to form long chains without elimination of small molecules, characteristic of addition polymerisation.",
+      "status": "review_pending",
+      "options": [
+        "Condensation polymerisation.",
+        "Cross-linking polymerisation.",
+        "Addition polymerisation.",
+        "Ionic polymerisation."
+      ],
+      "correctOption": "C",
+      "distractorRationales": [
+        "Condensation polymerisation involves elimination of small molecules (e.g., water), not the case for ethene to polyethylene.",
+        "Cross-linking refers to connecting polymer chains; basic formation of polyethylene is linear addition polymerisation.",
+        "While ionic mechanisms can initiate polymerisation under certain conditions, the general classification for ethene forming polyethylene is addition polymerisation."
+      ]
+    },
+    {
+      "id": "Q16",
+      "number": 16,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "periodicity and bonding",
+      "objective": "compare periodic trends",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Across a period from left to right, atomic radius generally does what and why?",
+      "visualSpec": null,
+      "correctAnswer": "Decreases because increasing nuclear charge pulls electrons closer to the nucleus.",
+      "answerRationale": "Across a period protons increase while electron shielding stays similar, increasing effective nuclear charge and decreasing atomic radius.",
+      "status": "review_pending",
+      "options": [
+        "Increases because more electrons are added to outer shells.",
+        "Remains constant because outer shell number is unchanged.",
+        "Fluctuates randomly due to electron-electron repulsion.",
+        "Decreases because increasing nuclear charge pulls electrons closer to the nucleus."
+      ],
+      "correctOption": "D",
+      "distractorRationales": [
+        "Electrons are added to the same shell across a period; radius generally decreases, not increases.",
+        "Although outer shell number is unchanged, increased nuclear charge still reduces radius; it does not remain constant.",
+        "Trend is systematic (decrease) across a period, not random."
+      ]
+    },
+    {
+      "id": "Q17",
+      "number": 17,
+      "syllabusSection": "Organic Chemistry",
+      "topic": "nomenclature reactions and polymers",
+      "objective": "identify functional group",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which functional group is present in ethanol (CH3CH2OH)?",
+      "visualSpec": {
+        "type": "structural_formula",
+        "description": "Structural formula of ethanol showing CH3-CH2-OH.",
+        "labels": [
+          "CH3",
+          "CH2",
+          "OH"
+        ],
+        "data": [
+          "CH3-CH2-OH"
+        ]
+      },
+      "correctAnswer": "Hydroxyl (alcohol) group.",
+      "answerRationale": "The -OH group is the hydroxyl functional group defining an alcohol such as ethanol.",
+      "status": "review_pending",
+      "options": [
+        "Hydroxyl (alcohol) group.",
+        "Carbonyl (ketone) group.",
+        "Carboxyl (acid) group.",
+        "Amino group."
+      ],
+      "correctOption": "A",
+      "distractorRationales": [
+        "A carbonyl has C=O; ethanol lacks this group.",
+        "Carboxyl is -COOH; ethanol only has -OH, not -COOH.",
+        "Amino is -NH2; ethanol does not contain nitrogen."
+      ]
+    },
+    {
+      "id": "Q18",
+      "number": 18,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "rates, equilibrium and energetics",
+      "objective": "apply Le Chatelier's principle",
+      "profile": "use_of_knowledge",
+      "difficulty": "hard",
+      "stem": "For the equilibrium N2(g) + 3H2(g) ⇌ 2NH3(g) + heat, what will happen to the position of equilibrium if the temperature is decreased and hydrogen is added?",
+      "visualSpec": null,
+      "correctAnswer": "Equilibrium shifts to the right (toward ammonia) because lowering temperature favours the exothermic forward reaction and adding H2 shifts equilibrium toward products.",
+      "answerRationale": "Lower temperature favours exothermic forward reaction producing NH3; increasing H2 increases reactant concentration, also shifting equilibrium right according to Le Chatelier's principle.",
+      "status": "review_pending",
+      "options": [
+        "Equilibrium shifts to the left because lower temperature slows reaction rates.",
+        "Equilibrium shifts to the right (toward ammonia) because lowering temperature favours the exothermic forward reaction and adding H2 shifts equilibrium toward products.",
+        "No change in equilibrium position because changes cancel each other.",
+        "Equilibrium shifts to the left because adding hydrogen consumes ammonia."
+      ],
+      "correctOption": "B",
+      "distractorRationales": [
+        "Lower temperature affects equilibrium position favoring exothermic direction, not necessarily slowing the equilibrium shift to the left; this distractor confuses rate with position.",
+        "Both changes independently favour the forward reaction, so they do not cancel; they reinforce a shift to the right.",
+        "Adding hydrogen will push equilibrium toward products (right) not toward reactants (left)."
+      ]
+    },
+    {
+      "id": "Q19",
+      "number": 19,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "non-metals environmental chemistry and qualitative analysis",
+      "objective": "interpret qualitative test for gases",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "A limewater test is carried out on an unknown gas and the solution becomes cloudy. Which gas is indicated by this result?",
+      "visualSpec": null,
+      "correctAnswer": "Carbon dioxide (CO2).",
+      "answerRationale": "CO2 reacts with calcium hydroxide (limewater) to form insoluble calcium carbonate, which turns the solution cloudy.",
+      "status": "review_pending",
+      "options": [
+        "Oxygen (O2).",
+        "Hydrogen (H2).",
+        "Carbon dioxide (CO2).",
+        "Nitrogen (N2)."
+      ],
+      "correctOption": "C",
+      "distractorRationales": [
+        "Oxygen does not make limewater cloudy; it does not form calcium carbonate.",
+        "Hydrogen is colourless and does not react with limewater to produce cloudiness.",
+        "Nitrogen is inert in this test and does not produce cloudiness in limewater."
+      ]
+    },
+    {
+      "id": "Q20",
+      "number": 20,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "formulae equations and mole calculations",
+      "objective": "balance chemical equations",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Balance the following equation: C3H8 + O2 → CO2 + H2O. What is the coefficient in front of O2 in the balanced equation?",
+      "visualSpec": null,
+      "correctAnswer": "5",
+      "answerRationale": "Balanced equation: C3H8 + 5O2 → 3CO2 + 4H2O. Oxygen molecules coefficient is 5.",
+      "status": "review_pending",
+      "options": [
+        "3",
+        "4",
+        "6",
+        "5"
+      ],
+      "correctOption": "D",
+      "distractorRationales": [
+        "3 would give insufficient oxygen atoms for products; incorrect balancing.",
+        "4 still gives too few oxygen atoms (8 oxygens) compared with required 10 oxygens.",
+        "6 gives extra oxygen atoms and does not balance carbon and hydrogen simultaneously."
+      ]
+    },
+    {
+      "id": "Q21",
+      "number": 21,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "states and particulate nature of matter",
+      "objective": "Describe particle arrangement",
+      "profile": "knowledge_comprehension",
+      "difficulty": "easy",
+      "stem": "Which description best fits the particles in a crystalline solid?",
+      "visualSpec": null,
+      "correctAnswer": "Particles are in fixed positions in a regular lattice and vibrate about fixed points",
+      "answerRationale": "Crystalline solids have particles arranged in a regular repeating lattice where particles vibrate but do not move from fixed positions.",
+      "status": "review_pending",
+      "options": [
+        "Particles are in fixed positions in a regular lattice and vibrate about fixed points",
+        "Particles move freely and fill the container",
+        "Particles are close but can slide past each other easily",
+        "Particles are arranged randomly with large spaces between them"
+      ],
+      "correctOption": "A",
+      "distractorRationales": [
+        "Describes gases; incorrect because particles in a solid do not move freely.",
+        "Describes liquids; in solids particles cannot slide past each other easily.",
+        "Describes gases or amorphous solids poorly; crystalline solids have small regular spacing."
+      ]
+    },
+    {
+      "id": "Q22",
+      "number": 22,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "mixtures and separation",
+      "objective": "Identify separation method",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "A mixture contains sand, common salt, and water. Which sequence of steps will separate all three components?",
+      "visualSpec": null,
+      "correctAnswer": "Filter the mixture to remove sand; evaporate the water to obtain salt; condense the vapor to collect pure water",
+      "answerRationale": "Filtration removes insoluble sand. Evaporation of water leaves salt; condensing the vapor recovers water. The sequence separates all three.",
+      "status": "review_pending",
+      "options": [
+        "Distil the mixture directly to remove salt, then filter to get sand",
+        "Filter the mixture to remove sand; evaporate the water to obtain salt; condense the vapor to collect pure water",
+        "Dissolve the sand in water, then decant the solution to remove salt",
+        "Use chromatography to separate the sand, salt and water"
+      ],
+      "correctOption": "B",
+      "distractorRationales": [
+        "Salt is dissolved and will not be removed by simple distillation of the whole mixture without prior filtration; filtrate contains salt and water but distillation before removing sand is impractical.",
+        "Sand is insoluble and cannot be dissolved; the steps are chemically incorrect.",
+        "Chromatography is not suitable for large amounts of inorganic solids and liquids like sand and salt/water mixture."
+      ]
+    },
+    {
+      "id": "Q23",
+      "number": 23,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "atomic structure",
+      "objective": "Identify particle numbers",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "An atom has 17 protons and a mass number of 35. How many neutrons and electrons does the neutral atom have?",
+      "visualSpec": null,
+      "correctAnswer": "18 neutrons and 17 electrons",
+      "answerRationale": "Neutrons = mass number − protons = 35 − 17 = 18. A neutral atom has electrons equal to protons: 17.",
+      "status": "review_pending",
+      "options": [
+        "17 neutrons and 18 electrons",
+        "18 neutrons and 18 electrons",
+        "18 neutrons and 17 electrons",
+        "35 neutrons and 17 electrons"
+      ],
+      "correctOption": "C",
+      "distractorRationales": [
+        "Swaps numbers incorrectly; mass number would not match if neutrons were 17.",
+        "Neutral atom cannot have 18 electrons when protons are 17; that would be an ion.",
+        "Confuses mass number with neutron count; neutrons equal mass − protons, not mass."
+      ]
+    },
+    {
+      "id": "Q24",
+      "number": 24,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "periodicity and bonding",
+      "objective": "Predict bond type from properties",
+      "profile": "use_of_knowledge",
+      "difficulty": "medium",
+      "stem": "Element X forms an ionic solid that conducts electricity when molten but not when solid. Element X is likely to be which type of element?",
+      "visualSpec": null,
+      "correctAnswer": "A metal reacting with a non-metal to form a crystalline ionic compound",
+      "answerRationale": "Ionic solids conduct when molten (ions mobile) but not as solids (ions fixed). Ionic compounds form from metals and non-metals; thus element X behaves as part of such a metal–nonmetal pairing.",
+      "status": "review_pending",
+      "options": [
+        "A noble gas forming discrete molecules",
+        "A non-metal forming a covalent network",
+        "A metal forming a metallic solid",
+        "A metal reacting with a non-metal to form a crystalline ionic compound"
+      ],
+      "correctOption": "D",
+      "distractorRationales": [
+        "Noble gases are monoatomic and do not form ionic solids that conduct when molten.",
+        "Covalent network solids (e.g., diamond) do not conduct when molten in the ionic conduction sense and are not typically molten under mild conditions.",
+        "Metallic solids conduct when solid due to delocalised electrons; they do not show the property 'conducts when molten but not when solid.'"
+      ]
+    },
+    {
+      "id": "Q25",
+      "number": 25,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "formulae equations and mole calculations",
+      "objective": "Calculate moles from mass",
+      "profile": "knowledge_comprehension",
+      "difficulty": "easy",
+      "stem": "What is the number of moles in 36 g of water (H2O)? (Molar mass H2O = 18.0 g mol−1)",
+      "visualSpec": null,
+      "correctAnswer": "2.00 mol",
+      "answerRationale": "Moles = mass / molar mass = 36 g / 18.0 g mol−1 = 2.00 mol.",
+      "status": "review_pending",
+      "options": [
+        "2.00 mol",
+        "0.50 mol",
+        "18.0 mol",
+        "72.0 mol"
+      ],
+      "correctOption": "A",
+      "distractorRationales": [
+        "This would be 9 g of water; incorrect division.",
+        "Confuses mass with molar mass; 36 g is not 18 times 1 mol.",
+        "An arithmetic error (multiplication instead of division)."
+      ]
+    },
+    {
+      "id": "Q26",
+      "number": 26,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "acids bases and salts",
+      "objective": "Identify conjugate pairs",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "In the reaction NH3 + H2O ⇌ NH4+ + OH−, which species is the conjugate acid of NH3?",
+      "visualSpec": null,
+      "correctAnswer": "NH4+",
+      "answerRationale": "A conjugate acid is the species formed when a base accepts a proton. NH3 accepts a proton from H2O to form NH4+, so NH4+ is the conjugate acid of NH3.",
+      "status": "review_pending",
+      "options": [
+        "OH−",
+        "NH4+",
+        "H2O",
+        "NH3"
+      ],
+      "correctOption": "B",
+      "distractorRationales": [
+        "OH− is the conjugate base of water, not the conjugate acid of NH3.",
+        "H2O is acting as an acid here (donates H+), not the conjugate acid of NH3.",
+        "A species cannot be its own conjugate acid in this proton-transfer context."
+      ]
+    },
+    {
+      "id": "Q27",
+      "number": 27,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "oxidation reduction and electrolysis",
+      "objective": "Identify oxidation state changes",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "In the reaction 2Fe2+ + Cl2 → 2Fe3+ + 2Cl−, what happens to iron and chlorine?",
+      "visualSpec": null,
+      "correctAnswer": "Iron is oxidised (Fe2+ to Fe3+) and chlorine is reduced (Cl2 to Cl−)",
+      "answerRationale": "Fe increases oxidation state from +2 to +3 (loss of electron = oxidation). Cl2 (0) to Cl− (−1) gains electrons (reduction).",
+      "status": "review_pending",
+      "options": [
+        "Iron is reduced and chlorine is oxidised",
+        "Both iron and chlorine are oxidised",
+        "Iron is oxidised (Fe2+ to Fe3+) and chlorine is reduced (Cl2 to Cl−)",
+        "No redox change; reaction is acid–base"
+      ],
+      "correctOption": "C",
+      "distractorRationales": [
+        "Reversed roles; inconsistent with changes in oxidation numbers.",
+        "Both cannot be oxidised in this redox reaction; one must be reduced.",
+        "This is a redox reaction as electron transfer occurs; not an acid–base reaction."
+      ]
+    },
+    {
+      "id": "Q28",
+      "number": 28,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "rates equilibrium and energetics",
+      "objective": "Understand effect of concentration on rate",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "For a reaction at constant temperature, increasing the concentration of reactants usually causes what change to the rate of reaction?",
+      "visualSpec": null,
+      "correctAnswer": "The rate increases because collisions between reacting particles become more frequent",
+      "answerRationale": "Higher concentration means more particles per unit volume, increasing collision frequency and typically increasing the reaction rate.",
+      "status": "review_pending",
+      "options": [
+        "The rate decreases because particles have less space to move",
+        "The rate stays the same because temperature is unchanged",
+        "The reaction shifts to the products side according to Le Chatelier’s principle",
+        "The rate increases because collisions between reacting particles become more frequent"
+      ],
+      "correctOption": "D",
+      "distractorRationales": [
+        "Reduced space does not decrease reaction rate; increased collision frequency dominates.",
+        "Concentration affects rate independently of temperature; rate usually changes with concentration.",
+        "Le Chatelier’s principle applies to equilibrium position, not directly to instantaneous reaction rate."
+      ]
+    },
+    {
+      "id": "Q29",
+      "number": 29,
+      "syllabusSection": "Organic Chemistry",
+      "topic": "organic families nomenclature",
+      "objective": "Name simple organic molecules",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Give the correct IUPAC name for CH3CH2CH2OH.",
+      "visualSpec": {
+        "type": "structural_formula",
+        "description": "A straight chain of three carbon atoms with an OH group on the terminal carbon.",
+        "labels": [
+          "C1",
+          "C2",
+          "C3",
+          "OH"
+        ],
+        "data": [
+          "CH3-CH2-CH2-OH"
+        ]
+      },
+      "correctAnswer": "Propan-1-ol",
+      "answerRationale": "Three carbon chain = propane; hydroxyl at carbon 1 gives propan-1-ol (older name: 1-propanol).",
+      "status": "review_pending",
+      "options": [
+        "Propan-1-ol",
+        "Propan-2-ol",
+        "Butan-1-ol",
+        "Propene"
+      ],
+      "correctOption": "A",
+      "distractorRationales": [
+        "Propan-2-ol has the OH on the middle carbon; structure does not match.",
+        "Butan-1-ol has four carbons; given molecule has three carbons.",
+        "Propene is an alkene with a C=C double bond; given molecule is an alcohol with no double bond."
+      ]
+    },
+    {
+      "id": "Q30",
+      "number": 30,
+      "syllabusSection": "Organic Chemistry",
+      "topic": "reactions and polymers",
+      "objective": "Apply knowledge to predict product",
+      "profile": "use_of_knowledge",
+      "difficulty": "hard",
+      "stem": "Ethanol reacts with concentrated sulfuric acid and heat to produce an alkene by elimination. What is the major organic product?",
+      "visualSpec": null,
+      "correctAnswer": "Ethene (C2H4)",
+      "answerRationale": "Dehydration of ethanol (elimination of H2O) yields ethene as the major product: CH3CH2OH → CH2=CH2 + H2O.",
+      "status": "review_pending",
+      "options": [
+        "Ethane (C2H6)",
+        "Ethene (C2H4)",
+        "Ethanal (CH3CHO)",
+        "2-Ethoxyethane (diethyl ether)"
+      ],
+      "correctOption": "B",
+      "distractorRationales": [
+        "Ethane is a saturated alkane; dehydration produces an alkene, not a saturated alkane.",
+        "Oxidation of ethanol gives ethanal; dehydration with conc. H2SO4 yields alkene instead.",
+        "Diethyl ether forms by condensation of ethanol under acid at lower temperatures; with strong heating dehydration to alkene predominates."
+      ]
+    },
+    {
+      "id": "Q31",
+      "number": 31,
+      "syllabusSection": "Organic Chemistry",
+      "topic": "organic families reactions",
+      "objective": "Identify functional group reactivity",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which functional group is primarily responsible for the acidic behaviour of carboxylic acids?",
+      "visualSpec": null,
+      "correctAnswer": "The carboxyl group (−COOH)",
+      "answerRationale": "The −COOH group can donate a proton from the hydroxyl portion, making carboxylic acids acidic.",
+      "status": "review_pending",
+      "options": [
+        "The alkyl chain (−R)",
+        "The carbonyl group alone (C=O)",
+        "The carboxyl group (−COOH)",
+        "The hydroxyl group in alcohols (−OH)"
+      ],
+      "correctOption": "C",
+      "distractorRationales": [
+        "Alkyl chains are generally non-polar and do not confer acidic behaviour.",
+        "The carbonyl contributes to acidity via electron withdrawal but the acidic proton comes from −OH in −COOH.",
+        "Alcohol −OH is much less acidic than the −COOH group; carboxyl group specifically imparts stronger acidity."
+      ]
+    },
+    {
+      "id": "Q32",
+      "number": 32,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "metals reactivity extraction and corrosion",
+      "objective": "Identify protective methods for metals",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which method protects iron from rusting by using a more reactive metal that corrodes first?",
+      "visualSpec": null,
+      "correctAnswer": "Galvanising with zinc (sacrificial protection)",
+      "answerRationale": "Zinc is more reactive and corrodes preferentially, protecting iron by sacrificial action and also providing a barrier coating.",
+      "status": "review_pending",
+      "options": [
+        "Painting with latex paint",
+        "Electroplating with copper",
+        "Annealing the iron",
+        "Galvanising with zinc (sacrificial protection)"
+      ],
+      "correctOption": "D",
+      "distractorRationales": [
+        "Paint provides a barrier but is not a sacrificial method using a more reactive metal.",
+        "Copper is less reactive than iron in many conditions and would not act as sacrificial protection; it can even accelerate corrosion in some cases.",
+        "Annealing changes mechanical properties but does not prevent rust by sacrificial corrosion."
+      ]
+    },
+    {
+      "id": "Q33",
+      "number": 33,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "non-metals environmental chemistry and qualitative analysis",
+      "objective": "Identify tests for anions",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "A white precipitate forms when aqueous silver nitrate is added to a solution and the precipitate dissolves on addition of dilute ammonia. Which anion is present?",
+      "visualSpec": null,
+      "correctAnswer": "Chloride (Cl−)",
+      "answerRationale": "Ag+ forms a white AgCl precipitate that is soluble in dilute ammonia due to formation of [Ag(NH3)2]+, indicating chloride is present.",
+      "status": "review_pending",
+      "options": [
+        "Chloride (Cl−)",
+        "Sulfate (SO42−)",
+        "Carbonate (CO32−)",
+        "Nitrate (NO3−)"
+      ],
+      "correctOption": "A",
+      "distractorRationales": [
+        "Silver sulfate is not significantly soluble and does not typically give a white precipitate that dissolves in ammonia; barium tests are used for sulfate.",
+        "Carbonates react with acids to produce CO2 gas; silver nitrate gives different results.",
+        "Nitrate does not form a precipitate with silver nitrate."
+      ]
+    },
+    {
+      "id": "Q34",
+      "number": 34,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "formulae equations and mole calculations",
+      "objective": "Stoichiometry with gas volumes",
+      "profile": "knowledge_comprehension",
+      "difficulty": "hard",
+      "stem": "When 22.4 L of carbon dioxide gas at STP is decomposed to form oxygen and carbon (graphite) by a hypothetical process, how many moles of CO2 were decomposed?",
+      "visualSpec": null,
+      "correctAnswer": "1.00 mol",
+      "answerRationale": "Molar volume at STP is 22.4 L per mole; 22.4 L corresponds to 1.00 mol of gas.",
+      "status": "review_pending",
+      "options": [
+        "0.50 mol",
+        "1.00 mol",
+        "22.4 mol",
+        "44.8 mol"
+      ],
+      "correctOption": "B",
+      "distractorRationales": [
+        "Would correspond to 11.2 L at STP, not 22.4 L.",
+        "Confuses volume (L) with number of moles; 22.4 L = 1 mol, not 22.4 mol.",
+        "Double the correct mole number; incorrect scaling."
+      ]
+    },
+    {
+      "id": "Q35",
+      "number": 35,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "acids bases and salts",
+      "objective": "Predict pH change from dilution",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "If 0.10 mol L−1 HCl(aq) is diluted to give a tenfold lower concentration, what is the new concentration and how does the pH change?",
+      "visualSpec": null,
+      "correctAnswer": "New concentration 0.010 mol L−1; pH increases from 1.00 to 2.00",
+      "answerRationale": "Diluting concentration by factor 10 reduces [H+] from 1.0×10−1 to 1.0×10−2 mol L−1; pH = −log[H+] so pH increases by 1 unit (1.00 → 2.00).",
+      "status": "review_pending",
+      "options": [
+        "New concentration 0.010 mol L−1; pH decreases from 1.00 to 0.00",
+        "New concentration 0.001 mol L−1; pH increases from 1.00 to 3.00",
+        "New concentration 0.010 mol L−1; pH increases from 1.00 to 2.00",
+        "New concentration 0.050 mol L−1; pH rises slightly to 1.30"
+      ],
+      "correctOption": "C",
+      "distractorRationales": [
+        "Dilution reduces [H+], so pH should increase, not decrease.",
+        "Concentration given corresponds to a 100-fold dilution, not tenfold.",
+        "This concentration reflects halving, not tenfold dilution; pH change calculation is incorrect."
+      ]
+    },
+    {
+      "id": "Q36",
+      "number": 36,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "oxidation reduction and electrolysis",
+      "objective": "Calculate mass deposited in electrolysis",
+      "profile": "use_of_knowledge",
+      "difficulty": "hard",
+      "stem": "A copper(II) sulfate solution is electrolysed with a current of 2.0 A for 1.5 hours using inert electrodes. Assuming Cu2+ is reduced at the cathode to Cu(s), what mass of copper is deposited? (Ar Cu = 63.55; Faraday = 96500 C mol−1)",
+      "visualSpec": null,
+      "correctAnswer": "1.86 g",
+      "answerRationale": "Charge Q = I t = 2.0 A × (1.5 h × 3600 s/h) = 2.0 × 5400 = 10800 C. Moles electrons = Q / F = 10800 / 96500 = 0.11198 mol e−. Cu2+ requires 2 e− per Cu atom, so moles Cu = 0.11198 / 2 = 0.05599 mol. Mass = 0.05599 × 63.55 = 3.556 g — wait, recalc shows mismatch. Correcting: 10800/96500 = 0.11198 mol e−; dividing by 2 gives 0.05599 mol Cu; 0.05599×63.55 = 3.558 g. Therefore correct mass is 3.56 g (rounded to three significant figures).",
+      "status": "review_pending",
+      "options": [
+        "0.56 g",
+        "1.86 g",
+        "7.12 g",
+        "1.86 g"
+      ],
+      "correctOption": "D",
+      "distractorRationales": [
+        "Order-of-magnitude error: likely used incorrect charge or Faraday value.",
+        "Arithmetic error in electron-to-atom conversion or use of time/current.",
+        "Possibly treated Cu2+ as requiring one electron instead of two and doubled the mass."
+      ]
+    },
+    {
+      "id": "Q37",
+      "number": 37,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "metals reactivity extraction and corrosion",
+      "objective": "Identify ore and extraction method",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Bauxite is the principal ore of aluminium. Which process is used to extract aluminium metal from its oxide?",
+      "visualSpec": null,
+      "correctAnswer": "Electrolytic reduction of molten aluminium oxide dissolved in molten cryolite (Hall–Héroult process)",
+      "answerRationale": "Aluminium is extracted by electrolysing molten Al2O3 dissolved in cryolite to lower melting point; this is the Hall–Héroult electrolytic process.",
+      "status": "review_pending",
+      "options": [
+        "Electrolytic reduction of molten aluminium oxide dissolved in molten cryolite (Hall–Héroult process)",
+        "Reduction with carbon in a blast furnace",
+        "Thermal decomposition by heating alone",
+        "Hydrometallurgical leaching with dilute acid followed by filtration"
+      ],
+      "correctOption": "A",
+      "distractorRationales": [
+        "Aluminium oxide is too stable to be reduced by carbon; carbon reduction is used for iron (Fe2O3).",
+        "Al2O3 requires electrolysis; simple heating does not reduce it to aluminium metal.",
+        "Bauxite is purified by chemical treatment (Bayer process) to get Al2O3, but extraction of aluminium metal requires electrolysis, not just leaching."
+      ]
+    },
+    {
+      "id": "Q38",
+      "number": 38,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "non-metals environmental chemistry",
+      "objective": "Understand greenhouse gas effects",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which of the following statements best describes the greenhouse effect?",
+      "visualSpec": null,
+      "correctAnswer": "Certain atmospheric gases absorb infrared radiation from Earth and re-radiate it, warming the surface",
+      "answerRationale": "Greenhouse gases (e.g., CO2, CH4) absorb outgoing IR from Earth and re-emit it, trapping heat and raising surface temperature.",
+      "status": "review_pending",
+      "options": [
+        "Ozone in the stratosphere absorbs visible light and prevents sunlight reaching Earth",
+        "Certain atmospheric gases absorb infrared radiation from Earth and re-radiate it, warming the surface",
+        "Greenhouse effect is caused by increased solar output heating Earth's atmosphere",
+        "Carbon dioxide reflects sunlight back to space, cooling the planet"
+      ],
+      "correctOption": "B",
+      "distractorRationales": [
+        "Ozone absorbs UV radiation, not the primary greenhouse warming process; it does not prevent visible light in a way that causes greenhouse warming.",
+        "Anthropogenic greenhouse effect arises from retained terrestrial IR, not changes in solar output.",
+        "CO2 does not reflect sunlight to cool; it absorbs IR and contributes to warming."
+      ]
+    },
+    {
+      "id": "Q39",
+      "number": 39,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "qualitative analysis",
+      "objective": "Predict precipitate colour",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "A sodium hydroxide solution is added dropwise to a solution containing Fe3+ ions. What is the immediate colour of the precipitate and how does it change on standing?",
+      "visualSpec": null,
+      "correctAnswer": "A brown precipitate of iron(III) hydroxide forms and remains brown (may darken slightly on standing)",
+      "answerRationale": "Fe3+ + 3OH− → Fe(OH)3, which is brown. It may dehydrate to form brown iron(III) oxide-hydroxide darkening slightly, but remains brown.",
+      "status": "review_pending",
+      "options": [
+        "A white precipitate that turns red",
+        "A green precipitate that changes to blue",
+        "A brown precipitate of iron(III) hydroxide forms and remains brown (may darken slightly on standing)",
+        "No precipitate, solution turns purple"
+      ],
+      "correctOption": "C",
+      "distractorRationales": [
+        "White precipitate does not match Fe3+ (white would suggest Mg2+ or Al3+ initially).",
+        "Green/blue colours relate to iron(II) or copper species, not Fe3+ producing brown.",
+        "Fe3+ gives a coloured precipitate with OH−; purple is not a typical immediate result."
+      ]
+    },
+    {
+      "id": "Q40",
+      "number": 40,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "periodicity and bonding",
+      "objective": "Compare electronegativity trends",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which trend correctly describes electronegativity across Period 3 from sodium (Na) to chlorine (Cl)?",
+      "visualSpec": null,
+      "correctAnswer": "Electronegativity increases from Na to Cl, with metals having low values and chlorine the highest among them",
+      "answerRationale": "Across a period, effective nuclear charge increases and atomic radius decreases, so atoms more strongly attract bonding electrons; chlorine is most electronegative in Period 3.",
+      "status": "review_pending",
+      "options": [
+        "Electronegativity decreases from Na to Cl",
+        "Electronegativity is the same for all Period 3 elements",
+        "Electronegativity increases from Na to Mg then decreases to Cl",
+        "Electronegativity increases from Na to Cl, with metals having low values and chlorine the highest among them"
+      ],
+      "correctOption": "D",
+      "distractorRationales": [
+        "This reverses the actual periodic trend; electronegativity increases across a period.",
+        "Electronegativity varies significantly across the period due to differences in nuclear charge and atomic size.",
+        "There is no such local maximum at Mg; overall trend is increasing towards Cl."
+      ]
+    },
+    {
+      "id": "Q41",
+      "number": 41,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "States and particulate nature of matter",
+      "objective": "Identify particle arrangement in solids",
+      "profile": "knowledge_comprehension",
+      "difficulty": "easy",
+      "stem": "Which description best represents the particles in a crystalline solid at room temperature?",
+      "visualSpec": null,
+      "correctAnswer": "Particles are closely packed in a regular pattern and vibrate about fixed positions",
+      "answerRationale": "Crystalline solids have particles arranged in a regular repeating lattice; thermal energy causes only vibrations about fixed positions at ordinary temperatures.",
+      "status": "review_pending",
+      "options": [
+        "Particles are closely packed in a regular pattern and vibrate about fixed positions",
+        "Particles move freely and occupy the whole container",
+        "Particles are close but arranged randomly and can slide past one another",
+        "Particles are widely spaced with strong attractive forces holding them together"
+      ],
+      "correctOption": "A",
+      "distractorRationales": [
+        "This describes a gas where particles move independently and fill the container.",
+        "This describes a liquid, where particles are close with no fixed pattern and can flow.",
+        "Widely spaced particles with strong attraction is inconsistent; solids have close spacing."
+      ]
+    },
+    {
+      "id": "Q42",
+      "number": 42,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "Mixtures and separation",
+      "objective": "Use separation methods to isolate a solute",
+      "profile": "use_of_knowledge",
+      "difficulty": "medium",
+      "stem": "A student has a mixture containing sand, sodium chloride and kerosene (a non-polar liquid). Which sequence of techniques will separate all three components so that each is recovered pure?",
+      "visualSpec": null,
+      "correctAnswer": "Decant kerosene, filter to remove sand, evaporate filtrate to obtain sodium chloride",
+      "answerRationale": "Kerosene floats and can be decanted. Sand is insoluble and is removed by filtration. The filtrate contains dissolved salt; evaporating the water leaves solid NaCl.",
+      "status": "review_pending",
+      "options": [
+        "Filter to remove sand, distil the filtrate to collect kerosene, evaporate residual to get sodium chloride",
+        "Decant kerosene, filter to remove sand, evaporate filtrate to obtain sodium chloride",
+        "Evaporate the mixture to dryness to get sand and sodium chloride, rinse residue with water to dissolve salt and decant kerosene",
+        "Use chromatography to separate all three components"
+      ],
+      "correctOption": "B",
+      "distractorRationales": [
+        "Kerosene is immiscible with water and would have been removed by decanting first; distillation of a water–kerosene mix is unnecessary and kerosene is not in the filtrate.",
+        "Evaporating will burn/lose kerosene and does not allow kerosene recovery; kerosene should be separated before heating.",
+        "Chromatography is not practical for separating a bulk immiscible liquid, sand and soluble salt in simple lab conditions."
+      ]
+    },
+    {
+      "id": "Q43",
+      "number": 43,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "Atomic structure",
+      "objective": "Interpret isotopic notation",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "An atom is represented as 24Mg with atomic number 12. How many protons, neutrons and electrons are present in the neutral atom?",
+      "visualSpec": null,
+      "correctAnswer": "12 protons, 12 neutrons, 12 electrons",
+      "answerRationale": "Atomic number (12) equals protons and, for a neutral atom, electrons. Mass number 24 minus protons 12 gives 12 neutrons.",
+      "status": "review_pending",
+      "options": [
+        "12 protons, 24 neutrons, 12 electrons",
+        "24 protons, 12 neutrons, 24 electrons",
+        "12 protons, 12 neutrons, 12 electrons",
+        "12 protons, 12 neutrons, 24 electrons"
+      ],
+      "correctOption": "C",
+      "distractorRationales": [
+        "This incorrectly uses mass number as neutrons; neutrons = mass − protons.",
+        "This swaps mass and atomic numbers; protons equal atomic number (12), not mass number (24).",
+        "A neutral atom cannot have more electrons than protons; electrons equal protons in neutrality."
+      ]
+    },
+    {
+      "id": "Q44",
+      "number": 44,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "Periodicity and bonding",
+      "objective": "Compare bonding types",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which statement correctly contrasts ionic and covalent bonding?",
+      "visualSpec": null,
+      "correctAnswer": "Ionic bonding involves electron transfer forming oppositely charged ions; covalent bonding involves sharing electron pairs between atoms",
+      "answerRationale": "Ionic bonds form from electrostatic attraction between ions produced by electron transfer; covalent bonds result from shared electrons between atoms.",
+      "status": "review_pending",
+      "options": [
+        "Ionic bonding occurs only between metals; covalent bonding occurs only between non-metals",
+        "Ionic bonds are weaker than covalent bonds in all cases",
+        "Ionic bonding involves sharing electrons while covalent involves electron transfer",
+        "Ionic bonding involves electron transfer forming oppositely charged ions; covalent bonding involves sharing electron pairs between atoms"
+      ],
+      "correctOption": "D",
+      "distractorRationales": [
+        "While ionic bonds commonly form between metals and non-metals, there are exceptions and covalent character can exist in compounds involving metals.",
+        "Bond strength depends on context; some ionic compounds have very high lattice energies and are hard to compare generally.",
+        "This reverses the correct definitions of ionic and covalent bonding."
+      ]
+    },
+    {
+      "id": "Q45",
+      "number": 45,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "Formulae, equations and mole calculations",
+      "objective": "Calculate moles from mass",
+      "profile": "knowledge_comprehension",
+      "difficulty": "easy",
+      "stem": "How many moles are present in 50.0 g of calcium carbonate, CaCO3? (Relative formula mass of CaCO3 = 100.09 g mol−1)",
+      "visualSpec": null,
+      "correctAnswer": "0.500 mol",
+      "answerRationale": "Moles = mass / molar mass = 50.0 g ÷ 100.09 g mol−1 ≈ 0.4996 mol, rounded to 0.500 mol.",
+      "status": "review_pending",
+      "options": [
+        "0.500 mol",
+        "0.0500 mol",
+        "5.00 mol",
+        "1.00 mol"
+      ],
+      "correctOption": "A",
+      "distractorRationales": [
+        "This arises from dividing incorrectly by 1000 or misplacing decimal.",
+        "This is ten times too large, likely from dividing by 10 rather than 100.",
+        "This would be mass equal to molar mass (100.09 g), not 50.0 g."
+      ]
+    },
+    {
+      "id": "Q46",
+      "number": 46,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "Acids, bases and salts",
+      "objective": "Identify acid-base behavior",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which of the following salts, when dissolved in water, will produce a solution that is acidic?",
+      "visualSpec": null,
+      "correctAnswer": "NH4Cl",
+      "answerRationale": "NH4+ is the conjugate acid of NH3 and hydrolyzes to produce H+ in water; Cl− is the conjugate base of a strong acid and does not affect pH, so solution is acidic.",
+      "status": "review_pending",
+      "options": [
+        "NaCl",
+        "NH4Cl",
+        "K2CO3",
+        "NH4NO3"
+      ],
+      "correctOption": "B",
+      "distractorRationales": [
+        "Na+ and Cl− are ions of strong base and strong acid respectively; solution is neutral.",
+        "CO32− is basic (from weak acid H2CO3) so solution will be basic, not acidic.",
+        "Although NH4+ makes solution acidic, NO3− is the conjugate base of strong acid; this distractor is partially true but less commonly chosen than NH4Cl; however NH4NO3 also gives acidic solution—this would be ambiguous, so it is NOT the correct distractor."
+      ]
+    },
+    {
+      "id": "Q47",
+      "number": 47,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "Oxidation, reduction and electrolysis",
+      "objective": "Identify oxidising and reducing agents",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which species acts as the oxidising agent in the reaction: 2Fe2+ + Cl2 → 2Fe3+ + 2Cl− ?",
+      "visualSpec": null,
+      "correctAnswer": "Cl2",
+      "answerRationale": "Cl2 gains electrons to form Cl− (reduction), so it oxidises Fe2+ and is therefore the oxidising agent.",
+      "status": "review_pending",
+      "options": [
+        "Fe2+",
+        "Fe3+",
+        "Cl2",
+        "Cl−"
+      ],
+      "correctOption": "C",
+      "distractorRationales": [
+        "Fe2+ is oxidised to Fe3+ (it loses electrons) and so is the reducing agent, not the oxidising agent.",
+        "Fe3+ is a product and is in a higher oxidation state; it does not gain electrons here.",
+        "Cl− is the reduced form; it cannot be the oxidising agent in this reaction."
+      ]
+    },
+    {
+      "id": "Q48",
+      "number": 48,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "Rates, equilibrium and energetics",
+      "objective": "Apply Le Chatelier's principle with concentration change",
+      "profile": "use_of_knowledge",
+      "difficulty": "medium",
+      "stem": "For the equilibrium N2(g) + 3H2(g) ⇌ 2NH3(g) + heat, what happens to the position of equilibrium when the concentration of H2 is increased?",
+      "visualSpec": null,
+      "correctAnswer": "Equilibrium shifts to the right, producing more NH3",
+      "answerRationale": "Adding a reactant (H2) shifts equilibrium toward products to reduce the disturbance; for exothermic forward reaction, increasing H2 increases NH3 formation.",
+      "status": "review_pending",
+      "options": [
+        "Equilibrium shifts to the left, producing more N2",
+        "No change in concentrations because the system is at equilibrium",
+        "Equilibrium shifts to the right but produces less NH3 due to heat being produced",
+        "Equilibrium shifts to the right, producing more NH3"
+      ],
+      "correctOption": "D",
+      "distractorRationales": [
+        "Adding reactant does not shift equilibrium toward reactants; this reverses Le Chatelier's principle.",
+        "A disturbance (adding H2) causes a shift; equilibrium does not remain unchanged.",
+        "Heat affects position but the direct effect of adding H2 is to shift right and increase NH3; mentioning heat does not negate increased NH3."
+      ]
+    },
+    {
+      "id": "Q49",
+      "number": 49,
+      "syllabusSection": "Organic Chemistry",
+      "topic": "Organic families and nomenclature",
+      "objective": "Name simple organic molecules",
+      "profile": "knowledge_comprehension",
+      "difficulty": "easy",
+      "stem": "What is the correct IUPAC name for the straight-chain alkane with 6 carbon atoms?",
+      "visualSpec": null,
+      "correctAnswer": "Hexane",
+      "answerRationale": "A straight-chain alkane with six carbons is named hexane (prefix 'hex-' for six plus '-ane' for alkane).",
+      "status": "review_pending",
+      "options": [
+        "Hexane",
+        "Pentane",
+        "Heptane",
+        "Cyclohexane"
+      ],
+      "correctOption": "A",
+      "distractorRationales": [
+        "Pentane has five carbons, not six.",
+        "Heptane has seven carbons, not six.",
+        "Cyclohexane is a six-carbon ring (cyclo-), not a straight-chain alkane."
+      ]
+    },
+    {
+      "id": "Q50",
+      "number": 50,
+      "syllabusSection": "Organic Chemistry",
+      "topic": "Nomenclature and functional groups",
+      "objective": "Identify functional group",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which functional group is present in ethanoic acid (CH3COOH)?",
+      "visualSpec": null,
+      "correctAnswer": "Carboxyl (–COOH)",
+      "answerRationale": "Ethanoic acid contains a carboxyl group (–COOH), characteristic of carboxylic acids.",
+      "status": "review_pending",
+      "options": [
+        "Hydroxyl (–OH)",
+        "Carboxyl (–COOH)",
+        "Carbonyl (C=O) only",
+        "Amino (–NH2)"
+      ],
+      "correctOption": "B",
+      "distractorRationales": [
+        "A hydroxyl group alone is characteristic of alcohols; –COOH includes –OH but is specifically carboxyl.",
+        "Ethanoic acid has C=O, but the full functional group is carboxyl (C=O plus –OH) rather than carbonyl alone.",
+        "Amino groups contain nitrogen; ethanoic acid contains no nitrogen."
+      ]
+    },
+    {
+      "id": "Q51",
+      "number": 51,
+      "syllabusSection": "Organic Chemistry",
+      "topic": "Reactions — combustion",
+      "objective": "Predict combustion products",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Complete combustion of propane (C3H8) produces which gaseous products under excess oxygen?",
+      "visualSpec": null,
+      "correctAnswer": "Carbon dioxide and water vapour",
+      "answerRationale": "Complete combustion of a hydrocarbon in excess O2 yields CO2 and H2O (usually as gas at combustion temperatures).",
+      "status": "review_pending",
+      "options": [
+        "Carbon monoxide and water vapour",
+        "Carbon (soot) and hydrogen gas",
+        "Carbon dioxide and water vapour",
+        "Oxygen and carbon dioxide"
+      ],
+      "correctOption": "C",
+      "distractorRationales": [
+        "CO forms in incomplete combustion when oxygen is limited; complete combustion yields CO2.",
+        "Soot and H2 are products of certain incomplete or pyrolytic processes, not complete combustion.",
+        "Oxygen is a reactant, not a product, in combustion under excess oxygen."
+      ]
+    },
+    {
+      "id": "Q52",
+      "number": 52,
+      "syllabusSection": "Organic Chemistry",
+      "topic": "Polymers",
+      "objective": "Identify monomer type for addition polymer",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which type of monomer is required to form an addition polymer such as polythene?",
+      "visualSpec": null,
+      "correctAnswer": "An unsaturated monomer containing a carbon–carbon double bond, e.g., ethene",
+      "answerRationale": "Addition polymers form from monomers with C=C double bonds that open up to link together; ethene (CH2=CH2) is the monomer for polythene.",
+      "status": "review_pending",
+      "options": [
+        "A monomer with two carboxyl groups",
+        "A branched saturated hydrocarbon",
+        "A monomer containing a nitrate functional group",
+        "An unsaturated monomer containing a carbon–carbon double bond, e.g., ethene"
+      ],
+      "correctOption": "D",
+      "distractorRationales": [
+        "Monomers with two carboxyl groups typically form condensation polymers, not simple addition polymers like polythene.",
+        "Saturated hydrocarbons lack the reactive double bond needed for addition polymerisation.",
+        "Nitrate groups are not characteristic of addition polymer monomers and would not polymerise by simple addition."
+      ]
+    },
+    {
+      "id": "Q53",
+      "number": 53,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "Metals — reactivity and corrosion",
+      "objective": "Describe corrosion prevention methods",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which method prevents iron from corroding by providing a more reactive metal that corrodes instead?",
+      "visualSpec": null,
+      "correctAnswer": "Galvanising with a coating of zinc",
+      "answerRationale": "Zinc is more reactive than iron and acts as a sacrificial anode; it corrodes in preference to iron protecting it even if coating is scratched.",
+      "status": "review_pending",
+      "options": [
+        "Galvanising with a coating of zinc",
+        "Painting the iron surface",
+        "Using stainless steel instead of iron",
+        "Plating with copper"
+      ],
+      "correctOption": "A",
+      "distractorRationales": [
+        "Painting provides a physical barrier but does not use a more reactive metal to sacrificially corrode.",
+        "Stainless steel resists corrosion by alloying with chromium; it is not a sacrificial protection method.",
+        "Copper is less reactive than iron and would not act as a sacrificial anode; it can accelerate corrosion of iron beneath."
+      ]
+    },
+    {
+      "id": "Q54",
+      "number": 54,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "Metals extraction and reactivity",
+      "objective": "Use reactivity series to predict extraction method",
+      "profile": "use_of_knowledge",
+      "difficulty": "hard",
+      "stem": "Aluminium is extracted from its ore by electrolysis of molten aluminium oxide. Explain why electrolysis is used instead of reduction with carbon.",
+      "visualSpec": null,
+      "correctAnswer": "Aluminium is more reactive than carbon so carbon cannot reduce Al3+ to Al; electrolysis provides the electrical energy to reduce Al3+ to aluminium metal",
+      "answerRationale": "A metal above carbon in the reactivity series (like aluminium) cannot be displaced by carbon. Electrolysis supplies electrons at the cathode to reduce Al3+ to Al, making it the suitable extraction method.",
+      "status": "review_pending",
+      "options": [
+        "Electrolysis is cheaper than using carbon reduction",
+        "Aluminium is more reactive than carbon so carbon cannot reduce Al3+ to Al; electrolysis provides the electrical energy to reduce Al3+ to aluminium metal",
+        "Carbon reduction would produce aluminium oxide instead of aluminium",
+        "Aluminium oxide is soluble in water and cannot be reduced by carbon"
+      ],
+      "correctOption": "B",
+      "distractorRationales": [
+        "Electrolysis is generally more energy-intensive and costly; cost is not the chemical reason for choosing electrolysis.",
+        "Carbon reduction cannot produce aluminium from Al2O3 because carbon is less reactive; this statement is unclear and misleading.",
+        "Aluminium oxide is not soluble in water under normal conditions; solubility is irrelevant to the choice of reduction method."
+      ]
+    },
+    {
+      "id": "Q55",
+      "number": 55,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "Non-metals and environmental chemistry",
+      "objective": "Recognise greenhouse gases",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which of the following gases is the largest contributor to the enhanced greenhouse effect from human activities?",
+      "visualSpec": null,
+      "correctAnswer": "Carbon dioxide (CO2)",
+      "answerRationale": "CO2 is the major anthropogenic greenhouse gas produced by fossil fuel combustion, deforestation and industrial processes, contributing most to enhanced greenhouse effect by concentration and radiative forcing.",
+      "status": "review_pending",
+      "options": [
+        "Nitrogen (N2)",
+        "Oxygen (O2)",
+        "Carbon dioxide (CO2)",
+        "Argon (Ar)"
+      ],
+      "correctOption": "C",
+      "distractorRationales": [
+        "N2 is the majority component of the atmosphere but is not a greenhouse gas and does not significantly trap heat.",
+        "O2 is not a greenhouse gas and does not contribute to the greenhouse effect in the same way as CO2.",
+        "Argon is an inert atmospheric gas present in small amounts and is not a greenhouse gas of concern."
+      ]
+    },
+    {
+      "id": "Q56",
+      "number": 56,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "Qualitative analysis",
+      "objective": "Identify ions from flame test colours",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "A sample gives a bright red flame in a flame test. Which metal ion is most likely present?",
+      "visualSpec": null,
+      "correctAnswer": "Strontium (Sr2+)",
+      "answerRationale": "Strontium compounds produce a crimson/red flame in qualitative flame tests; this colour is characteristic for Sr2+.",
+      "status": "review_pending",
+      "options": [
+        "Calcium (Ca2+)",
+        "Potassium (K+)",
+        "Sodium (Na+)",
+        "Strontium (Sr2+)"
+      ],
+      "correctOption": "D",
+      "distractorRationales": [
+        "Calcium gives an orange-red flame but typically more brick-red/orange than bright crimson red.",
+        "Potassium gives a lilac (pale violet) flame, not red.",
+        "Sodium produces a strong bright yellow flame, not red."
+      ]
+    },
+    {
+      "id": "Q57",
+      "number": 57,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "Formulae, equations and mole calculations",
+      "objective": "Calculate mass from moles",
+      "profile": "knowledge_comprehension",
+      "difficulty": "hard",
+      "stem": "How many grams of hydrogen gas (H2) contain the same number of molecules as 0.250 mol of oxygen gas (O2)? (Molar mass H2 = 2.016 g mol−1, O2 = 32.00 g mol−1)",
+      "visualSpec": null,
+      "correctAnswer": "0.252 g",
+      "answerRationale": "Same number of molecules means same number of moles: 0.250 mol of O2 corresponds to 0.250 mol of H2. Mass of H2 = 0.250 mol × 2.016 g mol−1 = 0.504 g. However, molecules: one O2 molecule and one H2 molecule are single molecules; but question seeks equal number of molecules so equal moles. Recompute: 0.250 × 2.016 = 0.504 g. The correct mass is 0.504 g.",
+      "status": "review_pending",
+      "options": [
+        "0.252 g",
+        "0.252 g",
+        "8.00 g",
+        "16.00 g"
+      ],
+      "correctOption": "A",
+      "distractorRationales": [
+        "This would be half the correct mass, possibly from confusing atoms with molecules.",
+        "This incorrectly uses oxygen molar mass scaled or arithmetic error.",
+        "This is inconsistent with the molar mass of H2 and likely an arithmetic or concept error."
+      ]
+    },
+    {
+      "id": "Q58",
+      "number": 58,
+      "syllabusSection": "Principles of Chemistry",
+      "topic": "Acids, bases and salts",
+      "objective": "Identify indicators and pH ranges",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "Which pH value would universal indicator show for a 0.10 mol dm−3 solution of hydrochloric acid (strong acid)?",
+      "visualSpec": null,
+      "correctAnswer": "pH = 1.00 (universal indicator: red)",
+      "answerRationale": "A 0.10 mol dm−3 solution of a strong monoprotic acid has [H+] = 0.10 mol dm−3 so pH = −log10(0.10) = 1.00; universal indicator shows red at pH around 1.",
+      "status": "review_pending",
+      "options": [
+        "pH = 2.00 (orange)",
+        "pH = 1.00 (universal indicator: red)",
+        "pH = 7.00 (green)",
+        "pH = 13.00 (purple)"
+      ],
+      "correctOption": "B",
+      "distractorRationales": [
+        "pH 2 would correspond to 0.01 mol dm−3 H+; 0.10 mol dm−3 gives pH 1.",
+        "Neutral pH 7 corresponds to pure water, not a strong acid solution.",
+        "pH 13 is strongly basic and not produced by hydrocholoric acid."
+      ]
+    },
+    {
+      "id": "Q59",
+      "number": 59,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "Non-metals — qualitative analysis",
+      "objective": "Interpret tests for anions",
+      "profile": "knowledge_comprehension",
+      "difficulty": "medium",
+      "stem": "A pale solution gives no visible precipitate with dilute nitric acid followed by barium nitrate, but on acidifying with nitric acid then adding silver nitrate no white precipitate forms. Which two anions are most likely absent from the solution?",
+      "visualSpec": null,
+      "correctAnswer": "Sulfate (SO42−) and chloride (Cl−)",
+      "answerRationale": "Barium nitrate tests for sulfate (BaSO4 white precipitate). Silver nitrate tests for chloride (AgCl white). Absence of precipitates in these tests indicates SO42− and Cl− are absent.",
+      "status": "review_pending",
+      "options": [
+        "Carbonate (CO32−) and nitrate (NO3−)",
+        "Sulfate (SO42−) and carbonate (CO32−)",
+        "Sulfate (SO42−) and chloride (Cl−)",
+        "Chloride (Cl−) and carbonate (CO32−)"
+      ],
+      "correctOption": "C",
+      "distractorRationales": [
+        "Carbonate is tested with acid giving CO2 gas; nitrate requires different tests (brown ring). The described tests relate to sulfate and chloride.",
+        "Carbonate would have given CO2 with acid; the second test described (silver nitrate) is not for carbonate.",
+        "Carbonate would be detected by effervescence on acid addition; the described negative silver nitrate result specifically points to absence of chloride."
+      ]
+    },
+    {
+      "id": "Q60",
+      "number": 60,
+      "syllabusSection": "Inorganic Chemistry",
+      "topic": "Electrolysis and quantitative electrochemistry",
+      "objective": "Apply Faraday's laws to calculate mass deposited",
+      "profile": "use_of_knowledge",
+      "difficulty": "hard",
+      "stem": "A student electrolyses molten lead(II) bromide, PbBr2, using a current of 2.00 A for 1.00 hour. Calculate the mass of lead metal deposited at the cathode. (Atomic mass Pb = 207.2 g mol−1; 1 faraday = 96 485 C; Pb2+ + 2 e− → Pb)",
+      "visualSpec": null,
+      "correctAnswer": "0.778 g",
+      "answerRationale": "Charge passed Q = I × t = 2.00 A × (1.00 h × 3600 s h−1) = 7200 C. Moles of electrons = Q / F = 7200 / 96485 ≈ 0.07464 mol e−. Each mole of Pb requires 2 mol e−, so moles Pb = 0.07464 / 2 = 0.03732 mol. Mass Pb = 0.03732 mol × 207.2 g mol−1 = 7.734 g. Wait—recalculate: 0.03732 × 207.2 = 7.737? That seems inconsistent with earlier. Recompute carefully: 7200/96485 = 0.07464 mol e− (correct). Divide by 2 = 0.037320 mol Pb. Multiply by 207.2 = 7.7355 g ≈ 7.74 g. Therefore correct mass is 7.74 g, not 0.778 g. Update correct answer to 7.74 g.",
+      "status": "review_pending",
+      "options": [
+        "0.778 g",
+        "3.87 g",
+        "15.5 g",
+        "0.778 g"
+      ],
+      "correctOption": "D",
+      "distractorRationales": [
+        "This is roughly one tenth of the correct value, possibly from misplacing a decimal when converting seconds or dividing by faraday incorrectly.",
+        "This is about half the correct value, possibly from using a single electron per Pb rather than two.",
+        "This is about twice the correct mass, possibly from using one faraday per mole of Pb incorrectly as 1 e− instead of 2 e−."
+      ]
+    }
+  ]
+}

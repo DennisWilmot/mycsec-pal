@@ -1,0 +1,843 @@
+{
+  "id": "CSEC-Chemistry-P2-Practice-2026-01",
+  "subject": "Chemistry",
+  "paper": 2,
+  "questions": [
+    {
+      "id": "Q1",
+      "number": 1,
+      "kind": "data_analysis",
+      "syllabusSections": [
+        "Principles of Chemistry",
+        "Inorganic Chemistry"
+      ],
+      "topics": [
+        "particles mixtures and separation",
+        "rates",
+        "experimental technique and data handling"
+      ],
+      "scenario": "A student investigates how the surface area of calcium carbonate (limestone) affects the initial rate of reaction with hydrochloric acid at constant temperature. The student used 0.500 g samples of CaCO3 of different particle sizes and 50.0 mL of 1.00 mol·L⁻¹ HCl at 25.0 °C. Initial rates of CO2 production were determined from the initial slope of volume vs time plots using a gas syringe.",
+      "stimulus": {
+        "type": "table",
+        "title": "Observed initial rates for reactions of CaCO3 with HCl",
+        "description": "Each trial used 0.500 g CaCO3 and 50.0 mL 1.00 mol·L⁻¹ HCl at 25.0 °C. Surface area is the estimated surface area of the CaCO3 sample per gram, obtained from sieve analysis and expressed in cm²·g⁻¹. Initial rate is the measured initial rate of CO2 production in cm³·s⁻¹, obtained from the first 20 s of the reaction.",
+        "labels": [
+          "Trial",
+          "Particle size (approx. diameter, mm)",
+          "Estimated surface area (cm²·g⁻¹)",
+          "Initial rate of CO2 (cm³·s⁻¹)"
+        ],
+        "data": [
+          "1, 3.0 mm, 1.00 cm²·g⁻¹, 0.060 cm³·s⁻¹",
+          "2, 1.5 mm, 2.50 cm²·g⁻¹, 0.150 cm³·s⁻¹",
+          "3, 1.0 mm, 5.00 cm²·g⁻¹, 0.300 cm³·s⁻¹",
+          "4, 0.5 mm, 10.0 cm²·g⁻¹, 0.600 cm³·s⁻¹",
+          "5, <0.25 mm (powder), 20.0 cm²·g⁻¹, 1.200 cm³·s⁻¹"
+        ]
+      },
+      "subparts": [
+        {
+          "id": "1a",
+          "label": "a",
+          "prompt": "Define the term 'initial rate of reaction' and give its SI units in the context of this experiment. (3 marks)",
+          "marks": 3,
+          "profile": "knowledge_comprehension",
+          "responseType": "short_text",
+          "answer": "Initial rate of reaction is the rate at the very start of a reaction, commonly taken as the slope of the concentration (or volume of gas) vs time curve at t = 0. In this experiment it is reported as the initial rate of CO2 production: volume of CO2 produced per unit time. SI units: cubic centimetres per second (cm³·s⁻¹) or m³·s⁻¹ (equivalent unit).",
+          "markScheme": [
+            {
+              "point": "Definition: rate at the start (slope at t = 0) or earliest measurable period",
+              "marks": 2
+            },
+            {
+              "point": "SI units appropriate to the data: cm³·s⁻¹ (or m³·s⁻¹) stated",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "1b",
+          "label": "b",
+          "prompt": "Plot a graph of initial rate of CO2 (y-axis) against estimated surface area (x-axis). Describe clearly how you would label the axes (including units) and the trend you expect. (6 marks)",
+          "marks": 6,
+          "profile": "use_of_knowledge",
+          "responseType": "graph_plot",
+          "answer": "Axes: x-axis: Estimated surface area (cm²·g⁻¹); y-axis: Initial rate of CO2 (cm³·s⁻¹). Plot the five data points: (1.00, 0.060), (2.50, 0.150), (5.00, 0.300), (10.0, 0.600), (20.0, 1.200). Draw a best-fit straight line through the points (these data are proportional). The trend: initial rate increases linearly with surface area; rate ∝ surface area.",
+          "markScheme": [
+            {
+              "point": "Axes correctly labelled with quantities and units (x and y labelled)",
+              "marks": 1
+            },
+            {
+              "point": "All five data points plotted in correct positions",
+              "marks": 2
+            },
+            {
+              "point": "Line of best fit drawn showing direct/linear relationship",
+              "marks": 2
+            },
+            {
+              "point": "Trend described: rate increases with surface area; proportional relationship",
+              "marks": 1
+            }
+          ],
+          "visualSpec": {
+            "type": "graph",
+            "description": "A Cartesian graph with x-axis from 0 to 22 cm²·g⁻¹ and y-axis from 0 to 1.4 cm³·s⁻¹. Points at (1.00,0.060), (2.50,0.150), (5.00,0.300), (10.0,0.600), (20.0,1.200). Expected best-fit line through the origin showing proportional increase.",
+            "labels": [
+              "x: Estimated surface area (cm²·g⁻¹)",
+              "y: Initial rate of CO2 (cm³·s⁻¹)"
+            ],
+            "data": [
+              "1.00, 0.060",
+              "2.50, 0.150",
+              "5.00, 0.300",
+              "10.00, 0.600",
+              "20.00, 1.200"
+            ]
+          }
+        },
+        {
+          "id": "1c",
+          "label": "c",
+          "prompt": "Use two of the data points to calculate the gradient of the rate vs surface area graph and give the units of the gradient. Show substitution and working. (4 marks)",
+          "marks": 4,
+          "profile": "use_of_knowledge",
+          "responseType": "calculation",
+          "answer": "Choose points (5.00, 0.300) and (10.00, 0.600).\nGradient = (change in rate)/(change in surface area) = (0.600 - 0.300) cm³·s⁻¹ / (10.00 - 5.00) cm²·g⁻¹ = 0.300 / 5.00 = 0.060 cm³·s⁻¹ per (cm²·g⁻¹). Units: cm³·s⁻¹·(cm²·g⁻¹)⁻¹.",
+          "markScheme": [
+            {
+              "point": "Selection of two correct data points and statement of their coordinates",
+              "marks": 1
+            },
+            {
+              "point": "Correct calculation of change in y and change in x and substitution",
+              "marks": 1
+            },
+            {
+              "point": "Correct numerical value for gradient (0.060)",
+              "marks": 1
+            },
+            {
+              "point": "Correct units stated: cm³·s⁻¹ per (cm²·g⁻¹) (or cm³·s⁻¹·(cm²·g⁻¹)⁻¹)",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "1d",
+          "label": "d",
+          "prompt": "From the data, state the mathematical relationship between initial rate and surface area (e.g., proportionalities). Give a one-sentence explanation using the collision theory. (2 marks)",
+          "marks": 2,
+          "profile": "use_of_knowledge",
+          "responseType": "short_text",
+          "answer": "The initial rate is directly proportional to the surface area (rate ∝ surface area). Explanation: increasing the surface area increases the number of exposed CaCO3 particles so more frequent collisions between acid particles and the solid surface occur, increasing the reaction rate.",
+          "markScheme": [
+            {
+              "point": "Statement of proportional relationship: rate ∝ surface area (or linear proportionality)",
+              "marks": 1
+            },
+            {
+              "point": "Concise collision theory explanation linking increased surface area to more effective collisions and higher rate",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "1e",
+          "label": "e",
+          "prompt": "Identify three possible sources of experimental error in this investigation and for each give one practical precaution or improvement that would reduce that error. Also state why repeating trials and reporting an average rate is important. (10 marks)",
+          "marks": 10,
+          "profile": "experimental_skills",
+          "responseType": "extended_text",
+          "answer": "Possible errors and improvements:\n1) Leakage or gas escape at the syringe connection → precaution: ensure airtight seals with rubber tubing and clamps; check for leaks before starting.\n2) Inaccurate timing when measuring initial period → improvement: use a digital timer started simultaneously with release of reagent or trigger and record video for timing verification.\n3) Variation in actual surface area between samples due to inconsistent sieving → improvement: prepare samples with standardized sieves and measure particle size distribution; use a single well-characterized powder fraction.\nImportance of repeats: Repeating trials allows calculation of an average (mean) and assessment of spread (precision). Averaging reduces the influence of random errors and gives a more reliable estimate of the true initial rate.",
+          "markScheme": [
+            {
+              "point": "Identification of experimental error 1 and a correct, practical improvement/precaution (2 marks: 1 for error, 1 for improvement)",
+              "marks": 2
+            },
+            {
+              "point": "Identification of experimental error 2 and improvement/precaution (2 marks)",
+              "marks": 2
+            },
+            {
+              "point": "Identification of experimental error 3 and improvement/precaution (2 marks)",
+              "marks": 2
+            },
+            {
+              "point": "Explanation why repeating trials and averaging improves reliability (2 marks)",
+              "marks": 2
+            },
+            {
+              "point": "Reference to precision/consistency or random error reduction in explanation (2 marks)",
+              "marks": 2
+            }
+          ],
+          "visualSpec": null
+        }
+      ],
+      "totalMarks": 25,
+      "status": "review_pending"
+    },
+    {
+      "id": "Q2",
+      "number": 2,
+      "kind": "structured",
+      "syllabusSections": [
+        "Principles of Chemistry",
+        "Inorganic Chemistry"
+      ],
+      "topics": [
+        "moles formulae and equations",
+        "oxidation and reduction",
+        "empirical formula determination"
+      ],
+      "scenario": "A student burns a clean strip of magnesium ribbon in air to form magnesium oxide. The magnesium ribbon had a mass of 0.500 g before heating; after complete combustion and cooling in a desiccator the mass of the oxide was 0.822 g.",
+      "stimulus": null,
+      "subparts": [
+        {
+          "id": "2a",
+          "label": "a",
+          "prompt": "Define 'empirical formula'. (2 marks)",
+          "marks": 2,
+          "profile": "knowledge_comprehension",
+          "responseType": "short_text",
+          "answer": "The empirical formula of a compound is the simplest whole-number ratio of atoms of each element in the compound.",
+          "markScheme": [
+            {
+              "point": "Definition stating simplest whole-number ratio of elements",
+              "marks": 2
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "2b",
+          "label": "b",
+          "prompt": "Using the data, calculate the empirical formula of the magnesium oxide produced. (Use atomic masses: Mg = 24.3 g·mol⁻¹, O = 16.0 g·mol⁻¹.) Show working. (8 marks)",
+          "marks": 8,
+          "profile": "use_of_knowledge",
+          "responseType": "calculation",
+          "answer": "Mass of Mg initially = 0.500 g.\nMass of oxide = 0.822 g.\nMass of oxygen in oxide = 0.822 g − 0.500 g = 0.322 g.\nMoles of Mg = 0.500 g ÷ 24.3 g·mol⁻¹ = 0.02058 mol (3 s.f.).\nMoles of O = 0.322 g ÷ 16.0 g·mol⁻¹ = 0.020125 mol ≈ 0.02013 mol.\nDivide by smallest: Mg: 0.02058 ÷ 0.02013 ≈ 1.02 ≈ 1.00; O: 0.02013 ÷ 0.02013 = 1.00.\nEmpirical formula approximately MgO.",
+          "markScheme": [
+            {
+              "point": "Correct calculation of mass of oxygen (0.322 g)",
+              "marks": 1
+            },
+            {
+              "point": "Correct calculation of moles of Mg (0.500 ÷ 24.3 = 0.02058 mol) with working",
+              "marks": 2
+            },
+            {
+              "point": "Correct calculation of moles of O (0.322 ÷ 16.0 = 0.02013 mol) with working",
+              "marks": 2
+            },
+            {
+              "point": "Correct formation of simplest ratio (both ≈1:1) and justification (division by smallest)",
+              "marks": 2
+            },
+            {
+              "point": "Correct empirical formula stated as MgO",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "2c",
+          "label": "c",
+          "prompt": "State the type of chemical change that occurred to magnesium (oxidation or reduction) and give one short reason. (3 marks)",
+          "marks": 3,
+          "profile": "knowledge_comprehension",
+          "responseType": "short_text",
+          "answer": "Magnesium underwent oxidation. Reason: magnesium atoms lose electrons when forming Mg²⁺ in MgO (increase in oxidation state from 0 to +2); oxygen gains electrons (reduction).",
+          "markScheme": [
+            {
+              "point": "Correct identification: oxidation",
+              "marks": 1
+            },
+            {
+              "point": "Correct reason: loss of electrons or increase in oxidation number for Mg",
+              "marks": 2
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "2d",
+          "label": "d",
+          "prompt": "Calculate the percentage by mass of oxygen in the magnesium oxide sample. Show working and give the answer to three significant figures. (2 marks)",
+          "marks": 2,
+          "profile": "knowledge_comprehension",
+          "responseType": "calculation",
+          "answer": "Mass oxygen in oxide = 0.322 g. Total mass oxide = 0.822 g.\n% by mass O = (0.322 ÷ 0.822) × 100 = 39.17% ≈ 39.2% (3 s.f.).",
+          "markScheme": [
+            {
+              "point": "Correct substitution and calculation: (0.322/0.822)×100",
+              "marks": 1
+            },
+            {
+              "point": "Correct numerical answer to three significant figures: 39.2%",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        }
+      ],
+      "totalMarks": 15,
+      "status": "review_pending"
+    },
+    {
+      "id": "Q3",
+      "number": 3,
+      "kind": "structured",
+      "syllabusSections": [
+        "Organic Chemistry",
+        "Principles of Chemistry"
+      ],
+      "topics": [
+        "nomenclature",
+        "addition reactions",
+        "stoichiometry of organic reactions"
+      ],
+      "scenario": "Consider the alkene but-2-ene (a straight-chain alkene). Use the structural information given below in answering the questions.",
+      "stimulus": {
+        "type": "structural_formula",
+        "title": "Structure of but-2-ene",
+        "description": "But-2-ene structural formula: CH3–CH=CH–CH3 (the double bond between carbon 2 and 3). This structure is the trans or cis isomer not specified here; treat as generic but-2-ene.",
+        "labels": [
+          "CH3–CH=CH–CH3"
+        ],
+        "data": []
+      },
+      "subparts": [
+        {
+          "id": "3a",
+          "label": "a",
+          "prompt": "Give the IUPAC name of the compound and its molecular formula. State whether it is saturated or unsaturated. (4 marks)",
+          "marks": 4,
+          "profile": "knowledge_comprehension",
+          "responseType": "short_text",
+          "answer": "IUPAC name: but-2-ene. Molecular formula: C4H8. It is unsaturated because it contains a carbon–carbon double bond.",
+          "markScheme": [
+            {
+              "point": "Correct IUPAC name: but-2-ene",
+              "marks": 2
+            },
+            {
+              "point": "Correct molecular formula: C4H8",
+              "marks": 1
+            },
+            {
+              "point": "Correct statement: unsaturated (presence of C=C)",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "3b",
+          "label": "b",
+          "prompt": "Write the structural formula of the product formed when but-2-ene reacts with bromine (Br2) in an inert solvent (bromination). Name the type of reaction. (4 marks)",
+          "marks": 4,
+          "profile": "use_of_knowledge",
+          "responseType": "diagram_draw",
+          "answer": "Product structural formula: CH3–CH(Br)–CH(Br)–CH3 (1,2-dibromobutane). Type of reaction: electrophilic addition (bromination is an addition reaction across the double bond).",
+          "markScheme": [
+            {
+              "point": "Structural formula of 1,2-dibromobutane correctly shown (both carbons formerly in double bond now bear Br and H appropriately)",
+              "marks": 3
+            },
+            {
+              "point": "Correct naming of reaction type: addition (electrophilic addition or bromination)",
+              "marks": 1
+            }
+          ],
+          "visualSpec": {
+            "type": "structural_formula",
+            "description": "Product: CH3–CH(Br)–CH(Br)–CH3 (1,2-dibromobutane).",
+            "labels": [
+              "CH3–CH(Br)–CH(Br)–CH3"
+            ],
+            "data": []
+          }
+        },
+        {
+          "id": "3c",
+          "label": "c",
+          "prompt": "If 2.00 g of but-2-ene (molar mass 56.10 g·mol⁻¹) reacts completely with excess bromine, calculate the mass of 1,2-dibromobutane formed. (Molar mass of product = 215.90 g·mol⁻¹.) Show working. (4 marks)",
+          "marks": 4,
+          "profile": "use_of_knowledge",
+          "responseType": "calculation",
+          "answer": "Moles of but-2-ene = 2.00 g ÷ 56.10 g·mol⁻¹ = 0.03564 mol.\nThe reaction adds one Br2 per alkene to give one mole product per mole alkene (1:1). So moles product = 0.03564 mol.\nMass product = 0.03564 mol × 215.90 g·mol⁻¹ = 7.689 g ≈ 7.69 g (3 s.f.).",
+          "markScheme": [
+            {
+              "point": "Correct calculation of moles of but-2-ene: 2.00 ÷ 56.10 = 0.03564 mol",
+              "marks": 1
+            },
+            {
+              "point": "Correct stoichiometric statement: 1 mole alkene → 1 mole dibromo product",
+              "marks": 1
+            },
+            {
+              "point": "Correct calculation of mass: moles × 215.90 = 7.689 g",
+              "marks": 2
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "3d",
+          "label": "d",
+          "prompt": "State two conditions or reagents that would favour polymerisation of alkenes such as but-2-ene. (3 marks)",
+          "marks": 3,
+          "profile": "knowledge_comprehension",
+          "responseType": "short_text",
+          "answer": "Two conditions/reagents that favour polymerisation: (1) Presence of an initiator such as a peroxide or radical initiator; (2) Elevated temperature and/or pressure, or use of catalysts (e.g., Ziegler–Natta catalysts for controlled polymerisation).",
+          "markScheme": [
+            {
+              "point": "First correct condition or reagent (e.g., radical initiator, peroxide, catalyst)",
+              "marks": 1
+            },
+            {
+              "point": "Second correct condition (e.g., heat, pressure, catalyst such as Ziegler–Natta)",
+              "marks": 1
+            },
+            {
+              "point": "Short statement linking these to polymerisation of alkenes (e.g., these enable opening of double bonds and formation of long chains)",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        }
+      ],
+      "totalMarks": 15,
+      "status": "review_pending"
+    },
+    {
+      "id": "Q4",
+      "number": 4,
+      "kind": "extended_response",
+      "syllabusSections": [
+        "Principles of Chemistry",
+        "Inorganic Chemistry"
+      ],
+      "topics": [
+        "acids bases salts and qualitative analysis",
+        "titration calculations"
+      ],
+      "scenario": "A student titrates a 25.00 mL sample of vinegar (aqueous acetic acid) with 0.1000 M sodium hydroxide to determine the concentration of acetic acid in the vinegar at 25.0 °C. The volume of NaOH required to reach the end point was 18.75 mL. The density of the vinegar is 1.01 g·mL⁻¹. (Molar mass of CH3COOH = 60.05 g·mol⁻¹.)",
+      "stimulus": null,
+      "subparts": [
+        {
+          "id": "4a",
+          "label": "a",
+          "prompt": "Define a monoprotic acid. (2 marks)",
+          "marks": 2,
+          "profile": "knowledge_comprehension",
+          "responseType": "short_text",
+          "answer": "A monoprotic acid is an acid that can donate one proton (H⁺) per molecule in an acid–base reaction.",
+          "markScheme": [
+            {
+              "point": "Definition indicating donation of one proton per molecule",
+              "marks": 2
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "4b",
+          "label": "b",
+          "prompt": "Calculate the concentration (molarity) of acetic acid in the vinegar sample. Show all working. (6 marks)",
+          "marks": 6,
+          "profile": "use_of_knowledge",
+          "responseType": "calculation",
+          "answer": "Moles NaOH used = M × V = 0.1000 mol·L⁻¹ × 0.01875 L = 0.001875 mol.\nReaction: CH3COOH + NaOH → CH3COONa + H2O (1:1). So moles CH3COOH = 0.001875 mol.\nConcentration of CH3COOH = moles / volume (L) = 0.001875 mol ÷ 0.02500 L = 0.07500 mol·L⁻¹.",
+          "markScheme": [
+            {
+              "point": "Correct calculation of moles NaOH (0.1000 × 0.01875 = 0.001875 mol)",
+              "marks": 2
+            },
+            {
+              "point": "Correct use of 1:1 stoichiometry to get moles CH3COOH (0.001875 mol)",
+              "marks": 1
+            },
+            {
+              "point": "Correct concentration calculation: 0.001875 ÷ 0.02500 = 0.07500 M with units",
+              "marks": 3
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "4c",
+          "label": "c",
+          "prompt": "Name a suitable indicator for this titration and state briefly why it is appropriate. (2 marks)",
+          "marks": 2,
+          "profile": "knowledge_comprehension",
+          "responseType": "short_text",
+          "answer": "Suitable indicator: phenolphthalein. It is appropriate because the equivalence point for a weak acid (acetic acid) titrated with a strong base is at pH > 7 (around pH ≈ 8–9), and phenolphthalein changes colour in the pH range ≈ 8.2–10.0.",
+          "markScheme": [
+            {
+              "point": "Correct indicator named: phenolphthalein (or equivalent with end-point above pH 7)",
+              "marks": 1
+            },
+            {
+              "point": "Correct brief justification linking weak-acid/strong-base equivalence pH (>7) to indicator range",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "4d",
+          "label": "d",
+          "prompt": "Calculate the percentage by mass of acetic acid in the vinegar. Show working and give answer to three significant figures. (3 marks)",
+          "marks": 3,
+          "profile": "use_of_knowledge",
+          "responseType": "calculation",
+          "answer": "Concentration CH3COOH = 0.07500 mol·L⁻¹. Moles in 25.00 mL sample = 0.07500 mol·L⁻¹ × 0.02500 L = 0.001875 mol.\nMass of CH3COOH = 0.001875 mol × 60.05 g·mol⁻¹ = 0.11259 g.\nMass of vinegar sample = volume × density = 25.00 mL × 1.01 g·mL⁻¹ = 25.25 g.\n% by mass = (0.11259 g ÷ 25.25 g) × 100 = 0.4458% ≈ 0.446% (3 s.f.).",
+          "markScheme": [
+            {
+              "point": "Correct moles of acid in sample: 0.07500 × 0.02500 = 0.001875 mol",
+              "marks": 1
+            },
+            {
+              "point": "Correct mass of acid: 0.001875 × 60.05 = 0.11259 g",
+              "marks": 1
+            },
+            {
+              "point": "Correct percentage calculation and answer to 3 s.f.: 0.446%",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "4e",
+          "label": "e",
+          "prompt": "State whether acetic acid in vinegar is a strong or weak acid and give one piece of experimental evidence that supports your answer. (2 marks)",
+          "marks": 2,
+          "profile": "knowledge_comprehension",
+          "responseType": "short_text",
+          "answer": "Acetic acid is a weak acid. Evidence: the equivalence pH in its titration with NaOH is greater than 7 (showing incomplete dissociation), and its aqueous solutions have a pH significantly above 0 for a comparable concentration of a strong acid; also it does not fully ionize (weak conductivity compared with strong acids at the same concentration).",
+          "markScheme": [
+            {
+              "point": "Correct identification: weak acid",
+              "marks": 1
+            },
+            {
+              "point": "One correct experimental evidence (e.g., equivalence pH > 7 in titration, lower conductivity than strong acid at same concentration)",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        }
+      ],
+      "totalMarks": 15,
+      "status": "review_pending"
+    },
+    {
+      "id": "Q5",
+      "number": 5,
+      "kind": "extended_response",
+      "syllabusSections": [
+        "Inorganic Chemistry",
+        "Principles of Chemistry"
+      ],
+      "topics": [
+        "electrolysis",
+        "metals extraction and plating",
+        "environmental chemistry"
+      ],
+      "scenario": "Copper is being electroplated onto a steel part from an aqueous copper(II) sulfate solution. A current of 2.00 A is passed through the cell for 3.00 hours and the student measures the mass of copper deposited. (Atomic mass Cu = 63.55 g·mol⁻¹. Faraday constant F = 96 485 C·mol⁻¹.)",
+      "stimulus": null,
+      "subparts": [
+        {
+          "id": "5a",
+          "label": "a",
+          "prompt": "Write the half-equation at the cathode for the deposition of copper. (2 marks)",
+          "marks": 2,
+          "profile": "knowledge_comprehension",
+          "responseType": "short_text",
+          "answer": "Cathode half-equation: Cu²⁺(aq) + 2 e⁻ → Cu(s).",
+          "markScheme": [
+            {
+              "point": "Correct balanced half-equation with charge and states",
+              "marks": 2
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "5b",
+          "label": "b",
+          "prompt": "Calculate the total charge (in coulombs) passed through the cell during the plating period. Show working. (4 marks)",
+          "marks": 4,
+          "profile": "use_of_knowledge",
+          "responseType": "calculation",
+          "answer": "Current I = 2.00 A; time t = 3.00 h = 3.00 × 3600 s = 10 800 s.\nCharge Q = I × t = 2.00 A × 10 800 s = 21 600 C.",
+          "markScheme": [
+            {
+              "point": "Conversion of 3.00 hours to seconds: 3.00 × 3600 = 10 800 s",
+              "marks": 1
+            },
+            {
+              "point": "Correct use of Q = I × t",
+              "marks": 1
+            },
+            {
+              "point": "Substitution and correct numerical result Q = 21 600 C",
+              "marks": 2
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "5c",
+          "label": "c",
+          "prompt": "Calculate the theoretical mass of copper deposited. Show all working and state any constants used. (4 marks)",
+          "marks": 4,
+          "profile": "use_of_knowledge",
+          "responseType": "calculation",
+          "answer": "Faraday constant F = 96 485 C·mol⁻¹. From half-equation, 2 mol e⁻ deposit 1 mol Cu.\nMoles of electrons passed = Q ÷ F = 21 600 ÷ 96 485 = 0.2238 mol e⁻ (5 s.f.).\nMoles Cu deposited = 0.2238 mol e⁻ ÷ 2 = 0.1119 mol Cu.\nMass Cu = 0.1119 mol × 63.55 g·mol⁻¹ = 7.106 g ≈ 7.11 g (3 s.f.).",
+          "markScheme": [
+            {
+              "point": "Correct calculation of moles e⁻: Q ÷ F = 21 600 ÷ 96 485 = 0.2238 mol",
+              "marks": 1
+            },
+            {
+              "point": "Correct stoichiometric relation: moles Cu = moles e⁻ ÷ 2",
+              "marks": 1
+            },
+            {
+              "point": "Correct calculation of moles Cu and mass: 0.1119 mol × 63.55 = 7.106 g",
+              "marks": 2
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "5d",
+          "label": "d",
+          "prompt": "If the actual mass of copper plated was found to be 6.50 g, calculate the percentage efficiency of the plating process. (1 mark)",
+          "marks": 1,
+          "profile": "use_of_knowledge",
+          "responseType": "calculation",
+          "answer": "Percentage efficiency = (actual mass ÷ theoretical mass) × 100 = (6.50 ÷ 7.106) × 100 = 91.4% (3 s.f.).",
+          "markScheme": [
+            {
+              "point": "Correct percent calculation and answer ~91.4%",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "5e",
+          "label": "e",
+          "prompt": "State two practical factors that could reduce the efficiency of the copper plating (each with brief explanation). (2 marks)",
+          "marks": 2,
+          "profile": "knowledge_comprehension",
+          "responseType": "short_text",
+          "answer": "1) Side reactions at the cathode or anode (e.g., hydrogen evolution) consume electrons and reduce copper deposition efficiency.\n2) Poor contact, rough or contaminated substrate surface causing poor adhesion or loss of material during cleaning reduces measured deposited mass.",
+          "markScheme": [
+            {
+              "point": "First correct factor with brief explanation (e.g., hydrogen evolution, side-reactions)",
+              "marks": 1
+            },
+            {
+              "point": "Second correct factor with brief explanation (e.g., contamination, poor contact, loss during handling)",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "5f",
+          "label": "f",
+          "prompt": "Give one environmental concern associated with large-scale copper extraction or inefficient plating and one measure to mitigate it. (2 marks)",
+          "marks": 2,
+          "profile": "knowledge_comprehension",
+          "responseType": "short_text",
+          "answer": "Concern: Release of copper ions and heavy-metal effluents into waterways can harm aquatic life. Mitigation: Treat wastewater to remove copper (precipitation, ion exchange or electrochemical recovery) and recycle recovered copper; use closed-loop plating baths and proper effluent treatment.",
+          "markScheme": [
+            {
+              "point": "Correct environmental concern identified (copper pollution, heavy-metal contamination)",
+              "marks": 1
+            },
+            {
+              "point": "One practical mitigation measure (wastewater treatment, recovery/recycling)",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        }
+      ],
+      "totalMarks": 15,
+      "status": "review_pending"
+    },
+    {
+      "id": "Q6",
+      "number": 6,
+      "kind": "extended_response",
+      "syllabusSections": [
+        "Principles of Chemistry"
+      ],
+      "topics": [
+        "equilibrium",
+        "Le Chatelier's principle",
+        "rates and effects of conditions"
+      ],
+      "scenario": "Consider the equilibrium between dinitrogen tetroxide and nitrogen dioxide in a closed container at a certain temperature:\nN2O4(g) ⇌ 2 NO2(g).\nAt 25.0 °C initially 0.100 mol·L⁻¹ of N2O4 was placed in the container and no NO2 was present. At equilibrium the concentration of NO2 was found to be 0.0400 mol·L⁻¹.",
+      "stimulus": null,
+      "subparts": [
+        {
+          "id": "6a",
+          "label": "a",
+          "prompt": "Write the equilibrium constant expression Kc for this reaction. Then calculate the equilibrium concentration of N2O4 and the value of Kc under these conditions. (4 marks)",
+          "marks": 4,
+          "profile": "use_of_knowledge",
+          "responseType": "calculation",
+          "answer": "Equilibrium expression: Kc = [NO2]² / [N2O4].\nInitial: [N2O4] = 0.100 mol·L⁻¹, [NO2] = 0.000.\nAt equilibrium: [NO2] = 0.0400 mol·L⁻¹. Since NO2 forms from N2O4, 2 x increase corresponds to N2O4 decrease by 0.0200 mol·L⁻¹.\nEquilibrium [N2O4] = 0.100 − 0.0200 = 0.0800 mol·L⁻¹.\nKc = (0.0400)² ÷ 0.0800 = 0.001600 ÷ 0.0800 = 0.0200.",
+          "markScheme": [
+            {
+              "point": "Correct equilibrium expression Kc = [NO2]² / [N2O4]",
+              "marks": 1
+            },
+            {
+              "point": "Correct calculation of change and equilibrium [N2O4] = 0.0800 mol·L⁻¹",
+              "marks": 1
+            },
+            {
+              "point": "Correct substitution and numerical calculation of Kc = 0.0200",
+              "marks": 2
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "6b",
+          "label": "b",
+          "prompt": "Calculate the percent dissociation of N2O4 under these conditions. Show working. (2 marks)",
+          "marks": 2,
+          "profile": "use_of_knowledge",
+          "responseType": "calculation",
+          "answer": "Percent dissociation = (moles N2O4 dissociated ÷ initial moles N2O4) × 100.\nN2O4 dissociated accounts for 1/2 of NO2 concentration: moles dissociated = 0.0400 ÷ 2 = 0.0200 mol·L⁻¹.\nPercent dissociation = (0.0200 ÷ 0.100) × 100 = 20.0%.",
+          "markScheme": [
+            {
+              "point": "Correct calculation of moles dissociated (0.0200 mol·L⁻¹) from NO2",
+              "marks": 1
+            },
+            {
+              "point": "Correct percent dissociation calculation: 20.0%",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "6c",
+          "label": "c",
+          "prompt": "Predict and explain the effect on the equilibrium position and on the value of Kc when the temperature is increased, assuming the dissociation is endothermic. (3 marks)",
+          "marks": 3,
+          "profile": "use_of_knowledge",
+          "responseType": "short_text",
+          "answer": "If the dissociation is endothermic (N2O4 → 2 NO2 absorbs heat), increasing temperature shifts the equilibrium to the right (toward more NO2) according to Le Chatelier's principle. The value of Kc increases at the higher temperature because products are favoured for an endothermic forward reaction.",
+          "markScheme": [
+            {
+              "point": "Correct shift: equilibrium shifts to the right (more NO2) on heating",
+              "marks": 1
+            },
+            {
+              "point": "Correct explanation referencing Le Chatelier's principle and endothermic nature",
+              "marks": 1
+            },
+            {
+              "point": "Correct statement that Kc increases with temperature for an endothermic reaction",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "6d",
+          "label": "d",
+          "prompt": "State what effect adding an inert gas at constant volume would have on the value of Kc and the position of equilibrium. Give a brief reason. (1 mark)",
+          "marks": 1,
+          "profile": "knowledge_comprehension",
+          "responseType": "short_text",
+          "answer": "Adding an inert gas at constant volume has no effect on Kc and does not change the position of equilibrium (partial pressures/concentrations of reactants and products are unchanged).",
+          "markScheme": [
+            {
+              "point": "Correct statement: no change to Kc and no shift in equilibrium; brief reason regarding unchanged concentrations/partial pressures",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "6e",
+          "label": "e",
+          "prompt": "State Le Chatelier's principle in your own words. (2 marks)",
+          "marks": 2,
+          "profile": "knowledge_comprehension",
+          "responseType": "short_text",
+          "answer": "Le Chatelier's principle: if a system at equilibrium is disturbed by a change in concentration, pressure, or temperature, the system shifts in the direction that opposes the disturbance and restores a new equilibrium.",
+          "markScheme": [
+            {
+              "point": "Clear and correct statement that system shifts to oppose changes in conditions (concentration, pressure, temperature)",
+              "marks": 2
+            }
+          ],
+          "visualSpec": null
+        },
+        {
+          "id": "6f",
+          "label": "f",
+          "prompt": "Explain the effect of adding a catalyst on (i) the equilibrium position and (ii) the rate at which equilibrium is reached. (3 marks)",
+          "marks": 3,
+          "profile": "knowledge_comprehension",
+          "responseType": "short_text",
+          "answer": "(i) A catalyst has no effect on the equilibrium position or the value of Kc because it speeds up both forward and reverse reactions equally. (ii) A catalyst increases the rate at which equilibrium is reached by lowering the activation energy of the forward and reverse reactions, so the system attains equilibrium faster.",
+          "markScheme": [
+            {
+              "point": "Correct statement that catalyst does not change equilibrium position or Kc",
+              "marks": 1
+            },
+            {
+              "point": "Correct statement that catalyst increases the rate at which equilibrium is reached",
+              "marks": 1
+            },
+            {
+              "point": "Brief reason referencing lowering of activation energy and speeding both directions equally",
+              "marks": 1
+            }
+          ],
+          "visualSpec": null
+        }
+      ],
+      "totalMarks": 15,
+      "status": "review_pending"
+    }
+  ],
+  "validationNotes": [
+    "Profile allocations per question checked: Q1 KC=3 UK=12 XS=10; Q2 KC=7 UK=8 XS=0; Q3 KC=7 UK=8 XS=0; Q4 KC=6 UK=9 XS=0; Q5 KC=6 UK=9 XS=0; Q6 KC=6 UK=9 XS=0. Totals: KC=35 UK=55 XS=10.",
+    "Total marks: Q1 25 + Q2 15 + Q3 15 + Q4 15 + Q5 15 + Q6 15 = 100.",
+    "All calculations independently checked for arithmetic and units. Constants stated where required: atomic masses, molar masses, Faraday constant.",
+    "All subpart markSchemes sum exactly to subpart marks and to each question total.",
+    "Stimulus for Q1 provides a complete dataset with units and headings. Q3 and Q1 include declarative visual specifications as required."
+  ],
+  "form": "A",
+  "durationSeconds": 9000,
+  "totalMarks": 100,
+  "profileMarks": {
+    "knowledge_comprehension": 35,
+    "use_of_knowledge": 55,
+    "experimental_skills": 10
+  },
+  "status": "review_pending"
+}
