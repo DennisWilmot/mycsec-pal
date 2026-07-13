@@ -15,6 +15,7 @@ import {
 } from "@/drizzle/schema";
 
 type AttemptRow = typeof attempts.$inferSelect;
+const PAPER_ONE_DURATION_SECONDS = 60 * 60;
 
 export class AttemptLifecycleError extends Error {
   constructor(
@@ -253,6 +254,9 @@ export async function createAttempt(profileId: string, paperVersionId: string, i
       if (!paper) {
         throw new AttemptLifecycleError(404, "PAPER_NOT_FOUND", "This paper is not available.");
       }
+      const durationSeconds = paper.paperType === "paper_1"
+        ? PAPER_ONE_DURATION_SECONDS
+        : paperVersion.durationSeconds;
 
       const paidAccess = await tx.execute(sql`
         select 1 from subscriptions
@@ -304,7 +308,7 @@ export async function createAttempt(profileId: string, paperVersionId: string, i
         profileId,
         paperVersionId,
         startedAt: now,
-        expiresAt: new Date(now.getTime() + paperVersion.durationSeconds * 1000),
+        expiresAt: new Date(now.getTime() + durationSeconds * 1000),
         lastActivityAt: now,
       }).returning();
 
@@ -344,7 +348,7 @@ export async function createAttempt(profileId: string, paperVersionId: string, i
       await tx.insert(attemptEvents).values({
         attemptId: created.id,
         type: "started",
-        metadataJson: { paperVersionId, durationSeconds: paperVersion.durationSeconds },
+        metadataJson: { paperVersionId, durationSeconds },
       });
       const response = publicAttempt(created, now);
       await tx.insert(idempotencyKeys).values({

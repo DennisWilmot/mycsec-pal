@@ -51,7 +51,7 @@ export const mathematics2027PaperDefinitionsSeed = Object.freeze([
     syllabusId: mathematics2027SyllabusSeed.id,
     paperNumber: 1,
     name: 'Mathematics Paper 1',
-    durationSeconds: 5400,
+    durationSeconds: 3600,
     questionCount: 60,
     totalMarks: 60,
     moduleQuestionTargets: { 1: 20, 2: 20, 3: 20 },

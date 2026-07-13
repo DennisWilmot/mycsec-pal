@@ -116,7 +116,7 @@ export async function readPracticeDashboard(profileId: string) {
           id: paper.paperVersionId,
           paperNumber: paper.paperType === "paper_1" ? 1 : 2,
           title: paper.title,
-          durationSeconds: paper.durationSeconds,
+          durationSeconds: paper.paperType === "paper_1" ? 60 * 60 : paper.durationSeconds,
           questionCount: paper.questionCount,
           totalMarks: paper.totalMarks,
           version: paper.version,

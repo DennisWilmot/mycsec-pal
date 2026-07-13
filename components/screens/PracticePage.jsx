@@ -1,6 +1,6 @@
 'use client';
 
-import { AlertCircle, ArrowRight, LoaderCircle, PauseCircle, X } from 'lucide-react';
+import { AlertCircle, ArrowRight, PauseCircle, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import AppSidebar from '../AppSidebar';
 
@@ -34,9 +34,11 @@ async function transitionAttempt(attemptId, action) {
   return payload.data;
 }
 
+let cachedPracticeDashboard = null;
+
 export default function PracticePage({navigate}) {
-  const [dashboard, setDashboard] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [dashboard, setDashboard] = useState(cachedPracticeDashboard);
+  const [loading, setLoading] = useState(!cachedPracticeDashboard);
   const [error, setError] = useState('');
   const [actionError, setActionError] = useState('');
   const [pendingPaper, setPendingPaper] = useState(null);
@@ -51,8 +53,12 @@ export default function PracticePage({navigate}) {
           window.location.replace(`/onboarding?mode=signin&next=${encodeURIComponent('/practice')}`);
           return;
         }
+        if (response.status === 404 && payload.error?.code === 'PROFILE_NOT_FOUND') {
+          window.location.replace(`/onboarding?next=${encodeURIComponent('/practice')}`);
+          return;
+        }
         if (!response.ok) throw new Error(payload.error?.message || 'Unable to load your subjects.');
-        if (alive) setDashboard(payload.data);
+        if (alive) { cachedPracticeDashboard = payload.data; setDashboard(payload.data); }
       })
       .catch((requestError) => alive && setError(requestError.message))
       .finally(() => alive && setLoading(false));
@@ -107,10 +113,10 @@ export default function PracticePage({navigate}) {
 
   return <div className="app-shell"><AppSidebar active="practice" onNavigate={navigate}/><main className="app-main"><div className="page-title-row"><div><p className="eyebrow">Pick up where you left off</p><h1>Practice</h1></div><img className="header-doodle" src="/assets/hero-pals.png" alt="Study companions"/></div>
     {actionError && <div className="practice-state-message error" role="alert"><AlertCircle size={18}/><span>{actionError}</span></div>}
-    {loading && <div className="practice-state-message"><LoaderCircle className="spin" size={19}/><span>Loading your subjects and saved paper…</span></div>}
-    {!loading && error && <div className="practice-state-message error" role="alert"><AlertCircle size={19}/><div><strong>We couldn’t load Practice.</strong><p>{error}</p><button className="button outline small" onClick={()=>window.location.reload()}>Try again</button></div></div>}
-    {!loading && !error && activeAttempt && <section className="resume-banner active-attempt-banner"><div className="resume-icon"><PauseCircle size={23}/></div><div><span className="active-attempt-label">{activeAttempt.status === 'paused' ? 'Paused attempt' : 'Active attempt'} · {activeAttempt.displayCode}</span><h2>You have a paper in progress</h2><p>{activeAttempt.subjectName} Paper {activeAttempt.paperNumber} · {formatRemaining(activeAttempt.remainingSeconds)}</p></div><button className="button resume-primary" disabled={busyAction === 'resume'} onClick={resumeAttempt}>{busyAction === 'resume' ? 'Resuming…' : 'Resume paper'} <ArrowRight size={17}/></button></section>}
-    {!loading && !error && <section><h2 className="section-title">Choose a subject to get started</h2>{dashboard.subjects.length === 0 ? <div className="practice-state-message"><span>No subjects are selected yet.</span><button className="button outline small" onClick={()=>navigate('settings')}>Choose subjects</button></div> : <div className="practice-grid">{dashboard.subjects.map((subject) => {
+    {loading && !dashboard && <section className="practice-loading-shell" aria-label="Loading Practice"><div className="resume-banner skeleton-resume"/><h2 className="section-title">Choose a subject to get started</h2><div className="practice-grid">{[1,2,3,4].map((item)=><div className="practice-card subject-art-card skeleton-card" key={item}><i/><b/><span/></div>)}</div></section>}
+    {!dashboard && error && <div className="practice-state-message error" role="alert"><AlertCircle size={19}/><div><strong>We couldn’t load Practice.</strong><p>{error}</p><button className="button outline small" onClick={()=>window.location.reload()}>Try again</button></div></div>}
+    {dashboard && activeAttempt && <section className="resume-banner active-attempt-banner"><div className="resume-icon"><PauseCircle size={23}/></div><div><span className="active-attempt-label">{activeAttempt.status === 'paused' ? 'Paused attempt' : 'Active attempt'} · {activeAttempt.displayCode}</span><h2>You have a paper in progress</h2><p>{activeAttempt.subjectName} Paper {activeAttempt.paperNumber} · {formatRemaining(activeAttempt.remainingSeconds)}</p></div><button className="button resume-primary" disabled={busyAction === 'resume'} onClick={resumeAttempt}>{busyAction === 'resume' ? 'Resuming…' : 'Resume paper'} <ArrowRight size={17}/></button></section>}
+    {dashboard && <section><h2 className="section-title">Choose a subject to get started</h2>{dashboard.subjects.length === 0 ? <div className="practice-state-message"><span>No subjects are selected yet.</span><button className="button outline small" onClick={()=>navigate('settings')}>Choose subjects</button></div> : <div className="practice-grid">{dashboard.subjects.map((subject) => {
       const image = subject.cardAssetUrl || `/assets/subjects/${subjectImages[subject.slug] || 'mathematics.png'}`;
       return <article className={`practice-card subject-art-card ${subject.papers.length ? 'available' : ''}`} key={subject.id}><img className="subject-card-art" src={image} alt=""/><h3>{subject.name}</h3>{subject.papers.length ? <div className="practice-actions">{subject.papers.map((paper, index) => { const matchesActive = activeAttempt?.paperVersionId === paper.id; return <button key={paper.id} disabled={matchesActive && busyAction === 'resume'} onClick={()=>requestPaper(subject, paper)} className={`button ${index === 0 ? 'dark' : 'outline'}`}>{matchesActive ? (busyAction === 'resume' ? 'Resuming…' : `Resume Paper ${paper.paperNumber}`) : `Start Paper ${paper.paperNumber}`} {!matchesActive || busyAction !== 'resume' ? <ArrowRight size={16}/> : null}</button>; })}</div> : <span className="status-pill">Coming soon</span>}</article>;
     })}</div>}</section>}

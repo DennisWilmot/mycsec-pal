@@ -4,6 +4,7 @@ import { Check, LoaderCircle, UserRound } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import AppSidebar from '../AppSidebar';
 import TopUser from '../TopUser';
+import { caribbeanSchools, gradeOrFormOptions } from '@/data/caribbean-schools';
 
 const countries = [
   ['AG', 'Antigua and Barbuda'], ['BS', 'The Bahamas'], ['BB', 'Barbados'], ['BZ', 'Belize'],
@@ -18,19 +19,21 @@ function messageFrom(response, payload, fallback) {
   return fallback;
 }
 
+let settingsCache = null;
+
 export default function SettingsPage({ navigate }) {
-  const [profile, setProfile] = useState({ displayName: '', phone: '', countryCode: '', gradeForm: '', institutionName: '' });
-  const [identity, setIdentity] = useState({ email: '', avatarUrl: null });
-  const [catalogue, setCatalogue] = useState([]);
-  const [selectedSubjects, setSelectedSubjects] = useState([]);
-  const [subjectLimit, setSubjectLimit] = useState(5);
-  const [loading, setLoading] = useState(true);
+  const [profile, setProfile] = useState(settingsCache?.profile || { displayName: '', phone: '', countryCode: '', gradeForm: '', institutionName: '' });
+  const [identity, setIdentity] = useState(settingsCache?.identity || { email: '', avatarUrl: null });
+  const [catalogue, setCatalogue] = useState(settingsCache?.catalogue || []);
+  const [selectedSubjects, setSelectedSubjects] = useState(settingsCache?.selectedSubjects || []);
+  const [subjectLimit, setSubjectLimit] = useState(settingsCache?.subjectLimit || 5);
+  const [loading, setLoading] = useState(!settingsCache);
   const [profileSaving, setProfileSaving] = useState(false);
   const [subjectsSaving, setSubjectsSaving] = useState(false);
   const [error, setError] = useState('');
   const [profileNotice, setProfileNotice] = useState('');
   const [subjectsNotice, setSubjectsNotice] = useState('');
-  const [billing, setBilling] = useState({ plan: 'guest', subscription: null });
+  const [billing, setBilling] = useState(settingsCache?.billing || { plan: 'guest', subscription: null });
   const [billingBusy, setBillingBusy] = useState(false);
 
   useEffect(() => {
@@ -42,12 +45,14 @@ export default function SettingsPage({ navigate }) {
         if (!catalogueResponse.ok) throw new Error(messageFrom(catalogueResponse, cataloguePayload, 'We could not load the subject catalogue.'));
         if (!active) return;
         const data = profilePayload.data;
-        setProfile({ displayName: data.displayName || '', phone: data.phone || '', countryCode: data.countryCode || '', gradeForm: data.gradeForm || '', institutionName: data.institutionName || data.institution?.name || '' });
-        setIdentity({ email: data.email || '', avatarUrl: data.avatarUrl || null });
-        setSelectedSubjects((data.subjects || []).map((subject) => subject.id));
-        setSubjectLimit(data.subjectLimit || 5);
-        setCatalogue(cataloguePayload.data || []);
-        if (billingResponse.ok) setBilling(billingPayload.data || { plan: 'guest', subscription: null });
+        const nextProfile = { displayName: data.displayName || '', phone: data.phone || '', countryCode: data.countryCode || '', gradeForm: data.gradeForm || '', institutionName: data.institutionName || data.institution?.name || '' };
+        const nextIdentity = { email: data.email || '', avatarUrl: data.avatarUrl || null };
+        const nextSubjects = (data.subjects || []).map((subject) => subject.id);
+        const nextLimit = data.subjectLimit || 5;
+        const nextCatalogue = cataloguePayload.data || [];
+        const nextBilling = billingResponse.ok ? (billingPayload.data || { plan: 'guest', subscription: null }) : billing;
+        settingsCache = { profile: nextProfile, identity: nextIdentity, selectedSubjects: nextSubjects, subjectLimit: nextLimit, catalogue: nextCatalogue, billing: nextBilling };
+        setProfile(nextProfile); setIdentity(nextIdentity); setSelectedSubjects(nextSubjects); setSubjectLimit(nextLimit); setCatalogue(nextCatalogue); setBilling(nextBilling);
       })
       .catch((loadError) => active && setError(loadError.message))
       .finally(() => active && setLoading(false));
@@ -55,6 +60,8 @@ export default function SettingsPage({ navigate }) {
   }, []);
 
   const initials = useMemo(() => profile.displayName.trim().split(/\s+/).slice(0, 2).map((word) => word[0]).join('').toUpperCase() || 'U', [profile.displayName]);
+  const countryName = countries.find(([code]) => code === profile.countryCode)?.[1];
+  const schoolOptions = ['Homeschooled', ...(caribbeanSchools[countryName] || [])];
   const update = (field, value) => { setProfile((current) => ({ ...current, [field]: value })); setError(''); setProfileNotice(''); };
 
   const saveProfile = async (event) => {
@@ -111,7 +118,7 @@ export default function SettingsPage({ navigate }) {
       <article className="settings-card"><div className="settings-card-heading"><div><h2>Profile</h2><p>Keep your learner details up to date.</p></div><div className="settings-avatar" aria-label={identity.avatarUrl ? 'Google profile picture' : 'Profile initials'}>{identity.avatarUrl ? <img src={identity.avatarUrl} alt="" referrerPolicy="no-referrer"/> : initials ? <span>{initials}</span> : <UserRound size={22}/>}</div></div>
         <form onSubmit={saveProfile}><label>Full name<input value={profile.displayName} onChange={(event) => update('displayName', event.target.value)} autoComplete="name"/></label><label>Email address<input value={identity.email} readOnly aria-readonly="true"/><small>Email is managed by your sign-in account.</small></label>
           <div className="settings-field-row"><label>Phone number<input value={profile.phone} onChange={(event) => update('phone', event.target.value)} autoComplete="tel" placeholder="Optional"/></label><label>Country<select value={profile.countryCode} onChange={(event) => update('countryCode', event.target.value)}><option value="">Choose a country</option>{countries.map(([code, name]) => <option value={code} key={code}>{name}</option>)}</select></label></div>
-          <div className="settings-field-row"><label>Grade or form<input value={profile.gradeForm} onChange={(event) => update('gradeForm', event.target.value)} placeholder="For example, Form 5"/></label><label>School or institution<input value={profile.institutionName} onChange={(event) => update('institutionName', event.target.value)} placeholder="Optional"/></label></div>
+          <div className="settings-field-row"><label>Grade or form<select value={profile.gradeForm} onChange={(event) => update('gradeForm', event.target.value)}><option value="">Choose your grade or form</option>{gradeOrFormOptions.map((option)=><option key={option}>{option}</option>)}</select></label><label>School or institution<input list="settings-school-options" value={profile.institutionName} onChange={(event) => update('institutionName', event.target.value)} placeholder="Search or enter your school"/><datalist id="settings-school-options">{schoolOptions.map((school)=><option value={school} key={school}/>)}</datalist><small>Choose a suggestion or enter a school that is not listed.</small></label></div>
           <div className="settings-actions"><button className="button dark" disabled={profileSaving}>{profileSaving ? <><LoaderCircle className="spin" size={16}/> Saving…</> : 'Save profile'}</button>{profileNotice && <span className="settings-success"><Check size={15}/>{profileNotice}</span>}</div></form>
       </article>
       <div className="settings-side-stack"><article className="settings-card"><div className="settings-card-heading"><div><h2>Your subjects</h2><p>{selectedSubjects.length} of {subjectLimit} selected</p></div></div><div className="settings-subject-list">{catalogue.map((subject) => <label className={selectedSubjects.includes(subject.id) ? 'selected' : ''} key={subject.id}><input type="checkbox" checked={selectedSubjects.includes(subject.id)} onChange={() => toggleSubject(subject.id)}/><span>{subject.name}</span>{selectedSubjects.includes(subject.id) && <Check size={16}/>}</label>)}</div><div className="settings-actions"><button type="button" className="button dark" onClick={saveSubjects} disabled={subjectsSaving}>{subjectsSaving ? <><LoaderCircle className="spin" size={16}/> Saving…</> : 'Save subjects'}</button>{subjectsNotice && <span className="settings-success"><Check size={15}/>{subjectsNotice}</span>}</div></article>

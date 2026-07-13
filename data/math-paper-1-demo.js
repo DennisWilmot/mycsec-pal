@@ -23,7 +23,7 @@ export const mathPaper1Demo = {
   title: 'Mathematics · Paper 1',
   syllabusEra: 'may-june-2027-onward',
   blueprintVersion: 'math-p1-2027-v1',
-  durationSeconds: 5400,
+  durationSeconds: 3600,
   totalMarks: 60,
   status: 'demo_review_pending',
   questions: [

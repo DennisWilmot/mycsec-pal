@@ -23,21 +23,25 @@ function date(value, short = false) {
     : { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
+const progressCache = new Map();
+
 export default function ProgressPage({ navigate }) {
   const [subjectId, setSubjectId] = useState('overall');
   const [tableView, setTableView] = useState('attempts');
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(progressCache.get('overall') || null);
+  const [loading, setLoading] = useState(!progressCache.has('overall'));
   const [error, setError] = useState('');
 
   const load = useCallback(async (scope = subjectId) => {
-    setLoading(true); setError('');
+    const cached = progressCache.get(scope);
+    if (cached) setData(cached);
+    setLoading(!cached); setError('');
     try {
       const query = scope === 'overall' ? '' : `?subjectId=${encodeURIComponent(scope)}`;
       const response = await fetch(`/api/me/progress${query}`, { cache: 'no-store' });
       const payload = await response.json().catch(() => ({}));
       if (!response.ok) throw new Error(payload.error?.message || 'We could not load your progress.');
-      setData(payload.data);
+      progressCache.set(scope, payload.data); setData(payload.data);
     } catch (requestError) { setError(requestError.message); }
     finally { setLoading(false); }
   }, [subjectId]);
