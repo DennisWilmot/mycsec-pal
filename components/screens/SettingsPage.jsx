@@ -30,7 +30,7 @@ export default function SettingsPage({ navigate }) {
   const [error, setError] = useState('');
   const [profileNotice, setProfileNotice] = useState('');
   const [subjectsNotice, setSubjectsNotice] = useState('');
-  const [billing, setBilling] = useState({ plan: 'free', subscription: null });
+  const [billing, setBilling] = useState({ plan: 'guest', subscription: null });
   const [billingBusy, setBillingBusy] = useState(false);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function SettingsPage({ navigate }) {
         setSelectedSubjects((data.subjects || []).map((subject) => subject.id));
         setSubjectLimit(data.subjectLimit || 5);
         setCatalogue(cataloguePayload.data || []);
-        if (billingResponse.ok) setBilling(billingPayload.data || { plan: 'free', subscription: null });
+        if (billingResponse.ok) setBilling(billingPayload.data || { plan: 'guest', subscription: null });
       })
       .catch((loadError) => active && setError(loadError.message))
       .finally(() => active && setLoading(false));
@@ -96,7 +96,7 @@ export default function SettingsPage({ navigate }) {
   const openBilling = async () => {
     setBillingBusy(true); setError('');
     try {
-      const endpoint = billing.plan === 'pro' ? '/api/billing/portal' : '/api/billing/checkout';
+      const endpoint = billing.plan === 'practice' ? '/api/billing/portal' : '/api/billing/checkout';
       const response = await fetch(endpoint, { method: 'POST' });
       const payload = await response.json().catch(() => ({}));
       if (!response.ok || !payload.data?.url) throw new Error(messageFrom(response, payload, 'Billing is not available yet.'));
@@ -115,7 +115,7 @@ export default function SettingsPage({ navigate }) {
           <div className="settings-actions"><button className="button dark" disabled={profileSaving}>{profileSaving ? <><LoaderCircle className="spin" size={16}/> Saving…</> : 'Save profile'}</button>{profileNotice && <span className="settings-success"><Check size={15}/>{profileNotice}</span>}</div></form>
       </article>
       <div className="settings-side-stack"><article className="settings-card"><div className="settings-card-heading"><div><h2>Your subjects</h2><p>{selectedSubjects.length} of {subjectLimit} selected</p></div></div><div className="settings-subject-list">{catalogue.map((subject) => <label className={selectedSubjects.includes(subject.id) ? 'selected' : ''} key={subject.id}><input type="checkbox" checked={selectedSubjects.includes(subject.id)} onChange={() => toggleSubject(subject.id)}/><span>{subject.name}</span>{selectedSubjects.includes(subject.id) && <Check size={16}/>}</label>)}</div><div className="settings-actions"><button type="button" className="button dark" onClick={saveSubjects} disabled={subjectsSaving}>{subjectsSaving ? <><LoaderCircle className="spin" size={16}/> Saving…</> : 'Save subjects'}</button>{subjectsNotice && <span className="settings-success"><Check size={15}/>{subjectsNotice}</span>}</div></article>
-        <article className="settings-card plan-card"><h2>Current access</h2><div className="plan-summary"><div><b>{billing.plan === 'pro' ? 'MyCSECPal Pro' : 'Free access'}</b><span>{billing.plan === 'pro' ? 'Subscription managed securely by Stripe' : `Up to ${subjectLimit} subjects`}</span></div><span className="success-pill">{billing.subscription?.status || 'Active'}</span></div><p>{billing.plan === 'pro' ? 'Manage payment details, invoices or cancellation in the secure billing portal.' : 'Upgrade through secure Stripe Checkout when you are ready.'}</p><button type="button" className="button dark" disabled={billingBusy} onClick={openBilling}>{billingBusy ? 'Opening…' : billing.plan === 'pro' ? 'Manage billing' : 'Upgrade to Pro'}</button></article>
+        <article className="settings-card plan-card"><h2>Current access</h2><div className="plan-summary"><div><b>{billing.plan === 'practice' ? 'Practice' : 'Guest'}</b><span>{billing.plan === 'practice' ? 'Unlimited Paper 1 and Paper 2 attempts for five subjects' : 'One Paper 1 and one Paper 2 attempt each day'}</span></div><span className="success-pill">{billing.subscription?.status || 'Active'}</span></div><p>{billing.plan === 'practice' ? 'Manage payment details, invoices or cancellation in the secure billing portal.' : 'Reports, AI analysis, radar progress and question breakdowns are included. Upgrade for unlimited attempts.'}</p><button type="button" className="button dark" disabled={billingBusy} onClick={openBilling}>{billingBusy ? 'Opening…' : billing.plan === 'practice' ? 'Manage billing' : 'Upgrade to Practice'}</button></article>
       </div>
     </section>}
   </main></div>;

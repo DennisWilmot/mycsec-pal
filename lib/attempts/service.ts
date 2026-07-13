@@ -7,6 +7,7 @@ import {
   idempotencyKeys,
   markingJobs,
   outboxEvents,
+  papers,
   paperVersions,
   questionOptions,
   questionParts,
@@ -212,6 +213,15 @@ export async function createAttempt(profileId: string, paperVersionId: string, i
 
   try {
     return await db.transaction(async (tx) => {
+      // Serialize starts per learner so the free daily quota cannot be bypassed
+      // by two requests arriving at the same time.
+      const profileLock = await tx.execute(sql`
+        select id from profiles where id = ${profileId} limit 1 for update
+      `);
+      if (!profileLock[0]) {
+        throw new AttemptLifecycleError(404, "PROFILE_NOT_FOUND", "Finish setting up your profile first.");
+      }
+
       const activeResult = await tx.execute(sql`
         select * from attempts
         where profile_id = ${profileId} and status in ('in_progress', 'paused')
@@ -233,6 +243,45 @@ export async function createAttempt(profileId: string, paperVersionId: string, i
         .limit(1);
       if (!paperVersion) {
         throw new AttemptLifecycleError(404, "PAPER_VERSION_NOT_FOUND", "This paper is not available.");
+      }
+
+      const [paper] = await tx
+        .select({ paperType: papers.paperType })
+        .from(papers)
+        .where(eq(papers.id, paperVersion.paperId))
+        .limit(1);
+      if (!paper) {
+        throw new AttemptLifecycleError(404, "PAPER_NOT_FOUND", "This paper is not available.");
+      }
+
+      const paidAccess = await tx.execute(sql`
+        select 1 from subscriptions
+        where profile_id = ${profileId}
+          and status in ('active', 'trialing')
+        order by updated_at desc
+        limit 1
+      `);
+      if (!paidAccess[0]) {
+        const dailyUsage = await tx.execute(sql`
+          select count(*)::int as used
+          from attempts a
+          inner join paper_versions pv on pv.id = a.paper_version_id
+          inner join papers p on p.id = pv.paper_id
+          where a.profile_id = ${profileId}
+            and p.paper_type = ${paper.paperType}
+            and (a.created_at at time zone 'America/Jamaica')::date =
+                (now() at time zone 'America/Jamaica')::date
+        `);
+        const used = Number((dailyUsage[0] as { used?: number } | undefined)?.used ?? 0);
+        if (used >= 1) {
+          const paperNumber = paper.paperType === "paper_1" ? 1 : 2;
+          throw new AttemptLifecycleError(
+            429,
+            "DAILY_ATTEMPT_LIMIT_REACHED",
+            `Your Guest plan includes one Paper ${paperNumber} attempt per day. Try again tomorrow or upgrade to Practice for unlimited attempts.`,
+            { plan: "guest", paperNumber, dailyLimit: 1, timeZone: "America/Jamaica" },
+          );
+        }
       }
 
       const selectedQuestions = await tx

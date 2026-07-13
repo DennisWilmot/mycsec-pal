@@ -11,7 +11,7 @@ This plan turns [System Architecture](./system-architecture.md) and [Question Ba
 - [ ] Confirm Paper 1 duration, Paper 2 duration and timer-expiry behaviour.
 - [ ] Confirm that timer expiry automatically submits the current attempt.
 - [ ] Confirm one active or paused attempt per learner.
-- [ ] Confirm five active subjects on the free plan.
+- [ ] Confirm up to five active subjects on Guest and Practice plans.
 - [ ] Confirm Google avatar only; email users receive initials.
 - [ ] Confirm Paper 1 is marked deterministically and Paper 2 is marked asynchronously.
 - [ ] Confirm the minimum viable Paper 2 response types:

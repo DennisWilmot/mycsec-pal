@@ -150,7 +150,7 @@ Gate: sign-up → Paper 1 → result → Progress and Paper 2 graph → AI marki
 
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY` or the current Supabase publishable key is required for real browser authentication.
 - Production Inngest event/signing keys are required outside local development.
-- Stripe secret key, webhook secret and Pro price ID are required to activate paid access. Until supplied, billing endpoints return a safe unavailable response.
+- Stripe secret key, webhook secret and Practice price ID are required to activate paid access. Until supplied, billing endpoints return a safe unavailable response.
 - OpenRouter marking is pinned locally to `openai/gpt-5-mini`; the reviewed rubrics are seeded. Paper 2 remains `review` until the golden marking fixture suite passes.
 
 ## Verification recorded on 13 July 2026

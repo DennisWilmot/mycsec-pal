@@ -16,7 +16,7 @@ Question sourcing, syllabus ingestion, generation, validation and runtime test a
 | ORM | Drizzle ORM | Drizzle provides the typed application schema, queries and migrations; Supabase still hosts Postgres and Auth. Use `drizzle-orm/postgres-js` or the Supabase-compatible server Postgres driver selected during implementation. |
 | File storage | Supabase Storage | Paper assets, question images, learner uploads for Paper 2 and generated report exports. |
 | Authorization | Supabase session + Postgres RLS | A learner can access only their own records. Teachers and parents require explicit relationship records. Service-role operations remain server-only. |
-| Payments | Stripe + webhook | Recommended for Pro subscriptions and the five-subject entitlement. Supabase stores a local subscription projection. |
+| Payments | Stripe + webhook | Practice subscriptions unlock unlimited Paper 1 and Paper 2 attempts for up to five subjects. Supabase stores a local subscription projection. |
 | AI marking | Background marking job | Submission should return quickly, then move the attempt from `submitted` to `marking` to `marked`. Paper 1 can be marked synchronously; Paper 2 should use a job. |
 | Analytics | Derived queries/materialised summaries | Attempt responses remain the source of truth. Dashboard statistics can be cached in aggregate tables as volume grows. |
 
@@ -72,7 +72,7 @@ Question sourcing, syllabus ingestion, generation, validation and runtime test a
 | Role selection | Student, teacher, parent/guardian | `PATCH /api/onboarding/profile` | `Profile.role` | MVP |
 | Personal details | Grade/form, school, country | `PATCH /api/onboarding/profile` | `Profile`, `Institution`, `Country` or controlled values | MVP |
 | Parent child link | Child email, invitation status | `POST /api/relationships/invitations` | `AccountRelationship`, `RelationshipInvitation` | Later unless parent mode launches in MVP |
-| Subject selection | One to five subjects on free plan | `PUT /api/me/subjects` | `ProfileSubject`, `Subscription`, `Plan` | MVP |
+| Subject selection | One to five subjects | `PUT /api/me/subjects` | `ProfileSubject`, `Subscription`, `Plan` | MVP |
 | Complete onboarding | Completion timestamp | `POST /api/onboarding/complete` | `Profile.onboarding_completed_at` | MVP |
 
 Server validation must return field-level errors, including duplicate email, invalid password policy, unverified account, expired OAuth callback, subject-limit violation and invalid child-link request.
