@@ -70,11 +70,13 @@ export async function readOwnedResult(profileId: string, attemptId: string) {
       id: string; position: number; max_marks: number; snapshot: Record<string, unknown>;
       selected_option_id: string | null; response: unknown; is_flagged: boolean | null;
       awarded_marks: string; marked_max_marks: string; is_correct: boolean; feedback: string | null;
+      marking_evidence: unknown;
       correct_option_id: string | null;
     }[]>`
       select aq.id, aq.position, aq.max_marks, aq.question_snapshot_json as snapshot,
         ar.selected_option_id, ar.response_json as response, ar.is_flagged,
         qm.awarded_marks, qm.max_marks as marked_max_marks, qm.is_correct, qm.feedback,
+        qm.marking_evidence_json as marking_evidence,
         correct_option.id as correct_option_id
       from attempt_questions aq
       join question_marks qm on qm.attempt_question_id = aq.id and qm.result_id = ${header.result_id}::uuid
@@ -130,6 +132,7 @@ export async function readOwnedResult(profileId: string, attemptId: string) {
       awardedMarks: Number(question.awarded_marks),
       isCorrect: question.is_correct,
       feedback: question.feedback,
+      markingEvidence: question.marking_evidence,
       snapshot: question.snapshot,
       response: {
         selectedOptionId: question.selected_option_id,

@@ -1,6 +1,5 @@
-import RouteScreen from '@/components/RouteScreen';
-import Screen from '@/components/screens/Paper2Page';
+import { redirect } from 'next/navigation';
 
 export default function Page() {
-  return <RouteScreen Screen={Screen} />;
+  redirect('/practice/mathematics/paper-2/briefing');
 }

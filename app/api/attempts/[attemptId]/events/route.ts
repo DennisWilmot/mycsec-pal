@@ -77,6 +77,10 @@ export async function GET(request: Request, { params }: { params: Promise<{ atte
         submittedAt: attempt.submittedAt,
         updatedAt: attempt.updatedAt,
       }));
+      if (["marked", "marking_failed"].includes(attempt.status)) {
+        void close();
+        return;
+      }
 
       void (async () => {
         while (!closed) {
@@ -93,7 +97,13 @@ export async function GET(request: Request, { params }: { params: Promise<{ atte
               for (const message of item.messages) {
                 cursor = message.id;
                 const event = decodeAttemptStreamEvent(message.id, message.message);
-                if (event) controller.enqueue(encodeSse(event.type, event, event.id));
+                if (event) {
+                  controller.enqueue(encodeSse(event.type, event, event.id));
+                  if (["attempt/marked", "attempt/marking_failed"].includes(event.type)) {
+                    await close();
+                    return;
+                  }
+                }
               }
             }
           } catch (error) {

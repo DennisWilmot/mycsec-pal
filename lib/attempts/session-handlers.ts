@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { apiError, parseJson, serverError, validationError } from "@/lib/api/responses";
 import { requireAuthenticatedUser } from "@/lib/supabase/auth";
-import { isAttemptLifecycleError } from "./service";
+import { allowRequest } from "@/lib/security/rate-limit";
+import { autoSubmitExpiredAttempt, isAttemptLifecycleError } from "./service";
 import { patchAttemptFlagSchema, putAttemptResponseSchema } from "./response-validation";
 import {
   readAttemptSession,
@@ -32,6 +33,13 @@ export async function handleGetAttemptSession(attemptId: string) {
     const parsedId = validId(attemptId, "attemptId");
     if (parsedId.response) return parsedId.response;
     const { user } = await requireAuthenticatedUser();
+    const attempt = await autoSubmitExpiredAttempt(user.id, parsedId.value);
+    if (attempt.status === "submitted") {
+      return NextResponse.json({
+        error: { code: "ATTEMPT_EXPIRED", message: "Time ended and the paper was submitted for marking." },
+        data: { attemptId: attempt.id, status: attempt.status },
+      }, { status: 409 });
+    }
     return NextResponse.json({ data: await readAttemptSession(user.id, parsedId.value) });
   } catch (error) {
     return lifecycleError(error) ?? serverError(error);
@@ -45,6 +53,7 @@ export async function handlePutAttemptResponse(request: Request, attemptId: stri
     const parsedQuestionId = validId(attemptQuestionId, "attemptQuestionId");
     if (parsedQuestionId.response) return parsedQuestionId.response;
     const { user } = await requireAuthenticatedUser();
+    if (!(await allowRequest(`answer-save:${user.id}`, 240, 60)).allowed) return apiError(429, "RATE_LIMITED", "Answers are saving too quickly. Pause briefly and continue.");
     const json = await parseJson(request);
     if (json.response) return json.response;
     const parsed = putAttemptResponseSchema.safeParse(json.data);

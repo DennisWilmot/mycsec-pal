@@ -15,7 +15,8 @@ const subjectImages = {
 };
 
 function paperRoute(subjectSlug, paperNumber, briefing = false) {
-  const base = `/practice/${subjectSlug}/paper-${paperNumber}`;
+  const routeSlug = subjectSlug === 'csec-mathematics' ? 'mathematics' : subjectSlug;
+  const base = `/practice/${routeSlug}/paper-${paperNumber}`;
   return briefing ? `${base}/briefing` : base;
 }
 
@@ -46,6 +47,10 @@ export default function PracticePage({navigate}) {
     fetch('/api/me/practice-dashboard', { cache: 'no-store' })
       .then(async (response) => {
         const payload = await response.json().catch(() => ({}));
+        if (response.status === 401) {
+          window.location.replace(`/onboarding?mode=signin&next=${encodeURIComponent('/practice')}`);
+          return;
+        }
         if (!response.ok) throw new Error(payload.error?.message || 'Unable to load your subjects.');
         if (alive) setDashboard(payload.data);
       })
@@ -75,6 +80,11 @@ export default function PracticePage({navigate}) {
 
   const requestPaper = (subject, paper) => {
     setActionError('');
+    const matchesActive = activeAttempt && activeAttempt.paperVersionId === paper.id;
+    if (matchesActive) {
+      resumeAttempt();
+      return;
+    }
     const selection = { subject, paper };
     if (activeAttempt) setPendingPaper(selection);
     else window.location.assign(paperRoute(subject.slug, paper.paperNumber, true));
@@ -102,7 +112,7 @@ export default function PracticePage({navigate}) {
     {!loading && !error && activeAttempt && <section className="resume-banner active-attempt-banner"><div className="resume-icon"><PauseCircle size={23}/></div><div><span className="active-attempt-label">{activeAttempt.status === 'paused' ? 'Paused attempt' : 'Active attempt'} · {activeAttempt.displayCode}</span><h2>You have a paper in progress</h2><p>{activeAttempt.subjectName} Paper {activeAttempt.paperNumber} · {formatRemaining(activeAttempt.remainingSeconds)}</p></div><button className="button resume-primary" disabled={busyAction === 'resume'} onClick={resumeAttempt}>{busyAction === 'resume' ? 'Resuming…' : 'Resume paper'} <ArrowRight size={17}/></button></section>}
     {!loading && !error && <section><h2 className="section-title">Choose a subject to get started</h2>{dashboard.subjects.length === 0 ? <div className="practice-state-message"><span>No subjects are selected yet.</span><button className="button outline small" onClick={()=>navigate('settings')}>Choose subjects</button></div> : <div className="practice-grid">{dashboard.subjects.map((subject) => {
       const image = subject.cardAssetUrl || `/assets/subjects/${subjectImages[subject.slug] || 'mathematics.png'}`;
-      return <article className={`practice-card subject-art-card ${subject.papers.length ? 'available' : ''}`} key={subject.id}><img className="subject-card-art" src={image} alt=""/><h3>{subject.name}</h3>{subject.papers.length ? <div className="practice-actions">{subject.papers.map((paper, index) => <button key={paper.id} onClick={()=>requestPaper(subject, paper)} className={`button ${index === 0 ? 'dark' : 'outline'}`}>Start Paper {paper.paperNumber} <ArrowRight size={16}/></button>)}</div> : <span className="status-pill">Coming soon</span>}</article>;
+      return <article className={`practice-card subject-art-card ${subject.papers.length ? 'available' : ''}`} key={subject.id}><img className="subject-card-art" src={image} alt=""/><h3>{subject.name}</h3>{subject.papers.length ? <div className="practice-actions">{subject.papers.map((paper, index) => { const matchesActive = activeAttempt?.paperVersionId === paper.id; return <button key={paper.id} disabled={matchesActive && busyAction === 'resume'} onClick={()=>requestPaper(subject, paper)} className={`button ${index === 0 ? 'dark' : 'outline'}`}>{matchesActive ? (busyAction === 'resume' ? 'Resuming…' : `Resume Paper ${paper.paperNumber}`) : `Start Paper ${paper.paperNumber}`} {!matchesActive || busyAction !== 'resume' ? <ArrowRight size={16}/> : null}</button>; })}</div> : <span className="status-pill">Coming soon</span>}</article>;
     })}</div>}</section>}
   </main>{pendingPaper && <div className="modal-backdrop" role="presentation"><section className="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="attempt-dialog-title"><button className="dialog-close" onClick={()=>setPendingPaper(null)} aria-label="Close dialog"><X size={18}/></button><span className="dialog-icon"><PauseCircle size={26}/></span><p className="eyebrow">One paper at a time</p><h2 id="attempt-dialog-title">You already have an active paper.</h2><p>Resume {activeAttempt.subjectName} Paper {activeAttempt.paperNumber}, or cancel it before starting {pendingPaper.subject.name} Paper {pendingPaper.paper.paperNumber}. Cancelling will end the current attempt.</p>{actionError && <p className="inline-api-error" role="alert">{actionError}</p>}<div className="dialog-actions two-dialog-actions"><button className="button resume-primary" disabled={Boolean(busyAction)} onClick={resumeAttempt}>Resume current paper</button><button className="button danger-button" disabled={Boolean(busyAction)} onClick={cancelAndContinue}>{busyAction === 'cancel' ? 'Cancelling…' : `Cancel attempt and start Paper ${pendingPaper.paper.paperNumber}`}</button></div></section></div>}
   </div>;

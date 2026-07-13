@@ -5,6 +5,8 @@ import {
   attemptQuestions,
   attempts,
   idempotencyKeys,
+  markingJobs,
+  outboxEvents,
   paperVersions,
   questionOptions,
   questionParts,
@@ -108,10 +110,11 @@ function publicAttempt(attempt: AttemptRow, now = new Date()) {
 async function expireLockedAttempt(tx: any, attempt: AttemptRow, now: Date) {
   const timing = calculateAttemptTiming(attempt, now);
   if (!timing.isExpired || !["in_progress", "paused"].includes(attempt.status)) return attempt;
-  const [expired] = await tx
+  const [submitted] = await tx
     .update(attempts)
     .set({
-      status: "expired",
+      status: "submitted",
+      submittedAt: now,
       elapsedSeconds: timing.elapsedSeconds,
       remainingSecondsAtPause: 0,
       lastActivityAt: now,
@@ -122,9 +125,31 @@ async function expireLockedAttempt(tx: any, attempt: AttemptRow, now: Date) {
   await tx.insert(attemptEvents).values({
     attemptId: attempt.id,
     type: "expired",
-    metadataJson: { elapsedSeconds: timing.elapsedSeconds, source: "server_timer" },
+    metadataJson: { elapsedSeconds: timing.elapsedSeconds, source: "server_timer", autoSubmitted: true },
   });
-  return expired;
+  await tx.insert(markingJobs).values({ attemptId: attempt.id, status: "pending" })
+    .onConflictDoNothing({ target: markingJobs.attemptId });
+  const [job] = await tx.select({ id: markingJobs.id }).from(markingJobs)
+    .where(eq(markingJobs.attemptId, attempt.id)).limit(1);
+  if (!job) throw new Error("Expired attempt marking job could not be created.");
+  await tx.insert(outboxEvents).values({
+    dedupeKey: `attempt.submitted:${attempt.id}`,
+    aggregateType: "attempt",
+    aggregateId: attempt.id,
+    eventType: "attempt/submitted",
+    payloadJson: { attemptId: attempt.id, markingJobId: job.id, source: "timer_expiry" },
+  }).onConflictDoNothing({ target: outboxEvents.dedupeKey });
+  return submitted;
+}
+
+export async function autoSubmitExpiredAttempt(profileId: string, attemptId: string) {
+  return getDatabase().transaction(async (tx) => {
+    const result = await tx.execute(sql`
+      select * from attempts where id = ${attemptId} and profile_id = ${profileId} limit 1 for update
+    `);
+    if (!result[0]) throw new AttemptLifecycleError(404, "ATTEMPT_NOT_FOUND", "Attempt not found.");
+    return expireLockedAttempt(tx, databaseRowToAttempt(result[0] as Record<string, any>), new Date());
+  });
 }
 
 export async function getActiveAttempt(profileId: string) {
@@ -138,7 +163,7 @@ export async function getActiveAttempt(profileId: string) {
     if (!raw) return null;
     const attempt = databaseRowToAttempt(raw);
     const current = await expireLockedAttempt(tx, attempt, new Date());
-    return current.status === "expired" ? null : publicAttempt(current);
+    return ["in_progress", "paused"].includes(current.status) ? publicAttempt(current) : null;
   });
 }
 
@@ -194,7 +219,7 @@ export async function createAttempt(profileId: string, paperVersionId: string, i
       `);
       if (activeResult[0]) {
         const active = await expireLockedAttempt(tx, databaseRowToAttempt(activeResult[0] as any), new Date());
-        if (active.status !== "expired") {
+        if (["in_progress", "paused"].includes(active.status)) {
           throw new AttemptLifecycleError(409, "ACTIVE_ATTEMPT_EXISTS", "Resume or cancel your active paper first.", {
             attempt: publicAttempt(active),
           });
@@ -313,7 +338,9 @@ export async function transitionAttempt(
     const attempt = databaseRowToAttempt(result[0] as any);
     const now = new Date();
     const current = await expireLockedAttempt(tx, attempt, now);
-    if (current.status === "expired") throw new AttemptLifecycleError(409, "ATTEMPT_EXPIRED", "The time for this paper has ended.");
+    if (current.status === "submitted" && attempt.status !== "submitted") {
+      throw new AttemptLifecycleError(409, "ATTEMPT_EXPIRED", "Time ended and the paper was submitted for marking.");
+    }
 
     if (action === "heartbeat") {
       if (current.status !== "in_progress") throw invalidTransition(current.status, action);

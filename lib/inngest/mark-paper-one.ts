@@ -1,6 +1,7 @@
 import { sql } from "drizzle-orm";
 import { NonRetriableError } from "inngest";
 import { getDatabase } from "@/lib/db";
+import { writeEvidenceSummary } from "./examiner-summary";
 
 type PaperOneAnswer = {
   attempt_question_id: string;
@@ -115,6 +116,7 @@ export async function markPaperOneAttempt(attemptId: string, markingJobId: strin
       having sum(qm.max_marks * qt.weight) > 0
     `);
 
+    await writeEvidenceSummary(tx, resultId);
     await tx.execute(sql`
       update marking_jobs set status = 'completed', completed_at = now(), updated_at = now()
       where id = ${markingJobId}

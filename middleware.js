@@ -16,11 +16,12 @@ export async function middleware(request) {
     request.nextUrl.pathname === prefix || request.nextUrl.pathname.startsWith(`${prefix}/`),
   );
 
-  if (session.configured && isProtected && !session.user) {
+  if (isProtected && !session.user) {
     const destination = request.nextUrl.clone();
     destination.pathname = '/onboarding';
     destination.search = '';
     destination.searchParams.set('next', `${request.nextUrl.pathname}${request.nextUrl.search}`);
+    destination.searchParams.set('mode', 'signin');
     return NextResponse.redirect(destination);
   }
 

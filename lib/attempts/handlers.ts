@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { apiError, parseJson, serverError, validationError } from "@/lib/api/responses";
 import { requireAuthenticatedUser } from "@/lib/supabase/auth";
+import { allowRequest } from "@/lib/security/rate-limit";
 import {
   createAttempt,
   getActiveAttempt,
@@ -35,6 +36,7 @@ function lifecycleError(error: unknown) {
 export async function handleCreateAttempt(request: Request) {
   try {
     const { user } = await requireAuthenticatedUser();
+    if (!(await allowRequest(`attempt-create:${user.id}`, 8, 60)).allowed) return apiError(429, "RATE_LIMITED", "Too many paper starts. Wait a moment and try again.");
     const key = idempotencyKeySchema.safeParse(request.headers.get("idempotency-key"));
     if (!key.success) {
       return apiError(

@@ -1,6 +1,7 @@
 import { inngest } from "./client";
 import { dispatchOutboxBatch } from "./outbox";
 import { markPaperOneAttempt, recordMarkingFailure } from "./mark-paper-one";
+import { markPaperTwoAttempt } from "./mark-paper-two";
 
 export const dispatchOutbox = inngest.createFunction(
   { id: "dispatch-transactional-outbox", retries: 3, triggers: [{ cron: "* * * * *" }] },
@@ -26,7 +27,10 @@ export const markSubmittedAttempt = inngest.createFunction(
     const attemptId = String(event.data.attemptId ?? "");
     const markingJobId = String(event.data.markingJobId ?? "");
     if (!attemptId || !markingJobId) throw new Error("Missing attemptId or markingJobId.");
-    return step.run("mark-paper", () => markPaperOneAttempt(attemptId, markingJobId));
+    return step.run("mark-paper", async () => {
+      const result = await markPaperOneAttempt(attemptId, markingJobId);
+      return result.status === "awaiting_paper_2_marker" ? markPaperTwoAttempt(attemptId, markingJobId) : result;
+    });
   },
 );
 

@@ -10,7 +10,7 @@ type Report = {
   result: null | { rawScore: number; maxScore: number; percentage: number; questionsCompleted: number; totalQuestions: number; timeUsedSeconds: number };
   examinerSummary: null | { summary: string; strengths: string[]; misconceptions: string[]; timeObservation: string | null; patterns: string[]; nextSteps: string[] };
   failure: null | { message: string; reference: string };
-  questions: Array<{ id: string; position: number; awardedMarks: number; maxMarks: number; isCorrect: boolean; feedback: string | null; snapshot: any; response: { selectedOptionId: string | null; value: unknown }; correctOptionId: string | null }>;
+  questions: Array<{ id: string; position: number; awardedMarks: number; maxMarks: number; isCorrect: boolean; feedback: string | null; markingEvidence: any; snapshot: any; response: { selectedOptionId: string | null; value: unknown }; correctOptionId: string | null }>;
 };
 
 const destinations: Record<string, string> = { landing: "/", practice: "/practice", progress: "/progress", settings: "/settings" };
@@ -35,6 +35,10 @@ function optionDetails(snapshot: any, optionId: string | null) {
 function WorkingResponse({ value }: { value: unknown }) {
   if (!value || typeof value !== "object") return <span>No answer submitted</span>;
   const response = value as any;
+  if (response.parts && typeof response.parts === "object") return <div className="review-working">{Object.values(response.parts).map((part: any, index) => {
+    const partLines = Array.isArray(part?.workingLines) ? part.workingLines.filter(Boolean) : [];
+    return <div key={index}><strong>Part {index + 1}</strong>{partLines.map((line: string, lineIndex: number) => <span key={lineIndex}>{line}</span>)}{Array.isArray(part?.graphPoints) && part.graphPoints.length > 0 && <span>{part.graphPoints.length} plotted points recorded</span>}{!partLines.length && !part?.graphPoints?.length && <span>No response</span>}</div>;
+  })}</div>;
   const lines = Array.isArray(response.workingLines) ? response.workingLines.filter(Boolean) : [];
   return <div className="review-working">
     {lines.map((line: string, index: number) => <span key={index}>{line}</span>)}

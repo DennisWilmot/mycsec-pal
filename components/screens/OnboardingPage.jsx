@@ -44,6 +44,10 @@ export default function OnboardingPage({ navigate }) {
   const [form, setForm] = useState({ name: '', email: '', password: '', confirm: '', grade: '', school: '', country: 'Jamaica', childName: '', childEmail: '' });
 
   useEffect(() => {
+    if (new URLSearchParams(window.location.search).get('mode') === 'signin') setMode('signin');
+  }, []);
+
+  useEffect(() => {
     const supabase = createSupabaseBrowserClient();
     if (!supabase) return;
     supabase.auth.getSession().then(({ data }) => {
@@ -115,7 +119,9 @@ export default function OnboardingPage({ navigate }) {
     if (response.ok) {
       const payload = await response.json();
       if (payload.data?.onboardingCompletedAt) {
-        navigate('practice');
+        const next = new URLSearchParams(window.location.search).get('next');
+        if (next?.startsWith('/') && !next.startsWith('//')) window.location.assign(next);
+        else navigate('practice');
         return;
       }
     } else if (response.status !== 404) {

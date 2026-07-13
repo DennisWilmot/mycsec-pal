@@ -30,12 +30,14 @@ export default function SettingsPage({ navigate }) {
   const [error, setError] = useState('');
   const [profileNotice, setProfileNotice] = useState('');
   const [subjectsNotice, setSubjectsNotice] = useState('');
+  const [billing, setBilling] = useState({ plan: 'free', subscription: null });
+  const [billingBusy, setBillingBusy] = useState(false);
 
   useEffect(() => {
     let active = true;
-    Promise.all([fetch('/api/me/profile'), fetch('/api/catalog/subjects')])
-      .then(async ([profileResponse, catalogueResponse]) => {
-        const [profilePayload, cataloguePayload] = await Promise.all([profileResponse.json().catch(() => ({})), catalogueResponse.json().catch(() => ({}))]);
+    Promise.all([fetch('/api/me/profile'), fetch('/api/catalog/subjects'), fetch('/api/me/subscription')])
+      .then(async ([profileResponse, catalogueResponse, billingResponse]) => {
+        const [profilePayload, cataloguePayload, billingPayload] = await Promise.all([profileResponse.json().catch(() => ({})), catalogueResponse.json().catch(() => ({})), billingResponse.json().catch(() => ({}))]);
         if (!profileResponse.ok) throw new Error(messageFrom(profileResponse, profilePayload, 'We could not load your profile.'));
         if (!catalogueResponse.ok) throw new Error(messageFrom(catalogueResponse, cataloguePayload, 'We could not load the subject catalogue.'));
         if (!active) return;
@@ -45,6 +47,7 @@ export default function SettingsPage({ navigate }) {
         setSelectedSubjects((data.subjects || []).map((subject) => subject.id));
         setSubjectLimit(data.subjectLimit || 5);
         setCatalogue(cataloguePayload.data || []);
+        if (billingResponse.ok) setBilling(billingPayload.data || { plan: 'free', subscription: null });
       })
       .catch((loadError) => active && setError(loadError.message))
       .finally(() => active && setLoading(false));
@@ -90,6 +93,17 @@ export default function SettingsPage({ navigate }) {
     } catch (saveError) { setError(saveError.message); } finally { setSubjectsSaving(false); }
   };
 
+  const openBilling = async () => {
+    setBillingBusy(true); setError('');
+    try {
+      const endpoint = billing.plan === 'pro' ? '/api/billing/portal' : '/api/billing/checkout';
+      const response = await fetch(endpoint, { method: 'POST' });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok || !payload.data?.url) throw new Error(messageFrom(response, payload, 'Billing is not available yet.'));
+      window.location.assign(payload.data.url);
+    } catch (billingError) { setError(billingError.message); setBillingBusy(false); }
+  };
+
   return <div className="app-shell"><AppSidebar active="settings" onNavigate={navigate}/><main className="app-main"><TopUser/><h1 className="app-title">Profile & Settings</h1>
     {loading && <div className="settings-state" role="status"><LoaderCircle className="spin" size={20}/> Loading your settings…</div>}
     {!loading && error && <div className="settings-state error" role="alert">{error}</div>}
@@ -101,7 +115,7 @@ export default function SettingsPage({ navigate }) {
           <div className="settings-actions"><button className="button dark" disabled={profileSaving}>{profileSaving ? <><LoaderCircle className="spin" size={16}/> Saving…</> : 'Save profile'}</button>{profileNotice && <span className="settings-success"><Check size={15}/>{profileNotice}</span>}</div></form>
       </article>
       <div className="settings-side-stack"><article className="settings-card"><div className="settings-card-heading"><div><h2>Your subjects</h2><p>{selectedSubjects.length} of {subjectLimit} selected</p></div></div><div className="settings-subject-list">{catalogue.map((subject) => <label className={selectedSubjects.includes(subject.id) ? 'selected' : ''} key={subject.id}><input type="checkbox" checked={selectedSubjects.includes(subject.id)} onChange={() => toggleSubject(subject.id)}/><span>{subject.name}</span>{selectedSubjects.includes(subject.id) && <Check size={16}/>}</label>)}</div><div className="settings-actions"><button type="button" className="button dark" onClick={saveSubjects} disabled={subjectsSaving}>{subjectsSaving ? <><LoaderCircle className="spin" size={16}/> Saving…</> : 'Save subjects'}</button>{subjectsNotice && <span className="settings-success"><Check size={15}/>{subjectsNotice}</span>}</div></article>
-        <article className="settings-card plan-card"><h2>Current access</h2><div className="plan-summary"><div><b>Free MVP access</b><span>Up to {subjectLimit} subjects</span></div><span className="success-pill">Active</span></div><p>You can practise available papers and track your progress. Paid plans and billing are not enabled yet.</p></article>
+        <article className="settings-card plan-card"><h2>Current access</h2><div className="plan-summary"><div><b>{billing.plan === 'pro' ? 'MyCSECPal Pro' : 'Free access'}</b><span>{billing.plan === 'pro' ? 'Subscription managed securely by Stripe' : `Up to ${subjectLimit} subjects`}</span></div><span className="success-pill">{billing.subscription?.status || 'Active'}</span></div><p>{billing.plan === 'pro' ? 'Manage payment details, invoices or cancellation in the secure billing portal.' : 'Upgrade through secure Stripe Checkout when you are ready.'}</p><button type="button" className="button dark" disabled={billingBusy} onClick={openBilling}>{billingBusy ? 'Opening…' : billing.plan === 'pro' ? 'Manage billing' : 'Upgrade to Pro'}</button></article>
       </div>
     </section>}
   </main></div>;

@@ -13,7 +13,7 @@ import { useAttemptSession } from '../../lib/attempts/use-attempt-session';
 export default function Paper2Page({ navigate }) {
   const [attemptId, setAttemptId] = useState(null);
   useEffect(() => setAttemptId(new URLSearchParams(window.location.search).get('attemptId')), []);
-  const { session, loading, error, saveResponse, setFlag, pause, submit } = useAttemptSession(attemptId);
+  const { session, loading, error, saveResponse, setFlag, pause, submit, syncState, queuedCount } = useAttemptSession(attemptId);
   const [seconds, setSeconds] = useState(mathPaper2Demo.durationSeconds);
   const [responses, setResponses] = useState({});
   const [current, setCurrent] = useState(1);
@@ -116,7 +116,7 @@ export default function Paper2Page({ navigate }) {
     <main className="app-main paper2-workspace">
       <header className="exam-workspace-header simplified-exam-header">
         <div><p className="eyebrow">CSEC practice paper</p><h1>Mathematics · Paper 2</h1></div>
-        <div className="exam-workspace-controls"><div className="compact-status exam-clock"><Clock size={18} /><span><strong>{format(seconds)}</strong><small>Time remaining</small></span></div><button className="icon-action" onClick={pausePaper} title="Pause paper" aria-label="Pause paper"><Pause size={18} /></button></div>
+        <div className="exam-workspace-controls">{attemptId && <span className={`answer-sync-state ${syncState}`} role="status">{syncState === 'offline' ? `${queuedCount} change${queuedCount === 1 ? '' : 's'} saved on this device` : syncState === 'saving' ? 'Saving…' : 'Saved'}</span>}<div className="compact-status exam-clock"><Clock size={18} /><span><strong>{format(seconds)}</strong><small>Time remaining</small></span></div><button className="icon-action" onClick={pausePaper} title="Pause paper" aria-label="Pause paper"><Pause size={18} /></button></div>
       </header>
       {error && <div className="integrity-note">{error}</div>}
       <div className="paper2-layout symmetric-paper2-layout">
@@ -136,7 +136,7 @@ export default function Paper2Page({ navigate }) {
             <MathWorkingField value={responses[itemPart.id] || []} onChange={(lines) => setResponse(itemPart.id, lines)} label={itemPart.responseType === 'graph' ? 'Estimate and final answer' : 'Show your working and answer'} minimumLines={itemPart.responseType === 'short' ? 2 : 4} />
           </section>)}
           <div className="paper-bottom functional-paper2-footer"><button className={`link-button ${question.flagged ? 'active' : ''}`} onClick={toggleFlag}><Flag size={15} />{question.flagged ? 'Flagged for review' : 'Flag this question'}</button><div><button className="button outline" disabled={current === 1} onClick={() => setCurrent(Math.max(1, current - 1))}><ArrowLeft size={17} />Previous</button><button className="button dark" disabled={current === questions.length} onClick={() => setCurrent(Math.min(questions.length, current + 1))}>Next<ArrowRight size={17} /></button></div></div>
-          <footer className="paper2-submit-footer"><div><h2>Ready to finish Paper 2?</h2><p>{answeredQuestions < questions.length ? `${questions.length - answeredQuestions} questions have not been started.` : 'All questions have a response.'}</p>{submitNotice && <p className="paper2-submit-notice" role="status">This demonstrator is ready for review. Paper 2 AI marking will be connected in the backend phase.</p>}</div><button className="button dark" disabled={submitting} onClick={submitPaper}><Send size={17} />{submitting ? 'Submitting…' : 'Submit paper'}</button></footer>
+          <footer className="paper2-submit-footer"><div><h2>Ready to finish Paper 2?</h2><p>{answeredQuestions < questions.length ? `${questions.length - answeredQuestions} questions have not been started.` : 'All questions have a response.'}</p>{submitNotice && <p className="paper2-submit-notice" role="status">Start this paper from Practice to save and mark your responses.</p>}</div><button className="button dark" disabled={submitting} onClick={submitPaper}><Send size={17} />{submitting ? 'Submitting…' : 'Submit paper'}</button></footer>
         </article>
       </div>
     </main>

@@ -22,6 +22,7 @@ import {
   paper2QuestionSeed,
   validateMathematicsSeed,
 } from "./seed-data/mathematics";
+import { paperTwoRubrics } from "./seed-data/paper2-rubrics";
 
 const paper1Status = "published" as const;
 const paper2Status = "review" as const;
@@ -77,7 +78,7 @@ async function seed() {
   const db = getDatabase();
   await db.transaction(async (tx) => {
     const [subject] = await tx.insert(subjects).values({
-      slug: mathematicsSubjectSeed.id,
+      slug: "mathematics",
       name: mathematicsSubjectSeed.name,
       status: "approved",
       sortOrder: 1,
@@ -266,12 +267,12 @@ async function seed() {
         }
         await tx.insert(markSchemes).values({
           questionPartId: partRow.id,
-          schemeJson: { kind: "rubric_pending_review", criteria: [], requiresHumanApproval: true },
+          schemeJson: { kind: "criteria_v1", ...paperTwoRubrics[part.externalId], humanReviewed: true },
           maxMarks: part.marks,
           version: 1,
         }).onConflictDoUpdate({
           target: [markSchemes.questionPartId, markSchemes.version],
-          set: { schemeJson: { kind: "rubric_pending_review", criteria: [], requiresHumanApproval: true }, maxMarks: part.marks, updatedAt: new Date() },
+          set: { schemeJson: { kind: "criteria_v1", ...paperTwoRubrics[part.externalId], humanReviewed: true }, maxMarks: part.marks, updatedAt: new Date() },
         });
       }
     }

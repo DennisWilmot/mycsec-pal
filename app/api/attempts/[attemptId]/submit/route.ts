@@ -4,6 +4,7 @@ import { apiError, serverError } from "@/lib/api/responses";
 import { requireAuthenticatedUser } from "@/lib/supabase/auth";
 import { AttemptLifecycleError } from "@/lib/attempts/service";
 import { submitAttempt } from "@/lib/attempts/submission";
+import { allowRequest } from "@/lib/security/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -13,6 +14,7 @@ const idempotencyKey = z.string().trim().min(8).max(160).regex(/^[A-Za-z0-9._:-]
 export async function POST(request: Request, context: { params: Promise<{ attemptId: string }> }) {
   try {
     const { user } = await requireAuthenticatedUser();
+    if (!(await allowRequest(`attempt-submit:${user.id}`, 10, 60)).allowed) return apiError(429, "RATE_LIMITED", "Too many submit requests. Wait a moment and try again.");
     const { attemptId } = await context.params;
     if (!identifier.safeParse(attemptId).success) return apiError(404, "ATTEMPT_NOT_FOUND", "Attempt not found.");
     const parsedKey = idempotencyKey.safeParse(request.headers.get("idempotency-key"));
