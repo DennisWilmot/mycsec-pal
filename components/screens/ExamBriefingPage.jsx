@@ -1,6 +1,6 @@
 'use client';
 
-import { AlertCircle, ArrowLeft, ArrowRight, Calculator, Clock3, FileQuestion, LoaderCircle, MonitorUp, PenLine } from 'lucide-react';
+import { AlertCircle, ArrowLeft, ArrowRight, Calculator, Clock3, FileQuestion, LoaderCircle, MonitorUp, PenLine, Sparkles } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import AppSidebar from '../AppSidebar';
 
@@ -20,7 +20,9 @@ export default function ExamBriefingPage({ navigate, paper }) {
   const [dashboard, setDashboard] = useState(null);
   const [loading, setLoading] = useState(true);
   const [starting, setStarting] = useState(false);
+  const [billingBusy, setBillingBusy] = useState(false);
   const [error, setError] = useState('');
+  const [planLimit, setPlanLimit] = useState(null);
 
   useEffect(() => {
     let alive = true;
@@ -69,6 +71,11 @@ export default function ExamBriefingPage({ navigate, paper }) {
         body: JSON.stringify({ paperVersionId: paperVersion.id }),
       });
       const payload = await response.json().catch(() => ({}));
+      if (response.status === 429 && payload.error?.code === 'DAILY_ATTEMPT_LIMIT_REACHED') {
+        setPlanLimit({ paperNumber: payload.error.details?.paperNumber || paper });
+        setStarting(false);
+        return;
+      }
       if (!response.ok) throw new Error(payload.error?.message || 'Unable to start this paper.');
       const attempt = attemptFromPayload(payload);
       if (!attempt?.id) throw new Error('The paper was created, but its attempt ID was not returned.');
@@ -76,6 +83,20 @@ export default function ExamBriefingPage({ navigate, paper }) {
     } catch (requestError) {
       setError(requestError.message);
       setStarting(false);
+    }
+  };
+
+  const upgradePlan = async () => {
+    setBillingBusy(true);
+    setError('');
+    try {
+      const response = await fetch('/api/billing/checkout', { method: 'POST' });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok || !payload.data?.url) throw new Error(payload.error?.message || 'Billing is not available right now.');
+      window.location.assign(payload.data.url);
+    } catch (requestError) {
+      setError(requestError.message);
+      setBillingBusy(false);
     }
   };
 
@@ -90,10 +111,11 @@ export default function ExamBriefingPage({ navigate, paper }) {
           <div className="briefing-facts"><article><Clock3/><div><strong>{paperVersion ? formatDuration(paperVersion.durationSeconds) : isPaperOne ? '60 minutes' : '2 hours 40 minutes'}</strong><span>A visible timer will count down.</span></div></article><article><FileQuestion/><div><strong>{paperVersion ? `${paperVersion.questionCount} questions` : isPaperOne ? '60 questions' : '9 questions'}</strong><span>{isPaperOne?'Choose one answer for each question.':'Show your working for method marks.'}</span></div></article><article><PenLine/><div><strong>Get pen and paper ready</strong><span>You may pause here before starting.</span></div></article><article><Calculator/><div><strong>{isPaperOne?'Calculator guidance':'Calculator permitted'}</strong><span>{isPaperOne?'Use one only when the question allows it.':'Keep it nearby for calculations.'}</span></div></article><article><MonitorUp/><div><strong>Stay in this tab</strong><span>Tab switches are noted to protect exam integrity.</span></div></article></div>
           <div className="briefing-note"><strong>Good to know</strong><p>Your answers save automatically. You may pause the paper and return later.</p></div>
           {activeAttempt && <div className="briefing-api-notice"><AlertCircle size={18}/><span>{matchesActiveAttempt ? `Your ${activeAttempt.subjectName} Paper ${activeAttempt.paperNumber} is ready to resume.` : `You already have ${activeAttempt.subjectName} Paper ${activeAttempt.paperNumber} in progress. Resume or cancel it from Practice before starting another paper.`}</span></div>}
+          {planLimit && <section className="briefing-upgrade-panel" aria-labelledby="plan-limit-title"><span className="upgrade-panel-icon"><Sparkles size={23}/></span><div><p className="eyebrow">Daily practice complete</p><h2 id="plan-limit-title">You’ve used today’s Paper {planLimit.paperNumber} attempt.</h2><p>Come back tomorrow for another free attempt, or upgrade to Practice for unlimited Paper 1 and Paper 2 attempts across five subjects.</p><div className="upgrade-panel-actions"><button className="button dark" disabled={billingBusy} onClick={upgradePlan}>{billingBusy ? 'Opening secure checkout…' : 'Upgrade to Practice'}</button><button className="button outline" onClick={()=>navigate('practice')}>Back to subjects</button></div></div></section>}
           {error && <div className="briefing-api-notice error" role="alert"><AlertCircle size={18}/><span>{error}</span></div>}
         </div>
         <img src="/assets/subjects/mathematics.png" alt="Mathematics study illustration"/>
-        <footer className="briefing-card-actions"><span>{matchesActiveAttempt ? 'Continue from your last saved response.' : 'Make sure you are comfortable and ready before starting.'}</span>{activeAttempt && !matchesActiveAttempt ? <button className="button briefing-start" onClick={()=>navigate('practice')}>Return to Practice <ArrowRight size={18}/></button> : <button className="button briefing-start" disabled={loading || starting || !paperVersion} onClick={matchesActiveAttempt ? resumePaper : startPaper}>{starting ? (matchesActiveAttempt ? 'Resuming paper…' : 'Starting paper…') : (matchesActiveAttempt ? `Resume Paper ${paper}` : `Start Paper ${paper}`)} {!starting && <ArrowRight size={18}/>}</button>}</footer>
+        <footer className="briefing-card-actions"><span>{planLimit ? 'Your free allowance resets tomorrow.' : matchesActiveAttempt ? 'Continue from your last saved response.' : 'Make sure you are comfortable and ready before starting.'}</span>{planLimit ? <button className="button briefing-start" disabled={billingBusy} onClick={upgradePlan}>Upgrade to Practice <ArrowRight size={18}/></button> : activeAttempt && !matchesActiveAttempt ? <button className="button briefing-start" onClick={()=>navigate('practice')}>Return to Practice <ArrowRight size={18}/></button> : <button className="button briefing-start" disabled={loading || starting || !paperVersion} onClick={matchesActiveAttempt ? resumePaper : startPaper}>{starting ? (matchesActiveAttempt ? 'Resuming paper…' : 'Starting paper…') : (matchesActiveAttempt ? `Resume Paper ${paper}` : `Start Paper ${paper}`)} {!starting && <ArrowRight size={18}/>}</button>}</footer>
       </section>
     </main>
   </div>;
