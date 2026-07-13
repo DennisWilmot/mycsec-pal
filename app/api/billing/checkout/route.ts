@@ -19,8 +19,29 @@ export async function POST() { try {
     return NextResponse.json({data:{url:portal.url,alreadySubscribed:true}});
   }
   const openSessions=await stripe.checkout.sessions.list({customer:customerId,status:"open",limit:20});
-  const existingSession=openSessions.data.find((candidate)=>candidate.mode==="subscription"&&candidate.metadata?.plan==="practice"&&candidate.metadata?.priceId===price);
+  const existingSession=openSessions.data.find((candidate)=>candidate.mode==="subscription"&&candidate.metadata?.plan==="practice"&&candidate.metadata?.priceId===price&&candidate.metadata?.brandingVersion==="mycsecpal-v1");
   if(existingSession?.url)return NextResponse.json({data:{url:existingSession.url,reused:true}});
-  const session=await stripe.checkout.sessions.create({mode:"subscription",customer:customerId,line_items:[{price,quantity:1}],client_reference_id:user.id,metadata:{plan:"practice",priceId:price},subscription_data:{metadata:{profileId:user.id,plan:"practice"}},success_url:`${applicationUrl()}/settings?billing=success`,cancel_url:`${applicationUrl()}/settings?billing=cancelled`});
+  const appUrl=applicationUrl();
+  const session=await stripe.checkout.sessions.create({
+    mode:"subscription",
+    customer:customerId,
+    line_items:[{price,quantity:1}],
+    client_reference_id:user.id,
+    metadata:{plan:"practice",priceId:price,brandingVersion:"mycsecpal-v1"},
+    subscription_data:{metadata:{profileId:user.id,plan:"practice"}},
+    branding_settings:{
+      display_name:"MyCSECPal",
+      logo:{type:"url",url:`${appUrl}/assets/brand/mycsecpal-logo.png`},
+      background_color:"#FFFCF5",
+      button_color:"#1A1815",
+      border_style:"rounded",
+      font_family:"lato",
+    },
+    custom_text:{
+      submit:{message:"MyCSECPal is a learning product operated by Pelagic Systems, LLC. Your subscription includes unlimited Paper 1 and Paper 2 practice attempts for up to five subjects."},
+    },
+    success_url:`${appUrl}/settings?billing=success`,
+    cancel_url:`${appUrl}/settings?billing=cancelled`,
+  });
   return NextResponse.json({data:{url:session.url}});
 } catch(error){if(isAuthenticationRequiredError(error)) return apiError(401,error.code,error.message);console.error("billing.checkout.failed",error);return apiError(500,"BILLING_ERROR","Could not start checkout.");} }
