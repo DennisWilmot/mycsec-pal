@@ -10,18 +10,16 @@ import QuestionVisual from '../QuestionVisual';
 import { mathPaper2Demo } from '../../data/math-paper-2-demo';
 import { useAttemptSession } from '../../lib/attempts/use-attempt-session';
 
-function EnglishQuestionContext({ context }) {
+function EnglishQuestionContext({ context, selectedChoiceId, onSelectChoice }) {
   if (!context || typeof context !== 'object') return null;
   const choices = Array.isArray(context.choices) ? context.choices : [];
   if (!context.extract && !context.purposePrompt && !context.scenario && !context.task && !choices.length) return null;
   return <section className="english-question-context">
-    {context.title && <p className="eyebrow">Source extract</p>}
-    {context.title && <h3>{context.title}</h3>}
+    {context.title && context.extract && <h3>{context.title}</h3>}
     {context.extract && <div className="english-exam-passage">{String(context.extract).split(/\n\s*\n/).map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>}
-    {context.purposePrompt && <div className="english-context-question"><strong>Part A</strong><p>{context.purposePrompt}</p></div>}
     {context.scenario && <div className="english-writing-scenario"><strong>Scenario</strong><p>{context.scenario}</p></div>}
     {context.task && !choices.length && <div className="english-context-question"><strong>Writing task</strong><p>{context.task}</p></div>}
-    {choices.length > 0 && <div className="english-writing-choices">{choices.map((choice, index) => <article key={choice.number || index}><span>Option {choice.number || index + 1}</span>{choice.scenario && <p>{choice.scenario}</p>}<strong>{choice.task}</strong></article>)}</div>}
+    {choices.length > 0 && <div className="english-writing-choices">{choices.map((choice, index) => choices.length > 1 ? <button type="button" className={String(selectedChoiceId) === String(choice.number) ? 'selected' : ''} onClick={() => onSelectChoice(String(choice.number))} key={choice.number || index}><span>Question {choice.number || index + 1}</span>{choice.scenario && <p>{choice.scenario}</p>}<strong>{choice.task}</strong><em>{String(selectedChoiceId) === String(choice.number) ? 'Selected' : 'Choose this prompt'}</em></button> : <article key={choice.number || index}><span>Writing task</span>{choice.scenario && <p>{choice.scenario}</p>}<strong>{choice.task}</strong></article>)}</div>}
   </section>;
 }
 
@@ -47,6 +45,7 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
   const [showSubmit, setShowSubmit] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [graphResponses, setGraphResponses] = useState({});
+  const [selectedChoices, setSelectedChoices] = useState({});
   const saveTimers = useRef(new Map());
   const pendingSaves = useRef(new Map());
   const hydratedAttemptId = useRef(null);
@@ -79,15 +78,18 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
     setSeconds(session.attempt.remainingSeconds);
     const savedLines = {};
     const savedGraphs = {};
+    const savedChoices = {};
     session.questions.forEach((item) => {
       const parts = item.response?.response?.parts || {};
       Object.entries(parts).forEach(([partId, value]) => {
         savedLines[partId] = value.workingLines || (value.finalAnswer ? [value.finalAnswer] : []);
         savedGraphs[partId] = value.graphPoints || [];
+        if (value.selectedChoiceId) savedChoices[item.id] = value.selectedChoiceId;
       });
     });
     setResponses(savedLines);
     setGraphResponses(savedGraphs);
+    setSelectedChoices(savedChoices);
   }, [attemptId, session]);
 
   useEffect(() => {
@@ -96,7 +98,7 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
   }, []);
 
   const format = (value) => `${String(Math.floor(value / 3600)).padStart(2, '0')}:${String(Math.floor(value % 3600 / 60)).padStart(2, '0')}:${String(value % 60).padStart(2, '0')}`;
-  const persistQuestion = (questionId, nextResponses, nextGraphs) => {
+  const persistQuestion = (questionId, nextResponses, nextGraphs, nextChoices = selectedChoices) => {
     if (!attemptId) return;
     window.clearTimeout(saveTimers.current.get(questionId));
     const persist = () => {
@@ -104,6 +106,7 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
       const parts = Object.fromEntries(target.parts.map((part) => [part.id, {
         workingLines: nextResponses[part.id] || [],
         graphPoints: nextGraphs[part.id] || [],
+        selectedChoiceId: nextChoices[questionId] || undefined,
       }]));
       pendingSaves.current.delete(questionId);
       return saveResponse(questionId, { response: { parts } }).catch(() => {});
@@ -121,10 +124,14 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
     persistQuestion(question.id, responses, next);
     return next;
   });
+  const setSelectedChoice = (questionId, choiceId) => setSelectedChoices((saved) => {
+    const next = { ...saved, [questionId]: choiceId };
+    persistQuestion(questionId, responses, graphResponses, next);
+    return next;
+  });
   const hasResponse = (partId) => (responses[partId] || []).some((line) => line.trim()) || (graphResponses[partId] || []).length > 0;
   const answeredQuestions = questions.filter((item) => item.parts.some((itemPart) => hasResponse(itemPart.id))).length;
-  const incompleteQuestions = questions.filter((item) => item.parts.some((itemPart) => !hasResponse(itemPart.id)));
-  const blankParts = incompleteQuestions.reduce((total, item) => total + item.parts.filter((itemPart) => !hasResponse(itemPart.id)).length, 0);
+  const incompleteQuestions = questions.filter((item) => item.parts.some((itemPart) => !hasResponse(itemPart.id)) || ((item.context?.choices?.length || 0) > 1 && !selectedChoices[item.id]));
   const flushPendingSaves = async () => {
     for (const [questionId, persist] of Array.from(pendingSaves.current.entries())) {
       window.clearTimeout(saveTimers.current.get(questionId));
@@ -150,7 +157,7 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
 
   return <div className="app-shell exam-shell">
     <AppSidebar active="practice" onNavigate={navigate} />
-    <main className="app-main paper2-workspace">
+    <main className={`app-main paper2-workspace ${subjectName.toLowerCase().includes('english') ? 'english-paper2-workspace' : ''}`}>
       <header className="exam-workspace-header simplified-exam-header">
         <div><p className="eyebrow">CSEC practice paper</p><h1>{subjectName} · Paper 2</h1></div>
         <div className="exam-workspace-controls">{attemptId && <span className={`answer-sync-state ${syncState}`} role="status">{syncState === 'offline' ? `${queuedCount} change${queuedCount === 1 ? '' : 's'} saved on this device` : syncState === 'saving' ? 'Saving…' : 'Saved'}</span>}<div className="compact-status exam-clock"><Clock size={18} /><span><strong>{format(seconds)}</strong><small>Time remaining</small></span></div><button className="icon-action" onClick={pausePaper} title="Pause paper" aria-label="Pause paper"><Pause size={18} /></button></div>
@@ -161,14 +168,15 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
           <div className="paper2-sidebar-progress"><strong>{answeredQuestions}/{questions.length}</strong><span>questions started</span></div>
           {questions.map((item) => {
             const started = item.parts.some((itemPart) => hasResponse(itemPart.id));
-            return <button onClick={() => setCurrent(item.number)} className={`${started ? 'done' : ''} ${item.number === current ? 'current' : ''}`} key={item.id}><span><b>Question {item.displayNumber || item.number}</b></span><em>{started ? '✓' : item.number === current ? '●' : '○'}</em></button>;
+            const label = (item.context?.choices?.length || 0) > 1 ? item.context.choices.map((choice) => choice.number).join(' or ') : item.displayNumber || item.number;
+            return <button onClick={() => setCurrent(item.number)} className={`${started ? 'done' : ''} ${item.number === current ? 'current' : ''}`} key={item.id}><span><b>Question {label}</b></span><em>{started ? '✓' : item.number === current ? '●' : '○'}</em></button>;
           })}
         </aside>
-        <article className="paper-sheet symmetric-paper-sheet paper2-generated-sheet">
-          <div className="paper2-question-heading"><div><p className="eyebrow">Question {current} of {questions.length}</p><h2>Question {question.displayNumber || current}</h2></div><span>{question.marks} marks</span></div>
-          {subjectName.toLowerCase().includes('english') && <EnglishQuestionContext context={question.context} />}
+        <article className={`paper-sheet symmetric-paper-sheet paper2-generated-sheet ${subjectName.toLowerCase().includes('english') ? 'english-paper2-sheet' : ''}`}>
+          <div className="paper2-question-heading"><div><p className="eyebrow">English A · Paper 2</p><h2>Question {(question.context?.choices?.length || 0) > 1 ? question.context.choices.map((choice) => choice.number).join(' or ') : question.displayNumber || current}</h2></div><span>{question.marks} marks</span></div>
+          {subjectName.toLowerCase().includes('english') && <EnglishQuestionContext context={question.context} selectedChoiceId={selectedChoices[question.id]} onSelectChoice={(choiceId) => setSelectedChoice(question.id, choiceId)} />}
           {question.parts.map((itemPart) => <section className="paper-question generated-paper2-part" key={itemPart.id}>
-            <div className="prompt-row"><span><b>{itemPart.label}</b> {itemPart.prompt}</span><small>({itemPart.marks} {itemPart.marks === 1 ? 'mark' : 'marks'})</small></div>
+            {!subjectName.toLowerCase().includes('english') && <div className="prompt-row"><span><b>{itemPart.label}</b> {itemPart.prompt}</span><small>({itemPart.marks} {itemPart.marks === 1 ? 'mark' : 'marks'})</small></div>}
             {itemPart.visual && itemPart.responseType !== 'graph' && <QuestionVisual spec={itemPart.visual} />}
             {itemPart.visual && itemPart.responseType === 'graph' && <InteractiveGraphResponse spec={itemPart.visual} points={graphResponses[itemPart.id] || []} onChange={(points) => setGraphResponse(itemPart.id, points)} />}
             {itemPart.responseType === 'long' ? (question.context?.purposePrompt ? <EnglishSummaryResponse purposePrompt={question.context.purposePrompt} summaryPrompt={itemPart.prompt} value={responses[itemPart.id] || []} onChange={(lines) => setResponse(itemPart.id, lines)} /> : <label className="english-long-response"><span>Your response</span><textarea value={(responses[itemPart.id] || []).join('\n')} onChange={(event) => setResponse(itemPart.id, event.target.value.split('\n'))} rows={18} placeholder="Write your response here…"/></label>) : <MathWorkingField value={responses[itemPart.id] || []} onChange={(lines) => setResponse(itemPart.id, lines)} label={itemPart.responseType === 'graph' ? 'Estimate and final answer' : 'Show your working and answer'} minimumLines={itemPart.responseType === 'short' ? 2 : 4} />}

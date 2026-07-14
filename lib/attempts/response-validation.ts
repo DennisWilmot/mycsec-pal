@@ -11,6 +11,7 @@ const structuredAnswer = z.object({
   workingLines: z.array(workingLine).max(40).optional(),
   graphPoints: z.array(graphPoint).max(250).optional(),
   finalAnswer: z.string().max(20_000).optional(),
+  selectedChoiceId: z.string().max(64).optional(),
 }).strict();
 
 const structuredResponse = structuredAnswer.extend({
