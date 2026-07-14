@@ -49,6 +49,22 @@ try {
       select ${user.id}::uuid,id,case when slug='mathematics' then 0 else 1 end,true
       from subjects where slug in ('mathematics','english-a')
       on conflict(profile_id,subject_id) do update set is_active=true,sort_order=excluded.sort_order`;
+    const [mathSyllabus] = await tx`select sv.id,s.id subject_id
+      from syllabus_versions sv join subjects s on s.id=sv.subject_id
+      where s.slug='mathematics' and sv.status in ('approved','published')
+      order by case when sv.status='published' then 0 else 1 end,sv.created_at desc limit 1`;
+    if (!mathSyllabus) throw new Error("No approved Mathematics syllabus is available.");
+    const additionalMathTopics = [
+      { slug: "algebra", name: "Algebra", module: 1, order: 30 },
+      { slug: "measurement", name: "Measurement", module: 1, order: 40 },
+      { slug: "geometry-and-trigonometry", name: "Geometry and Trigonometry", module: 2, order: 50 },
+      { slug: "statistics-and-probability", name: "Statistics and Probability", module: 3, order: 60 },
+    ];
+    for (const topic of additionalMathTopics) {
+      await tx`insert into topics(subject_id,syllabus_version_id,module_number,slug,name,syllabus_code,sort_order)
+        values(${mathSyllabus.subject_id},${mathSyllabus.id},${topic.module},${topic.slug},${topic.name},${`DEMO-${topic.order}`},${topic.order})
+        on conflict(syllabus_version_id,slug) do update set name=excluded.name,sort_order=excluded.sort_order`;
+    }
     await tx`delete from attempts where profile_id=${user.id}::uuid and display_code like 'DEMO-%'`;
 
     for (const [index, plan] of plans.entries()) {
@@ -106,6 +122,26 @@ try {
           values(${result.id},${topic.topic_id},${topicPercentage},100,${topicPercentage},${Math.max(1, questions.length - topicIndex)})`;
       }
     }
+
+    // A six-axis Mathematics profile reads clearly in the progress radar and gives
+    // every displayed topic enough repeated evidence to be treated as reliable.
+    await tx`delete from attempt_topic_results atr using results r,attempts a,paper_versions pv,papers p,subjects s
+      where atr.result_id=r.id and r.attempt_id=a.id and a.paper_version_id=pv.id and pv.paper_id=p.id
+        and p.subject_id=s.id and a.profile_id=${user.id}::uuid and a.display_code like 'DEMO-%' and s.slug='mathematics'`;
+    await tx`with math_results as (
+        select r.id,row_number() over(order by r.published_at) result_rank
+        from results r join attempts a on a.id=r.attempt_id join paper_versions pv on pv.id=a.paper_version_id
+        join papers p on p.id=pv.paper_id join subjects s on s.id=p.subject_id
+        where a.profile_id=${user.id}::uuid and a.display_code like 'DEMO-%' and s.slug='mathematics'
+      ), math_topics as (
+        select t.id,row_number() over(order by t.sort_order,t.name) topic_rank
+        from topics t join subjects s on s.id=t.subject_id where s.slug='mathematics'
+        order by t.sort_order,t.name limit 6
+      )
+      insert into attempt_topic_results(result_id,topic_id,score,max_score,percentage,evidence_count)
+      select mr.id,mt.id,58+mod((mt.topic_rank*7+mr.result_rank*3)::int,29),100,
+        58+mod((mt.topic_rank*7+mr.result_rank*3)::int,29),3+mod((mt.topic_rank+mr.result_rank)::int,4)
+      from math_results mr cross join math_topics mt`;
   });
   console.log(JSON.stringify({ seeded: true, email, attempts: plans.length, subjects: ["Mathematics", "English A"] }));
 } finally {
