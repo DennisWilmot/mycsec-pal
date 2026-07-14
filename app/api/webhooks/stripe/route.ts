@@ -13,7 +13,7 @@ type WebhookStage =
   | "persist_subscription"
   | "record_event";
 
-const HANDLER_VERSION = "2026-07-14-stripe-shape-v2";
+const HANDLER_VERSION = "2026-07-14-iso-period-v3";
 
 export async function POST(request: NextRequest) {
   const secret = process.env.STRIPE_WEBHOOK_SECRET;

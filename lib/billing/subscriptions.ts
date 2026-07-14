@@ -16,7 +16,9 @@ export const EXISTING_SUBSCRIPTION_STATUSES = new Set([
 
 export function subscriptionPeriodEnd(subscription: Stripe.Subscription) {
   const periodEnd = subscription.items?.data?.[0]?.current_period_end;
-  return periodEnd ? new Date(periodEnd * 1000) : null;
+  // Pass an ISO string rather than a Date object. Some serverless Postgres
+  // transports attempt to encode Date values as binary strings and throw.
+  return periodEnd ? new Date(periodEnd * 1000).toISOString() : null;
 }
 
 export async function persistStripeSubscription(
