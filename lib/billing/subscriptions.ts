@@ -15,7 +15,7 @@ export const EXISTING_SUBSCRIPTION_STATUSES = new Set([
 ]);
 
 export function subscriptionPeriodEnd(subscription: Stripe.Subscription) {
-  const periodEnd = subscription.items.data[0]?.current_period_end;
+  const periodEnd = subscription.items?.data?.[0]?.current_period_end;
   return periodEnd ? new Date(periodEnd * 1000) : null;
 }
 
@@ -24,12 +24,13 @@ export async function persistStripeSubscription(
   profileId: string,
   subscription: Stripe.Subscription,
 ) {
-  const item = subscription.items.data[0];
+  const item = subscription.items?.data?.[0];
+  const priceId = typeof item?.price === "string" ? item.price : item?.price?.id ?? null;
   await sql`
     insert into subscriptions
       (profile_id, stripe_subscription_id, stripe_price_id, status, current_period_end, cancel_at_period_end)
     values
-      (${profileId}::uuid, ${subscription.id}, ${item?.price.id ?? null}, ${subscription.status},
+      (${profileId}::uuid, ${subscription.id}, ${priceId}, ${subscription.status},
        ${subscriptionPeriodEnd(subscription)}, ${String(subscription.cancel_at_period_end)})
     on conflict (stripe_subscription_id) do update set
       profile_id = excluded.profile_id,

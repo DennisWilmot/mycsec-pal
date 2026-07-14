@@ -13,7 +13,7 @@ type WebhookStage =
   | "persist_subscription"
   | "record_event";
 
-const HANDLER_VERSION = "2026-07-14-stage-diagnostics-v1";
+const HANDLER_VERSION = "2026-07-14-stripe-shape-v2";
 
 export async function POST(request: NextRequest) {
   const secret = process.env.STRIPE_WEBHOOK_SECRET;
@@ -84,12 +84,14 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ received: true, handlerVersion: HANDLER_VERSION });
   } catch (error) {
     const errorType = error instanceof Error ? error.name : "UnknownError";
+    const errorMessage = error instanceof Error ? error.message.slice(0, 240) : "Unknown webhook error";
     console.error("stripe.webhook.failed", { eventId: event.id, type: event.type, stage, error });
     return NextResponse.json({
       error: "Webhook processing failed.",
       eventId: event.id,
       stage,
       errorType,
+      errorMessage,
       handlerVersion: HANDLER_VERSION,
     }, { status: 500 });
   }
