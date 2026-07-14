@@ -23,13 +23,13 @@ function EnglishQuestionContext({ context, selectedChoiceId, onSelectChoice }) {
   </section>;
 }
 
-function EnglishSummaryResponse({ purposePrompt, summaryPrompt, value, onChange }) {
+function EnglishSummaryResponse({ purposePrompt, summaryPrompt, value, onChange, inputGuards }) {
   const purpose = value[0] || '';
   const summary = value.slice(1).join('\n');
   const words = summary.trim() ? summary.trim().split(/\s+/).length : 0;
   return <div className="english-summary-response">
-    <label><span>Part A response</span><small>{purposePrompt}</small><input value={purpose} onChange={(event) => onChange([event.target.value, summary])} placeholder="State the writer’s purpose or describe the setting…" /></label>
-    <label><span>Part B response</span><small>{summaryPrompt}</small><textarea value={summary} onChange={(event) => onChange([purpose, event.target.value])} rows={12} placeholder="Write your summary here…" /></label>
+    <label><span>Part A response</span><small>{purposePrompt}</small><input {...inputGuards} value={purpose} onChange={(event) => onChange([event.target.value, summary])} placeholder="State the writer’s purpose or describe the setting…" /></label>
+    <label><span>Part B response</span><small>{summaryPrompt}</small><textarea {...inputGuards} value={summary} onChange={(event) => onChange([purpose, event.target.value])} rows={12} placeholder="Write your summary here…" /></label>
     <p className={words > 50 ? 'over' : ''}>{words} / 50 words in your summary</p>
   </div>;
 }
@@ -46,6 +46,7 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
   const [submitting, setSubmitting] = useState(false);
   const [graphResponses, setGraphResponses] = useState({});
   const [selectedChoices, setSelectedChoices] = useState({});
+  const [pasteNotice, setPasteNotice] = useState('');
   const saveTimers = useRef(new Map());
   const pendingSaves = useRef(new Map());
   const hydratedAttemptId = useRef(null);
@@ -67,6 +68,19 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
   }));
   const questions = attemptId ? liveQuestions : mathPaper2Demo.questions;
   const question = questions[current - 1];
+  const isEnglish = subjectName.toLowerCase().includes('english');
+  const blockExternalText = (event) => {
+    event.preventDefault();
+    setPasteNotice('Pasting or dropping text is disabled for Paper 2 responses. Type your answer directly.');
+  };
+  const responseInputGuards = isEnglish ? {
+    onPaste: blockExternalText,
+    onDrop: blockExternalText,
+    onBeforeInput: (event) => {
+      const inputType = event.nativeEvent?.inputType;
+      if (inputType === 'insertFromPaste' || inputType === 'insertFromDrop') blockExternalText(event);
+    },
+  } : {};
 
   useEffect(() => {
     if (!session) return;
@@ -157,12 +171,13 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
 
   return <div className="app-shell exam-shell">
     <AppSidebar active="practice" onNavigate={navigate} />
-    <main className={`app-main paper2-workspace ${subjectName.toLowerCase().includes('english') ? 'english-paper2-workspace' : ''}`}>
+    <main className={`app-main paper2-workspace ${isEnglish ? 'english-paper2-workspace' : ''}`}>
       <header className="exam-workspace-header simplified-exam-header">
         <div><p className="eyebrow">CSEC practice paper</p><h1>{subjectName} · Paper 2</h1></div>
         <div className="exam-workspace-controls">{attemptId && <span className={`answer-sync-state ${syncState}`} role="status">{syncState === 'offline' ? `${queuedCount} change${queuedCount === 1 ? '' : 's'} saved on this device` : syncState === 'saving' ? 'Saving…' : 'Saved'}</span>}<div className="compact-status exam-clock"><Clock size={18} /><span><strong>{format(seconds)}</strong><small>Time remaining</small></span></div><button className="icon-action" onClick={pausePaper} title="Pause paper" aria-label="Pause paper"><Pause size={18} /></button></div>
       </header>
       {error && <div className="integrity-note">{error}</div>}
+      {pasteNotice && <div className="integrity-note paste-blocked-notice" role="alert">{pasteNotice}</div>}
       <div className="paper2-layout symmetric-paper2-layout">
         <aside className="question-sidebar symmetric-question-sidebar" aria-label="Paper questions">
           <div className="paper2-sidebar-progress"><strong>{answeredQuestions}/{questions.length}</strong><span>questions started</span></div>
@@ -172,14 +187,14 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
             return <button onClick={() => setCurrent(item.number)} className={`${started ? 'done' : ''} ${item.number === current ? 'current' : ''}`} key={item.id}><span><b>Question {label}</b></span><em>{started ? '✓' : item.number === current ? '●' : '○'}</em></button>;
           })}
         </aside>
-        <article className={`paper-sheet symmetric-paper-sheet paper2-generated-sheet ${subjectName.toLowerCase().includes('english') ? 'english-paper2-sheet' : ''}`}>
+        <article className={`paper-sheet symmetric-paper-sheet paper2-generated-sheet ${isEnglish ? 'english-paper2-sheet' : ''}`}>
           <div className="paper2-question-heading"><div><p className="eyebrow">English A · Paper 2</p><h2>Question {(question.context?.choices?.length || 0) > 1 ? question.context.choices.map((choice) => choice.number).join(' or ') : question.displayNumber || current}</h2></div><span>{question.marks} marks</span></div>
-          {subjectName.toLowerCase().includes('english') && <EnglishQuestionContext context={question.context} selectedChoiceId={selectedChoices[question.id]} onSelectChoice={(choiceId) => setSelectedChoice(question.id, choiceId)} />}
+          {isEnglish && <EnglishQuestionContext context={question.context} selectedChoiceId={selectedChoices[question.id]} onSelectChoice={(choiceId) => setSelectedChoice(question.id, choiceId)} />}
           {question.parts.map((itemPart) => <section className="paper-question generated-paper2-part" key={itemPart.id}>
-            {!subjectName.toLowerCase().includes('english') && <div className="prompt-row"><span><b>{itemPart.label}</b> {itemPart.prompt}</span><small>({itemPart.marks} {itemPart.marks === 1 ? 'mark' : 'marks'})</small></div>}
+            {!isEnglish && <div className="prompt-row"><span><b>{itemPart.label}</b> {itemPart.prompt}</span><small>({itemPart.marks} {itemPart.marks === 1 ? 'mark' : 'marks'})</small></div>}
             {itemPart.visual && itemPart.responseType !== 'graph' && <QuestionVisual spec={itemPart.visual} />}
             {itemPart.visual && itemPart.responseType === 'graph' && <InteractiveGraphResponse spec={itemPart.visual} points={graphResponses[itemPart.id] || []} onChange={(points) => setGraphResponse(itemPart.id, points)} />}
-            {itemPart.responseType === 'long' ? (question.context?.purposePrompt ? <EnglishSummaryResponse purposePrompt={question.context.purposePrompt} summaryPrompt={itemPart.prompt} value={responses[itemPart.id] || []} onChange={(lines) => setResponse(itemPart.id, lines)} /> : <label className="english-long-response"><span>Your response</span><textarea value={(responses[itemPart.id] || []).join('\n')} onChange={(event) => setResponse(itemPart.id, event.target.value.split('\n'))} rows={18} placeholder="Write your response here…"/></label>) : <MathWorkingField value={responses[itemPart.id] || []} onChange={(lines) => setResponse(itemPart.id, lines)} label={itemPart.responseType === 'graph' ? 'Estimate and final answer' : 'Show your working and answer'} minimumLines={itemPart.responseType === 'short' ? 2 : 4} />}
+            {itemPart.responseType === 'long' ? (question.context?.purposePrompt ? <EnglishSummaryResponse purposePrompt={question.context.purposePrompt} summaryPrompt={itemPart.prompt} value={responses[itemPart.id] || []} onChange={(lines) => setResponse(itemPart.id, lines)} inputGuards={responseInputGuards} /> : <label className="english-long-response"><span>Your response</span><small>Type your response directly. Pasting and dropped text are disabled.</small><textarea {...responseInputGuards} value={(responses[itemPart.id] || []).join('\n')} onChange={(event) => setResponse(itemPart.id, event.target.value.split('\n'))} rows={18} placeholder="Write your response here…"/></label>) : <MathWorkingField value={responses[itemPart.id] || []} onChange={(lines) => setResponse(itemPart.id, lines)} label={itemPart.responseType === 'graph' ? 'Estimate and final answer' : 'Show your working and answer'} minimumLines={itemPart.responseType === 'short' ? 2 : 4} />}
           </section>)}
           <div className="paper-bottom functional-paper2-footer"><button className={`link-button ${question.flagged ? 'active' : ''}`} onClick={toggleFlag}><Flag size={15} />{question.flagged ? 'Flagged for review' : 'Flag this question'}</button><div><button className="button outline" disabled={current === 1} onClick={() => setCurrent(Math.max(1, current - 1))}><ArrowLeft size={17} />Previous</button><button className="button dark" disabled={current === questions.length} onClick={() => setCurrent(Math.min(questions.length, current + 1))}>Next<ArrowRight size={17} /></button></div></div>
           <footer className="paper2-submit-footer"><div><h2>Ready to finish Paper 2?</h2><p>{incompleteQuestions.length ? `${incompleteQuestions.length} questions still have blank parts.` : 'Every part has a response.'}</p>{submitNotice && <p className="paper2-submit-notice" role="status">Start this paper from Practice to save and mark your responses.</p>}</div><button className="button dark" disabled={submitting} onClick={() => setShowSubmit(true)}><Send size={17} />{submitting ? 'Submitting…' : 'Submit paper'}</button></footer>

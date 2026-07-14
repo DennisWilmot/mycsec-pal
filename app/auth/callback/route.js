@@ -60,6 +60,9 @@ export async function GET(request) {
     : await supabase.auth.verifyOtp({ token_hash: tokenHash, type });
 
   if (result.error) {
+    // Do not leave a previous browser session available after a failed account
+    // switch. The user must complete a fresh, successful authentication.
+    await supabase.auth.signOut({ scope: 'local' }).catch(() => {});
     return NextResponse.json(
       { code: 'AUTH_CALLBACK_FAILED', message: 'We could not complete sign in. Please try again.' },
       { status: 400 },

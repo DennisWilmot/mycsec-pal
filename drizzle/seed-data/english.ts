@@ -42,6 +42,7 @@ export function validateEnglishCandidates() {
     const form = String.fromCharCode(65 + formIndex);
     const p1Questions = paperOne.questions;
     if (!['review_pending', 'approved'].includes(paperOne.status)) issues.push({ severity: "error", code: "UNSAFE_STATUS", message: `English Paper 1 Form ${form} has an unsupported source status.` });
+    if (paperOne.durationSeconds !== 5_400) issues.push({ severity: "error", code: "P1_DURATION", message: `English Paper 1 Form ${form} must allow 90 minutes.` });
     if (p1Questions.length !== 60) issues.push({ severity: "error", code: "P1_COUNT", message: `Paper 1 Form ${form} has ${p1Questions.length} questions; expected 60.` });
     for (const moduleNumber of [1, 2, 3]) {
       const moduleQuestions = p1Questions.filter((question) => question.module === moduleNumber);

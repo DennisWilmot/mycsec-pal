@@ -54,14 +54,11 @@ export default function OnboardingPage({ navigate }) {
     supabase.auth.getSession().then(({ data }) => {
       if (!data.session) return;
       setAuthenticated(true);
-      const authMode = window.sessionStorage.getItem('mycsecpal-auth-mode');
       window.sessionStorage.removeItem('mycsecpal-auth-mode');
-      if (authMode === 'signin') {
-        continueAfterSignIn(data.session.user).catch((error) => setNotice(error.message));
-        return;
-      }
-      setForm((current) => ({ ...current, name: current.name || data.session.user.user_metadata?.full_name || data.session.user.user_metadata?.name || '' }));
-      setStep(2);
+      // OAuth can return through either the sign-in or sign-up entry point.
+      // Always ask the server whether this identity already has a completed
+      // profile before deciding to show onboarding again.
+      continueAfterSignIn(data.session.user).catch((error) => setNotice(error.message));
     });
     // RouteScreen recreates its navigation callback on render; session restore
     // should run once when this screen mounts, not after each form update.
@@ -116,7 +113,7 @@ export default function OnboardingPage({ navigate }) {
   };
 
   const continueAfterSignIn = async (user) => {
-    const response = await fetch('/api/me/profile');
+    const response = await fetch('/api/me/profile', { cache: 'no-store' });
     if (response.ok) {
       const payload = await response.json();
       if (payload.data?.onboardingCompletedAt) {
@@ -173,7 +170,17 @@ export default function OnboardingPage({ navigate }) {
     setBusy(true);
     setNotice('');
     window.sessionStorage.setItem('mycsecpal-auth-mode', mode);
-    const { error } = await supabase.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: `${window.location.origin}/auth/callback?next=/onboarding` } });
+    // Never let a previous MyCSECPal session determine which profile receives
+    // the next OAuth callback. This clears only this browser's app session;
+    // Google then presents its account chooser explicitly.
+    await supabase.auth.signOut({ scope: 'local' }).catch(() => {});
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: `${window.location.origin}/auth/callback?next=/onboarding`,
+        queryParams: { prompt: 'select_account' },
+      },
+    });
     if (error) {
       window.sessionStorage.removeItem('mycsecpal-auth-mode');
       setNotice(authErrorMessage(error));
