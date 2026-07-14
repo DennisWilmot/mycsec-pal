@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Dennis Wilmot (product owner)",
+  "reviewedAt": "2026-07-14T14:35:35.557Z",
+  "notes": "Product owner approved the Mathematics pool and English Forms A-C for release. Structural validators remain mandatory before database ingestion.",
+  "approvedPools": {
+    "mathematics": [
+      "A",
+      "B"
+    ],
+    "englishPaperOne": [
+      "A",
+      "B",
+      "C"
+    ],
+    "englishPaperTwo": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  "paperOne": {
+    "approved": true,
+    "itemDecisions": {}
+  },
+  "paperTwo": {
+    "approved": true,
+    "taskDecisions": {}
+  },
+  "rightsApproved": true,
+  "spineApproved": true
+}

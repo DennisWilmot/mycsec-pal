@@ -3,6 +3,8 @@ import path from 'node:path';
 
 const apiKey = process.env.OPENROUTER_API_KEY;
 const model = process.env.OPENROUTER_QUESTION_MODEL || 'openai/gpt-5-mini';
+const form = String(process.argv[2] || 'A').toUpperCase();
+if (!['A', 'B', 'C'].includes(form)) throw new Error('Form must be A, B or C.');
 if (!apiKey) throw new Error('OPENROUTER_API_KEY is required.');
 
 const schema = {
@@ -91,15 +93,15 @@ const compositionRubrics = {
 };
 const candidate = {
   ...raw,
+  id: `CSEC-ENGA-P2-2025-ORIG-FORM-${form}`,
   durationSeconds: 9900,
   totalMarksAnswered: 120,
   status: 'review_pending',
-  summaryTasks: raw.summaryTasks.map((task) => ({ ...task, marks: 10, maxSummaryWords: 50, rubric: summaryRubric })),
-  writingTasks: raw.writingTasks.map((task) => ({ ...task, marks: 30, rubric: task.kind === 'informative_exposition' ? compositionRubrics.informative_exposition : task.kind.startsWith('narrative_') ? compositionRubrics.narrative : compositionRubrics.persuasive_essay })),
+  summaryTasks: raw.summaryTasks.map((task) => ({ ...task, id: `ENGA-P2-F${form}-Q${task.number}`, marks: 10, maxSummaryWords: 50, rubric: summaryRubric })),
+  writingTasks: raw.writingTasks.map((task) => ({ ...task, id: `ENGA-P2-F${form}-Q${task.number}`, marks: 30, rubric: task.kind === 'informative_exposition' ? compositionRubrics.informative_exposition : task.kind.startsWith('narrative_') ? compositionRubrics.narrative : compositionRubrics.persuasive_essay })),
 };
 
-const outputPath = path.resolve('tmp/english/english-paper2-review-candidate.json');
+const outputPath = path.resolve(`data/english/paper-2-form-${form.toLowerCase()}-review-candidate.json`);
 await mkdir(path.dirname(outputPath), { recursive: true });
 await writeFile(outputPath, `${JSON.stringify(candidate, null, 2)}\n`, 'utf8');
-console.log(JSON.stringify({ outputPath, model, summaryTasks: candidate.summaryTasks.length, writingTasks: candidate.writingTasks.length }));
-
+console.log(JSON.stringify({ outputPath, model, form, summaryTasks: candidate.summaryTasks.length, writingTasks: candidate.writingTasks.length }));

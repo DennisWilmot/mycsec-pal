@@ -7,6 +7,7 @@ import {
   idempotencyKeys,
   markingJobs,
   outboxEvents,
+  paperBlueprintSlots,
   papers,
   paperVersions,
   questionOptions,
@@ -15,7 +16,6 @@ import {
 } from "@/drizzle/schema";
 
 type AttemptRow = typeof attempts.$inferSelect;
-const PAPER_ONE_DURATION_SECONDS = 60 * 60;
 
 export class AttemptLifecycleError extends Error {
   constructor(
@@ -193,6 +193,102 @@ function displayCode() {
   return `ATT-${crypto.randomUUID().replaceAll("-", "").slice(0, 12).toUpperCase()}`;
 }
 
+type BlueprintSlot = typeof paperBlueprintSlots.$inferSelect;
+type QuestionRow = typeof questions.$inferSelect;
+
+function stableRank(value: string) {
+  let hash = 2166136261;
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+async function assembleQuestions(
+  tx: any,
+  paperVersion: typeof paperVersions.$inferSelect,
+  profileId: string,
+  assemblyKey: string,
+): Promise<Array<{ question: QuestionRow; position: number }>> {
+  const slots = await tx.select().from(paperBlueprintSlots)
+    .where(eq(paperBlueprintSlots.paperVersionId, paperVersion.id))
+    .orderBy(asc(paperBlueprintSlots.position)) as BlueprintSlot[];
+
+  // Compatibility path for catalogues that have not received the exam-spine migration yet.
+  if (slots.length === 0) {
+    const fixed = await tx.select().from(questions)
+      .where(and(eq(questions.paperVersionId, paperVersion.id), eq(questions.status, "published")))
+      .orderBy(asc(questions.questionNumber)) as QuestionRow[];
+    return fixed.map((question, index) => ({ question, position: index + 1 }));
+  }
+  if (slots.length !== paperVersion.questionCount) {
+    throw new AttemptLifecycleError(409, "PAPER_NOT_READY", "This paper's exam spine is incomplete.");
+  }
+
+  const candidateRows = await tx.execute(sql`
+    select q.*, coalesce(array_agg(distinct qt.topic_id) filter (where qt.topic_id is not null), '{}') as topic_ids,
+      count(distinct aq.id)::int as exposure_count,
+      max(a.created_at) filter (where a.profile_id = ${profileId}) as last_seen_at
+    from questions q
+    inner join paper_versions pv on pv.id = q.paper_version_id
+    left join question_topics qt on qt.question_id = q.id
+    left join attempt_questions aq on aq.question_id = q.id
+    left join attempts a on a.id = aq.attempt_id
+    where pv.paper_id = ${paperVersion.paperId}
+      and pv.syllabus_version_id = ${paperVersion.syllabusVersionId}
+      and q.status = 'published'
+    group by q.id
+  `);
+  const candidates = (candidateRows as Array<Record<string, any>>).map((row) => ({
+    question: {
+      id: row.id, externalId: row.external_id, paperVersionId: row.paper_version_id,
+      questionNumber: row.question_number, moduleNumber: row.module_number,
+      objectiveCode: row.objective_code, assessmentProfile: row.assessment_profile,
+      difficulty: row.difficulty, type: row.type, promptJson: row.prompt_json,
+      totalMarks: row.total_marks, assetUrl: row.asset_url, status: row.status,
+      provenanceJson: row.provenance_json, createdAt: new Date(row.created_at), updatedAt: new Date(row.updated_at),
+    } as QuestionRow,
+    topicIds: (row.topic_ids ?? []) as string[],
+    exposureCount: Number(row.exposure_count ?? 0),
+    lastSeenAt: row.last_seen_at ? new Date(row.last_seen_at) : null,
+  }));
+
+  const recentlySeenCutoff = Date.now() - 180 * 24 * 60 * 60 * 1000;
+  const used = new Set<string>();
+  const lockedVersionByGroup = new Map<string, string>();
+  return slots.map((slot) => {
+    const lockedVersion = slot.selectionGroup?.startsWith("block:") ? lockedVersionByGroup.get(slot.selectionGroup) : null;
+    const eligible = candidates.filter(({ question, topicIds }) =>
+      !used.has(question.id)
+      && (!lockedVersion || question.paperVersionId === lockedVersion)
+      && question.moduleNumber === slot.moduleNumber
+      && question.assessmentProfile === slot.assessmentProfile
+      && question.difficulty === slot.difficulty
+      && question.type === slot.questionType
+      && question.totalMarks === slot.marks
+      && (!slot.topicId || topicIds.includes(slot.topicId))
+    );
+    eligible.sort((left, right) => {
+      const leftRecent = left.lastSeenAt && left.lastSeenAt.getTime() >= recentlySeenCutoff ? 1 : 0;
+      const rightRecent = right.lastSeenAt && right.lastSeenAt.getTime() >= recentlySeenCutoff ? 1 : 0;
+      return leftRecent - rightRecent
+        || left.exposureCount - right.exposureCount
+        || stableRank(`${assemblyKey}:${slot.position}:${left.question.id}`)
+          - stableRank(`${assemblyKey}:${slot.position}:${right.question.id}`);
+    });
+    const chosen = eligible[0];
+    if (!chosen) {
+      throw new AttemptLifecycleError(409, "PAPER_NOT_READY", `No approved question can fill exam-spine slot ${slot.position}.`);
+    }
+    used.add(chosen.question.id);
+    if (slot.selectionGroup?.startsWith("block:") && !lockedVersion) {
+      lockedVersionByGroup.set(slot.selectionGroup, chosen.question.paperVersionId);
+    }
+    return { question: chosen.question, position: slot.position };
+  });
+}
+
 export async function createAttempt(profileId: string, paperVersionId: string, idempotencyKey: string) {
   const db = getDatabase();
   const existingKey = await db
@@ -254,9 +350,7 @@ export async function createAttempt(profileId: string, paperVersionId: string, i
       if (!paper) {
         throw new AttemptLifecycleError(404, "PAPER_NOT_FOUND", "This paper is not available.");
       }
-      const durationSeconds = paper.paperType === "paper_1"
-        ? PAPER_ONE_DURATION_SECONDS
-        : paperVersion.durationSeconds;
+      const durationSeconds = paperVersion.durationSeconds;
 
       const paidAccess = await tx.execute(sql`
         select 1 from subscriptions
@@ -288,11 +382,8 @@ export async function createAttempt(profileId: string, paperVersionId: string, i
         }
       }
 
-      const selectedQuestions = await tx
-        .select()
-        .from(questions)
-        .where(and(eq(questions.paperVersionId, paperVersionId), eq(questions.status, "published")))
-        .orderBy(asc(questions.questionNumber));
+      const assembledQuestions = await assembleQuestions(tx, paperVersion, profileId, idempotencyKey);
+      const selectedQuestions = assembledQuestions.map(({ question }) => question);
       if (selectedQuestions.length !== paperVersion.questionCount) {
         throw new AttemptLifecycleError(409, "PAPER_NOT_READY", "This paper is not ready to start.");
       }
@@ -312,10 +403,10 @@ export async function createAttempt(profileId: string, paperVersionId: string, i
         lastActivityAt: now,
       }).returning();
 
-      await tx.insert(attemptQuestions).values(selectedQuestions.map((question, index) => ({
+      await tx.insert(attemptQuestions).values(assembledQuestions.map(({ question, position }) => ({
         attemptId: created.id,
         questionId: question.id,
-        position: index + 1,
+        position,
         maxMarks: question.totalMarks,
         questionSnapshotJson: {
           externalId: question.externalId,
@@ -348,7 +439,11 @@ export async function createAttempt(profileId: string, paperVersionId: string, i
       await tx.insert(attemptEvents).values({
         attemptId: created.id,
         type: "started",
-        metadataJson: { paperVersionId, durationSeconds },
+        metadataJson: {
+          paperVersionId,
+          durationSeconds,
+          assembly: assembledQuestions.map(({ question, position }) => ({ position, questionId: question.id })),
+        },
       });
       const response = publicAttempt(created, now);
       await tx.insert(idempotencyKeys).values({

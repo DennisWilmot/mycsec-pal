@@ -157,6 +157,30 @@ export const paperInstructions = pgTable(
   (table) => [uniqueIndex("paper_instructions_version_key_unique").on(table.paperVersionId, table.key)],
 );
 
+export const paperBlueprintSlots = pgTable(
+  "paper_blueprint_slots",
+  {
+    id: primaryId(),
+    paperVersionId: uuid("paper_version_id").notNull().references(() => paperVersions.id, { onDelete: "cascade" }),
+    position: smallint("position").notNull(),
+    moduleNumber: smallint("module_number").notNull(),
+    topicId: uuid("topic_id").references(() => topics.id, { onDelete: "restrict" }),
+    assessmentProfile: assessmentProfileEnum("assessment_profile").notNull(),
+    difficulty: difficultyEnum("difficulty").notNull(),
+    questionType: questionTypeEnum("question_type").notNull(),
+    marks: integer("marks").notNull(),
+    selectionGroup: varchar("selection_group", { length: 80 }),
+    createdAt: createdAt(),
+    updatedAt: updatedAt(),
+  },
+  (table) => [
+    uniqueIndex("paper_blueprint_slots_version_position_unique").on(table.paperVersionId, table.position),
+    index("paper_blueprint_slots_selection_idx").on(table.paperVersionId, table.moduleNumber, table.assessmentProfile, table.difficulty),
+    check("paper_blueprint_slots_position_positive", sql`${table.position} > 0 and ${table.marks} > 0`),
+    check("paper_blueprint_slots_module_range", sql`${table.moduleNumber} between 1 and 3`),
+  ],
+);
+
 export const questions = pgTable(
   "questions",
   {

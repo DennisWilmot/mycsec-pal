@@ -2,6 +2,7 @@ import { eq } from "drizzle-orm";
 import { getDatabase, getDatabaseClient } from "../lib/db";
 import {
   markSchemes,
+  paperBlueprintSlots,
   papers,
   paperVersions,
   questionOptions,
@@ -23,6 +24,8 @@ import {
   validateMathematicsSeed,
 } from "./seed-data/mathematics";
 import { paperTwoRubrics } from "./seed-data/paper2-rubrics";
+import { mathPaper1FormB } from "../data/mathematics/paper-1-form-b-review-candidate";
+import { mathPaper2FormB } from "../data/mathematics/paper-2-form-b-review-candidate";
 
 const paper1Status = "published" as const;
 // Paper 2 is part of the live MVP catalogue. Its questions and marking
@@ -119,6 +122,7 @@ async function seed() {
     }
 
     const versionIds = new Map<number, string>();
+    const paperIds = new Map<number, string>();
     for (const definition of mathematics2027PaperDefinitionsSeed) {
       const paperType = definition.paperNumber === 1 ? "paper_1" : "paper_2";
       const status = definition.paperNumber === 1 ? paper1Status : paper2Status;
@@ -131,6 +135,7 @@ async function seed() {
         target: [papers.subjectId, papers.paperType],
         set: { title: definition.name, status, updatedAt: new Date() },
       }).returning({ id: papers.id });
+      paperIds.set(definition.paperNumber, paper.id);
       const [version] = await tx.insert(paperVersions).values({
         paperId: paper.id,
         syllabusVersionId: syllabus.id,
@@ -183,7 +188,7 @@ async function seed() {
         },
       }).returning({ id: questions.id });
 
-      for (const [index, content] of item.options.entries()) {
+      for (const [index, content] of (item.options as string[]).entries()) {
         const label = optionLabels[index];
         await tx.insert(questionOptions).values({
           questionId: question.id,
@@ -206,6 +211,30 @@ async function seed() {
       }).onConflictDoUpdate({
         target: [markSchemes.questionId, markSchemes.version],
         set: { schemeJson: { kind: "exact_option", correctOption: item.correctAnswer }, maxMarks: 1, updatedAt: new Date() },
+      });
+
+      await tx.insert(paperBlueprintSlots).values({
+        paperVersionId: versionIds.get(1)!,
+        position: item.number,
+        moduleNumber: item.module,
+        topicId: topicIds.get(item.topic)!,
+        assessmentProfile: profileMap[item.profile as keyof typeof profileMap],
+        difficulty,
+        questionType: "multiple_choice",
+        marks: 1,
+        selectionGroup: null,
+      }).onConflictDoUpdate({
+        target: [paperBlueprintSlots.paperVersionId, paperBlueprintSlots.position],
+        set: {
+          moduleNumber: item.module,
+          topicId: topicIds.get(item.topic)!,
+          assessmentProfile: profileMap[item.profile as keyof typeof profileMap],
+          difficulty,
+          questionType: "multiple_choice",
+          marks: 1,
+          selectionGroup: null,
+          updatedAt: new Date(),
+        },
       });
     }
 
@@ -278,10 +307,122 @@ async function seed() {
           set: { schemeJson: { kind: "criteria_v1", ...paperTwoRubrics[part.externalId], humanReviewed: true }, maxMarks: part.marks, updatedAt: new Date() },
         });
       }
+
+      await tx.insert(paperBlueprintSlots).values({
+        paperVersionId: versionIds.get(2)!,
+        position: item.number,
+        moduleNumber: item.module,
+        assessmentProfile: paper2Profiles[item.externalId],
+        difficulty: paper2Profiles[item.externalId] === "reasoning" ? "hard" : "medium",
+        questionType: "structured",
+        marks: item.marks,
+        selectionGroup: null,
+      }).onConflictDoUpdate({
+        target: [paperBlueprintSlots.paperVersionId, paperBlueprintSlots.position],
+        set: {
+          moduleNumber: item.module,
+          topicId: null,
+          assessmentProfile: paper2Profiles[item.externalId],
+          difficulty: paper2Profiles[item.externalId] === "reasoning" ? "hard" : "medium",
+          questionType: "structured",
+          marks: item.marks,
+          selectionGroup: null,
+          updatedAt: new Date(),
+        },
+      });
+    }
+
+    const alternateVersionIds = new Map<number, string>();
+    for (const definition of mathematics2027PaperDefinitionsSeed) {
+      const [version] = await tx.insert(paperVersions).values({
+        paperId: paperIds.get(definition.paperNumber)!,
+        syllabusVersionId: syllabus.id,
+        blueprintId: `${definition.id}-review-form-b`,
+        blueprintVersion: 1,
+        version: 2,
+        durationSeconds: definition.durationSeconds,
+        totalMarks: definition.totalMarks,
+        questionCount: definition.questionCount,
+        status: "published",
+        publishedAt: new Date(),
+      }).onConflictDoUpdate({
+        target: [paperVersions.blueprintId, paperVersions.blueprintVersion],
+        set: { status: "published", publishedAt: new Date(), durationSeconds: definition.durationSeconds, totalMarks: definition.totalMarks, questionCount: definition.questionCount, updatedAt: new Date() },
+      }).returning({ id: paperVersions.id });
+      alternateVersionIds.set(definition.paperNumber, version.id);
+    }
+
+    for (const item of mathPaper1FormB.questions) {
+      const [question] = await tx.insert(questions).values({
+        externalId: item.id,
+        paperVersionId: alternateVersionIds.get(1)!,
+        questionNumber: item.number,
+        moduleNumber: item.module,
+        objectiveCode: item.objective,
+        assessmentProfile: profileMap[item.profile as keyof typeof profileMap],
+        difficulty: item.difficulty as "easy" | "medium" | "hard",
+        type: "multiple_choice",
+        promptJson: { text: item.prompt, visual: item.visual },
+        totalMarks: 1,
+        status: "published",
+        provenanceJson: item.provenance,
+      }).onConflictDoUpdate({
+        target: questions.externalId,
+        set: { promptJson: { text: item.prompt, visual: item.visual }, status: "published", updatedAt: new Date() },
+      }).returning({ id: questions.id });
+      for (const [index, content] of (item.options as string[]).entries()) {
+        const label = optionLabels[index];
+        await tx.insert(questionOptions).values({ questionId: question.id, label, contentJson: { text: content }, sortOrder: index + 1, isCorrect: label === item.correctAnswer })
+          .onConflictDoUpdate({ target: [questionOptions.questionId, questionOptions.label], set: { contentJson: { text: content }, sortOrder: index + 1, isCorrect: label === item.correctAnswer } });
+      }
+      await tx.insert(questionTopics).values({ questionId: question.id, topicId: topicIds.get(item.topic)!, weight: "1" })
+        .onConflictDoUpdate({ target: [questionTopics.questionId, questionTopics.topicId], set: { weight: "1" } });
+      await tx.insert(markSchemes).values({ questionId: question.id, schemeJson: { kind: "exact_option", correctOption: item.correctAnswer, humanReviewed: true }, maxMarks: 1, version: 1 })
+        .onConflictDoUpdate({ target: [markSchemes.questionId, markSchemes.version], set: { schemeJson: { kind: "exact_option", correctOption: item.correctAnswer, humanReviewed: true }, maxMarks: 1, updatedAt: new Date() } });
+    }
+
+    for (const item of mathPaper2FormB.questions) {
+      const assessmentProfile = paper2Profiles[`math-p2-demo-q${item.number}`];
+      const [question] = await tx.insert(questions).values({
+        externalId: item.id,
+        paperVersionId: alternateVersionIds.get(2)!,
+        questionNumber: item.number,
+        moduleNumber: item.module,
+        objectiveCode: `M${item.module}-INTEGRATED-Q${item.number}`,
+        assessmentProfile,
+        difficulty: assessmentProfile === "reasoning" ? "hard" : "medium",
+        type: "structured",
+        promptJson: { internalTitle: item.title },
+        totalMarks: item.marks,
+        status: "published",
+        provenanceJson: { source: "original_local_authoring", form: "B", approvedBy: "product_owner" },
+      }).onConflictDoUpdate({
+        target: questions.externalId,
+        set: { promptJson: { internalTitle: item.title }, totalMarks: item.marks, status: "published", updatedAt: new Date() },
+      }).returning({ id: questions.id });
+      for (const [index, part] of item.parts.entries()) {
+        const responseType = part.responseType === "graph" ? "graph" : part.responseType === "short" ? "short_text" : "working_lines";
+        const [partRow] = await tx.insert(questionParts).values({
+          externalId: `${item.id}-${part.id}`, questionId: question.id, label: part.label,
+          promptJson: { text: part.prompt, visual: part.visual }, responseType, marks: part.marks, sortOrder: index + 1,
+        }).onConflictDoUpdate({
+          target: questionParts.externalId,
+          set: { promptJson: { text: part.prompt, visual: part.visual }, responseType, marks: part.marks, sortOrder: index + 1, updatedAt: new Date() },
+        }).returning({ id: questionParts.id });
+        await tx.insert(markSchemes).values({
+          questionPartId: partRow.id,
+          schemeJson: { kind: "criteria_v1", criteria: part.markingCriteria, humanReviewed: true },
+          maxMarks: part.marks,
+          version: 1,
+        }).onConflictDoUpdate({
+          target: [markSchemes.questionPartId, markSchemes.version],
+          set: { schemeJson: { kind: "criteria_v1", criteria: part.markingCriteria, humanReviewed: true }, maxMarks: part.marks, updatedAt: new Date() },
+        });
+      }
     }
   });
 
-  console.log(`Seeded ${paper1QuestionSeed.length} Paper 1 and ${paper2QuestionSeed.length} Paper 2 questions.`);
+  console.log(`Seeded ${paper1QuestionSeed.length + mathPaper1FormB.questions.length} approved Paper 1 and ${paper2QuestionSeed.length + mathPaper2FormB.questions.length} approved Paper 2 questions.`);
 }
 
 seed()

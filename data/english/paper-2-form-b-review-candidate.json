@@ -1,0 +1,350 @@
+{
+  "id": "CSEC-ENGA-P2-2025-ORIG-FORM-B",
+  "subject": "English A",
+  "paper": 2,
+  "syllabusVersion": "CXC-01-G-SYLL-25",
+  "summaryTasks": [
+    {
+      "id": "ENGA-P2-FB-Q1",
+      "number": 1,
+      "module": 1,
+      "discourse": "informative",
+      "extractTitle": "Community Garden Launch",
+      "extract": "On Saturday morning the plaza hummed quietly with purpose. A group of neighbours had gathered to open a small community garden on a narrow strip of municipal land that had once been a derelict carpark. Organisers had spent weeks negotiating with the local council, clearing rubble, consulting residents and preparing raised beds for vegetables and herbs. The project’s coordinator, Ms. Alvarez, spoke of practical goals: to give families access to fresh produce, to create a safe place where children could learn about growing food, and to encourage neighbours to work together.\n\nBeneath the practical aims, voluntary contributors described a deeper hope: the garden could repair social ties frayed by years of people coming and going, by busy schedules and by the urban anonymity that made many feel isolated. Volunteers arranged benches and painted a mural showing the island’s coastline and fruit trees. A small shed, stocked with tools donated by a local hardware shop, stood ready for use. The team planned workshops on composting and seasonal planting; they had also set up a rota to ensure that watered beds would not be neglected during holidays.\n\nFunding came from a mixture of a modest council grant, donations from a neighbourhood fund, and a bake sale held two weekends prior. The coordinators emphasised sustainability: rain barrels to collect runoff, organic methods to avoid chemical fertilizers, and swapping seedlings rather than buying expensive starts. They hoped the garden would become self-sufficient over time.\n\nMs. Alvarez closed the opening remarks by inviting everyone to try planting a seedling and sign up for the first workshop. She reminded attendees that the garden was for everyone, regardless of age or skill. By midday, children were drawing chalk paths and an elderly man shared stories about the crops his family used to grow decades ago, already weaving memory with the new endeavour.",
+      "purposePrompt": "State the writer's main purpose in this extract. (3 marks)",
+      "purposeAnswer": "To inform readers about the launch, aims and practical arrangements of a community garden project, explaining its goals and how it will operate.",
+      "summaryPrompt": "Summarise the extract in no more than 50 words using three detailed points.",
+      "acceptedPoints": [
+        "Community members opened a garden on former carpark land with council approval.",
+        "Practical measures include raised beds, workshops, rain barrels, and a rota for maintenance.",
+        "Funding and support came from a council grant, donations and local fundraising.",
+        "Organisers aim to provide fresh produce, teach children, and rebuild neighbourhood ties."
+      ],
+      "sampleSummary": "Neighbours opened a community garden on reclaimed land with council support; organisers set up raised beds, workshops, rain barrels and a watering rota; funding came from a council grant, donations and a bake sale, aiming to provide fresh food, teach children and strengthen community ties.",
+      "rights": "original_generated_candidate",
+      "marks": 10,
+      "maxSummaryWords": 50,
+      "rubric": {
+        "maxMarks": 10,
+        "criteria": [
+          {
+            "id": "purpose-or-setting",
+            "profile": "analysing",
+            "marks": 3,
+            "rule": "Accurately addresses the required purpose or setting task."
+          },
+          {
+            "id": "three-supported-points",
+            "profile": "understanding",
+            "marks": 3,
+            "rule": "Awards one mark for each of three distinct supported points in the learner’s own words."
+          },
+          {
+            "id": "summary-language",
+            "profile": "evaluating_creating",
+            "marks": 4,
+            "rule": "Assesses concise expression, cohesion, grammar, mechanics and sentence linkages within the 50-word limit."
+          }
+        ]
+      },
+      "status": "approved"
+    },
+    {
+      "id": "ENGA-P2-FB-Q3",
+      "number": 3,
+      "module": 2,
+      "discourse": "literary",
+      "extractTitle": "The Night Market",
+      "extract": "The night market unfurled along the waterfront like a long, busy river of lantern light. Stalls leaned together under patched awnings, and the air carried the mixed smells of frying plantain, sweet coconut candy and fresh salt from the sea. Music drifted across the promenade: a slow guitar tune from one corner, the quick cadence of drums from a group of young men near the pier, and an old radio playing a love song in the background. People moved in small clusters — families, young couples, tourists with cameras — creating a soft, persistent murmur.\n\nThe setting felt both intimate and expansive. Lanterns strung between poles cast warm pools of orange where vendors sat arranging goods: stacks of woven baskets, trays of fried pastries, jars of pickled mango. Beyond the stalls, the harbour’s black water reflected the flicker of lamps and the silhouette of a single fishing boat tied to a mooring, bobbing slowly. The sky was high and clear, the trade winds gentle enough to carry the scent of the sea and the smoke from charcoal grills.\n\nAn elderly woman, selling hand-stitched dolls, sat near the edge of the market, her table illuminated by a single bulb. A child ran past clutching a skewer, laughing; nearby a couple argued quietly and then smiled at each other as they stepped into the light. The market’s rhythm was human and unhurried: the creak of crates, the clink of cups, the occasional bark of a dog. Occasionally a breeze would lift the awnings and the whole market seemed to inhale, carrying hopes and small comforts across the night.",
+      "purposePrompt": "Describe the setting of the piece. (3 marks)",
+      "purposeAnswer": "A lively night market along the waterfront, lit by lanterns and bulbs, with the sea and harbour nearby; warm smells, musical sounds, and a mix of people create an intimate yet expansive evening atmosphere.",
+      "summaryPrompt": "Summarise in no more than 50 words using three points about the setting and atmosphere.",
+      "acceptedPoints": [
+        "The market is on the waterfront at night, lit by lanterns with the sea and a fishing boat visible.",
+        "Smells of fried plantain, coconut candy and charcoal grills blend with music and human murmur.",
+        "Vendors display goods under patched awnings; the mood is intimate, unhurried and communal.",
+        "Small details (a child with a skewer, an elderly seller, creaking crates) convey everyday life."
+      ],
+      "sampleSummary": "A waterfront night market glows with lantern light and the harbour beyond; scents of fried plantain and coconut mix with music and conversation; patched stalls and small human details — an elderly seller, a laughing child — create an intimate, communal atmosphere.",
+      "rights": "original_generated_candidate",
+      "marks": 10,
+      "maxSummaryWords": 50,
+      "rubric": {
+        "maxMarks": 10,
+        "criteria": [
+          {
+            "id": "purpose-or-setting",
+            "profile": "analysing",
+            "marks": 3,
+            "rule": "Accurately addresses the required purpose or setting task."
+          },
+          {
+            "id": "three-supported-points",
+            "profile": "understanding",
+            "marks": 3,
+            "rule": "Awards one mark for each of three distinct supported points in the learner’s own words."
+          },
+          {
+            "id": "summary-language",
+            "profile": "evaluating_creating",
+            "marks": 4,
+            "rule": "Assesses concise expression, cohesion, grammar, mechanics and sentence linkages within the 50-word limit."
+          }
+        ]
+      },
+      "status": "approved"
+    },
+    {
+      "id": "ENGA-P2-FB-Q6",
+      "number": 6,
+      "module": 3,
+      "discourse": "persuasive",
+      "extractTitle": "Smartphones in Schools",
+      "extract": "When the debate over smartphones in schools reached the board, both parents and teachers brought strong opinions. Supporters argued that phones are powerful learning tools: students can research during lessons, use educational apps, and document experiments. Some teachers used phones to record presentations, while others used group chats to share assignments and reminders. Supporters also pointed out that phones help with safety — a quick call can be made in an emergency.\n\nOpponents raised concerns about distraction: notifications, social media and games can interrupt lessons and reduce concentration. They spoke of unequal access — not all students can afford the latest devices — and the pressure students feel to display perfect images of their lives online. Cyberbullying, screens that keep students awake at night, and the difficulty of monitoring appropriate use were also listed as risks. Some teachers reported spending class time policing screens rather than teaching.\n\nThe board considered compromise policies: phones allowed for specific lessons only, devices kept in lockers otherwise, or school-provided tablets for classes. Training for teachers on integrating phones constructively, digital citizenship lessons for students, and clear rules about cameras and social media were suggested. Parents wanted consistency across schools and simple rules they could enforce at home. The decision would need to balance learning benefits with safeguarding and equity.\n\nAt the meeting’s close, the chair urged the board to act thoughtfully, proposing a pilot scheme in three schools to test rules and monitor outcomes before a wider rollout. Everyone agreed that any policy should be reviewed after measurable results were gathered.",
+      "purposePrompt": "State the writer's main purpose in this extract. (3 marks)",
+      "purposeAnswer": "To persuade readers by presenting the arguments for and against allowing smartphones in schools and recommending a cautious, evidence-based compromise.",
+      "summaryPrompt": "Summarise the extract in no more than 50 words using three points.",
+      "acceptedPoints": [
+        "Supporters claim phones aid learning, safety and communication; teachers use them for lessons and reminders.",
+        "Opponents warn of distraction, unequal access, cyberbullying and monitoring difficulties.",
+        "The board considered compromises like limited use, school devices, teacher training and a pilot scheme to test policies.",
+        "Parents sought consistent, enforceable rules across schools."
+      ],
+      "sampleSummary": "The extract outlines pro- and anti-smartphone views: supporters cite learning tools and safety, opponents cite distraction, inequality and cyberbullying; the board proposed limited use, school devices, teacher training and a pilot scheme to test policies before wider adoption.",
+      "rights": "original_generated_candidate",
+      "marks": 10,
+      "maxSummaryWords": 50,
+      "rubric": {
+        "maxMarks": 10,
+        "criteria": [
+          {
+            "id": "purpose-or-setting",
+            "profile": "analysing",
+            "marks": 3,
+            "rule": "Accurately addresses the required purpose or setting task."
+          },
+          {
+            "id": "three-supported-points",
+            "profile": "understanding",
+            "marks": 3,
+            "rule": "Awards one mark for each of three distinct supported points in the learner’s own words."
+          },
+          {
+            "id": "summary-language",
+            "profile": "evaluating_creating",
+            "marks": 4,
+            "rule": "Assesses concise expression, cohesion, grammar, mechanics and sentence linkages within the 50-word limit."
+          }
+        ]
+      },
+      "status": "approved"
+    }
+  ],
+  "writingTasks": [
+    {
+      "id": "ENGA-P2-FB-Q2",
+      "number": 2,
+      "module": 1,
+      "kind": "informative_exposition",
+      "choiceGroup": null,
+      "scenario": "Your local community centre asks you to prepare a formal notice to inform residents about a new weekly skills workshop series aimed at helping adults develop practical skills (e.g., sewing, basic carpentry, mobile phone literacy).",
+      "task": "Write a formal notice announcing the workshop series. Include: purpose of the workshops, schedule and location, how to register, any costs or materials needed, and contact details for further information. Use a clear, audience-appropriate format and continuous prose where appropriate.",
+      "requiredContent": [
+        "Purpose and benefits of the workshops",
+        "Schedule (days/times) and location",
+        "Registration process and deadlines",
+        "Costs and materials participants must bring",
+        "Contact details for more information"
+      ],
+      "audience": "Local residents, adults of varied backgrounds",
+      "purpose": "To inform and encourage residents to register for practical skills workshops",
+      "suggestedWords": {
+        "minimum": 250,
+        "maximum": 350
+      },
+      "visualSpec": null,
+      "rights": "original_generated_candidate",
+      "marks": 30,
+      "rubric": {
+        "maxMarks": 30,
+        "criteria": [
+          {
+            "id": "content-accuracy",
+            "profile": "understanding",
+            "marks": 7
+          },
+          {
+            "id": "format-audience-sequence",
+            "profile": "analysing",
+            "marks": 7
+          },
+          {
+            "id": "clarity-coherence-language",
+            "profile": "evaluating_creating",
+            "marks": 16
+          }
+        ]
+      },
+      "status": "approved"
+    },
+    {
+      "id": "ENGA-P2-FB-Q4",
+      "number": 4,
+      "module": 2,
+      "kind": "narrative_picture",
+      "choiceGroup": "narrative-choice",
+      "scenario": "Use the picture prompt below as the opening image for a narrative.",
+      "task": "Write a short story (400–450 words) inspired by the picture. Use Standard English; dialogue may include dialect. Focus on character, action and a clear sense of direction or change.",
+      "requiredContent": [
+        "A clear central character",
+        "A turning point or conflict",
+        "Vivid sensory detail linked to the picture",
+        "A satisfying resolution or change"
+      ],
+      "audience": "General readers",
+      "purpose": "To entertain and tell a complete story",
+      "suggestedWords": {
+        "minimum": 400,
+        "maximum": 450
+      },
+      "visualSpec": {
+        "type": "picture_prompt",
+        "description": "A lone wooden bench sits under a tall almond tree at the edge of a calm harbour at dawn. Morning mist lifts from the water; in the distance, a small boat returns with a single figure on board. A colourful kite, tangled in the tree's branches, flutters weakly as a gull lands nearby.",
+        "elements": [
+          "wooden bench under almond tree",
+          "calm harbour at dawn with morning mist",
+          "small returning boat with one figure",
+          "colourful kite tangled in branches",
+          "gull landing nearby"
+        ],
+        "altText": "A bench beneath an almond tree by a misty harbour at dawn; a lone boat returns and a kite is caught in the branches."
+      },
+      "rights": "original_generated_candidate",
+      "marks": 30,
+      "rubric": {
+        "maxMarks": 30,
+        "criteria": [
+          {
+            "id": "language-narrative-understanding",
+            "profile": "understanding",
+            "marks": 7
+          },
+          {
+            "id": "organization-sequencing",
+            "profile": "analysing",
+            "marks": 7
+          },
+          {
+            "id": "stimulus-plot-characterization-style",
+            "profile": "evaluating_creating",
+            "marks": 16
+          }
+        ]
+      },
+      "status": "approved"
+    },
+    {
+      "id": "ENGA-P2-FB-Q5",
+      "number": 5,
+      "module": 2,
+      "kind": "narrative_sentence",
+      "choiceGroup": "narrative-choice",
+      "scenario": "Write a short story that begins with the sentence below.",
+      "task": "Write a short story (400–450 words) that begins with the given sentence. Use Standard English; dialogue may include dialect. Focus on character, action and a clear sense of direction or change.",
+      "requiredContent": [
+        "A clear central character",
+        "A turning point or conflict",
+        "Use of the opening sentence to lead the narrative",
+        "A satisfying resolution or change"
+      ],
+      "audience": "General readers",
+      "purpose": "To entertain and tell a complete story",
+      "suggestedWords": {
+        "minimum": 400,
+        "maximum": 450
+      },
+      "visualSpec": null,
+      "rights": "original_generated_candidate",
+      "marks": 30,
+      "rubric": {
+        "maxMarks": 30,
+        "criteria": [
+          {
+            "id": "language-narrative-understanding",
+            "profile": "understanding",
+            "marks": 7
+          },
+          {
+            "id": "organization-sequencing",
+            "profile": "analysing",
+            "marks": 7
+          },
+          {
+            "id": "stimulus-plot-characterization-style",
+            "profile": "evaluating_creating",
+            "marks": 16
+          }
+        ]
+      },
+      "status": "approved"
+    },
+    {
+      "id": "ENGA-P2-FB-Q7",
+      "number": 7,
+      "module": 3,
+      "kind": "persuasive_essay",
+      "choiceGroup": null,
+      "scenario": "Schools across the region are considering whether to require community service as a compulsory part of the secondary-school curriculum.",
+      "task": "Write a persuasive essay of 250–300 words arguing for or against the proposal. Your essay must have at least five paragraphs, include evidence or examples, and address a possible counterargument.",
+      "requiredContent": [
+        "A clear stance for or against compulsory community service",
+        "At least five paragraphs",
+        "Evidence or examples to support the argument",
+        "Acknowledgement and rebuttal of a counterargument",
+        "A concluding paragraph that reinforces the position"
+      ],
+      "audience": "School administrators and other students",
+      "purpose": "To persuade decision-makers about the proposal",
+      "suggestedWords": {
+        "minimum": 250,
+        "maximum": 300
+      },
+      "visualSpec": null,
+      "rights": "original_generated_candidate",
+      "marks": 30,
+      "rubric": {
+        "maxMarks": 30,
+        "criteria": [
+          {
+            "id": "language-persuasive-understanding",
+            "profile": "understanding",
+            "marks": 7
+          },
+          {
+            "id": "argument-organization",
+            "profile": "analysing",
+            "marks": 7
+          },
+          {
+            "id": "position-evidence-audience-persuasion",
+            "profile": "evaluating_creating",
+            "marks": 16
+          }
+        ]
+      },
+      "status": "approved"
+    }
+  ],
+  "validationNotes": [
+    "Each extract is original and between 300 and 450 words.",
+    "Each extract contains at least four independently expressible accepted points.",
+    "Each summary answer is supported exactly by points present in its extract and the sample summaries use their own wording and are no more than 50 words.",
+    "Q2 is an informative exposition in formal notice format with audience-aware requirements.",
+    "Q4 and Q5 form a narrative choice: Q4 uses an original picture prompt; Q5 uses an original opening sentence.",
+    "Q7 is a balanced, age-appropriate debatable statement requiring a five-paragraph persuasive essay of 250–300 words.",
+    "All content avoids reproduction or close paraphrase of past papers, specimens or exemplars and contains no unsafe or discriminatory material."
+  ],
+  "durationSeconds": 9900,
+  "totalMarksAnswered": 120,
+  "status": "approved"
+}

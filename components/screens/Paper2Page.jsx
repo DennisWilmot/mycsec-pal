@@ -10,7 +10,7 @@ import QuestionVisual from '../QuestionVisual';
 import { mathPaper2Demo } from '../../data/math-paper-2-demo';
 import { useAttemptSession } from '../../lib/attempts/use-attempt-session';
 
-export default function Paper2Page({ navigate }) {
+export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
   const [attemptId, setAttemptId] = useState(null);
   useEffect(() => setAttemptId(new URLSearchParams(window.location.search).get('attemptId')), []);
   const { session, loading, error, saveResponse, setFlag, pause, submit, syncState, queuedCount } = useAttemptSession(attemptId);
@@ -27,6 +27,7 @@ export default function Paper2Page({ navigate }) {
   const liveQuestions = (session?.questions || []).map((item) => ({
     id: item.id,
     number: item.position,
+    displayNumber: item.snapshot?.questionNumber || item.position,
     marks: item.maxMarks,
     flagged: Boolean(item.response?.isFlagged),
     parts: (item.snapshot?.parts || []).map((part) => ({
@@ -34,7 +35,7 @@ export default function Paper2Page({ navigate }) {
       label: part.label,
       prompt: part.prompt?.text || '',
       visual: part.prompt?.visual || null,
-      responseType: part.responseType === 'graph' ? 'graph' : part.responseType === 'short_text' ? 'short' : 'working',
+      responseType: part.responseType === 'graph' ? 'graph' : part.responseType === 'short_text' ? 'short' : part.responseType === 'long_text' ? 'long' : 'working',
       marks: part.marks,
     })),
   }));
@@ -124,7 +125,7 @@ export default function Paper2Page({ navigate }) {
     <AppSidebar active="practice" onNavigate={navigate} />
     <main className="app-main paper2-workspace">
       <header className="exam-workspace-header simplified-exam-header">
-        <div><p className="eyebrow">CSEC practice paper</p><h1>Mathematics · Paper 2</h1></div>
+        <div><p className="eyebrow">CSEC practice paper</p><h1>{subjectName} · Paper 2</h1></div>
         <div className="exam-workspace-controls">{attemptId && <span className={`answer-sync-state ${syncState}`} role="status">{syncState === 'offline' ? `${queuedCount} change${queuedCount === 1 ? '' : 's'} saved on this device` : syncState === 'saving' ? 'Saving…' : 'Saved'}</span>}<div className="compact-status exam-clock"><Clock size={18} /><span><strong>{format(seconds)}</strong><small>Time remaining</small></span></div><button className="icon-action" onClick={pausePaper} title="Pause paper" aria-label="Pause paper"><Pause size={18} /></button></div>
       </header>
       {error && <div className="integrity-note">{error}</div>}
@@ -133,16 +134,16 @@ export default function Paper2Page({ navigate }) {
           <div className="paper2-sidebar-progress"><strong>{answeredQuestions}/{questions.length}</strong><span>questions started</span></div>
           {questions.map((item) => {
             const started = item.parts.some((itemPart) => hasResponse(itemPart.id));
-            return <button onClick={() => setCurrent(item.number)} className={`${started ? 'done' : ''} ${item.number === current ? 'current' : ''}`} key={item.id}><span><b>Question {item.number}</b></span><em>{started ? '✓' : item.number === current ? '●' : '○'}</em></button>;
+            return <button onClick={() => setCurrent(item.number)} className={`${started ? 'done' : ''} ${item.number === current ? 'current' : ''}`} key={item.id}><span><b>Question {item.displayNumber || item.number}</b></span><em>{started ? '✓' : item.number === current ? '●' : '○'}</em></button>;
           })}
         </aside>
         <article className="paper-sheet symmetric-paper-sheet paper2-generated-sheet">
-          <div className="paper2-question-heading"><div><p className="eyebrow">Question {current} of {questions.length}</p><h2>Question {current}</h2></div><span>{question.marks} marks</span></div>
+          <div className="paper2-question-heading"><div><p className="eyebrow">Question {current} of {questions.length}</p><h2>Question {question.displayNumber || current}</h2></div><span>{question.marks} marks</span></div>
           {question.parts.map((itemPart) => <section className="paper-question generated-paper2-part" key={itemPart.id}>
             <div className="prompt-row"><span><b>{itemPart.label}</b> {itemPart.prompt}</span><small>({itemPart.marks} {itemPart.marks === 1 ? 'mark' : 'marks'})</small></div>
             {itemPart.visual && itemPart.responseType !== 'graph' && <QuestionVisual spec={itemPart.visual} />}
             {itemPart.visual && itemPart.responseType === 'graph' && <InteractiveGraphResponse spec={itemPart.visual} points={graphResponses[itemPart.id] || []} onChange={(points) => setGraphResponse(itemPart.id, points)} />}
-            <MathWorkingField value={responses[itemPart.id] || []} onChange={(lines) => setResponse(itemPart.id, lines)} label={itemPart.responseType === 'graph' ? 'Estimate and final answer' : 'Show your working and answer'} minimumLines={itemPart.responseType === 'short' ? 2 : 4} />
+            {itemPart.responseType === 'long' ? <label className="english-long-response"><span>Your response</span><textarea value={(responses[itemPart.id] || []).join('\n')} onChange={(event) => setResponse(itemPart.id, event.target.value.split('\n'))} rows={18} placeholder="Write your response here…"/></label> : <MathWorkingField value={responses[itemPart.id] || []} onChange={(lines) => setResponse(itemPart.id, lines)} label={itemPart.responseType === 'graph' ? 'Estimate and final answer' : 'Show your working and answer'} minimumLines={itemPart.responseType === 'short' ? 2 : 4} />}
           </section>)}
           <div className="paper-bottom functional-paper2-footer"><button className={`link-button ${question.flagged ? 'active' : ''}`} onClick={toggleFlag}><Flag size={15} />{question.flagged ? 'Flagged for review' : 'Flag this question'}</button><div><button className="button outline" disabled={current === 1} onClick={() => setCurrent(Math.max(1, current - 1))}><ArrowLeft size={17} />Previous</button><button className="button dark" disabled={current === questions.length} onClick={() => setCurrent(Math.min(questions.length, current + 1))}>Next<ArrowRight size={17} /></button></div></div>
           <footer className="paper2-submit-footer"><div><h2>Ready to finish Paper 2?</h2><p>{incompleteQuestions.length ? `${incompleteQuestions.length} questions still have blank parts.` : 'Every part has a response.'}</p>{submitNotice && <p className="paper2-submit-notice" role="status">Start this paper from Practice to save and mark your responses.</p>}</div><button className="button dark" disabled={submitting} onClick={() => setShowSubmit(true)}><Send size={17} />{submitting ? 'Submitting…' : 'Submit paper'}</button></footer>

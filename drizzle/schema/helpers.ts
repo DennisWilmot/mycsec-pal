@@ -5,11 +5,14 @@ export const profileRoleEnum = pgEnum("profile_role", ["student", "teacher", "pa
 export const contentStatusEnum = pgEnum("content_status", ["draft", "review", "approved", "published", "retired"]);
 export const paperTypeEnum = pgEnum("paper_type", ["paper_1", "paper_2"]);
 export const questionTypeEnum = pgEnum("question_type", ["multiple_choice", "structured"]);
-export const responseTypeEnum = pgEnum("response_type", ["option", "working_lines", "graph", "short_text"]);
+export const responseTypeEnum = pgEnum("response_type", ["option", "working_lines", "graph", "short_text", "long_text"]);
 export const assessmentProfileEnum = pgEnum("assessment_profile", [
   "conceptual_knowledge",
   "algorithmic_knowledge",
   "reasoning",
+  "understanding",
+  "analysing",
+  "evaluating_creating",
 ]);
 export const difficultyEnum = pgEnum("difficulty", ["easy", "medium", "hard"]);
 export const attemptStatusEnum = pgEnum("attempt_status", [

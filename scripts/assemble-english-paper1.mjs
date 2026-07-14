@@ -1,12 +1,16 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-const modulePaths = [1, 2, 3].map((module) => path.resolve(`data/english/paper-1-module-${module}-review-candidate.json`));
+const form = String(process.argv[2] || 'A').toUpperCase();
+if (!['A', 'B', 'C'].includes(form)) throw new Error('Form must be A, B or C.');
+const modulePaths = form === 'A'
+  ? [1, 2, 3].map((module) => path.resolve(`data/english/paper-1-module-${module}-review-candidate.json`))
+  : [1, 2, 3].map((module) => path.resolve(`tmp/english/form-${form.toLowerCase()}/paper1-module${module}-candidate.json`));
 const modules = await Promise.all(modulePaths.map(async (file) => JSON.parse(await readFile(file, 'utf8'))));
 const labels = ['A', 'B', 'C', 'D'];
 
 const paper = {
-  id: 'english-a-p1-2025-form-a-review-candidate',
+  id: `english-a-p1-2025-form-${form.toLowerCase()}-review-candidate`,
   subject: 'English A',
   paper: 1,
   syllabusVersion: 'CXC-01-G-SYLL-25',
@@ -25,7 +29,7 @@ const paper = {
       stimuli: batch.stimuli.map((stimulus) => ({ ...stimulus, id: stimulusIdMap[stimulus.id] })),
       questions: batch.questions.map((question) => ({
         ...question,
-        id: `ENGA-P1-M${module}-Q${String(question.number).padStart(2, '0')}`,
+        id: `ENGA-P1-F${form}-M${module}-Q${String(question.number).padStart(2, '0')}`,
         number: moduleIndex * 20 + question.number,
         moduleQuestionNumber: question.number,
         module,
@@ -52,6 +56,5 @@ const answerCounts = paper.questions.reduce((counts, question) => ({ ...counts, 
 if (labels.some((label) => answerCounts[label] !== 15)) errors.push('Answer positions are not balanced at 15 each.');
 if (errors.length) throw new Error(errors.join('\n'));
 
-await writeFile(path.resolve('data/english/paper-1-form-a-review-candidate.json'), `${JSON.stringify(paper, null, 2)}\n`, 'utf8');
-console.log(JSON.stringify({ valid: true, questionCount: 60, moduleCounts: [20, 20, 20], answerCounts }));
-
+await writeFile(path.resolve(`data/english/paper-1-form-${form.toLowerCase()}-review-candidate.json`), `${JSON.stringify(paper, null, 2)}\n`, 'utf8');
+console.log(JSON.stringify({ valid: true, form, questionCount: 60, moduleCounts: [20, 20, 20], answerCounts }));

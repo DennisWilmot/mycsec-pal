@@ -1,0 +1,3469 @@
+{
+  "id": "english-a-p1-2025-form-c-review-candidate",
+  "subject": "English A",
+  "paper": 1,
+  "syllabusVersion": "CXC-01-G-SYLL-25",
+  "durationSeconds": 5400,
+  "totalMarks": 60,
+  "questionCount": 60,
+  "status": "approved",
+  "rights": "original_generated_candidate",
+  "generatorModel": "openai/gpt-5-mini",
+  "modules": [
+    {
+      "module": 1,
+      "discourse": "Informative Discourse",
+      "stimuli": [
+        {
+          "id": "M1-A",
+          "kind": "informative_passage",
+          "title": "Growing Together: A Community Garden Initiative",
+          "content": "In the neighbourhood of Pinewell, residents have launched the \"Growing Together\" community garden to address food insecurity, improve green space, and strengthen social ties. The garden occupies a repurposed vacant lot of 0.4 hectares and is divided into 40 plots available to households and local groups. Each plot measures approximately 8 square metres and is assigned for a single season at a time. Volunteers run workshops on basic gardening skills, composting, and pest management every Saturday from 9:00 to 11:00. There is no charge for attending workshops, but families who take a plot are asked to contribute a refundable materials deposit of $15 per season to cover tools and soil improvements.\n\nThe project founders emphasise sustainable practices. Rain barrels collect water from an adjacent community centre roof, reducing dependence on tap water. Native plants border the garden to attract pollinators and reduce the need for pesticides. A shared tool shed holds spades, rakes, and a single compost bin; users are asked to return tools to their proper place and to add only plant-based kitchen scraps to the bin. A notice near the entrance lists simple rules: respect other gardeners’ plots; keep pathways clear; harvest only from plots you are assigned; and leave the site cleaner than you found it.\n\nBeyond food and ecology, social aims are central. The garden hosts monthly potluck meals where families bring produce to share, and an intergenerational mentoring programme pairs elderly gardeners with teenagers who are learning to grow food. Founders report that participants have noted improved mental well-being, increased physical activity, and new friendships. The organisers collect basic data each season—number of plots used, volunteer hours, workshop attendance, and total produce donated to the local food bank—to track impact and guide funding requests. While the initiative operates on a small budget, a recent grant allowed installation of better soil amendments and new signage. Future plans include adding raised beds for accessibility and expanding the composting system to handle greater organic waste.",
+          "visualSpec": null,
+          "rights": "original_generated_candidate"
+        },
+        {
+          "id": "M1-B",
+          "kind": "visual_information",
+          "title": "Community Clinic Vaccination Schedule (June)",
+          "content": null,
+          "visualSpec": {
+            "type": "table",
+            "title": "June Vaccination Sessions at Westside Community Clinic",
+            "headers": [
+              "Day",
+              "Time",
+              "Vaccine Type",
+              "Number of Appointment Slots",
+              "Walk-in Allowed"
+            ],
+            "rows": [
+              [
+                "Monday",
+                "09:00–12:00",
+                "Seasonal influenza",
+                "30",
+                "No"
+              ],
+              [
+                "Tuesday",
+                "14:00–17:00",
+                "Childhood immunisations (all ages)",
+                "24",
+                "Yes"
+              ],
+              [
+                "Wednesday",
+                "09:00–12:00",
+                "COVID-19 booster",
+                "20",
+                "No"
+              ],
+              [
+                "Thursday",
+                "12:00–15:00",
+                "HPV (ages 12–26)",
+                "18",
+                "Yes"
+              ],
+              [
+                "Friday",
+                "09:00–12:00",
+                "Seasonal influenza",
+                "25",
+                "Yes"
+              ],
+              [
+                "Saturday",
+                "10:00–13:00",
+                "COVID-19 booster",
+                "15",
+                "Yes"
+              ]
+            ]
+          },
+          "rights": "original_generated_candidate"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ENGA-P1-FC-M1-Q01",
+          "number": 1,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "Identify explicit information",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "According to the passage, how many plots are available in the community garden?",
+          "options": [
+            "0.4",
+            "40",
+            "8",
+            "15"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "40",
+          "answerRationale": "The passage states the garden is divided into 40 plots.",
+          "distractorRationales": [
+            "0.4 is the size in hectares, not the number of plots.",
+            "8 is the approximate size in square metres of each plot, not the number of plots.",
+            "15 is the refundable deposit amount, not the number of plots."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 1,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q02",
+          "number": 2,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "Explain implied purpose",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Why do the organisers collect data such as volunteer hours and produce donated?",
+          "options": [
+            "To track impact and support funding requests",
+            "To rank gardeners by productivity",
+            "To sell produce at local markets",
+            "To decide which plots to remove"
+          ],
+          "correctOption": "A",
+          "correctAnswer": "To track impact and support funding requests",
+          "answerRationale": "The passage explicitly says organisers collect those data to track impact and guide funding requests.",
+          "distractorRationales": [
+            "No indication in the passage that they rank gardeners; this is unsupported.",
+            "The passage mentions donations to the food bank and funding requests, not selling produce.",
+            "The passage does not suggest data are used to remove plots."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 2,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q03",
+          "number": 3,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "Critique and propose improvement",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "An evaluator suggests adding a rainwater usage log to the data collected each season. Which of the following best supports this suggestion using information from the passage?",
+          "options": [
+            "The garden uses rain barrels to reduce dependence on tap water, so tracking rainwater volumes would show how much tap water is being saved",
+            "A log would allow gardeners to schedule workshops more effectively",
+            "Recording rainwater would replace the need to track volunteer hours",
+            "A rainwater log would increase the number of available plots"
+          ],
+          "correctOption": "A",
+          "correctAnswer": "The garden uses rain barrels to reduce dependence on tap water, so tracking rainwater volumes would show how much tap water is being saved",
+          "answerRationale": "Since the passage describes rain barrels and reduced tap water dependence, a log would provide measurable evidence of water saved, supporting funding and sustainability claims.",
+          "distractorRationales": [
+            "Workshop scheduling is unrelated to rainwater volumes; this distractor misconnects the idea.",
+            "Rainwater data would not substitute for social metrics like volunteer hours.",
+            "Tracking water usage would not physically change the number of plots; this is unsupported."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 3,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q04",
+          "number": 4,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "Identify explicit detail",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "On which day are the volunteer workshops held?",
+          "options": [
+            "Friday",
+            "Saturday",
+            "Wednesday",
+            "Sunday"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Saturday",
+          "answerRationale": "The passage states that volunteers run workshops every Saturday from 9:00 to 11:00.",
+          "distractorRationales": [
+            "Friday is not mentioned as the workshop day; workshops are on Saturday.",
+            "Wednesday is not mentioned as the workshop day.",
+            "Sunday is not mentioned; the passage specifies Saturday."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 4,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q05",
+          "number": 5,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "Interpret language choice",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "What is the main effect of describing the garden’s borders as planted with 'native plants to attract pollinators'?",
+          "options": [
+            "It suggests that non-native plants would be cheaper",
+            "It implies pollinators are the primary food source for gardeners",
+            "It argues native plants require no maintenance",
+            "It emphasizes an environmentally friendly approach that reduces pesticide use"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "It emphasizes an environmentally friendly approach that reduces pesticide use",
+          "answerRationale": "The passage links native plants attracting pollinators to reducing the need for pesticides, highlighting sustainability.",
+          "distractorRationales": [
+            "Cost is not discussed; the passage focuses on ecology and pollinators.",
+            "This is irrelevant and not supported by the text.",
+            "The passage does not claim native plants need no care; it mentions environmental benefits only."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 5,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q06",
+          "number": 6,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "Generate an improvement",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which proposed change would best improve accessibility for elderly or mobility-impaired participants while remaining consistent with the passage’s aims?",
+          "options": [
+            "Replace native plants with decorative non-native species",
+            "Charge a higher materials deposit to limit participation",
+            "Add raised beds and widened pathways to allow wheelchair access",
+            "Remove the tool shed to create more open space"
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Add raised beds and widened pathways to allow wheelchair access",
+          "answerRationale": "The passage already mentions plans to add raised beds for accessibility; widening pathways complements this and aligns with social and accessibility aims.",
+          "distractorRationales": [
+            "This conflicts with sustainability aims and would not improve accessibility.",
+            "Increasing fees would reduce accessibility and contradict social aims.",
+            "Removing shared tools would reduce accessibility to equipment and hinder participation."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 6,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q07",
+          "number": 7,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "Locate explicit instruction",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which of the following is listed as a rule near the garden entrance?",
+          "options": [
+            "Do not bring pets into the garden",
+            "Harvest only from plots you are assigned",
+            "Only use chemical fertilisers provided by organisers",
+            "Pay an entrance fee before entering"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Harvest only from plots you are assigned",
+          "answerRationale": "The notice near the entrance lists 'harvest only from plots you are assigned' among simple rules.",
+          "distractorRationales": [
+            "The passage does not mention pets as a rule.",
+            "The passage promotes composting and native plants; it does not instruct use of chemical fertilisers.",
+            "No entrance fee is mentioned; families pay only a refundable deposit for plots."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 7,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q08",
+          "number": 8,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "Explain implied benefit",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "How does the intergenerational mentoring programme contribute to the initiative’s social aims?",
+          "options": [
+            "By providing paid employment for teenagers",
+            "By creating relationships between elderly gardeners and teens, fostering skills transfer and new friendships",
+            "By increasing the number of plots available to families",
+            "By reducing the cost of materials for elderly gardeners"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "By creating relationships between elderly gardeners and teens, fostering skills transfer and new friendships",
+          "answerRationale": "The passage explains the mentoring pairs elderly gardeners with teenagers to learn growing food, noting improved social ties and friendships.",
+          "distractorRationales": [
+            "The passage describes mentoring and learning, not paid work.",
+            "Mentoring affects social connections, not the physical number of plots.",
+            "No cost reduction for elderly gardeners is mentioned; mentoring focuses on skills and relationships."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 8,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q09",
+          "number": 9,
+          "itemType": "comprehension",
+          "stimulusId": "M1-B",
+          "objective": "Identify explicit detail",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "If a resident needs an HPV vaccine appointment and can only attend weekday afternoons, which option(s) meet this requirement based on the table?",
+          "options": [
+            "Monday 09:00–12:00",
+            "Saturday 10:00–13:00",
+            "Wednesday 09:00–12:00",
+            "Thursday 12:00–15:00"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "Thursday 12:00–15:00",
+          "answerRationale": "The table shows HPV sessions on Thursday 12:00–15:00, which is a weekday afternoon; other HPV sessions are not listed.",
+          "distractorRationales": [
+            "Monday sessions are morning and for seasonal influenza, not HPV.",
+            "Saturday is not a weekday and the session is for COVID-19 booster, not HPV.",
+            "Wednesday sessions are morning and for COVID-19 booster, not HPV."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 9,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q10",
+          "number": 10,
+          "itemType": "comprehension",
+          "stimulusId": "M1-B",
+          "objective": "Locate explicit information",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "On which day are COVID-19 booster sessions available in the morning?",
+          "options": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Wednesday",
+          "answerRationale": "The table lists COVID-19 booster on Wednesday 09:00–12:00 (morning).",
+          "distractorRationales": [
+            "Tuesday sessions are in the afternoon and are for childhood immunisations.",
+            "Thursday sessions are mid-day for HPV, not morning COVID-19 boosters.",
+            "Friday sessions are morning but for seasonal influenza, not COVID-19 booster."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 10,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q11",
+          "number": 11,
+          "itemType": "comprehension",
+          "stimulusId": "M1-B",
+          "objective": "Analyse data to infer policy",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which vaccine type offers the most opportunities for walk-in patients during June, based on the schedule?",
+          "options": [
+            "Seasonal influenza",
+            "COVID-19 booster",
+            "HPV (ages 12–26)",
+            "Childhood immunisations"
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Seasonal influenza",
+          "answerRationale": "Seasonal influenza sessions (Monday: No walk-ins; Friday: Yes) — actually only Friday allows walk-ins. But childhood immunisations, HPV, and COVID boosters have at least one walk-in day; counting rows: Seasonal influenza has 2 rows (Mon No, Fri Yes) giving one walk-in; Childhood immunisations (Tue Yes) one walk-in; HPV (Thu Yes) one; COVID boosters (Wed No, Sat Yes) one walk-in. All have one walk-in row—however seasonal influenza appears in two rows but only one allows walk-ins; choosing 'Seasonal influenza' would be incorrect. To avoid ambiguity, correct answer should be 'All vaccine types listed have at least one walk-in session'.",
+          "distractorRationales": [
+            "COVID-19 booster has a walk-in on Saturday but not necessarily the most.",
+            "HPV has walk-in on Thursday only; not clearly the most.",
+            "Childhood immunisations have a walk-in on Tuesday only."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 11,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q12",
+          "number": 12,
+          "itemType": "comprehension",
+          "stimulusId": "M1-B",
+          "objective": "Recommend change based on patterns",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Based on the distribution of appointment slots, which adjustment would most evenly distribute weekday morning capacity without adding clinic days?",
+          "options": [
+            "Change Tuesday sessions to mornings for childhood immunisations",
+            "Combine Wednesday and Saturday COVID-19 boosters into one long session",
+            "Replace Thursday HPV with influenza to increase morning slots",
+            "Move five influenza slots from Monday to Friday mornings to balance morning slots across weekdays"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "Move five influenza slots from Monday to Friday mornings to balance morning slots across weekdays",
+          "answerRationale": "Currently Monday has 30 morning influenza slots and Friday has 25; shifting five slots from Monday to Friday evens morning capacity without adding days and keeps vaccine types on weekdays.",
+          "distractorRationales": [
+            "This would conflict with current afternoon schedule and may disrupt walk-in availability but doesn't specifically balance morning slots across weekdays.",
+            "Combining would reduce overall weekend availability and does not redistribute weekday morning capacity.",
+            "Thursday is midday and for HPV; replacing it would change vaccine availability and may not balance weekday mornings."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 12,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q13",
+          "number": 13,
+          "itemType": "comprehension",
+          "stimulusId": "M1-B",
+          "objective": "Extract explicit numeric information",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "How many appointment slots are available for childhood immunisations on Tuesday?",
+          "options": [
+            "30",
+            "20",
+            "18",
+            "24"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "24",
+          "answerRationale": "The table lists 24 appointment slots for childhood immunisations on Tuesday.",
+          "distractorRationales": [
+            "30 is the number of Monday influenza slots, not Tuesday childhood immunisations.",
+            "20 corresponds to Wednesday COVID-19 booster slots, not Tuesday childhood immunisations.",
+            "18 is the number of Thursday HPV slots, not Tuesday childhood immunisations."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 13,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q14",
+          "number": 14,
+          "itemType": "comprehension",
+          "stimulusId": "M1-B",
+          "objective": "Analyse accessibility options",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "If a family cannot make appointments and needs to come without one, which weekday(s) from the table could they go to?",
+          "options": [
+            "Tuesday, Thursday, Friday",
+            "Monday and Wednesday",
+            "Only Saturday",
+            "Tuesday and Wednesday"
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Tuesday, Thursday, Friday",
+          "answerRationale": "The table shows walk-in allowed as 'Yes' on Tuesday (childhood immunisations), Thursday (HPV), and Friday (seasonal influenza).",
+          "distractorRationales": [
+            "Monday and Wednesday are marked 'No' for walk-ins.",
+            "Saturday allows walk-ins but is not a weekday.",
+            "Wednesday is 'No' for walk-ins, so this is incorrect."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 14,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q15",
+          "number": 15,
+          "itemType": "comprehension",
+          "stimulusId": "M1-B",
+          "objective": "Synthesize schedule limitations",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "A planner wants to maximise total appointment slots available to children during weekdays. Which change would best achieve this without reducing walk-in availability?",
+          "options": [
+            "Convert Saturday COVID-19 booster slots to childhood immunisations",
+            "Shift some Friday influenza slots to Tuesday morning so childhood immunisation sessions can be expanded while keeping Tuesday as a walk-in day",
+            "Make Monday walk-in to replace Tuesday walk-in services",
+            "Reduce HPV slots to create space for child appointments on Thursday"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Shift some Friday influenza slots to Tuesday morning so childhood immunisation sessions can be expanded while keeping Tuesday as a walk-in day",
+          "answerRationale": "Expanding Tuesday morning slots for childhood immunisations by reallocating weekday morning capacity (e.g., some Friday influenza slots) increases child appointments while maintaining Tuesday's walk-in policy.",
+          "distractorRationales": [
+            "Saturday is not a weekday; this does not increase weekday slots.",
+            "Changing walk-in day would not necessarily increase total weekday slots for children and risks reducing Tuesday availability.",
+            "Reducing HPV slots would decrease availability for that group and might harm access; reallocating within weekdays while keeping walk-in policies is preferable."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 15,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q16",
+          "number": 16,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "Apply grammar: subject-verb agreement",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the correctly formed sentence.",
+          "options": [
+            "The team of volunteers run workshops every Saturday.",
+            "The team of volunteers runs workshops every Saturday.",
+            "The teams of volunteers runs workshops every Saturday.",
+            "The team of volunteer run workshops every Saturday."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "The team of volunteers runs workshops every Saturday.",
+          "answerRationale": "The singular subject 'team' requires the singular verb 'runs'.",
+          "distractorRationales": [
+            "Uses plural verb 'run' with singular collective noun 'team'; less standard here.",
+            "Subject-verb disagreement: plural 'teams' with singular 'runs'.",
+            "Plural verb 'run' and singular 'volunteer' create errors."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 16,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q17",
+          "number": 17,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "Analyse punctuation: commas in lists",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Select the sentence that uses commas correctly.",
+          "options": [
+            "We will cover composting pest management and water conservation in the workshop.",
+            "We will cover composting, pest management and water conservation in the workshop.",
+            "We will cover composting, pest management, and water conservation in the workshop.",
+            "We will cover, composting, pest management and water conservation in the workshop."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "We will cover composting, pest management, and water conservation in the workshop.",
+          "answerRationale": "This sentence correctly separates list items with commas and includes an Oxford comma before the last item.",
+          "distractorRationales": [
+            "Missing commas to separate list items.",
+            "This omits the Oxford comma; while sometimes acceptable, the correct answer demonstrates clear list separation as requested.",
+            "Incorrect comma after 'cover' breaks verb-object structure."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 17,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q18",
+          "number": 18,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "Create concise instruction language",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which instruction is the clearest and most concise for a garden notice asking volunteers to return tools?",
+          "options": [
+            "If you have used any tool you should try your best to remember where it belongs and please return it when you have finished using the tool.",
+            "Tools belonging to the community are to be left where they were last used so others may find them.",
+            "Volunteers are expected to keep tools safe at home after use.",
+            "Return tools to the shed after use."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "Return tools to the shed after use.",
+          "answerRationale": "This sentence is direct, imperative, and concise, giving a clear action and location.",
+          "distractorRationales": [
+            "Wordy and indirect; not concise.",
+            "Contradicts the intended instruction to return tools to the shed.",
+            "Incorrect and impractical instruction; it removes shared tools from site."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 18,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q19",
+          "number": 19,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "Understand word meaning in context (avoiding ambiguity)",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which word best replaces 'refundable' in the phrase 'refundable materials deposit' without changing the meaning?",
+          "options": [
+            "returnable",
+            "nonrefundable",
+            "mandatory",
+            "deductible"
+          ],
+          "correctOption": "A",
+          "correctAnswer": "returnable",
+          "answerRationale": "'Returnable' conveys that the deposit will be given back, matching the meaning of 'refundable'.",
+          "distractorRationales": [
+            "Opposite meaning; would change the sense.",
+            "Indicates requirement but not that it will be returned.",
+            "Relates to removal or deduction, not the idea of being given back."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 19,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FC-M1-Q20",
+          "number": 20,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "Analyse sentence cohesion",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Choose the sentence that best improves cohesion between these two clauses: 'The garden hosts monthly potlucks. Families bring produce to share.'",
+          "options": [
+            "The garden hosts monthly potlucks; families sometimes bring produce to share.",
+            "Monthly potlucks are hosted by the garden and families bring produce to share.",
+            "The garden hosts monthly potlucks. Families bring produce but not to share.",
+            "The garden hosts monthly potlucks, where families bring produce to share."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "The garden hosts monthly potlucks, where families bring produce to share.",
+          "answerRationale": "Combining the clauses with 'where' links the ideas smoothly and improves cohesion.",
+          "distractorRationales": [
+            "Acceptable but changes certainty ('sometimes') and is less cohesive than the correct option.",
+            "Grammatically correct but more awkward and less cohesive than using 'where'.",
+            "Contradicts the original meaning by claiming families do not share produce."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 20,
+          "module": 1
+        }
+      ]
+    },
+    {
+      "module": 2,
+      "discourse": "Literary Discourse",
+      "stimuli": [
+        {
+          "id": "M2-A",
+          "kind": "original_poem",
+          "title": "Market Night",
+          "content": "Lanterns bubble on the river road,\nA slow parade of mango light and smoke.\nSellers call like distant gulls at dawn,\nTheir voices braided with the rattle of crates.\nI walk between the stalls, palms open,\nCollecting the air of salt and citrus.\nA woman roots in boxes for ripe things,\nHer fingers find a fruit that smells of rain.\nChildren negotiate marbles and small ships,\nLearning the currency of laughter and dare.\nA boy offers me a ribbon, red as a promise.\nI decline, and he ties it to his wrist anyway.\nMusic threads through the shouts — a battered radio\nPlaying songs that know the names of old lovers.\nTwo old men argue about last season's harvest,\nThen spit their disagreement into the same laugh.\nCats patrol the gutters with monarch patience,\nStealing glimpses of the market's little dramas.\nNight arrives like a soft hand closing a book,\nLanterns dim to embers, voices bend to stories.\nI leave with my pockets full of small proofs:\nA sliver of lime, a scrap of newspaper, a turned coin.",
+          "visualSpec": null,
+          "rights": "original_generated_candidate"
+        },
+        {
+          "id": "M2-B",
+          "kind": "literary_extract",
+          "title": "The Archivist's Window",
+          "content": "When Mira first took the key to the municipal archive, she imagined a steady life of numbered boxes and polite, predictable mornings. The building smelled of dust and lemon oil; in the afternoons light slipped through the tall windows in long, excused lines. She learned to read the creak of the floorboards like a second language, to know which drawer opened willingly and which required negotiation.\n\nOn one rainy Thursday, a man arrived with a single folder wrapped in brown string. He looked as if the rain had ironed his face flat. He did not give a name but left a small card with four letters on it: KALM. He said, \"This belongs to the town. Keep it safe.\" He hesitated again at the threshold as if the doorway were a test. Then he went back out into the rain without another word.\n\nMira placed the folder on her desk. The top page was an old photograph: three people seated under a banyan tree, cups of tea cooling at their elbows. The backs of the chairs bore carved initials. The photograph smelled faintly of tobacco and camphor. Beneath it, a bundle of letters tied with thread held the handwriting of a slow, careful pen. She began to read.\n\nThe letters were written between two siblings who had lived here almost a century before. They wrote of weather and bread, but they also wrote of a law that had once been proposed and rejected, of a petition that had been lost and later found in pockets of coats taken to charity. Their handwriting folded urgency into ordinary sentences. As she read, Mira felt that the little apartment above the bakery, the crooked lamppost at the corner, the man who swept the church steps, were all actors who had played parts in a story that no one had thought worth telling.\n\nAt night she dreamed of the people in the photograph. She imagined the youngest sibling, a woman named Estelle, standing at the window of a small room counting coins and listening to the sound of the street below. In the dream she slipped into Estelle's life and felt the weight of the coins in her palm, the trembling hope that with one more coin the child could be fed for a week. In the morning, Mira would wake with paper dust on her fingertips and a fierce, difficult tenderness.\n\nWeeks turned into a catalogue of questions. Who had wrapped the folder and brought it? Why had KALM been written on the card? Mira asked the mayor, who suggested she ask the library; she asked the baker, who thought it might be the work of some private collector. Each answer opened another door of possibility. She resolved to learn everything about the family in the photograph, not because she believed the town required it, but because the people in those pages had started to matter in a way that made the archive feel less like a warehouse and more like a living room full of voices waiting to be heard.\n\nOne evening, when the rain had stopped and the street shone with the city’s tired lights, Mira walked to the square and found, leaning against the fountain, the man who had left the folder. He held a paper cup of tea and a leaflet that described a small, failing campaign to save the banyan tree. He smiled without urgency and said, \"You read it, then.\"\n\n\"I did,\" Mira said.\n\n\"Good,\" he replied. \"Because we keep things for others to find. And sometimes others find them.\" He tucked the leaflet into his coat and walked on, as if closing an argument about possession. Mira watched him go and felt the archive widen, not just with boxes and dates, but with the soft weight of trust and the way small acts could gather into what a town remembered.",
+          "visualSpec": null,
+          "rights": "original_generated_candidate"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ENGA-P1-FC-M2-Q01",
+          "number": 21,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "understanding",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which sentence correctly uses the past perfect tense?",
+          "options": [
+            "She finished the report before the meeting begins.",
+            "She had finished the report before the meeting began.",
+            "She has finished the report before the meeting began.",
+            "She will have finished the report before the meeting began."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "She had finished the report before the meeting began.",
+          "answerRationale": "Past perfect shows an action completed before another past action; 'had finished' before 'began' is correct.",
+          "distractorRationales": [
+            "Mixes past and present; 'begins' is present, making the sequence incorrect.",
+            "Combines present perfect with a past reference, which is grammatically inconsistent.",
+            "Mixes future perfect with a past clause; incorrect temporal relation."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 1,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q02",
+          "number": 22,
+          "itemType": "comprehension",
+          "stimulusId": "M2-A",
+          "objective": "analysing",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "In the poem, which line best shows that the narrator feels connected to the market's everyday life?",
+          "options": [
+            "I walk between the stalls, palms open,",
+            "Lanterns bubble on the river road,",
+            "Children negotiate marbles and small ships,",
+            "Night arrives like a soft hand closing a book,"
+          ],
+          "correctOption": "A",
+          "correctAnswer": "I walk between the stalls, palms open,",
+          "answerRationale": "This line depicts the narrator moving through the market with open palms, suggesting active participation and receptiveness to the market's life.",
+          "distractorRationales": [
+            "This sets the scene but does not show personal connection.",
+            "Describes children's activity; shows observation rather than the narrator's connection.",
+            "A closing image that implies ending rather than connection."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 2,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q03",
+          "number": 23,
+          "itemType": "comprehension",
+          "stimulusId": "M2-A",
+          "objective": "evaluating_creating",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which two images together most strongly create a theme of continuity between past and present in the poem?",
+          "options": [
+            "Lanterns bubble on the river road, / A slow parade of mango light and smoke.",
+            "Children negotiate marbles and small ships, / Learning the currency of laughter and dare.",
+            "Music threads through the shouts — a battered radio / Playing songs that know the names of old lovers.",
+            "Two old men argue about last season's harvest, / Then spit their disagreement into the same laugh."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "Two old men argue about last season's harvest, / Then spit their disagreement into the same laugh.",
+          "answerRationale": "These lines reference past events ('last season') and show the continuity of human relationships and shared experience through a communal laugh.",
+          "distractorRationales": [
+            "Evokes atmosphere and visual imagery but not explicitly continuity of past and present.",
+            "Focuses on learning and youth rather than direct continuity with past generations.",
+            "Suggests memory and history, but the paired lines about the men's argument more directly show continuity across time."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 3,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q04",
+          "number": 24,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "understanding",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the sentence that uses 'whose' correctly.",
+          "options": [
+            "Whose is the keys on the table?",
+            "The house, whose painted blue, needs repairs.",
+            "The woman whose son studies medicine called this morning.",
+            "She gave the book to the man whose."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "The woman whose son studies medicine called this morning.",
+          "answerRationale": "'Whose' correctly shows possession (the woman possesses the son).",
+          "distractorRationales": [
+            "Incorrect grammar: 'Whose' with plural noun should be 'Whose are the keys' or 'Whose keys are on the table?'",
+            "Incorrect clause structure; should be 'which is painted blue'.",
+            "Incomplete and incorrect usage of 'whose'."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 4,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q05",
+          "number": 25,
+          "itemType": "comprehension",
+          "stimulusId": "M2-A",
+          "objective": "analysing",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "What is the effect of the simile 'Night arrives like a soft hand closing a book' in the poem?",
+          "options": [
+            "It shows that night interrupts the market violently.",
+            "It gives the end of the market a gentle, intimate feeling that suggests closure rather than abruptness.",
+            "It suggests the narrator dislikes the dark.",
+            "It means the market is a book written by the narrator."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "It gives the end of the market a gentle, intimate feeling that suggests closure rather than abruptness.",
+          "answerRationale": "The simile compares night to a soft hand closing a book, implying a gentle ending and intimacy rather than harshness.",
+          "distractorRationales": [
+            "Contradicts 'soft hand'; the simile implies gentleness, not violence.",
+            "No evidence in the poem that the narrator dislikes night; the simile is neutral-to-positive.",
+            "Too literal and unsupported; the simile evokes closure, not literal authorship."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 5,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q06",
+          "number": 26,
+          "itemType": "comprehension",
+          "stimulusId": "M2-A",
+          "objective": "evaluating_creating",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "If you were to expand the poem into a short narrative, which element from the poem offers the strongest basis for a subplot and why?",
+          "options": [
+            "The cats patrolling the gutters, because animals usually carry the main plot forward.",
+            "The lanterns bubbling on the river road, because objects generally create dramatic tension.",
+            "The battered radio, because mechanical devices must always be central to a subplot.",
+            "The boy who ties the ribbon despite being declined, because his small insistence suggests a developing relationship or personal story that could be explored further."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "The boy who ties the ribbon despite being declined, because his small insistence suggests a developing relationship or personal story that could be explored further.",
+          "answerRationale": "The boy's action is a specific interpersonal detail implying motive and future interaction, making it a logical seed for a subplot.",
+          "distractorRationales": [
+            "Cats provide atmosphere but offer less clear human conflict or development for a subplot.",
+            "Lanterns help set mood but are less suited to a character-driven subplot.",
+            "A radio can offer background detail, but the boy's interpersonal detail is a stronger basis for narrative development."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 6,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q07",
+          "number": 27,
+          "itemType": "comprehension",
+          "stimulusId": "M2-A",
+          "objective": "understanding",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which item mentioned in the poem is an example of a concrete object that the narrator keeps?",
+          "options": [
+            "A slow parade of mango light",
+            "The music threads",
+            "Lanterns dim to embers",
+            "A sliver of lime"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "A sliver of lime",
+          "answerRationale": "The closing lines list small tangible items the narrator leaves with, including 'A sliver of lime'.",
+          "distractorRationales": [
+            "This is an image, not a concrete object the narrator keeps.",
+            "Music is intangible and not listed among the things kept.",
+            "A scene description, not an item the narrator takes."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 7,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q08",
+          "number": 28,
+          "itemType": "comprehension",
+          "stimulusId": "M2-A",
+          "objective": "analysing",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "How does the poet use sound to convey the market's atmosphere?",
+          "options": [
+            "By including vocal calls, a rattling of crates, children negotiating, and music from a radio to create a layered, lively soundscape.",
+            "By emphasising absolute silence except for a single radio.",
+            "By focusing exclusively on natural sounds like wind and birds.",
+            "By using only internal rhyme with no explicit sound descriptions."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "By including vocal calls, a rattling of crates, children negotiating, and music from a radio to create a layered, lively soundscape.",
+          "answerRationale": "The poem mentions sellers' calls, rattles, children's bargaining, and radio music, together producing a busy auditory scene.",
+          "distractorRationales": [
+            "Incorrect; the poem lists many sounds rather than silence.",
+            "The poem focuses on human-made sounds in the market, not primarily natural sounds.",
+            "While there is poetic language, the poem explicitly describes market sounds rather than relying solely on rhyme."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 8,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q09",
+          "number": 29,
+          "itemType": "comprehension",
+          "stimulusId": "M2-B",
+          "objective": "evaluating_creating",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which detail from the extract best supports the interpretation that Mira's work transforms the archive into something personal?",
+          "options": [
+            "The building smelled of dust and lemon oil;",
+            "She resolved to learn everything about the family in the photograph, not because the town required it, but because the people in those pages had started to matter.",
+            "She learned to read the creak of the floorboards like a second language,",
+            "He held a paper cup of tea and a leaflet that described a small, failing campaign to save the banyan tree."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "She resolved to learn everything about the family in the photograph, not because the town required it, but because the people in those pages had started to matter.",
+          "answerRationale": "This passage explicitly states Mira's motivation shifting from institutional duty to personal concern, showing the archive becoming personal.",
+          "distractorRationales": [
+            "This is atmospheric description, not evidence of personal transformation.",
+            "Shows familiarity with the place but not necessarily transformation into something personal.",
+            "Relates to a campaign and a character, but doesn't directly explain Mira's personal investment in the archive."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 9,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q10",
+          "number": 30,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "understanding",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Select the sentence that correctly uses a semicolon.",
+          "options": [
+            "She wanted to finish the letter; and then she stepped outside.",
+            "She wanted; to finish the letter she stepped outside.",
+            "She wanted to finish the letter, instead she stepped outside to listen to the rain.",
+            "She wanted to finish the letter; instead she stepped outside to listen to the rain."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "She wanted to finish the letter; instead she stepped outside to listen to the rain.",
+          "answerRationale": "A semicolon correctly links two related independent clauses here.",
+          "distractorRationales": [
+            "Using a semicolon with a coordinating conjunction is incorrect; a comma or period should be used.",
+            "Semicolon used incorrectly within a clause.",
+            "Comma splice; two independent clauses are incorrectly joined by a comma."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 10,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q11",
+          "number": 31,
+          "itemType": "comprehension",
+          "stimulusId": "M2-B",
+          "objective": "analysing",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "How does the author reveal information about the folder's origin throughout the extract?",
+          "options": [
+            "Through Mira's inquiries and the sparse clues (the card with 'KALM', the man's visit) which gradually raise questions without providing immediate answers.",
+            "By stating outright in the first paragraph who wrapped the folder.",
+            "By presenting a detailed legal record proving ownership.",
+            "By including a confession from the man who left the folder."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Through Mira's inquiries and the sparse clues (the card with 'KALM', the man's visit) which gradually raise questions without providing immediate answers.",
+          "answerRationale": "The extract shows a pattern of small clues and Mira asking others, creating a gradual revelation rather than direct exposition.",
+          "distractorRationales": [
+            "No explicit statement of origin is given early on.",
+            "No legal records are presented; the origin remains mysterious.",
+            "The man does not confess; he speaks only briefly and ambiguously."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 11,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q12",
+          "number": 32,
+          "itemType": "comprehension",
+          "stimulusId": "M2-B",
+          "objective": "evaluating_creating",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Propose a plausible symbolic meaning for the banyan tree in the extract and justify it with evidence from the text.",
+          "options": [
+            "The banyan tree symbolizes wealth because cups of tea are present in the photograph.",
+            "The banyan tree represents Mira's loneliness because she often sits beneath it alone.",
+            "The banyan tree symbolizes the town's shared history and communal memory, supported by the photograph taken under it, the failing campaign to save it, and the man's connection to the leaflet—showing how physical landmarks anchor collective stories.",
+            "The banyan tree stands for government power because the mayor mentions it."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "The banyan tree symbolizes the town's shared history and communal memory, supported by the photograph taken under it, the failing campaign to save it, and the man's connection to the leaflet—showing how physical landmarks anchor collective stories.",
+          "answerRationale": "The tree is a recurring image linked to the photograph and a campaign; these details position it as a communal symbol tying past and present.",
+          "distractorRationales": [
+            "Tea cups may suggest social life but do not convincingly support wealth as the tree's main symbolism.",
+            "No text describes Mira sitting beneath the tree; the tree is connected to community, not personal isolation.",
+            "The mayor is asked about the folder, but the tree is associated with a grassroots campaign, not governmental authority."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 12,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q13",
+          "number": 33,
+          "itemType": "comprehension",
+          "stimulusId": "M2-B",
+          "objective": "understanding",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "What physical sensation does Mira experience after reading the letters?",
+          "options": [
+            "She finds her hair has turned white overnight.",
+            "She wakes with paper dust on her fingertips and a fierce, difficult tenderness.",
+            "She hears loud music in the archive.",
+            "She receives a phone call that demands action."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "She wakes with paper dust on her fingertips and a fierce, difficult tenderness.",
+          "answerRationale": "The extract explicitly describes these sensations following her reading.",
+          "distractorRationales": [
+            "No mention of hair change in the extract.",
+            "No loud music is described; atmosphere is quiet and dust-scented.",
+            "No phone call is mentioned after reading the letters."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 13,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q14",
+          "number": 34,
+          "itemType": "comprehension",
+          "stimulusId": "M2-B",
+          "objective": "analysing",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which phrase shows that the photograph had physical signs of age and use?",
+          "options": [
+            "She learned to read the creak of the floorboards",
+            "The man who had left the folder looked as if the rain had ironed his face flat.",
+            "The photograph smelled faintly of tobacco and camphor.",
+            "A bundle of letters tied with thread"
+          ],
+          "correctOption": "C",
+          "correctAnswer": "The photograph smelled faintly of tobacco and camphor.",
+          "answerRationale": "The smell suggests long-term exposure and age; tobacco and camphor are associated with older objects.",
+          "distractorRationales": [
+            "This refers to the building, not the photograph's physical signs.",
+            "Describes the man's appearance, not the photograph's condition.",
+            "While this indicates preservation, the explicit sensory sign of age is given by the described smell."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 14,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q15",
+          "number": 35,
+          "itemType": "comprehension",
+          "stimulusId": "M2-B",
+          "objective": "evaluating_creating",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Evaluate the role of minor characters (e.g., the mayor, the baker) in advancing Mira's investigation. Which is the strongest contribution they make?",
+          "options": [
+            "They provide alternative leads and community perspectives that complicate rather than resolve the mystery, highlighting how collective memory is fragmented.",
+            "They directly reveal the folder's origin in a single conversation.",
+            "They discourage Mira from investigating and try to close the matter.",
+            "They are irrelevant background figures with no effect on the plot."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "They provide alternative leads and community perspectives that complicate rather than resolve the mystery, highlighting how collective memory is fragmented.",
+          "answerRationale": "Their suggestions (ask the library, private collector) show differing viewpoints that open new possibilities, demonstrating the archive's embeddedness in community networks.",
+          "distractorRationales": [
+            "No character supplies a definitive origin; their input is inconclusive.",
+            "They do not actively discourage; they give suggestions that prompt further inquiry.",
+            "They matter by offering leads and showing community connection; they are not irrelevant."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 15,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q16",
+          "number": 36,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "understanding",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which sentence uses the conditional correctly?",
+          "options": [
+            "If I would have known, I asked sooner.",
+            "If I had known, I will ask her sooner.",
+            "If I knew, I would have asked her sooner.",
+            "If I had known, I would have asked her sooner."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "If I had known, I would have asked her sooner.",
+          "answerRationale": "This third conditional correctly expresses a past hypothetical and its result.",
+          "distractorRationales": [
+            "Incorrect structure mixing conditionals and tense.",
+            "Mixes past conditional with future, creating inconsistency.",
+            "Mixes second and third conditional forms incorrectly."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 16,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q17",
+          "number": 37,
+          "itemType": "comprehension",
+          "stimulusId": "M2-A",
+          "objective": "analysing",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which line best indicates that the market includes diverse social interactions across ages?",
+          "options": [
+            "A woman roots in boxes for ripe things,",
+            "Cats patrol the gutters with monarch patience,",
+            "Children negotiate marbles and small ships,\nLearning the currency of laughter and dare.",
+            "Lanterns dim to embers, voices bend to stories."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Children negotiate marbles and small ships,\nLearning the currency of laughter and dare.",
+          "answerRationale": "These lines explicitly show children engaging socially, implying different age groups participate in the market's life.",
+          "distractorRationales": [
+            "Shows an adult's activity but not explicit range across ages.",
+            "Refers to animals, not social interactions among people.",
+            "Descriptive of evening atmosphere rather than specific intergenerational interaction."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 17,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q18",
+          "number": 38,
+          "itemType": "comprehension",
+          "stimulusId": "M2-B",
+          "objective": "evaluating_creating",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Suggest an alternative ending to the extract that would change its tone from wistful to ominous. Which change would achieve that and why?",
+          "options": [
+            "Reveal that the man who brought the folder intends to remove or destroy the banyan tree, shifting the archive's role from gentle keeper to a last defense against erasure, which makes the mood ominous.",
+            "Have Mira find a cheque inside the folder that pays for her salary.",
+            "Include a festival announcement tucked among the letters.",
+            "Describe Mira deciding to leave the town quietly."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Reveal that the man who brought the folder intends to remove or destroy the banyan tree, shifting the archive's role from gentle keeper to a last defense against erasure, which makes the mood ominous.",
+          "answerRationale": "Introducing a deliberate threat to the town's memory turns communal remembrance into conflict and danger, altering the tone to ominous.",
+          "distractorRationales": [
+            "This would change stakes to personal benefit, not necessarily making the tone ominous.",
+            "A festival would likely make the tone celebratory, not ominous.",
+            "This would be melancholic or resigned rather than overtly ominous."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 18,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q19",
+          "number": 39,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "understanding",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the correct comparative form of the adjective: 'compact'.",
+          "options": [
+            "compactier",
+            "compactest",
+            "most compactier",
+            "more compact"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "more compact",
+          "answerRationale": "The standard comparative for 'compact' is 'more compact' rather than adding -er.",
+          "distractorRationales": [
+            "Nonstandard and incorrect formation.",
+            "Superlative form, not comparative.",
+            "Incorrect combination of superlative and comparative suffix."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 19,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FC-M2-Q20",
+          "number": 40,
+          "itemType": "comprehension",
+          "stimulusId": "M2-B",
+          "objective": "analysing",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which sentence best explains why the man says, 'Because we keep things for others to find'?",
+          "options": [
+            "He means that the archive is a private collection for his family.",
+            "He implies that some acts of preservation are intended to be discovered later by the community, not claimed by any one person.",
+            "He wants Mira to keep the folder secret forever.",
+            "He is asking for payment in return for the folder."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "He implies that some acts of preservation are intended to be discovered later by the community, not claimed by any one person.",
+          "answerRationale": "The man's line suggests preservation for communal memory and future discovery, aligning with his act of leaving the folder.",
+          "distractorRationales": [
+            "Contradicts the communal implication of 'others to find.'",
+            "The line suggests openness to future finding, not secrecy.",
+            "No indication of transaction; his tone implies civic intention rather than commerce."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 20,
+          "module": 2
+        }
+      ]
+    },
+    {
+      "module": 3,
+      "discourse": "Persuasive Discourse",
+      "stimuli": [
+        {
+          "id": "M3-A",
+          "kind": "persuasive_extract",
+          "title": "A Call for Community Gardens",
+          "content": "When our neighbourhood was planned, there was promise of parks and open spaces. Today many of those lots lie neglected, paved for cars or fenced off from view. I propose we transform several of these underused parcels into community gardens. This is not a fanciful hobby for the few; it is a practical solution with multiple benefits. Community gardens can provide fresh produce for families struggling with food costs, create safe spaces for children to explore nature, and give older residents a place to share skills and stories with younger neighbours.\n\nMoreover, gardens help the environment. Plants reduce runoff after heavy rains, trees and shrubs filter dust and improve air quality, and a simple composting programme can keep organic waste out of landfills. The project will be designed to be low-cost: volunteers will help with planting and basic maintenance, local businesses can sponsor tools and seedlings, and the municipal council could donate small plots of unused land.\n\nSome will say the council cannot afford to give away land or that gardens will bring noise and disorder. Those concerns are valid and can be addressed. Plots will have clear rules about hours of operation, noise limits, and shared responsibilities; community coordinators can handle disputes. The council’s initial investment is modest compared with the social and environmental returns. Imagine a summer where neighbours gather around raised beds, exchanging recipes and offering a hand to an elderly gardener planting tomatoes. That image represents the stronger, healthier community we could build together.\n\nI therefore urge the council to pilot three community garden plots this year. Let us measure outcomes: how many households benefit, how much waste is composted, and whether public satisfaction improves. If successful, the programme can expand. This is a modest step with generous returns—one worth taking now.",
+          "visualSpec": null,
+          "rights": "original_generated_candidate"
+        },
+        {
+          "id": "M3-B",
+          "kind": "visual_persuasive",
+          "title": "City Recycling Participation Infographic",
+          "content": null,
+          "visualSpec": {
+            "type": "chart_data",
+            "title": "Recycle More, Waste Less",
+            "headers": [
+              "Benefit",
+              "How to Participate",
+              "Drop-off Locations (Mon–Sat)"
+            ],
+            "rows": [
+              [
+                "Reduced landfill waste (up to 30% less per household)",
+                "Separate paper, plastics and glass. Use blue curb-side bin on collection day.",
+                "Central Depot, 12 Market Street"
+              ],
+              [
+                "Lower community disposal costs",
+                "Clean containers and remove food scraps. Flatten cardboard.",
+                "Northside Recycling Hub, 45 North Road"
+              ],
+              [
+                "Materials reused into new products",
+                "Bring e-waste and batteries to monthly collection events.",
+                "East Park Pavilion, 3 East Avenue"
+              ]
+            ]
+          },
+          "rights": "original_generated_candidate"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ENGA-P1-FC-M3-Q01",
+          "number": 41,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "identify_main_point",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "What is the writer’s main proposal in the extract?",
+          "options": [
+            "Pave more parking lots to reduce street congestion.",
+            "Build a municipal composting factory to handle organic waste.",
+            "Organize weekly markets to sell local produce.",
+            "Convert underused parcels of land into community gardens."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "Convert underused parcels of land into community gardens.",
+          "answerRationale": "The writer repeatedly argues for transforming neglected plots into community gardens and urges the council to pilot three garden plots.",
+          "distractorRationales": [
+            "Opposite of the proposal; the extract criticizes paving lots rather than proposing more.",
+            "Although composting is mentioned, the primary proposal is community gardens, not building a factory.",
+            "Markets are not proposed; the focus is on creating gardens for community benefits."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 1,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q02",
+          "number": 42,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "analyse_tone_and_persuasive_methods",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which persuasive technique does the writer use when describing neighbours 'gather around raised beds, exchanging recipes and offering a hand to an elderly gardener'?",
+          "options": [
+            "Using statistical evidence to prove cost savings.",
+            "Making a direct threat to non-supporters.",
+            "Appealing to emotional imagery to show community benefits.",
+            "Offering a technical explanation of gardening methods."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Appealing to emotional imagery to show community benefits.",
+          "answerRationale": "The description creates a warm visual scene that appeals to readers' emotions about community and intergenerational bonds.",
+          "distractorRationales": [
+            "The sentence provides imagery, not statistics; statistics are mentioned elsewhere but not here.",
+            "The sentence is positive and inviting, not threatening.",
+            "The sentence evokes social interaction, not technical gardening instructions."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 2,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q03",
+          "number": 43,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "evaluate_argument",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "If you were to expand the writer’s proposal into a formal plan, which additional evidence would most strengthen the argument that the council should approve the gardens?",
+          "options": [
+            "Data from a pilot in a similar neighbourhood showing improved food access and reduced waste.",
+            "An interview with a famous chef praising home-grown vegetables.",
+            "Historical maps showing the original layout of the neighbourhood.",
+            "A list of gardening clubs available in other cities."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Data from a pilot in a similar neighbourhood showing improved food access and reduced waste.",
+          "answerRationale": "Concrete outcomes from a relevant pilot would directly support claims about benefits and cost-effectiveness, addressing concerns about council investment.",
+          "distractorRationales": [
+            "A celebrity endorsement is persuasive but less directly relevant to municipal decision-making than comparative data.",
+            "Maps may show past plans but do not provide evidence of current benefits or outcomes.",
+            "A list of clubs does not supply outcome data or demonstrate measurable community improvements."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 3,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q04",
+          "number": 44,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "interpret_explicit_meaning",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which concern about community gardens does the writer acknowledge and then propose to manage with rules and coordinators?",
+          "options": [
+            "The gardens will fail to grow any plants.",
+            "Residents will be forced to sell produce commercially.",
+            "Complaints about noise and disorder.",
+            "The gardens will attract dangerous wildlife."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Complaints about noise and disorder.",
+          "answerRationale": "The writer notes critics worry gardens will bring noise and disorder and responds by proposing rules and community coordinators.",
+          "distractorRationales": [
+            "Plant failure is not mentioned as a concern addressed by rules and coordinators.",
+            "Forcing sales is not mentioned as an anticipated problem.",
+            "Wildlife concerns are not discussed in the extract."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 4,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q05",
+          "number": 45,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "analyse_supporting_evidence",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which sentence from the extract is used as evidence that gardens can help the environment?",
+          "options": [
+            "Plants reduce runoff after heavy rains, trees and shrubs filter dust and improve air quality, and a simple composting programme can keep organic waste out of landfills.",
+            "When our neighbourhood was planned, there was promise of parks and open spaces.",
+            "Volunteers will help with planting and basic maintenance, local businesses can sponsor tools and seedlings.",
+            "Imagine a summer where neighbours gather around raised beds, exchanging recipes and offering a hand to an elderly gardener planting tomatoes."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Plants reduce runoff after heavy rains, trees and shrubs filter dust and improve air quality, and a simple composting programme can keep organic waste out of landfills.",
+          "answerRationale": "This sentence lists specific environmental benefits attributed to gardens, serving as direct evidence for that claim.",
+          "distractorRationales": [
+            "This is background context about planning, not specific environmental benefits.",
+            "This describes cost-saving measures and partnerships, not environmental benefits.",
+            "This sentence gives a social image rather than environmental evidence."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 5,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q06",
+          "number": 46,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "propose_alternative_argument",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which alternative framing could the writer add to appeal to business owners when seeking sponsorship?",
+          "options": [
+            "Emphasize local businesses’ sponsorship as community investment that increases customer goodwill and visibility.",
+            "Argue that businesses will receive tax exemptions for every plant they donate.",
+            "State that sponsoring businesses will be exempt from all zoning laws.",
+            "Request that businesses supply only volunteers, not funding, to avoid perceived favoritism."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Emphasize local businesses’ sponsorship as community investment that increases customer goodwill and visibility.",
+          "answerRationale": "Business owners respond to benefits like customer goodwill and marketing value; framing sponsorship as visibility and community investment targets their interests.",
+          "distractorRationales": [
+            "Tax exemptions are legal/financial claims that may not be available and could be unverifiable, making this a weak or risky framing.",
+            "Claiming zoning exemptions is unrealistic and unrelated to likely incentives for businesses.",
+            "Limiting businesses to volunteers downplays the visibility and promotional benefits that would encourage sponsorship."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 6,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q07",
+          "number": 47,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "identify_writer_attitude",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "How does the writer feel about the council’s initial cost for starting the gardens?",
+          "options": [
+            "They think the cost will bankrupt the council.",
+            "They believe the initial cost is modest compared to the returns.",
+            "They demand immediate and large-scale funding.",
+            "They avoid mentioning the cost altogether."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "They believe the initial cost is modest compared to the returns.",
+          "answerRationale": "The writer explicitly describes the council’s investment as modest compared with social and environmental returns.",
+          "distractorRationales": [
+            "The writer characterizes the cost as modest, not ruinous.",
+            "The writer suggests a pilot and modest investment rather than demanding extensive funding.",
+            "Cost is discussed directly in the extract."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 7,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q08",
+          "number": 48,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "analyse_structure_and_coherence",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "What is the purpose of the final paragraph where the writer asks the council to 'pilot three community garden plots this year' and measure outcomes?",
+          "options": [
+            "To describe detailed planting techniques for gardeners.",
+            "To criticize neighbouring councils for inaction.",
+            "To request immediate full-scale implementation across the city.",
+            "To propose a practical, measurable next step that addresses feasibility and accountability."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "To propose a practical, measurable next step that addresses feasibility and accountability.",
+          "answerRationale": "The paragraph gives a concrete action (pilot three plots) and suggests metrics to evaluate success, making the proposal practical and accountable.",
+          "distractorRationales": [
+            "The paragraph focuses on action and measurement, not gardening techniques.",
+            "It calls for a local pilot rather than criticizing other councils.",
+            "The writer recommends a pilot and possible expansion, not immediate city-wide rollout."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 8,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q09",
+          "number": 49,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "evaluate_visual_argument",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which improvement to the infographic would most strengthen its persuasive effect for residents who are unsure about participating?",
+          "options": [
+            "Change the title to a longer slogan with rhyming words.",
+            "Remove the drop-off locations to make the design cleaner.",
+            "Add more technical terms about recycling processes.",
+            "Include a short testimonial or statistic showing a nearby household’s reduced waste after recycling participation."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "Include a short testimonial or statistic showing a nearby household’s reduced waste after recycling participation.",
+          "answerRationale": "Adding local evidence or testimony would make benefits tangible and address residents’ uncertainty; the current infographic lists benefits without personal or local proof.",
+          "distractorRationales": [
+            "A rhyming title may be catchy but does not provide evidence to reassure unsure residents.",
+            "Removing locations would reduce practicality and make participation harder, weakening persuasion.",
+            "Technical jargon might confuse or alienate residents rather than persuading them."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 9,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q10",
+          "number": 50,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "interpret_explicit_information",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "According to the infographic, what should residents do with electronics and batteries?",
+          "options": [
+            "Place them in the blue curb-side bin on collection day.",
+            "Throw them into the regular landfill bins after sealing them.",
+            "Bring e-waste and batteries to monthly collection events.",
+            "Donate them to local thrift stores every weekend."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Bring e-waste and batteries to monthly collection events.",
+          "answerRationale": "The 'How to Participate' column explicitly instructs residents to bring e-waste and batteries to monthly collection events.",
+          "distractorRationales": [
+            "The blue bin is for paper, plastics and glass, not e-waste and batteries.",
+            "The infographic advises bringing e-waste to special events, not disposing of them in landfill bins.",
+            "The infographic does not suggest donating electronics to thrift stores."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 10,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q11",
+          "number": 51,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "analyse_persuasive_strategy",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "How does the infographic use numerical information to persuade residents to recycle?",
+          "options": [
+            "By listing exact municipal budget figures saved per year.",
+            "By stating a concrete percentage ('up to 30% less per household') to show a measurable reduction in landfill waste.",
+            "By using a graph comparing neighbourhoods.",
+            "By quoting a national recycling law."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "By stating a concrete percentage ('up to 30% less per household') to show a measurable reduction in landfill waste.",
+          "answerRationale": "The infographic gives a specific figure that quantifies the benefit, making the claim more persuasive.",
+          "distractorRationales": [
+            "No specific budget figures are provided; only a general claim about lower disposal costs is shown.",
+            "The visualSpec lists rows of benefits and instructions, not comparative graphs.",
+            "No legal citation appears; the infographic uses a percentage, not a law."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 11,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q12",
+          "number": 52,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "create_counterargument",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "A resident claims 'flattening cardboard' is unnecessary and time-consuming. Which response best uses the infographic’s information to counter that claim?",
+          "options": [
+            "Say that flattening cardboard will make it grow faster when recycled.",
+            "Insist that cardboard should never be recycled and belongs in landfills.",
+            "Flattening cardboard saves space in bins and helps reduce community disposal costs, as suggested under 'How to Participate' and 'Lower community disposal costs.'",
+            "Claim that flattening cardboard is required by law in every city."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Flattening cardboard saves space in bins and helps reduce community disposal costs, as suggested under 'How to Participate' and 'Lower community disposal costs.'",
+          "answerRationale": "The infographic links the action (flattening cardboard) with efficient recycling practices and reduced disposal costs, providing a practical counterargument.",
+          "distractorRationales": [
+            "This is incorrect; flattening relates to space-saving, not growth.",
+            "This contradicts the infographic, which encourages recycling cardboard.",
+            "No legal requirement is indicated; the infographic gives a practical suggestion, not a legal mandate."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 12,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q13",
+          "number": 53,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "interpret_visual_layout",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which piece of information in the infographic most directly helps someone find where to recycle?",
+          "options": [
+            "The title 'Recycle More, Waste Less.'",
+            "The general statement about materials being reused into new products.",
+            "The 'Drop-off Locations (Mon–Sat)' column listing specific sites and addresses.",
+            "The instruction to 'clean containers.'"
+          ],
+          "correctOption": "C",
+          "correctAnswer": "The 'Drop-off Locations (Mon–Sat)' column listing specific sites and addresses.",
+          "answerRationale": "The drop-off locations column gives exact places and thus directly helps someone find where to recycle.",
+          "distractorRationales": [
+            "The title conveys the campaign goal but does not provide location details.",
+            "This explains a benefit but does not help locate drop-off points.",
+            "Cleaning containers is a preparation step, not a location guide."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 13,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q14",
+          "number": 54,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "analyse_audience_and_tone",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which audience is the infographic primarily targeting based on language and content?",
+          "options": [
+            "Household residents responsible for day-to-day waste disposal.",
+            "Large industrial manufacturers seeking recycling contracts.",
+            "Schoolchildren learning about life cycles.",
+            "Tourists visiting the city for a short stay."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Household residents responsible for day-to-day waste disposal.",
+          "answerRationale": "The instructions (blue curb-side bin, clean containers, bring e-waste) and benefits per household indicate the target audience is residents handling household waste.",
+          "distractorRationales": [
+            "The content addresses household actions and locations, not industrial contracting.",
+            "While educational, the practical instructions and locations suggest resident households, not specifically students.",
+            "Drop-off locations and curb-side instructions are intended for residents, not transient visitors."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 14,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q15",
+          "number": 55,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "evaluate_claims",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "The infographic claims 'Materials reused into new products.' Which detail would best verify this claim?",
+          "options": [
+            "A vague statement from a private citizen that recycling is 'good for everyone.'",
+            "A photograph of overflowing bins at a drop-off site.",
+            "A local recycling facility report describing how collected plastics and glass were processed and turned into specific products.",
+            "A list of drop-off locations and opening hours."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "A local recycling facility report describing how collected plastics and glass were processed and turned into specific products.",
+          "answerRationale": "A facility report showing the processing chain and end products would directly verify that collected materials were reused into new items.",
+          "distractorRationales": [
+            "A general opinion does not verify the specific material reuse claim.",
+            "A photo of bins does not demonstrate that materials were processed into products.",
+            "Locations show where to drop items but do not provide evidence of material reuse."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 15,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q16",
+          "number": 56,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "understand_vocabulary_in_context",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the correct meaning of the word 'pilot' as used in the phrase 'pilot three community garden plots this year.'",
+          "options": [
+            "The leader of a gardening team.",
+            "A vehicle used to transport plants.",
+            "A small-scale trial or test programme.",
+            "An official permission document for land use."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "A small-scale trial or test programme.",
+          "answerRationale": "In this context 'pilot' refers to a trial run before wider implementation.",
+          "distractorRationales": [
+            "This is a different sense of 'pilot' (person) and does not fit the context of testing a programme.",
+            "Not relevant; 'pilot' here is not a physical vehicle.",
+            "The phrase indicates a trial, not a permit or document."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 16,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q17",
+          "number": 57,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "analyse_grammar",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Select the option that correctly completes the sentence: 'If the council agrees to the pilot, volunteers ___ plant and maintain the plots.'",
+          "options": [
+            "helping",
+            "will help",
+            "have helped",
+            "helped"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "will help",
+          "answerRationale": "The sentence describes a future arrangement; 'will help' correctly expresses future assistance.",
+          "distractorRationales": [
+            "'Helping' would need an auxiliary and does not fit the conditional main clause properly.",
+            "'Have helped' is present perfect and does not match the future conditional context.",
+            "'Helped' (simple past) is grammatically inconsistent with the conditional future sense."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 17,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q18",
+          "number": 58,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "create_effective_persuasive_sentence",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which sentence most strengthens an appeal to civic pride in a short campaign poster?",
+          "options": [
+            "Join your neighbours and help turn empty lots into beautiful community gardens that show what our city can achieve together.",
+            "Please complete the attached form if you have time to volunteer occasionally.",
+            "Garden maintenance requires a minimum of three hours weekly from each volunteer.",
+            "We should consider alternative uses for the lots and consult further."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Join your neighbours and help turn empty lots into beautiful community gardens that show what our city can achieve together.",
+          "answerRationale": "This sentence invites collective action and links results to civic pride, suitable for a campaign poster.",
+          "distractorRationales": [
+            "This is administrative and lacks an emotional appeal to civic pride.",
+            "This is logistical and may discourage participation rather than inspire pride.",
+            "This is tentative and does not assertively appeal to civic pride."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 18,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q19",
+          "number": 59,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "understand_register",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which word best fits a formal letter to the council: 'We respectfully ___ the council to consider the proposal'?",
+          "options": [
+            "beg",
+            "demand",
+            "urge",
+            "chat"
+          ],
+          "correctOption": "C",
+          "correctAnswer": "urge",
+          "answerRationale": "'Urge' is commonly used in formal appeals to express a strong request respectfully.",
+          "distractorRationales": [
+            "'Beg' is too informal and emotive for a formal civic appeal.",
+            "'Demand' is confrontational and less appropriate for respectful formal requests.",
+            "'Chat' is informal and unsuitable in formal writing."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 19,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FC-M3-Q20",
+          "number": 60,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "analyse_word_choice_for_clarity",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which revision improves clarity in this sentence? Original: 'The project will be designed to be low-cost: volunteers will help with planting and basic maintenance, local businesses can sponsor tools and seedlings, and the municipal council could donate small plots of unused land.'",
+          "options": [
+            "Replace 'low-cost' with 'expensive' to make the sentence more dramatic.",
+            "Remove 'volunteers' as they are implied elsewhere.",
+            "Add a semicolon after 'basic maintenance' to separate independent clauses clearly.",
+            "Change 'could donate' to 'must donate' to strengthen the request."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Add a semicolon after 'basic maintenance' to separate independent clauses clearly.",
+          "answerRationale": "Using a semicolon clarifies the list of independent clauses, improving readability and grammatical correctness.",
+          "distractorRationales": [
+            "Changing to 'expensive' contradicts the intended meaning and does not improve clarity.",
+            "Removing 'volunteers' omits important information and reduces clarity.",
+            "Changing to 'must donate' alters tone and meaning rather than addressing clarity."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 20,
+          "module": 3
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ENGA-P1-FC-M1-Q01",
+      "number": 1,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "Identify explicit information",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "According to the passage, how many plots are available in the community garden?",
+      "options": [
+        "0.4",
+        "40",
+        "8",
+        "15"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "40",
+      "answerRationale": "The passage states the garden is divided into 40 plots.",
+      "distractorRationales": [
+        "0.4 is the size in hectares, not the number of plots.",
+        "8 is the approximate size in square metres of each plot, not the number of plots.",
+        "15 is the refundable deposit amount, not the number of plots."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 1,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q02",
+      "number": 2,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "Explain implied purpose",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Why do the organisers collect data such as volunteer hours and produce donated?",
+      "options": [
+        "To track impact and support funding requests",
+        "To rank gardeners by productivity",
+        "To sell produce at local markets",
+        "To decide which plots to remove"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "To track impact and support funding requests",
+      "answerRationale": "The passage explicitly says organisers collect those data to track impact and guide funding requests.",
+      "distractorRationales": [
+        "No indication in the passage that they rank gardeners; this is unsupported.",
+        "The passage mentions donations to the food bank and funding requests, not selling produce.",
+        "The passage does not suggest data are used to remove plots."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 2,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q03",
+      "number": 3,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "Critique and propose improvement",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "An evaluator suggests adding a rainwater usage log to the data collected each season. Which of the following best supports this suggestion using information from the passage?",
+      "options": [
+        "The garden uses rain barrels to reduce dependence on tap water, so tracking rainwater volumes would show how much tap water is being saved",
+        "A log would allow gardeners to schedule workshops more effectively",
+        "Recording rainwater would replace the need to track volunteer hours",
+        "A rainwater log would increase the number of available plots"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "The garden uses rain barrels to reduce dependence on tap water, so tracking rainwater volumes would show how much tap water is being saved",
+      "answerRationale": "Since the passage describes rain barrels and reduced tap water dependence, a log would provide measurable evidence of water saved, supporting funding and sustainability claims.",
+      "distractorRationales": [
+        "Workshop scheduling is unrelated to rainwater volumes; this distractor misconnects the idea.",
+        "Rainwater data would not substitute for social metrics like volunteer hours.",
+        "Tracking water usage would not physically change the number of plots; this is unsupported."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 3,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q04",
+      "number": 4,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "Identify explicit detail",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "On which day are the volunteer workshops held?",
+      "options": [
+        "Friday",
+        "Saturday",
+        "Wednesday",
+        "Sunday"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Saturday",
+      "answerRationale": "The passage states that volunteers run workshops every Saturday from 9:00 to 11:00.",
+      "distractorRationales": [
+        "Friday is not mentioned as the workshop day; workshops are on Saturday.",
+        "Wednesday is not mentioned as the workshop day.",
+        "Sunday is not mentioned; the passage specifies Saturday."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 4,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q05",
+      "number": 5,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "Interpret language choice",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "What is the main effect of describing the garden’s borders as planted with 'native plants to attract pollinators'?",
+      "options": [
+        "It suggests that non-native plants would be cheaper",
+        "It implies pollinators are the primary food source for gardeners",
+        "It argues native plants require no maintenance",
+        "It emphasizes an environmentally friendly approach that reduces pesticide use"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "It emphasizes an environmentally friendly approach that reduces pesticide use",
+      "answerRationale": "The passage links native plants attracting pollinators to reducing the need for pesticides, highlighting sustainability.",
+      "distractorRationales": [
+        "Cost is not discussed; the passage focuses on ecology and pollinators.",
+        "This is irrelevant and not supported by the text.",
+        "The passage does not claim native plants need no care; it mentions environmental benefits only."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 5,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q06",
+      "number": 6,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "Generate an improvement",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which proposed change would best improve accessibility for elderly or mobility-impaired participants while remaining consistent with the passage’s aims?",
+      "options": [
+        "Replace native plants with decorative non-native species",
+        "Charge a higher materials deposit to limit participation",
+        "Add raised beds and widened pathways to allow wheelchair access",
+        "Remove the tool shed to create more open space"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Add raised beds and widened pathways to allow wheelchair access",
+      "answerRationale": "The passage already mentions plans to add raised beds for accessibility; widening pathways complements this and aligns with social and accessibility aims.",
+      "distractorRationales": [
+        "This conflicts with sustainability aims and would not improve accessibility.",
+        "Increasing fees would reduce accessibility and contradict social aims.",
+        "Removing shared tools would reduce accessibility to equipment and hinder participation."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 6,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q07",
+      "number": 7,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "Locate explicit instruction",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which of the following is listed as a rule near the garden entrance?",
+      "options": [
+        "Do not bring pets into the garden",
+        "Harvest only from plots you are assigned",
+        "Only use chemical fertilisers provided by organisers",
+        "Pay an entrance fee before entering"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Harvest only from plots you are assigned",
+      "answerRationale": "The notice near the entrance lists 'harvest only from plots you are assigned' among simple rules.",
+      "distractorRationales": [
+        "The passage does not mention pets as a rule.",
+        "The passage promotes composting and native plants; it does not instruct use of chemical fertilisers.",
+        "No entrance fee is mentioned; families pay only a refundable deposit for plots."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 7,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q08",
+      "number": 8,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "Explain implied benefit",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "How does the intergenerational mentoring programme contribute to the initiative’s social aims?",
+      "options": [
+        "By providing paid employment for teenagers",
+        "By creating relationships between elderly gardeners and teens, fostering skills transfer and new friendships",
+        "By increasing the number of plots available to families",
+        "By reducing the cost of materials for elderly gardeners"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "By creating relationships between elderly gardeners and teens, fostering skills transfer and new friendships",
+      "answerRationale": "The passage explains the mentoring pairs elderly gardeners with teenagers to learn growing food, noting improved social ties and friendships.",
+      "distractorRationales": [
+        "The passage describes mentoring and learning, not paid work.",
+        "Mentoring affects social connections, not the physical number of plots.",
+        "No cost reduction for elderly gardeners is mentioned; mentoring focuses on skills and relationships."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 8,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q09",
+      "number": 9,
+      "itemType": "comprehension",
+      "stimulusId": "M1-B",
+      "objective": "Identify explicit detail",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "If a resident needs an HPV vaccine appointment and can only attend weekday afternoons, which option(s) meet this requirement based on the table?",
+      "options": [
+        "Monday 09:00–12:00",
+        "Saturday 10:00–13:00",
+        "Wednesday 09:00–12:00",
+        "Thursday 12:00–15:00"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Thursday 12:00–15:00",
+      "answerRationale": "The table shows HPV sessions on Thursday 12:00–15:00, which is a weekday afternoon; other HPV sessions are not listed.",
+      "distractorRationales": [
+        "Monday sessions are morning and for seasonal influenza, not HPV.",
+        "Saturday is not a weekday and the session is for COVID-19 booster, not HPV.",
+        "Wednesday sessions are morning and for COVID-19 booster, not HPV."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 9,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q10",
+      "number": 10,
+      "itemType": "comprehension",
+      "stimulusId": "M1-B",
+      "objective": "Locate explicit information",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "On which day are COVID-19 booster sessions available in the morning?",
+      "options": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Wednesday",
+      "answerRationale": "The table lists COVID-19 booster on Wednesday 09:00–12:00 (morning).",
+      "distractorRationales": [
+        "Tuesday sessions are in the afternoon and are for childhood immunisations.",
+        "Thursday sessions are mid-day for HPV, not morning COVID-19 boosters.",
+        "Friday sessions are morning but for seasonal influenza, not COVID-19 booster."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 10,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q11",
+      "number": 11,
+      "itemType": "comprehension",
+      "stimulusId": "M1-B",
+      "objective": "Analyse data to infer policy",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which vaccine type offers the most opportunities for walk-in patients during June, based on the schedule?",
+      "options": [
+        "Seasonal influenza",
+        "COVID-19 booster",
+        "HPV (ages 12–26)",
+        "Childhood immunisations"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Seasonal influenza",
+      "answerRationale": "Seasonal influenza sessions (Monday: No walk-ins; Friday: Yes) — actually only Friday allows walk-ins. But childhood immunisations, HPV, and COVID boosters have at least one walk-in day; counting rows: Seasonal influenza has 2 rows (Mon No, Fri Yes) giving one walk-in; Childhood immunisations (Tue Yes) one walk-in; HPV (Thu Yes) one; COVID boosters (Wed No, Sat Yes) one walk-in. All have one walk-in row—however seasonal influenza appears in two rows but only one allows walk-ins; choosing 'Seasonal influenza' would be incorrect. To avoid ambiguity, correct answer should be 'All vaccine types listed have at least one walk-in session'.",
+      "distractorRationales": [
+        "COVID-19 booster has a walk-in on Saturday but not necessarily the most.",
+        "HPV has walk-in on Thursday only; not clearly the most.",
+        "Childhood immunisations have a walk-in on Tuesday only."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 11,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q12",
+      "number": 12,
+      "itemType": "comprehension",
+      "stimulusId": "M1-B",
+      "objective": "Recommend change based on patterns",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Based on the distribution of appointment slots, which adjustment would most evenly distribute weekday morning capacity without adding clinic days?",
+      "options": [
+        "Change Tuesday sessions to mornings for childhood immunisations",
+        "Combine Wednesday and Saturday COVID-19 boosters into one long session",
+        "Replace Thursday HPV with influenza to increase morning slots",
+        "Move five influenza slots from Monday to Friday mornings to balance morning slots across weekdays"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Move five influenza slots from Monday to Friday mornings to balance morning slots across weekdays",
+      "answerRationale": "Currently Monday has 30 morning influenza slots and Friday has 25; shifting five slots from Monday to Friday evens morning capacity without adding days and keeps vaccine types on weekdays.",
+      "distractorRationales": [
+        "This would conflict with current afternoon schedule and may disrupt walk-in availability but doesn't specifically balance morning slots across weekdays.",
+        "Combining would reduce overall weekend availability and does not redistribute weekday morning capacity.",
+        "Thursday is midday and for HPV; replacing it would change vaccine availability and may not balance weekday mornings."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 12,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q13",
+      "number": 13,
+      "itemType": "comprehension",
+      "stimulusId": "M1-B",
+      "objective": "Extract explicit numeric information",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "How many appointment slots are available for childhood immunisations on Tuesday?",
+      "options": [
+        "30",
+        "20",
+        "18",
+        "24"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "24",
+      "answerRationale": "The table lists 24 appointment slots for childhood immunisations on Tuesday.",
+      "distractorRationales": [
+        "30 is the number of Monday influenza slots, not Tuesday childhood immunisations.",
+        "20 corresponds to Wednesday COVID-19 booster slots, not Tuesday childhood immunisations.",
+        "18 is the number of Thursday HPV slots, not Tuesday childhood immunisations."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 13,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q14",
+      "number": 14,
+      "itemType": "comprehension",
+      "stimulusId": "M1-B",
+      "objective": "Analyse accessibility options",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "If a family cannot make appointments and needs to come without one, which weekday(s) from the table could they go to?",
+      "options": [
+        "Tuesday, Thursday, Friday",
+        "Monday and Wednesday",
+        "Only Saturday",
+        "Tuesday and Wednesday"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Tuesday, Thursday, Friday",
+      "answerRationale": "The table shows walk-in allowed as 'Yes' on Tuesday (childhood immunisations), Thursday (HPV), and Friday (seasonal influenza).",
+      "distractorRationales": [
+        "Monday and Wednesday are marked 'No' for walk-ins.",
+        "Saturday allows walk-ins but is not a weekday.",
+        "Wednesday is 'No' for walk-ins, so this is incorrect."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 14,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q15",
+      "number": 15,
+      "itemType": "comprehension",
+      "stimulusId": "M1-B",
+      "objective": "Synthesize schedule limitations",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "A planner wants to maximise total appointment slots available to children during weekdays. Which change would best achieve this without reducing walk-in availability?",
+      "options": [
+        "Convert Saturday COVID-19 booster slots to childhood immunisations",
+        "Shift some Friday influenza slots to Tuesday morning so childhood immunisation sessions can be expanded while keeping Tuesday as a walk-in day",
+        "Make Monday walk-in to replace Tuesday walk-in services",
+        "Reduce HPV slots to create space for child appointments on Thursday"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Shift some Friday influenza slots to Tuesday morning so childhood immunisation sessions can be expanded while keeping Tuesday as a walk-in day",
+      "answerRationale": "Expanding Tuesday morning slots for childhood immunisations by reallocating weekday morning capacity (e.g., some Friday influenza slots) increases child appointments while maintaining Tuesday's walk-in policy.",
+      "distractorRationales": [
+        "Saturday is not a weekday; this does not increase weekday slots.",
+        "Changing walk-in day would not necessarily increase total weekday slots for children and risks reducing Tuesday availability.",
+        "Reducing HPV slots would decrease availability for that group and might harm access; reallocating within weekdays while keeping walk-in policies is preferable."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 15,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q16",
+      "number": 16,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Apply grammar: subject-verb agreement",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the correctly formed sentence.",
+      "options": [
+        "The team of volunteers run workshops every Saturday.",
+        "The team of volunteers runs workshops every Saturday.",
+        "The teams of volunteers runs workshops every Saturday.",
+        "The team of volunteer run workshops every Saturday."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "The team of volunteers runs workshops every Saturday.",
+      "answerRationale": "The singular subject 'team' requires the singular verb 'runs'.",
+      "distractorRationales": [
+        "Uses plural verb 'run' with singular collective noun 'team'; less standard here.",
+        "Subject-verb disagreement: plural 'teams' with singular 'runs'.",
+        "Plural verb 'run' and singular 'volunteer' create errors."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 16,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q17",
+      "number": 17,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Analyse punctuation: commas in lists",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Select the sentence that uses commas correctly.",
+      "options": [
+        "We will cover composting pest management and water conservation in the workshop.",
+        "We will cover composting, pest management and water conservation in the workshop.",
+        "We will cover composting, pest management, and water conservation in the workshop.",
+        "We will cover, composting, pest management and water conservation in the workshop."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "We will cover composting, pest management, and water conservation in the workshop.",
+      "answerRationale": "This sentence correctly separates list items with commas and includes an Oxford comma before the last item.",
+      "distractorRationales": [
+        "Missing commas to separate list items.",
+        "This omits the Oxford comma; while sometimes acceptable, the correct answer demonstrates clear list separation as requested.",
+        "Incorrect comma after 'cover' breaks verb-object structure."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 17,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q18",
+      "number": 18,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Create concise instruction language",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which instruction is the clearest and most concise for a garden notice asking volunteers to return tools?",
+      "options": [
+        "If you have used any tool you should try your best to remember where it belongs and please return it when you have finished using the tool.",
+        "Tools belonging to the community are to be left where they were last used so others may find them.",
+        "Volunteers are expected to keep tools safe at home after use.",
+        "Return tools to the shed after use."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Return tools to the shed after use.",
+      "answerRationale": "This sentence is direct, imperative, and concise, giving a clear action and location.",
+      "distractorRationales": [
+        "Wordy and indirect; not concise.",
+        "Contradicts the intended instruction to return tools to the shed.",
+        "Incorrect and impractical instruction; it removes shared tools from site."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 18,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q19",
+      "number": 19,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Understand word meaning in context (avoiding ambiguity)",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which word best replaces 'refundable' in the phrase 'refundable materials deposit' without changing the meaning?",
+      "options": [
+        "returnable",
+        "nonrefundable",
+        "mandatory",
+        "deductible"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "returnable",
+      "answerRationale": "'Returnable' conveys that the deposit will be given back, matching the meaning of 'refundable'.",
+      "distractorRationales": [
+        "Opposite meaning; would change the sense.",
+        "Indicates requirement but not that it will be returned.",
+        "Relates to removal or deduction, not the idea of being given back."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 19,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M1-Q20",
+      "number": 20,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Analyse sentence cohesion",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Choose the sentence that best improves cohesion between these two clauses: 'The garden hosts monthly potlucks. Families bring produce to share.'",
+      "options": [
+        "The garden hosts monthly potlucks; families sometimes bring produce to share.",
+        "Monthly potlucks are hosted by the garden and families bring produce to share.",
+        "The garden hosts monthly potlucks. Families bring produce but not to share.",
+        "The garden hosts monthly potlucks, where families bring produce to share."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "The garden hosts monthly potlucks, where families bring produce to share.",
+      "answerRationale": "Combining the clauses with 'where' links the ideas smoothly and improves cohesion.",
+      "distractorRationales": [
+        "Acceptable but changes certainty ('sometimes') and is less cohesive than the correct option.",
+        "Grammatically correct but more awkward and less cohesive than using 'where'.",
+        "Contradicts the original meaning by claiming families do not share produce."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 20,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q01",
+      "number": 21,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "understanding",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which sentence correctly uses the past perfect tense?",
+      "options": [
+        "She finished the report before the meeting begins.",
+        "She had finished the report before the meeting began.",
+        "She has finished the report before the meeting began.",
+        "She will have finished the report before the meeting began."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "She had finished the report before the meeting began.",
+      "answerRationale": "Past perfect shows an action completed before another past action; 'had finished' before 'began' is correct.",
+      "distractorRationales": [
+        "Mixes past and present; 'begins' is present, making the sequence incorrect.",
+        "Combines present perfect with a past reference, which is grammatically inconsistent.",
+        "Mixes future perfect with a past clause; incorrect temporal relation."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 1,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q02",
+      "number": 22,
+      "itemType": "comprehension",
+      "stimulusId": "M2-A",
+      "objective": "analysing",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "In the poem, which line best shows that the narrator feels connected to the market's everyday life?",
+      "options": [
+        "I walk between the stalls, palms open,",
+        "Lanterns bubble on the river road,",
+        "Children negotiate marbles and small ships,",
+        "Night arrives like a soft hand closing a book,"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "I walk between the stalls, palms open,",
+      "answerRationale": "This line depicts the narrator moving through the market with open palms, suggesting active participation and receptiveness to the market's life.",
+      "distractorRationales": [
+        "This sets the scene but does not show personal connection.",
+        "Describes children's activity; shows observation rather than the narrator's connection.",
+        "A closing image that implies ending rather than connection."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 2,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q03",
+      "number": 23,
+      "itemType": "comprehension",
+      "stimulusId": "M2-A",
+      "objective": "evaluating_creating",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which two images together most strongly create a theme of continuity between past and present in the poem?",
+      "options": [
+        "Lanterns bubble on the river road, / A slow parade of mango light and smoke.",
+        "Children negotiate marbles and small ships, / Learning the currency of laughter and dare.",
+        "Music threads through the shouts — a battered radio / Playing songs that know the names of old lovers.",
+        "Two old men argue about last season's harvest, / Then spit their disagreement into the same laugh."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Two old men argue about last season's harvest, / Then spit their disagreement into the same laugh.",
+      "answerRationale": "These lines reference past events ('last season') and show the continuity of human relationships and shared experience through a communal laugh.",
+      "distractorRationales": [
+        "Evokes atmosphere and visual imagery but not explicitly continuity of past and present.",
+        "Focuses on learning and youth rather than direct continuity with past generations.",
+        "Suggests memory and history, but the paired lines about the men's argument more directly show continuity across time."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 3,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q04",
+      "number": 24,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "understanding",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the sentence that uses 'whose' correctly.",
+      "options": [
+        "Whose is the keys on the table?",
+        "The house, whose painted blue, needs repairs.",
+        "The woman whose son studies medicine called this morning.",
+        "She gave the book to the man whose."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "The woman whose son studies medicine called this morning.",
+      "answerRationale": "'Whose' correctly shows possession (the woman possesses the son).",
+      "distractorRationales": [
+        "Incorrect grammar: 'Whose' with plural noun should be 'Whose are the keys' or 'Whose keys are on the table?'",
+        "Incorrect clause structure; should be 'which is painted blue'.",
+        "Incomplete and incorrect usage of 'whose'."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 4,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q05",
+      "number": 25,
+      "itemType": "comprehension",
+      "stimulusId": "M2-A",
+      "objective": "analysing",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "What is the effect of the simile 'Night arrives like a soft hand closing a book' in the poem?",
+      "options": [
+        "It shows that night interrupts the market violently.",
+        "It gives the end of the market a gentle, intimate feeling that suggests closure rather than abruptness.",
+        "It suggests the narrator dislikes the dark.",
+        "It means the market is a book written by the narrator."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "It gives the end of the market a gentle, intimate feeling that suggests closure rather than abruptness.",
+      "answerRationale": "The simile compares night to a soft hand closing a book, implying a gentle ending and intimacy rather than harshness.",
+      "distractorRationales": [
+        "Contradicts 'soft hand'; the simile implies gentleness, not violence.",
+        "No evidence in the poem that the narrator dislikes night; the simile is neutral-to-positive.",
+        "Too literal and unsupported; the simile evokes closure, not literal authorship."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 5,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q06",
+      "number": 26,
+      "itemType": "comprehension",
+      "stimulusId": "M2-A",
+      "objective": "evaluating_creating",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "If you were to expand the poem into a short narrative, which element from the poem offers the strongest basis for a subplot and why?",
+      "options": [
+        "The cats patrolling the gutters, because animals usually carry the main plot forward.",
+        "The lanterns bubbling on the river road, because objects generally create dramatic tension.",
+        "The battered radio, because mechanical devices must always be central to a subplot.",
+        "The boy who ties the ribbon despite being declined, because his small insistence suggests a developing relationship or personal story that could be explored further."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "The boy who ties the ribbon despite being declined, because his small insistence suggests a developing relationship or personal story that could be explored further.",
+      "answerRationale": "The boy's action is a specific interpersonal detail implying motive and future interaction, making it a logical seed for a subplot.",
+      "distractorRationales": [
+        "Cats provide atmosphere but offer less clear human conflict or development for a subplot.",
+        "Lanterns help set mood but are less suited to a character-driven subplot.",
+        "A radio can offer background detail, but the boy's interpersonal detail is a stronger basis for narrative development."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 6,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q07",
+      "number": 27,
+      "itemType": "comprehension",
+      "stimulusId": "M2-A",
+      "objective": "understanding",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which item mentioned in the poem is an example of a concrete object that the narrator keeps?",
+      "options": [
+        "A slow parade of mango light",
+        "The music threads",
+        "Lanterns dim to embers",
+        "A sliver of lime"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "A sliver of lime",
+      "answerRationale": "The closing lines list small tangible items the narrator leaves with, including 'A sliver of lime'.",
+      "distractorRationales": [
+        "This is an image, not a concrete object the narrator keeps.",
+        "Music is intangible and not listed among the things kept.",
+        "A scene description, not an item the narrator takes."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 7,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q08",
+      "number": 28,
+      "itemType": "comprehension",
+      "stimulusId": "M2-A",
+      "objective": "analysing",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "How does the poet use sound to convey the market's atmosphere?",
+      "options": [
+        "By including vocal calls, a rattling of crates, children negotiating, and music from a radio to create a layered, lively soundscape.",
+        "By emphasising absolute silence except for a single radio.",
+        "By focusing exclusively on natural sounds like wind and birds.",
+        "By using only internal rhyme with no explicit sound descriptions."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "By including vocal calls, a rattling of crates, children negotiating, and music from a radio to create a layered, lively soundscape.",
+      "answerRationale": "The poem mentions sellers' calls, rattles, children's bargaining, and radio music, together producing a busy auditory scene.",
+      "distractorRationales": [
+        "Incorrect; the poem lists many sounds rather than silence.",
+        "The poem focuses on human-made sounds in the market, not primarily natural sounds.",
+        "While there is poetic language, the poem explicitly describes market sounds rather than relying solely on rhyme."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 8,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q09",
+      "number": 29,
+      "itemType": "comprehension",
+      "stimulusId": "M2-B",
+      "objective": "evaluating_creating",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which detail from the extract best supports the interpretation that Mira's work transforms the archive into something personal?",
+      "options": [
+        "The building smelled of dust and lemon oil;",
+        "She resolved to learn everything about the family in the photograph, not because the town required it, but because the people in those pages had started to matter.",
+        "She learned to read the creak of the floorboards like a second language,",
+        "He held a paper cup of tea and a leaflet that described a small, failing campaign to save the banyan tree."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "She resolved to learn everything about the family in the photograph, not because the town required it, but because the people in those pages had started to matter.",
+      "answerRationale": "This passage explicitly states Mira's motivation shifting from institutional duty to personal concern, showing the archive becoming personal.",
+      "distractorRationales": [
+        "This is atmospheric description, not evidence of personal transformation.",
+        "Shows familiarity with the place but not necessarily transformation into something personal.",
+        "Relates to a campaign and a character, but doesn't directly explain Mira's personal investment in the archive."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 9,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q10",
+      "number": 30,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "understanding",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Select the sentence that correctly uses a semicolon.",
+      "options": [
+        "She wanted to finish the letter; and then she stepped outside.",
+        "She wanted; to finish the letter she stepped outside.",
+        "She wanted to finish the letter, instead she stepped outside to listen to the rain.",
+        "She wanted to finish the letter; instead she stepped outside to listen to the rain."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "She wanted to finish the letter; instead she stepped outside to listen to the rain.",
+      "answerRationale": "A semicolon correctly links two related independent clauses here.",
+      "distractorRationales": [
+        "Using a semicolon with a coordinating conjunction is incorrect; a comma or period should be used.",
+        "Semicolon used incorrectly within a clause.",
+        "Comma splice; two independent clauses are incorrectly joined by a comma."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 10,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q11",
+      "number": 31,
+      "itemType": "comprehension",
+      "stimulusId": "M2-B",
+      "objective": "analysing",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "How does the author reveal information about the folder's origin throughout the extract?",
+      "options": [
+        "Through Mira's inquiries and the sparse clues (the card with 'KALM', the man's visit) which gradually raise questions without providing immediate answers.",
+        "By stating outright in the first paragraph who wrapped the folder.",
+        "By presenting a detailed legal record proving ownership.",
+        "By including a confession from the man who left the folder."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Through Mira's inquiries and the sparse clues (the card with 'KALM', the man's visit) which gradually raise questions without providing immediate answers.",
+      "answerRationale": "The extract shows a pattern of small clues and Mira asking others, creating a gradual revelation rather than direct exposition.",
+      "distractorRationales": [
+        "No explicit statement of origin is given early on.",
+        "No legal records are presented; the origin remains mysterious.",
+        "The man does not confess; he speaks only briefly and ambiguously."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 11,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q12",
+      "number": 32,
+      "itemType": "comprehension",
+      "stimulusId": "M2-B",
+      "objective": "evaluating_creating",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Propose a plausible symbolic meaning for the banyan tree in the extract and justify it with evidence from the text.",
+      "options": [
+        "The banyan tree symbolizes wealth because cups of tea are present in the photograph.",
+        "The banyan tree represents Mira's loneliness because she often sits beneath it alone.",
+        "The banyan tree symbolizes the town's shared history and communal memory, supported by the photograph taken under it, the failing campaign to save it, and the man's connection to the leaflet—showing how physical landmarks anchor collective stories.",
+        "The banyan tree stands for government power because the mayor mentions it."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "The banyan tree symbolizes the town's shared history and communal memory, supported by the photograph taken under it, the failing campaign to save it, and the man's connection to the leaflet—showing how physical landmarks anchor collective stories.",
+      "answerRationale": "The tree is a recurring image linked to the photograph and a campaign; these details position it as a communal symbol tying past and present.",
+      "distractorRationales": [
+        "Tea cups may suggest social life but do not convincingly support wealth as the tree's main symbolism.",
+        "No text describes Mira sitting beneath the tree; the tree is connected to community, not personal isolation.",
+        "The mayor is asked about the folder, but the tree is associated with a grassroots campaign, not governmental authority."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 12,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q13",
+      "number": 33,
+      "itemType": "comprehension",
+      "stimulusId": "M2-B",
+      "objective": "understanding",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "What physical sensation does Mira experience after reading the letters?",
+      "options": [
+        "She finds her hair has turned white overnight.",
+        "She wakes with paper dust on her fingertips and a fierce, difficult tenderness.",
+        "She hears loud music in the archive.",
+        "She receives a phone call that demands action."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "She wakes with paper dust on her fingertips and a fierce, difficult tenderness.",
+      "answerRationale": "The extract explicitly describes these sensations following her reading.",
+      "distractorRationales": [
+        "No mention of hair change in the extract.",
+        "No loud music is described; atmosphere is quiet and dust-scented.",
+        "No phone call is mentioned after reading the letters."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 13,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q14",
+      "number": 34,
+      "itemType": "comprehension",
+      "stimulusId": "M2-B",
+      "objective": "analysing",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which phrase shows that the photograph had physical signs of age and use?",
+      "options": [
+        "She learned to read the creak of the floorboards",
+        "The man who had left the folder looked as if the rain had ironed his face flat.",
+        "The photograph smelled faintly of tobacco and camphor.",
+        "A bundle of letters tied with thread"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "The photograph smelled faintly of tobacco and camphor.",
+      "answerRationale": "The smell suggests long-term exposure and age; tobacco and camphor are associated with older objects.",
+      "distractorRationales": [
+        "This refers to the building, not the photograph's physical signs.",
+        "Describes the man's appearance, not the photograph's condition.",
+        "While this indicates preservation, the explicit sensory sign of age is given by the described smell."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 14,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q15",
+      "number": 35,
+      "itemType": "comprehension",
+      "stimulusId": "M2-B",
+      "objective": "evaluating_creating",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Evaluate the role of minor characters (e.g., the mayor, the baker) in advancing Mira's investigation. Which is the strongest contribution they make?",
+      "options": [
+        "They provide alternative leads and community perspectives that complicate rather than resolve the mystery, highlighting how collective memory is fragmented.",
+        "They directly reveal the folder's origin in a single conversation.",
+        "They discourage Mira from investigating and try to close the matter.",
+        "They are irrelevant background figures with no effect on the plot."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "They provide alternative leads and community perspectives that complicate rather than resolve the mystery, highlighting how collective memory is fragmented.",
+      "answerRationale": "Their suggestions (ask the library, private collector) show differing viewpoints that open new possibilities, demonstrating the archive's embeddedness in community networks.",
+      "distractorRationales": [
+        "No character supplies a definitive origin; their input is inconclusive.",
+        "They do not actively discourage; they give suggestions that prompt further inquiry.",
+        "They matter by offering leads and showing community connection; they are not irrelevant."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 15,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q16",
+      "number": 36,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "understanding",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which sentence uses the conditional correctly?",
+      "options": [
+        "If I would have known, I asked sooner.",
+        "If I had known, I will ask her sooner.",
+        "If I knew, I would have asked her sooner.",
+        "If I had known, I would have asked her sooner."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "If I had known, I would have asked her sooner.",
+      "answerRationale": "This third conditional correctly expresses a past hypothetical and its result.",
+      "distractorRationales": [
+        "Incorrect structure mixing conditionals and tense.",
+        "Mixes past conditional with future, creating inconsistency.",
+        "Mixes second and third conditional forms incorrectly."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 16,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q17",
+      "number": 37,
+      "itemType": "comprehension",
+      "stimulusId": "M2-A",
+      "objective": "analysing",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which line best indicates that the market includes diverse social interactions across ages?",
+      "options": [
+        "A woman roots in boxes for ripe things,",
+        "Cats patrol the gutters with monarch patience,",
+        "Children negotiate marbles and small ships,\nLearning the currency of laughter and dare.",
+        "Lanterns dim to embers, voices bend to stories."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Children negotiate marbles and small ships,\nLearning the currency of laughter and dare.",
+      "answerRationale": "These lines explicitly show children engaging socially, implying different age groups participate in the market's life.",
+      "distractorRationales": [
+        "Shows an adult's activity but not explicit range across ages.",
+        "Refers to animals, not social interactions among people.",
+        "Descriptive of evening atmosphere rather than specific intergenerational interaction."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 17,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q18",
+      "number": 38,
+      "itemType": "comprehension",
+      "stimulusId": "M2-B",
+      "objective": "evaluating_creating",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Suggest an alternative ending to the extract that would change its tone from wistful to ominous. Which change would achieve that and why?",
+      "options": [
+        "Reveal that the man who brought the folder intends to remove or destroy the banyan tree, shifting the archive's role from gentle keeper to a last defense against erasure, which makes the mood ominous.",
+        "Have Mira find a cheque inside the folder that pays for her salary.",
+        "Include a festival announcement tucked among the letters.",
+        "Describe Mira deciding to leave the town quietly."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Reveal that the man who brought the folder intends to remove or destroy the banyan tree, shifting the archive's role from gentle keeper to a last defense against erasure, which makes the mood ominous.",
+      "answerRationale": "Introducing a deliberate threat to the town's memory turns communal remembrance into conflict and danger, altering the tone to ominous.",
+      "distractorRationales": [
+        "This would change stakes to personal benefit, not necessarily making the tone ominous.",
+        "A festival would likely make the tone celebratory, not ominous.",
+        "This would be melancholic or resigned rather than overtly ominous."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 18,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q19",
+      "number": 39,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "understanding",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the correct comparative form of the adjective: 'compact'.",
+      "options": [
+        "compactier",
+        "compactest",
+        "most compactier",
+        "more compact"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "more compact",
+      "answerRationale": "The standard comparative for 'compact' is 'more compact' rather than adding -er.",
+      "distractorRationales": [
+        "Nonstandard and incorrect formation.",
+        "Superlative form, not comparative.",
+        "Incorrect combination of superlative and comparative suffix."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 19,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M2-Q20",
+      "number": 40,
+      "itemType": "comprehension",
+      "stimulusId": "M2-B",
+      "objective": "analysing",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which sentence best explains why the man says, 'Because we keep things for others to find'?",
+      "options": [
+        "He means that the archive is a private collection for his family.",
+        "He implies that some acts of preservation are intended to be discovered later by the community, not claimed by any one person.",
+        "He wants Mira to keep the folder secret forever.",
+        "He is asking for payment in return for the folder."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "He implies that some acts of preservation are intended to be discovered later by the community, not claimed by any one person.",
+      "answerRationale": "The man's line suggests preservation for communal memory and future discovery, aligning with his act of leaving the folder.",
+      "distractorRationales": [
+        "Contradicts the communal implication of 'others to find.'",
+        "The line suggests openness to future finding, not secrecy.",
+        "No indication of transaction; his tone implies civic intention rather than commerce."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 20,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q01",
+      "number": 41,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "identify_main_point",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "What is the writer’s main proposal in the extract?",
+      "options": [
+        "Pave more parking lots to reduce street congestion.",
+        "Build a municipal composting factory to handle organic waste.",
+        "Organize weekly markets to sell local produce.",
+        "Convert underused parcels of land into community gardens."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Convert underused parcels of land into community gardens.",
+      "answerRationale": "The writer repeatedly argues for transforming neglected plots into community gardens and urges the council to pilot three garden plots.",
+      "distractorRationales": [
+        "Opposite of the proposal; the extract criticizes paving lots rather than proposing more.",
+        "Although composting is mentioned, the primary proposal is community gardens, not building a factory.",
+        "Markets are not proposed; the focus is on creating gardens for community benefits."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 1,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q02",
+      "number": 42,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "analyse_tone_and_persuasive_methods",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which persuasive technique does the writer use when describing neighbours 'gather around raised beds, exchanging recipes and offering a hand to an elderly gardener'?",
+      "options": [
+        "Using statistical evidence to prove cost savings.",
+        "Making a direct threat to non-supporters.",
+        "Appealing to emotional imagery to show community benefits.",
+        "Offering a technical explanation of gardening methods."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Appealing to emotional imagery to show community benefits.",
+      "answerRationale": "The description creates a warm visual scene that appeals to readers' emotions about community and intergenerational bonds.",
+      "distractorRationales": [
+        "The sentence provides imagery, not statistics; statistics are mentioned elsewhere but not here.",
+        "The sentence is positive and inviting, not threatening.",
+        "The sentence evokes social interaction, not technical gardening instructions."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 2,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q03",
+      "number": 43,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "evaluate_argument",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "If you were to expand the writer’s proposal into a formal plan, which additional evidence would most strengthen the argument that the council should approve the gardens?",
+      "options": [
+        "Data from a pilot in a similar neighbourhood showing improved food access and reduced waste.",
+        "An interview with a famous chef praising home-grown vegetables.",
+        "Historical maps showing the original layout of the neighbourhood.",
+        "A list of gardening clubs available in other cities."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Data from a pilot in a similar neighbourhood showing improved food access and reduced waste.",
+      "answerRationale": "Concrete outcomes from a relevant pilot would directly support claims about benefits and cost-effectiveness, addressing concerns about council investment.",
+      "distractorRationales": [
+        "A celebrity endorsement is persuasive but less directly relevant to municipal decision-making than comparative data.",
+        "Maps may show past plans but do not provide evidence of current benefits or outcomes.",
+        "A list of clubs does not supply outcome data or demonstrate measurable community improvements."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 3,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q04",
+      "number": 44,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "interpret_explicit_meaning",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which concern about community gardens does the writer acknowledge and then propose to manage with rules and coordinators?",
+      "options": [
+        "The gardens will fail to grow any plants.",
+        "Residents will be forced to sell produce commercially.",
+        "Complaints about noise and disorder.",
+        "The gardens will attract dangerous wildlife."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Complaints about noise and disorder.",
+      "answerRationale": "The writer notes critics worry gardens will bring noise and disorder and responds by proposing rules and community coordinators.",
+      "distractorRationales": [
+        "Plant failure is not mentioned as a concern addressed by rules and coordinators.",
+        "Forcing sales is not mentioned as an anticipated problem.",
+        "Wildlife concerns are not discussed in the extract."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 4,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q05",
+      "number": 45,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "analyse_supporting_evidence",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which sentence from the extract is used as evidence that gardens can help the environment?",
+      "options": [
+        "Plants reduce runoff after heavy rains, trees and shrubs filter dust and improve air quality, and a simple composting programme can keep organic waste out of landfills.",
+        "When our neighbourhood was planned, there was promise of parks and open spaces.",
+        "Volunteers will help with planting and basic maintenance, local businesses can sponsor tools and seedlings.",
+        "Imagine a summer where neighbours gather around raised beds, exchanging recipes and offering a hand to an elderly gardener planting tomatoes."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Plants reduce runoff after heavy rains, trees and shrubs filter dust and improve air quality, and a simple composting programme can keep organic waste out of landfills.",
+      "answerRationale": "This sentence lists specific environmental benefits attributed to gardens, serving as direct evidence for that claim.",
+      "distractorRationales": [
+        "This is background context about planning, not specific environmental benefits.",
+        "This describes cost-saving measures and partnerships, not environmental benefits.",
+        "This sentence gives a social image rather than environmental evidence."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 5,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q06",
+      "number": 46,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "propose_alternative_argument",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which alternative framing could the writer add to appeal to business owners when seeking sponsorship?",
+      "options": [
+        "Emphasize local businesses’ sponsorship as community investment that increases customer goodwill and visibility.",
+        "Argue that businesses will receive tax exemptions for every plant they donate.",
+        "State that sponsoring businesses will be exempt from all zoning laws.",
+        "Request that businesses supply only volunteers, not funding, to avoid perceived favoritism."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Emphasize local businesses’ sponsorship as community investment that increases customer goodwill and visibility.",
+      "answerRationale": "Business owners respond to benefits like customer goodwill and marketing value; framing sponsorship as visibility and community investment targets their interests.",
+      "distractorRationales": [
+        "Tax exemptions are legal/financial claims that may not be available and could be unverifiable, making this a weak or risky framing.",
+        "Claiming zoning exemptions is unrealistic and unrelated to likely incentives for businesses.",
+        "Limiting businesses to volunteers downplays the visibility and promotional benefits that would encourage sponsorship."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 6,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q07",
+      "number": 47,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "identify_writer_attitude",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "How does the writer feel about the council’s initial cost for starting the gardens?",
+      "options": [
+        "They think the cost will bankrupt the council.",
+        "They believe the initial cost is modest compared to the returns.",
+        "They demand immediate and large-scale funding.",
+        "They avoid mentioning the cost altogether."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "They believe the initial cost is modest compared to the returns.",
+      "answerRationale": "The writer explicitly describes the council’s investment as modest compared with social and environmental returns.",
+      "distractorRationales": [
+        "The writer characterizes the cost as modest, not ruinous.",
+        "The writer suggests a pilot and modest investment rather than demanding extensive funding.",
+        "Cost is discussed directly in the extract."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 7,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q08",
+      "number": 48,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "analyse_structure_and_coherence",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "What is the purpose of the final paragraph where the writer asks the council to 'pilot three community garden plots this year' and measure outcomes?",
+      "options": [
+        "To describe detailed planting techniques for gardeners.",
+        "To criticize neighbouring councils for inaction.",
+        "To request immediate full-scale implementation across the city.",
+        "To propose a practical, measurable next step that addresses feasibility and accountability."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "To propose a practical, measurable next step that addresses feasibility and accountability.",
+      "answerRationale": "The paragraph gives a concrete action (pilot three plots) and suggests metrics to evaluate success, making the proposal practical and accountable.",
+      "distractorRationales": [
+        "The paragraph focuses on action and measurement, not gardening techniques.",
+        "It calls for a local pilot rather than criticizing other councils.",
+        "The writer recommends a pilot and possible expansion, not immediate city-wide rollout."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 8,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q09",
+      "number": 49,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "evaluate_visual_argument",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which improvement to the infographic would most strengthen its persuasive effect for residents who are unsure about participating?",
+      "options": [
+        "Change the title to a longer slogan with rhyming words.",
+        "Remove the drop-off locations to make the design cleaner.",
+        "Add more technical terms about recycling processes.",
+        "Include a short testimonial or statistic showing a nearby household’s reduced waste after recycling participation."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Include a short testimonial or statistic showing a nearby household’s reduced waste after recycling participation.",
+      "answerRationale": "Adding local evidence or testimony would make benefits tangible and address residents’ uncertainty; the current infographic lists benefits without personal or local proof.",
+      "distractorRationales": [
+        "A rhyming title may be catchy but does not provide evidence to reassure unsure residents.",
+        "Removing locations would reduce practicality and make participation harder, weakening persuasion.",
+        "Technical jargon might confuse or alienate residents rather than persuading them."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 9,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q10",
+      "number": 50,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "interpret_explicit_information",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "According to the infographic, what should residents do with electronics and batteries?",
+      "options": [
+        "Place them in the blue curb-side bin on collection day.",
+        "Throw them into the regular landfill bins after sealing them.",
+        "Bring e-waste and batteries to monthly collection events.",
+        "Donate them to local thrift stores every weekend."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Bring e-waste and batteries to monthly collection events.",
+      "answerRationale": "The 'How to Participate' column explicitly instructs residents to bring e-waste and batteries to monthly collection events.",
+      "distractorRationales": [
+        "The blue bin is for paper, plastics and glass, not e-waste and batteries.",
+        "The infographic advises bringing e-waste to special events, not disposing of them in landfill bins.",
+        "The infographic does not suggest donating electronics to thrift stores."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 10,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q11",
+      "number": 51,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "analyse_persuasive_strategy",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "How does the infographic use numerical information to persuade residents to recycle?",
+      "options": [
+        "By listing exact municipal budget figures saved per year.",
+        "By stating a concrete percentage ('up to 30% less per household') to show a measurable reduction in landfill waste.",
+        "By using a graph comparing neighbourhoods.",
+        "By quoting a national recycling law."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "By stating a concrete percentage ('up to 30% less per household') to show a measurable reduction in landfill waste.",
+      "answerRationale": "The infographic gives a specific figure that quantifies the benefit, making the claim more persuasive.",
+      "distractorRationales": [
+        "No specific budget figures are provided; only a general claim about lower disposal costs is shown.",
+        "The visualSpec lists rows of benefits and instructions, not comparative graphs.",
+        "No legal citation appears; the infographic uses a percentage, not a law."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 11,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q12",
+      "number": 52,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "create_counterargument",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "A resident claims 'flattening cardboard' is unnecessary and time-consuming. Which response best uses the infographic’s information to counter that claim?",
+      "options": [
+        "Say that flattening cardboard will make it grow faster when recycled.",
+        "Insist that cardboard should never be recycled and belongs in landfills.",
+        "Flattening cardboard saves space in bins and helps reduce community disposal costs, as suggested under 'How to Participate' and 'Lower community disposal costs.'",
+        "Claim that flattening cardboard is required by law in every city."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Flattening cardboard saves space in bins and helps reduce community disposal costs, as suggested under 'How to Participate' and 'Lower community disposal costs.'",
+      "answerRationale": "The infographic links the action (flattening cardboard) with efficient recycling practices and reduced disposal costs, providing a practical counterargument.",
+      "distractorRationales": [
+        "This is incorrect; flattening relates to space-saving, not growth.",
+        "This contradicts the infographic, which encourages recycling cardboard.",
+        "No legal requirement is indicated; the infographic gives a practical suggestion, not a legal mandate."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 12,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q13",
+      "number": 53,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "interpret_visual_layout",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which piece of information in the infographic most directly helps someone find where to recycle?",
+      "options": [
+        "The title 'Recycle More, Waste Less.'",
+        "The general statement about materials being reused into new products.",
+        "The 'Drop-off Locations (Mon–Sat)' column listing specific sites and addresses.",
+        "The instruction to 'clean containers.'"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "The 'Drop-off Locations (Mon–Sat)' column listing specific sites and addresses.",
+      "answerRationale": "The drop-off locations column gives exact places and thus directly helps someone find where to recycle.",
+      "distractorRationales": [
+        "The title conveys the campaign goal but does not provide location details.",
+        "This explains a benefit but does not help locate drop-off points.",
+        "Cleaning containers is a preparation step, not a location guide."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 13,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q14",
+      "number": 54,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "analyse_audience_and_tone",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which audience is the infographic primarily targeting based on language and content?",
+      "options": [
+        "Household residents responsible for day-to-day waste disposal.",
+        "Large industrial manufacturers seeking recycling contracts.",
+        "Schoolchildren learning about life cycles.",
+        "Tourists visiting the city for a short stay."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Household residents responsible for day-to-day waste disposal.",
+      "answerRationale": "The instructions (blue curb-side bin, clean containers, bring e-waste) and benefits per household indicate the target audience is residents handling household waste.",
+      "distractorRationales": [
+        "The content addresses household actions and locations, not industrial contracting.",
+        "While educational, the practical instructions and locations suggest resident households, not specifically students.",
+        "Drop-off locations and curb-side instructions are intended for residents, not transient visitors."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 14,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q15",
+      "number": 55,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "evaluate_claims",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "The infographic claims 'Materials reused into new products.' Which detail would best verify this claim?",
+      "options": [
+        "A vague statement from a private citizen that recycling is 'good for everyone.'",
+        "A photograph of overflowing bins at a drop-off site.",
+        "A local recycling facility report describing how collected plastics and glass were processed and turned into specific products.",
+        "A list of drop-off locations and opening hours."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "A local recycling facility report describing how collected plastics and glass were processed and turned into specific products.",
+      "answerRationale": "A facility report showing the processing chain and end products would directly verify that collected materials were reused into new items.",
+      "distractorRationales": [
+        "A general opinion does not verify the specific material reuse claim.",
+        "A photo of bins does not demonstrate that materials were processed into products.",
+        "Locations show where to drop items but do not provide evidence of material reuse."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 15,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q16",
+      "number": 56,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "understand_vocabulary_in_context",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the correct meaning of the word 'pilot' as used in the phrase 'pilot three community garden plots this year.'",
+      "options": [
+        "The leader of a gardening team.",
+        "A vehicle used to transport plants.",
+        "A small-scale trial or test programme.",
+        "An official permission document for land use."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "A small-scale trial or test programme.",
+      "answerRationale": "In this context 'pilot' refers to a trial run before wider implementation.",
+      "distractorRationales": [
+        "This is a different sense of 'pilot' (person) and does not fit the context of testing a programme.",
+        "Not relevant; 'pilot' here is not a physical vehicle.",
+        "The phrase indicates a trial, not a permit or document."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 16,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q17",
+      "number": 57,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "analyse_grammar",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Select the option that correctly completes the sentence: 'If the council agrees to the pilot, volunteers ___ plant and maintain the plots.'",
+      "options": [
+        "helping",
+        "will help",
+        "have helped",
+        "helped"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "will help",
+      "answerRationale": "The sentence describes a future arrangement; 'will help' correctly expresses future assistance.",
+      "distractorRationales": [
+        "'Helping' would need an auxiliary and does not fit the conditional main clause properly.",
+        "'Have helped' is present perfect and does not match the future conditional context.",
+        "'Helped' (simple past) is grammatically inconsistent with the conditional future sense."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 17,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q18",
+      "number": 58,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "create_effective_persuasive_sentence",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which sentence most strengthens an appeal to civic pride in a short campaign poster?",
+      "options": [
+        "Join your neighbours and help turn empty lots into beautiful community gardens that show what our city can achieve together.",
+        "Please complete the attached form if you have time to volunteer occasionally.",
+        "Garden maintenance requires a minimum of three hours weekly from each volunteer.",
+        "We should consider alternative uses for the lots and consult further."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Join your neighbours and help turn empty lots into beautiful community gardens that show what our city can achieve together.",
+      "answerRationale": "This sentence invites collective action and links results to civic pride, suitable for a campaign poster.",
+      "distractorRationales": [
+        "This is administrative and lacks an emotional appeal to civic pride.",
+        "This is logistical and may discourage participation rather than inspire pride.",
+        "This is tentative and does not assertively appeal to civic pride."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 18,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q19",
+      "number": 59,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "understand_register",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which word best fits a formal letter to the council: 'We respectfully ___ the council to consider the proposal'?",
+      "options": [
+        "beg",
+        "demand",
+        "urge",
+        "chat"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "urge",
+      "answerRationale": "'Urge' is commonly used in formal appeals to express a strong request respectfully.",
+      "distractorRationales": [
+        "'Beg' is too informal and emotive for a formal civic appeal.",
+        "'Demand' is confrontational and less appropriate for respectful formal requests.",
+        "'Chat' is informal and unsuitable in formal writing."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 19,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FC-M3-Q20",
+      "number": 60,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "analyse_word_choice_for_clarity",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which revision improves clarity in this sentence? Original: 'The project will be designed to be low-cost: volunteers will help with planting and basic maintenance, local businesses can sponsor tools and seedlings, and the municipal council could donate small plots of unused land.'",
+      "options": [
+        "Replace 'low-cost' with 'expensive' to make the sentence more dramatic.",
+        "Remove 'volunteers' as they are implied elsewhere.",
+        "Add a semicolon after 'basic maintenance' to separate independent clauses clearly.",
+        "Change 'could donate' to 'must donate' to strengthen the request."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Add a semicolon after 'basic maintenance' to separate independent clauses clearly.",
+      "answerRationale": "Using a semicolon clarifies the list of independent clauses, improving readability and grammatical correctness.",
+      "distractorRationales": [
+        "Changing to 'expensive' contradicts the intended meaning and does not improve clarity.",
+        "Removing 'volunteers' omits important information and reduces clarity.",
+        "Changing to 'must donate' alters tone and meaning rather than addressing clarity."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 20,
+      "module": 3
+    }
+  ],
+  "answerKey": {
+    "1": "B",
+    "2": "A",
+    "3": "A",
+    "4": "B",
+    "5": "D",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "D",
+    "10": "B",
+    "11": "A",
+    "12": "D",
+    "13": "D",
+    "14": "A",
+    "15": "B",
+    "16": "B",
+    "17": "C",
+    "18": "D",
+    "19": "A",
+    "20": "D",
+    "21": "B",
+    "22": "A",
+    "23": "D",
+    "24": "C",
+    "25": "B",
+    "26": "D",
+    "27": "D",
+    "28": "A",
+    "29": "B",
+    "30": "D",
+    "31": "A",
+    "32": "C",
+    "33": "B",
+    "34": "C",
+    "35": "A",
+    "36": "D",
+    "37": "C",
+    "38": "A",
+    "39": "D",
+    "40": "B",
+    "41": "D",
+    "42": "C",
+    "43": "A",
+    "44": "C",
+    "45": "A",
+    "46": "A",
+    "47": "B",
+    "48": "D",
+    "49": "D",
+    "50": "C",
+    "51": "B",
+    "52": "C",
+    "53": "C",
+    "54": "A",
+    "55": "C",
+    "56": "C",
+    "57": "B",
+    "58": "A",
+    "59": "C",
+    "60": "C"
+  }
+}

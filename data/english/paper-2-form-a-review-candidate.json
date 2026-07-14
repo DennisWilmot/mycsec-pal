@@ -46,7 +46,8 @@
             "rule": "Assesses concise expression, cohesion, grammar, mechanics and sentence linkages within the 50-word limit."
           }
         ]
-      }
+      },
+      "status": "approved"
     },
     {
       "id": "Q3",
@@ -90,7 +91,8 @@
             "rule": "Assesses concise expression, cohesion, grammar, mechanics and sentence linkages within the 50-word limit."
           }
         ]
-      }
+      },
+      "status": "approved"
     },
     {
       "id": "carib_p2_q6_2026_001",
@@ -135,7 +137,8 @@
             "rule": "Assesses concise expression, cohesion, grammar, mechanics and sentence linkages within the 50-word limit."
           }
         ]
-      }
+      },
+      "status": "approved"
     }
   ],
   "writingTasks": [
@@ -182,7 +185,8 @@
             "marks": 16
           }
         ]
-      }
+      },
+      "status": "approved"
     },
     {
       "id": "Q4",
@@ -237,7 +241,8 @@
             "marks": 16
           }
         ]
-      }
+      },
+      "status": "approved"
     },
     {
       "id": "Q5",
@@ -281,7 +286,8 @@
             "marks": 16
           }
         ]
-      }
+      },
+      "status": "approved"
     },
     {
       "id": "Q7",
@@ -325,7 +331,8 @@
             "marks": 16
           }
         ]
-      }
+      },
+      "status": "approved"
     }
   ],
   "validationNotes": [
@@ -340,5 +347,5 @@
   ],
   "durationSeconds": 9900,
   "totalMarksAnswered": 120,
-  "status": "review_pending"
+  "status": "approved"
 }

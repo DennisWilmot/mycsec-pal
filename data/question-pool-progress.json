@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-14T14:43:04.574Z",
+  "countingRules": {
+    "mathematicsPaperOne": "Individual multiple-choice questions.",
+    "mathematicsPaperTwo": "Complete structured questions, including all dependent parts.",
+    "englishPaperOne": "Individual questions are counted, but assembly locks each 20-question module to its two source stimuli.",
+    "englishPaperTwo": "Printed tasks are counted; Questions 4 and 5 remain one narrative-choice route in the database."
+  },
+  "subjects": {
+    "mathematics": {
+      "status": "approved",
+      "paperOne": {
+        "forms": 2,
+        "poolItems": 120,
+        "spineSlots": 60,
+        "candidatesPerSlot": 2,
+        "launchTarget": 300,
+        "progressPercent": 40
+      },
+      "paperTwo": {
+        "forms": 2,
+        "poolItems": 18,
+        "spineSlots": 9,
+        "candidatesPerSlot": 2,
+        "launchTarget": 27,
+        "progressPercent": 67
+      }
+    },
+    "englishA": {
+      "status": "approved",
+      "paperOne": {
+        "forms": 3,
+        "poolItems": 180,
+        "stimulusBlocks": 18,
+        "moduleBlocks": 9,
+        "launchTarget": 300,
+        "progressPercent": 60
+      },
+      "paperTwo": {
+        "forms": 3,
+        "printedTasks": 21,
+        "assembledRoutesPerForm": 6,
+        "launchTarget": 35,
+        "progressPercent": 60
+      }
+    }
+  }
+}

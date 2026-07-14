@@ -15,6 +15,11 @@
     "db:migrate": "drizzle-kit migrate",
     "db:seed": "node --env-file=.env --import tsx drizzle/seed.ts",
     "db:seed:validate": "node --import tsx -e \"import('./drizzle/seed-data/mathematics.js').then(({ validateMathematicsSeed }) => { const result = validateMathematicsSeed(); console.log(JSON.stringify(result, null, 2)); if (!result.valid) process.exit(1); })\"",
+    "math:review:validate": "node --import tsx scripts/validate-mathematics-review.mjs",
+    "pool:progress:update": "node scripts/update-question-pool-progress.mjs",
+    "pool:release:verify": "node --env-file=.env --import tsx scripts/verify-question-pool-release.mjs",
+    "english:release:validate": "node --import tsx scripts/validate-english-release.mjs",
+    "db:seed:english:review": "node --env-file=.env --import tsx drizzle/seed-english.ts",
     "test-user:create": "node --env-file=.env scripts/create-test-user.mjs"
   },
   "dependencies": {

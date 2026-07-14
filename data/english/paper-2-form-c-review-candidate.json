@@ -1,0 +1,348 @@
+{
+  "id": "CSEC-ENGA-P2-2025-ORIG-FORM-C",
+  "subject": "English A",
+  "paper": 2,
+  "syllabusVersion": "CXC-01-G-SYLL-25",
+  "summaryTasks": [
+    {
+      "id": "ENGA-P2-FC-Q1",
+      "number": 1,
+      "module": 1,
+      "discourse": "informative",
+      "extractTitle": "Community Garden Brings Fresh Produce to Urban Neighbourhood",
+      "extract": "When city council members approved the vacant lot conversion two summers ago, local residents were cautiously optimistic. The community garden project quickly became a hub of activity: families planted vegetables in raised beds, school groups came for weekly lessons on soil care, and a small co-op arranged to sell surplus produce at a low cost. Organisers emphasised that the garden’s goals were practical — to improve access to fresh food, teach gardening skills, and create green space. Within a year the lot had been transformed; what had been a patch of weeds was now rows of tomatoes, peppers, herbs and okra. A shaded seating area with benches crafted by volunteers provided a place for conversation and informal meetings.\n\nFunding came from a combination of small municipal grants, donations from garden enthusiasts, and a fundraiser hosted at the neighbourhood hall. The grant money paid for tools, compost, and an irrigation system, while volunteer labour kept costs down. To ensure the project’s long-term stability, organisers set up a simple rota for maintenance and a membership fee scaled to household income.\n\nChallenges surfaced as well. Pests and a brief drought tested the gardeners’ knowledge and resilience; a community workshop on organic pest control helped mitigate the problem. Some residents worried about parking when larger markets were held, and there were debates about how to allocate produce fairly. The organisers responded by introducing timed market hours and a produce-sharing policy prioritising elderly and low-income households.\n\nTeachers noted positive changes among students who participated: improved knowledge of plant life cycles, greater willingness to try unfamiliar vegetables, and pride in contributing to community wellbeing. Local health workers also recorded anecdotal reports of families increasing their consumption of fresh vegetables. Plans for expansion include adding fruit trees and a composting training centre to make the garden more self-sustaining.",
+      "purposePrompt": "State the writer's purpose in this informative extract. (3 marks)",
+      "purposeAnswer": "To inform readers about the creation, benefits and ongoing challenges of a community garden that improves food access, teaches skills, and strengthens neighbourhood ties.",
+      "summaryPrompt": "Summarise the information in the extract using three relevant points in no more than 50 words. (7 marks)",
+      "acceptedPoints": [
+        "The vacant lot was converted into a community garden offering vegetables and teaching opportunities.",
+        "Funding combined municipal grants, donations, fundraisers and volunteer labour with a sliding membership fee.",
+        "Challenges included pests, drought and parking; organisers introduced workshops, market rules and a produce-sharing policy.",
+        "Positive outcomes included student learning, increased vegetable consumption and plans to expand with trees and composting."
+      ],
+      "sampleSummary": "A vacant lot became a community garden providing vegetables and gardening lessons. Funding mixed grants, donations, fundraisers and volunteers with a scaled membership fee. Organisers tackled pests, drought and parking by holding workshops and setting market rules; students learned and families ate more vegetables, with plans to expand.",
+      "rights": "original_generated_candidate",
+      "marks": 10,
+      "maxSummaryWords": 50,
+      "rubric": {
+        "maxMarks": 10,
+        "criteria": [
+          {
+            "id": "purpose-or-setting",
+            "profile": "analysing",
+            "marks": 3,
+            "rule": "Accurately addresses the required purpose or setting task."
+          },
+          {
+            "id": "three-supported-points",
+            "profile": "understanding",
+            "marks": 3,
+            "rule": "Awards one mark for each of three distinct supported points in the learner’s own words."
+          },
+          {
+            "id": "summary-language",
+            "profile": "evaluating_creating",
+            "marks": 4,
+            "rule": "Assesses concise expression, cohesion, grammar, mechanics and sentence linkages within the 50-word limit."
+          }
+        ]
+      },
+      "status": "approved"
+    },
+    {
+      "id": "ENGA-P2-FC-Q3",
+      "number": 3,
+      "module": 2,
+      "discourse": "literary",
+      "extractTitle": "Night Walk Along the Seawall",
+      "extract": "The seawall road curved like a protective spine between the town and the restless sea. Night had settled in slowly, carrying a soft dampness that smelled of salt and wet stone. Streetlamps flung pale cones of light onto the pavement; beyond them, the ocean was a vast, low breath, visible only as a dark smear under the sky. A thin wind moved along the wall, lifting the hems of coats and sending a tide of cooling air over anyone who paused to listen.\n\nOn the promenade, the few people out at that hour seemed careful not to disturb the hush. A fisherman sat hunched over his bucket, fingers working with practiced ease as he fixed a knot. Two teenagers, their voices reduced to whispers, walked close together, shadows blending beneath the nearest lamp. A mother pushed a stroller, the child inside asleep; her pace was measured, as if the night demanded gentleness.\n\nAt the point where the wall dipped and the land opened to a small bay, the lights were dimmer and the sea sounded louder. The air here tasted sharper, and the rocks at the water’s edge glistened where foam had washed over them. Farther out, a solitary buoy blinked its distant eye, steady against the vast dark. The night seemed to hold its breath as if something unseen might emerge from the water, but only the steady rhythm of the waves answered.\n\nAs the narrator walked on, footsteps blended with the whisper of tide and the soft scrape of pebbles. Memory made the place larger than it was, bringing back earlier summers of footsore children and festivals, but now the night shrank those memories, wrapping them in the hush. It was a place where the town’s long, ordinary days folded gently into the sea’s patient, steady time.",
+      "purposePrompt": "Describe the setting as presented in the extract. (3 marks)",
+      "purposeAnswer": "A damp, night-time seaside promenade where pale streetlamps, a curved seawall and the dark, rhythmic sea create a quiet, reflective atmosphere with few people and dimmer light at a bay.",
+      "summaryPrompt": "Summarise the narrator’s experience in the extract using three relevant points in no more than 50 words. (7 marks)",
+      "acceptedPoints": [
+        "The narrator walks along a curved seawall at night, noticing damp air, streetlamps and the dark sea.",
+        "They observe quiet people – a fisherman, whispering teenagers and a mother with a stroller – maintaining a hush.",
+        "At a bay the lights dim, waves sound louder and memories of past summers surface, while the night compresses them.",
+        "The overall mood is reflective and peaceful, with footsteps blending into the rhythm of the tide."
+      ],
+      "sampleSummary": "Walking the damp, lamp-lit seawall at night, the narrator senses the dark, rhythmic sea and a hush among passersby. At a dim bay, waves grow louder and memories of past summers rise, while the night quiets the town into a reflective, peaceful mood.",
+      "rights": "original_generated_candidate",
+      "marks": 10,
+      "maxSummaryWords": 50,
+      "rubric": {
+        "maxMarks": 10,
+        "criteria": [
+          {
+            "id": "purpose-or-setting",
+            "profile": "analysing",
+            "marks": 3,
+            "rule": "Accurately addresses the required purpose or setting task."
+          },
+          {
+            "id": "three-supported-points",
+            "profile": "understanding",
+            "marks": 3,
+            "rule": "Awards one mark for each of three distinct supported points in the learner’s own words."
+          },
+          {
+            "id": "summary-language",
+            "profile": "evaluating_creating",
+            "marks": 4,
+            "rule": "Assesses concise expression, cohesion, grammar, mechanics and sentence linkages within the 50-word limit."
+          }
+        ]
+      },
+      "status": "approved"
+    },
+    {
+      "id": "ENGA-P2-FC-Q6",
+      "number": 6,
+      "module": 3,
+      "discourse": "persuasive",
+      "extractTitle": "Save Our Shorelines: A Call for Youth Action",
+      "extract": "Walk along any of our island beaches at sunrise and you will see more than sand and sea — you will see the future of our Caribbean. Too often, that future is threatened by careless behaviour: plastics left behind by tourists, mangroves cleared for short-term profit, and rivers choked with runoff. As young people who will inherit these islands, we must act now to protect our environment, our culture and our livelihoods.\n\nFirst, maintaining healthy shorelines keeps our islands resilient. Mangroves and coral reefs act as natural barriers against storms and coastal erosion; when we allow them to be destroyed, we leave our communities vulnerable to hurricanes and flooding. Second, a clean environment attracts responsible tourism. Tourists who encounter pristine beaches and vibrant reefs are more likely to return and to spend money in local businesses, strengthening our economy. Third, our environment is tied to our identity. Many traditional practices—fishing methods, coastal festivals, and foodways—depend on healthy marine and coastal ecosystems. Letting these habitats degrade is to erase parts of who we are.\n\nSome will argue that development and construction bring jobs and that expanding resorts or clearing land is necessary for economic growth. Development can create employment, but growth that sacrifices ecosystems is short-sighted. Jobs disappear when reefs die and beaches erode; in the long run, sustainable tourism and green jobs provide steadier income and protect the resources those jobs depend on.\n\nWhat can we do? Start locally: organise beach clean-ups, support school programmes that teach sustainable fishing and waste management, and pressure local authorities to enforce environmental protections. Vote with your voice and your choices: choose businesses that use sustainable practices and speak up when you see damage being done.\n\nOur islands are beautiful because of the delicate balance between people and nature. If we want thriving communities and a secure future, we must become guardians of our shorelines today. Join a cleanup, sign a petition, and encourage your friends — the future of the Caribbean is in our hands.",
+      "purposePrompt": "What is the writer's purpose?",
+      "purposeAnswer": "To persuade Caribbean secondary students to take immediate local action to protect shorelines by highlighting environmental, economic and cultural reasons, addressing a counterargument, and giving specific steps to act.",
+      "summaryPrompt": "Summarise the passage in your own words (maximum 50 words).",
+      "acceptedPoints": [
+        "Mangroves and coral reefs protect communities from storms and erosion.",
+        "A clean environment and healthy ecosystems attract responsible tourism and support the local economy.",
+        "Coastal ecosystems are essential to Caribbean cultural practices and identity.",
+        "Unregulated development may create short-term jobs but destroys resources, harming long-term employment.",
+        "Practical actions students can take include organising beach clean-ups, supporting school sustainability programmes, and pressuring authorities to enforce protections."
+      ],
+      "sampleSummary": "The writer urges Caribbean students to protect shorelines to safeguard communities, tourism income, and cultural traditions, warns that destructive development harms long-term jobs, and calls for local actions like clean-ups and advocacy.",
+      "rights": "original_generated_candidate",
+      "marks": 10,
+      "maxSummaryWords": 50,
+      "rubric": {
+        "maxMarks": 10,
+        "criteria": [
+          {
+            "id": "purpose-or-setting",
+            "profile": "analysing",
+            "marks": 3,
+            "rule": "Accurately addresses the required purpose or setting task."
+          },
+          {
+            "id": "three-supported-points",
+            "profile": "understanding",
+            "marks": 3,
+            "rule": "Awards one mark for each of three distinct supported points in the learner’s own words."
+          },
+          {
+            "id": "summary-language",
+            "profile": "evaluating_creating",
+            "marks": 4,
+            "rule": "Assesses concise expression, cohesion, grammar, mechanics and sentence linkages within the 50-word limit."
+          }
+        ]
+      },
+      "status": "approved"
+    }
+  ],
+  "writingTasks": [
+    {
+      "id": "ENGA-P2-FC-Q2",
+      "number": 2,
+      "module": 1,
+      "kind": "informative_exposition",
+      "choiceGroup": null,
+      "scenario": "Your suburban community has experienced several brief power outages during midday, affecting small vendors who cook and sell food outdoors. The community committee asks you to prepare an official document to inform residents and suggest practical steps to reduce food loss and disruption while the council considers infrastructure upgrades.",
+      "task": "Write a formal letter to the Community Committee explaining the effects of the power outages on small food vendors, proposing three practical measures the committee can recommend immediately, and suggesting how to communicate these measures to residents. Use an appropriate formal-letter format, address the Committee, and write in continuous prose. (Suggested length: 400–450 words)",
+      "requiredContent": [
+        "Clear explanation of how outages affect vendors (food spoilage, lost income, safety).",
+        "Three realistic, low-cost measures the committee can recommend right away (for example: staggered market hours, shared cold-storage rota, temporary shaded cooking areas with safe fuel).",
+        "A plan for communicating measures to residents and vendors, including methods and key messages.",
+        "A polite formal tone and appropriate letter format with opening, body and closing."
+      ],
+      "audience": "Community Committee",
+      "purpose": "To inform committee members and recommend immediate practical actions to mitigate the impact of power outages on small food vendors.",
+      "suggestedWords": {
+        "minimum": 400,
+        "maximum": 450
+      },
+      "visualSpec": null,
+      "rights": "original_generated_candidate",
+      "marks": 30,
+      "rubric": {
+        "maxMarks": 30,
+        "criteria": [
+          {
+            "id": "content-accuracy",
+            "profile": "understanding",
+            "marks": 7
+          },
+          {
+            "id": "format-audience-sequence",
+            "profile": "analysing",
+            "marks": 7
+          },
+          {
+            "id": "clarity-coherence-language",
+            "profile": "evaluating_creating",
+            "marks": 16
+          }
+        ]
+      },
+      "status": "approved"
+    },
+    {
+      "id": "ENGA-P2-FC-Q4",
+      "number": 4,
+      "module": 2,
+      "kind": "narrative_picture",
+      "choiceGroup": "narrative-choice",
+      "scenario": "Picture prompt: A single battered suitcase sits on an empty bus-station bench under a flickering fluorescent light. Beyond it, a distant clock shows 00:15 and the tiled floor is streaked with rainwater. A poster on the wall advertises a ferry that sailed earlier that evening.",
+      "task": "Write a story inspired by the picture prompt. Begin by describing the scene, then follow the events that explain why the suitcase is there and what happens next. Use Standard English; dialogue may include regional speech. Suggested length: 400–450 words.",
+      "requiredContent": [
+        "A clear opening that describes the station scene and suitcase.",
+        "An explanation—through action, reflection or dialogue—of how the suitcase came to be left there.",
+        "A resolution or turning point showing what happens to the suitcase and/or the person connected with it.",
+        "Sensory details and at least one line of dialogue."
+      ],
+      "audience": "General reader",
+      "purpose": "To entertain by telling a coherent, engaging story sparked by the visual prompt.",
+      "suggestedWords": {
+        "minimum": 400,
+        "maximum": 450
+      },
+      "visualSpec": {
+        "type": "picture_prompt",
+        "description": "A deserted bus station bench with one battered suitcase under a flickering fluorescent light. Rainwater streaks the tiled floor; a wall clock reads 00:15. A poster advertises a ferry that left earlier.",
+        "elements": [
+          "battered suitcase",
+          "empty bench",
+          "flickering fluorescent light",
+          "clock reading 00:15",
+          "rain-streaked tiled floor",
+          "ferry poster"
+        ],
+        "altText": "Lonely suitcase on bench in empty bus station, clock 00:15, rain streaks, ferry poster."
+      },
+      "rights": "original_generated_candidate",
+      "marks": 30,
+      "rubric": {
+        "maxMarks": 30,
+        "criteria": [
+          {
+            "id": "language-narrative-understanding",
+            "profile": "understanding",
+            "marks": 7
+          },
+          {
+            "id": "organization-sequencing",
+            "profile": "analysing",
+            "marks": 7
+          },
+          {
+            "id": "stimulus-plot-characterization-style",
+            "profile": "evaluating_creating",
+            "marks": 16
+          }
+        ]
+      },
+      "status": "approved"
+    },
+    {
+      "id": "ENGA-P2-FC-Q5",
+      "number": 5,
+      "module": 2,
+      "kind": "narrative_sentence",
+      "choiceGroup": "narrative-choice",
+      "scenario": "Use the following opening/turning-point sentence as the start of your story: 'She realised, with a small, shocking clarity, that the map in her palm was drawn to a place that no longer existed.'",
+      "task": "Write a story that begins with the sentence above and develops the situation that follows. Show why the map matters and what the protagonist chooses to do. Use Standard English; dialogue may include regional speech. Suggested length: 400–450 words.",
+      "requiredContent": [
+        "Begin with the provided sentence and immediately establish the protagonist and setting.",
+        "Explain the nature and importance of the map and why its destination is gone.",
+        "Develop the protagonist’s response and a clear consequence or choice.",
+        "Sensory detail and at least one line of dialogue."
+      ],
+      "audience": "General reader",
+      "purpose": "To entertain by creating a coherent, imaginative narrative that explores loss, memory or discovery.",
+      "suggestedWords": {
+        "minimum": 400,
+        "maximum": 450
+      },
+      "visualSpec": null,
+      "rights": "original_generated_candidate",
+      "marks": 30,
+      "rubric": {
+        "maxMarks": 30,
+        "criteria": [
+          {
+            "id": "language-narrative-understanding",
+            "profile": "understanding",
+            "marks": 7
+          },
+          {
+            "id": "organization-sequencing",
+            "profile": "analysing",
+            "marks": 7
+          },
+          {
+            "id": "stimulus-plot-characterization-style",
+            "profile": "evaluating_creating",
+            "marks": 16
+          }
+        ]
+      },
+      "status": "approved"
+    },
+    {
+      "id": "ENGA-P2-FC-Q7",
+      "number": 7,
+      "module": 3,
+      "kind": "persuasive_essay",
+      "choiceGroup": null,
+      "scenario": "Many island schools are debating whether to make wearing school uniforms optional to let students express individuality.",
+      "task": "Write a balanced, age-appropriate persuasive essay of five or more paragraphs (250–300 words) arguing for or against making school uniforms optional. Address likely opposing views and provide reasons and examples to support your position. Use Standard English. (Minimum five paragraphs; Suggested length: 250–300 words.)",
+      "requiredContent": [
+        "Clear position for or against uniforms being optional.",
+        "At least two supporting reasons with relevant examples.",
+        "Consideration of opposing views and rebuttal.",
+        "A concluding paragraph that reinforces your argument."
+      ],
+      "audience": "School board members, parents and students",
+      "purpose": "To persuade stakeholders to accept the writer’s position on school uniform policy.",
+      "suggestedWords": {
+        "minimum": 250,
+        "maximum": 300
+      },
+      "visualSpec": null,
+      "rights": "original_generated_candidate",
+      "marks": 30,
+      "rubric": {
+        "maxMarks": 30,
+        "criteria": [
+          {
+            "id": "language-persuasive-understanding",
+            "profile": "understanding",
+            "marks": 7
+          },
+          {
+            "id": "argument-organization",
+            "profile": "analysing",
+            "marks": 7
+          },
+          {
+            "id": "position-evidence-audience-persuasion",
+            "profile": "evaluating_creating",
+            "marks": 16
+          }
+        ]
+      },
+      "status": "approved"
+    }
+  ],
+  "validationNotes": [
+    "Each extract is original, 300–450 words and contains at least four independently expressible accepted points.",
+    "Each purposeAnswer states a single clear purpose linked to the extract.",
+    "Each sampleSummary uses no more than 50 words and reflects exactly the acceptedPoints provided for that extract.",
+    "Writing tasks specify format, audience, purpose and word counts; Q4 includes a picture prompt description and Q5 uses the provided opening sentence.",
+    "All content avoids reproduction, paraphrase or imitation of existing past-paper materials and remains age-appropriate and non-harmful."
+  ],
+  "durationSeconds": 9900,
+  "totalMarksAnswered": 120,
+  "status": "approved"
+}

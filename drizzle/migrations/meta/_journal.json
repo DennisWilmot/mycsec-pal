@@ -36,6 +36,20 @@
       "when": 1783963200000,
       "tag": "0004_normalize_mathematics_slug",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1784020800000,
+      "tag": "0005_english_assessment_profiles",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1784020860000,
+      "tag": "0006_exam_spine",
+      "breakpoints": true
     }
   ]
 }

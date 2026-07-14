@@ -4,6 +4,8 @@ import path from 'node:path';
 const apiKey = process.env.OPENROUTER_API_KEY;
 const model = process.env.OPENROUTER_QUESTION_MODEL || 'openai/gpt-5-mini';
 const moduleNumber = Number(process.argv[2] || 1);
+const form = String(process.argv[3] || 'A').toUpperCase();
+if (!['A', 'B', 'C'].includes(form)) throw new Error('Form must be A, B or C.');
 
 const moduleConfig = {
   1: {
@@ -28,7 +30,7 @@ if (!activeModule) throw new Error('Module must be 1, 2 or 3.');
 
 if (!apiKey) throw new Error('OPENROUTER_API_KEY is required.');
 
-const outputPath = path.resolve(`tmp/english/english-paper1-module${moduleNumber}-candidate.json`);
+const outputPath = path.resolve(`tmp/english/form-${form.toLowerCase()}/paper1-module${moduleNumber}-candidate.json`);
 
 const systemPrompt = `You create ORIGINAL candidate questions for a commercial CSEC English A practice product.
 Return only JSON matching the requested schema. Do not quote, reproduce, paraphrase closely, or imitate any past-paper or subject-report passage.
@@ -141,10 +143,17 @@ const content = payload.choices?.[0]?.message?.content;
 if (!content) throw new Error('OpenRouter returned no candidate content.');
 const rawCandidate = JSON.parse(content);
 const optionLabels = ['A', 'B', 'C', 'D'];
+const seededKey = Array.from({ length: 60 }, (_, index) => index % 4);
+let state = form.charCodeAt(0) * 1009;
+for (let index = seededKey.length - 1; index > 0; index -= 1) {
+  state = (state * 1664525 + 1013904223) >>> 0;
+  const swap = state % (index + 1);
+  [seededKey[index], seededKey[swap]] = [seededKey[swap], seededKey[index]];
+}
 const candidate = {
   ...rawCandidate,
   questions: rawCandidate.questions.map((question) => {
-    const correctIndex = (question.number - 1) % 4;
+    const correctIndex = seededKey[(moduleNumber - 1) * 20 + question.number - 1];
     const options = question.distractors.map((item) => item.text);
     options.splice(correctIndex, 0, question.correctAnswer);
     return {
@@ -168,4 +177,4 @@ const candidate = {
 
 await mkdir(path.dirname(outputPath), { recursive: true });
 await writeFile(outputPath, `${JSON.stringify(candidate, null, 2)}\n`, 'utf8');
-console.log(JSON.stringify({ outputPath, model, questionCount: candidate.questions?.length ?? 0 }));
+console.log(JSON.stringify({ outputPath, model, form, questionCount: candidate.questions?.length ?? 0 }));

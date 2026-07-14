@@ -15,7 +15,7 @@ function attemptFromPayload(payload) {
   return payload?.data?.attempt || payload?.data || payload?.attempt || null;
 }
 
-export default function ExamBriefingPage({ navigate, paper }) {
+export default function ExamBriefingPage({ navigate, paper, subjectSlug = 'mathematics', subjectName = 'Mathematics' }) {
   const isPaperOne = paper === 1;
   const [dashboard, setDashboard] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -37,8 +37,8 @@ export default function ExamBriefingPage({ navigate, paper }) {
     return () => { alive = false; };
   }, []);
 
-  const mathematics = useMemo(() => dashboard?.subjects?.find((subject) => subject.slug === 'mathematics'), [dashboard]);
-  const paperVersion = useMemo(() => mathematics?.papers?.find((item) => item.paperNumber === paper), [mathematics, paper]);
+  const subject = useMemo(() => dashboard?.subjects?.find((item) => item.slug === subjectSlug), [dashboard, subjectSlug]);
+  const paperVersion = useMemo(() => subject?.papers?.find((item) => item.paperNumber === paper), [subject, paper]);
   const activeAttempt = dashboard?.activeAttempt;
   const matchesActiveAttempt = activeAttempt?.paperVersionId === paperVersion?.id;
 
@@ -79,7 +79,7 @@ export default function ExamBriefingPage({ navigate, paper }) {
       if (!response.ok) throw new Error(payload.error?.message || 'Unable to start this paper.');
       const attempt = attemptFromPayload(payload);
       if (!attempt?.id) throw new Error('The paper was created, but its attempt ID was not returned.');
-      window.location.assign(`/practice/mathematics/paper-${paper}?attemptId=${attempt.id}`);
+      window.location.assign(`/practice/${subjectSlug}/paper-${paper}?attemptId=${attempt.id}`);
     } catch (requestError) {
       setError(requestError.message);
       setStarting(false);
@@ -105,7 +105,7 @@ export default function ExamBriefingPage({ navigate, paper }) {
     <main className="app-main briefing-main">
       <button className="briefing-back" onClick={()=>navigate('practice')}><ArrowLeft size={17}/>Back to subjects</button>
       <section className="briefing-card briefing-card-shell">
-        <div className="briefing-copy"><p className="eyebrow">Before you begin</p><h1>Mathematics · Paper {paper}</h1>
+        <div className="briefing-copy"><p className="eyebrow">Before you begin</p><h1>{subjectName} · Paper {paper}</h1>
           {loading && <div className="briefing-background-status" role="status"><LoaderCircle className="spin" size={15}/>Checking availability…</div>}
           <p className="briefing-lead">You’re about to begin a timed CSEC-style {isPaperOne?'multiple-choice paper':'structured-response paper'}.</p>
           <div className="briefing-facts"><article><Clock3/><div><strong>{paperVersion ? formatDuration(paperVersion.durationSeconds) : isPaperOne ? '60 minutes' : '2 hours 40 minutes'}</strong><span>A visible timer will count down.</span></div></article><article><FileQuestion/><div><strong>{paperVersion ? `${paperVersion.questionCount} questions` : isPaperOne ? '60 questions' : '9 questions'}</strong><span>{isPaperOne?'Choose one answer for each question.':'Show your working for method marks.'}</span></div></article><article><PenLine/><div><strong>Get pen and paper ready</strong><span>You may pause here before starting.</span></div></article><article><Calculator/><div><strong>{isPaperOne?'Calculator guidance':'Calculator permitted'}</strong><span>{isPaperOne?'Use one only when the question allows it.':'Keep it nearby for calculations.'}</span></div></article><article><MonitorUp/><div><strong>Stay in this tab</strong><span>Tab switches are noted to protect exam integrity.</span></div></article></div>
@@ -114,7 +114,7 @@ export default function ExamBriefingPage({ navigate, paper }) {
           {planLimit && <section className="briefing-upgrade-panel" aria-labelledby="plan-limit-title"><span className="upgrade-panel-icon"><Sparkles size={23}/></span><div><p className="eyebrow">Daily practice complete</p><h2 id="plan-limit-title">You’ve used today’s Paper {planLimit.paperNumber} attempt.</h2><p>Come back tomorrow for another free attempt, or upgrade to Practice for unlimited Paper 1 and Paper 2 attempts across five subjects.</p><div className="upgrade-panel-actions"><button className="button dark" disabled={billingBusy} onClick={upgradePlan}>{billingBusy ? 'Opening secure checkout…' : 'Upgrade to Practice'}</button><button className="button outline" onClick={()=>navigate('practice')}>Back to subjects</button></div></div></section>}
           {error && <div className="briefing-api-notice error" role="alert"><AlertCircle size={18}/><span>{error}</span></div>}
         </div>
-        <img src="/assets/subjects/mathematics.png" alt="Mathematics study illustration"/>
+        <img src={`/assets/subjects/${subjectSlug}.png`} alt={`${subjectName} study illustration`}/>
         <footer className="briefing-card-actions"><span>{planLimit ? 'Your free allowance resets tomorrow.' : matchesActiveAttempt ? 'Continue from your last saved response.' : 'Make sure you are comfortable and ready before starting.'}</span>{planLimit ? <button className="button briefing-start" disabled={billingBusy} onClick={upgradePlan}>Upgrade to Practice <ArrowRight size={18}/></button> : activeAttempt && !matchesActiveAttempt ? <button className="button briefing-start" onClick={()=>navigate('practice')}>Return to Practice <ArrowRight size={18}/></button> : <button className="button briefing-start" disabled={loading || starting || !paperVersion} onClick={matchesActiveAttempt ? resumePaper : startPaper}>{starting ? (matchesActiveAttempt ? 'Resuming paper…' : 'Starting paper…') : (matchesActiveAttempt ? `Resume Paper ${paper}` : `Start Paper ${paper}`)} {!starting && <ArrowRight size={18}/>}</button>}</footer>
       </section>
     </main>

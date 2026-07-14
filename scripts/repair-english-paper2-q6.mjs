@@ -1,7 +1,8 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-const file = path.resolve('tmp/english/english-paper2-review-candidate.json');
+const form = String(process.argv[2] || 'A').toUpperCase();
+const file = path.resolve(form === 'A' ? 'data/english/paper-2-form-a-review-candidate.json' : `data/english/paper-2-form-${form.toLowerCase()}-review-candidate.json`);
 const paper = JSON.parse(await readFile(file, 'utf8'));
 const apiKey = process.env.OPENROUTER_API_KEY;
 const model = process.env.OPENROUTER_QUESTION_MODEL || 'openai/gpt-5-mini';
@@ -32,7 +33,6 @@ const payload = await response.json();
 const replacement = JSON.parse(payload.choices?.[0]?.message?.content || 'null');
 if (!replacement) throw new Error('No replacement returned.');
 const existing = paper.summaryTasks.find((task) => task.number === 6);
-paper.summaryTasks = paper.summaryTasks.map((task) => task.number === 6 ? { ...replacement, marks: 10, maxSummaryWords: 50, rubric: existing.rubric } : task);
+paper.summaryTasks = paper.summaryTasks.map((task) => task.number === 6 ? { ...replacement, id: `ENGA-P2-F${form}-Q6`, marks: 10, maxSummaryWords: 50, rubric: existing.rubric } : task);
 await writeFile(file, `${JSON.stringify(paper, null, 2)}\n`, 'utf8');
-console.log(JSON.stringify({ repaired: 6, model }));
-
+console.log(JSON.stringify({ repaired: 6, form, model }));

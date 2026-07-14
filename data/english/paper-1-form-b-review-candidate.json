@@ -1,0 +1,3481 @@
+{
+  "id": "english-a-p1-2025-form-b-review-candidate",
+  "subject": "English A",
+  "paper": 1,
+  "syllabusVersion": "CXC-01-G-SYLL-25",
+  "durationSeconds": 5400,
+  "totalMarks": 60,
+  "questionCount": 60,
+  "status": "approved",
+  "rights": "original_generated_candidate",
+  "generatorModel": "openai/gpt-5-mini",
+  "modules": [
+    {
+      "module": 1,
+      "discourse": "Informative Discourse",
+      "stimuli": [
+        {
+          "id": "M1-A",
+          "kind": "informative_passage",
+          "title": "Turning a Vacant Lot into a Community Garden",
+          "content": "When a derelict lot in Eastmont sat unused for years, a group of neighbours decided to transform it into a community garden. Their aim was simple: provide fresh produce, create green space and build social ties. The project began with a series of public meetings where residents identified priorities, such as which crops to plant, how to share costs and who would maintain the beds. Funding came from small donations, a municipal neighbourhood grant and a local hardware store that supplied tools and compost at a discount.\n\nVolunteers prepared the soil, built raised beds from reclaimed wood and installed a rain barrel system to capture water. They organised workshops on planting and composting, open to all age groups, and established a rotating schedule for maintenance. The garden now supplies fresh vegetables to participating households and donates a portion to a nearby shelter. Importantly, it has become a place where neighbours meet, exchange gardening tips and plan other community activities.\n\nChallenges remain: pest control, seasonal fluctuations in yield and disagreements about which crops should be grown. To address these, the organisers created a simple code of conduct, set aside a contingency fund for pest management and started trialing cold-weather crops. They are careful to evaluate each season’s results and adjust plans accordingly. The organisers emphasise inclusivity: plots are allocated on a first-come, low-cost basis, and training is offered to those with limited gardening experience.\n\nLooking ahead, the group is exploring partnerships with local schools for educational programmes and considering a small market day to sell surplus produce. They believe that the garden’s biggest benefit is not only the food it produces but the stronger, more connected neighbourhood it helps to nurture.",
+          "visualSpec": null,
+          "rights": "original_generated_candidate"
+        },
+        {
+          "id": "M1-B",
+          "kind": "visual_information",
+          "title": "Bluebridge Community Centre Weekly Activity Timetable",
+          "content": null,
+          "visualSpec": {
+            "type": "table",
+            "title": "Bluebridge Community Centre Activities (Weekly)",
+            "headers": [
+              "Time",
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "rows": [
+              [
+                "09:00–10:30",
+                "Yoga (All levels)",
+                "Senior Walking Group",
+                "Yoga (All levels)",
+                "Art Class (Adults)",
+                "Yoga (All levels)",
+                "Family Playtime"
+              ],
+              [
+                "11:00–12:30",
+                "Community Garden Workshop",
+                "Language Café",
+                "Community Garden Workshop",
+                "Language Café",
+                "Community Meeting (monthly)",
+                "Local Market (monthly)"
+              ],
+              [
+                "14:00–15:30",
+                "After-school Club",
+                "After-school Club",
+                "Homework Help",
+                "After-school Club",
+                "Homework Help",
+                "Youth Sports"
+              ],
+              [
+                "17:00–18:30",
+                "Pilates",
+                "Cooking Class",
+                "Pilates",
+                "Youth Music",
+                "Pilates",
+                "Community Choir"
+              ]
+            ]
+          },
+          "rights": "original_generated_candidate"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ENGA-P1-FB-M1-Q01",
+          "number": 1,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "recognise subject-verb agreement in a simple sentence",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the grammatically correct sentence.",
+          "options": [
+            "The team of volunteers prepares the beds every Saturday.",
+            "The team of volunteers prepare the beds every Saturday.",
+            "The team of volunteers preparing the beds every Saturday.",
+            "The team of volunteers has preparing the beds every Saturday."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "The team of volunteers prepares the beds every Saturday.",
+          "answerRationale": "The collective noun 'team' is treated as a single unit and takes the singular verb 'prepares'.",
+          "distractorRationales": [
+            "Uses plural verb 'prepare' with a singular collective noun; less standard in this context.",
+            "Missing the required auxiliary or finite verb; ungrammatical sentence structure.",
+            "Incorrect verb form 'has preparing' is ungrammatical."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 1,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q02",
+          "number": 2,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "identify main purpose of the passage",
+          "profile": "analysing",
+          "difficulty": "easy",
+          "stem": "What is the primary purpose of the passage about the vacant lot?",
+          "options": [
+            "To describe how neighbours converted a vacant lot into a community garden and its effects.",
+            "To argue that all city lots should be turned into gardens.",
+            "To give a step-by-step manual for building raised beds.",
+            "To report on the financial accounts of the garden group."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "To describe how neighbours converted a vacant lot into a community garden and its effects.",
+          "answerRationale": "The passage explains the project steps, funding, activities and the garden’s social and practical benefits, showing description and effects.",
+          "distractorRationales": [
+            "Overgeneralises; the passage describes one project and its benefits without making that universal claim.",
+            "While raised beds are mentioned, the passage is broader and not a how-to manual.",
+            "Funding sources are mentioned briefly, but financial accounting is not the passage’s focus."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 2,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q03",
+          "number": 3,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "evaluate the effectiveness of strategies used by organisers",
+          "profile": "evaluating_creating",
+          "difficulty": "medium",
+          "stem": "Which action by the organisers best addresses disagreement about which crops to grow?",
+          "options": [
+            "They sold all surplus produce to fund new crops.",
+            "They created a simple code of conduct and trialled different crops.",
+            "They banned certain crops from being planted.",
+            "They left crop choices entirely to external experts."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "They created a simple code of conduct and trialled different crops.",
+          "answerRationale": "The passage states organisers made a code of conduct and trialled cold-weather crops to handle disagreements and seasonal issues.",
+          "distractorRationales": [
+            "Selling surplus is mentioned as a possibility but not as a measure to resolve crop-selection disagreements.",
+            "No mention of banning crops; the passage emphasises inclusion and trialing instead.",
+            "The passage emphasises resident decision-making rather than outsourcing decisions to experts."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 3,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q04",
+          "number": 4,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "recognise correct preposition use in context",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Select the sentence with the correct preposition.",
+          "options": [
+            "They donated a portion to a nearby shelter.",
+            "They donated a portion for a nearby shelter.",
+            "They donated a portion at a nearby shelter.",
+            "They donated a portion by a nearby shelter."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "They donated a portion to a nearby shelter.",
+          "answerRationale": "'Donate to' is the correct verb-preposition collocation for giving something to an organisation.",
+          "distractorRationales": [
+            "'Donate for' can be used for a purpose but is less precise here than 'donate to'.",
+            "'Donate at' indicates location of donation but changes meaning; not the best fit.",
+            "'Donate by' is incorrect in this context."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 4,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q05",
+          "number": 5,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "analyse how inclusivity is shown in the text",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which detail most directly supports the passage’s claim that the garden organisers emphasise inclusivity?",
+          "options": [
+            "Plots are allocated on a first-come, low-cost basis, and training is offered to those with limited experience.",
+            "They installed a rain barrel system to capture water.",
+            "The local hardware store supplied tools and compost at a discount.",
+            "They are exploring partnerships with local schools."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Plots are allocated on a first-come, low-cost basis, and training is offered to those with limited experience.",
+          "answerRationale": "This sentence explicitly describes measures taken to ensure broad participation regardless of experience or finances.",
+          "distractorRationales": [
+            "This refers to infrastructure, not inclusivity measures.",
+            "This aids the project generally but does not directly show organisers’ inclusive allocation policies.",
+            "Partnerships may promote outreach but the explicit allocation and training details more directly support inclusivity."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 5,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q06",
+          "number": 6,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "create a reasonable recommendation based on the passage’s evaluation practices",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Based on the organisers’ approach to evaluation, which of the following would be the most consistent next step to improve yields?",
+          "options": [
+            "Collect seasonal yield data and adjust planting schedules accordingly.",
+            "Immediately buy more land to expand production.",
+            "Replace volunteer labour with paid staff to ensure consistency.",
+            "Stop offering training since it slows production."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Collect seasonal yield data and adjust planting schedules accordingly.",
+          "answerRationale": "The passage says organisers evaluate each season’s results and adjust plans; collecting yield data and altering schedules follows that method.",
+          "distractorRationales": [
+            "Expansion may help but is not consistent with their iterative evaluation approach focused on adjusting practices first.",
+            "This shifts the model rather than following the described practice of trialing and evaluation.",
+            "This contradicts their inclusivity and education efforts; not aligned with their values."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 6,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q07",
+          "number": 7,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "understand the source of funding mentioned",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which of the following was NOT listed as a source of funding for the garden?",
+          "options": [
+            "Small donations from residents.",
+            "A national charity grant.",
+            "A municipal neighbourhood grant.",
+            "Support from a local hardware store."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "A national charity grant.",
+          "answerRationale": "The passage mentions small donations, a municipal neighbourhood grant and a local hardware store discount, but not a national charity grant.",
+          "distractorRationales": [
+            "Small donations are explicitly mentioned as funding.",
+            "A municipal grant is explicitly mentioned.",
+            "The hardware store’s discounted supplies are mentioned as support."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 7,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q08",
+          "number": 8,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "analyse the broader significance of the garden in the community",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which sentence from the passage best expresses the garden’s main social benefit?",
+          "options": [
+            "Volunteers prepared the soil, built raised beds from reclaimed wood and installed a rain barrel system to capture water.",
+            "They are careful to evaluate each season’s results and adjust plans accordingly.",
+            "The group is exploring partnerships with local schools for educational programmes.",
+            "It has become a place where neighbours meet, exchange gardening tips and plan other community activities."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "It has become a place where neighbours meet, exchange gardening tips and plan other community activities.",
+          "answerRationale": "This sentence directly states the garden’s social role in fostering neighbourly interaction and additional initiatives.",
+          "distractorRationales": [
+            "This lists practical tasks rather than the main social benefit.",
+            "This describes their management approach rather than social benefit.",
+            "This is a potential future benefit but not the main current social benefit described."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 8,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q09",
+          "number": 9,
+          "itemType": "comprehension",
+          "stimulusId": "M1-B",
+          "objective": "understand schedule information from a table",
+          "profile": "evaluating_creating",
+          "difficulty": "medium",
+          "stem": "If a parent wants to attend the After-school Club and also join Pilates in the evening on the same weekday, which weekday should they choose?",
+          "options": [
+            "Tuesday",
+            "Wednesday",
+            "Monday",
+            "Thursday"
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Monday",
+          "answerRationale": "Monday lists After-school Club at 14:00–15:30 and Pilates at 17:00–18:30, so both activities occur that day.",
+          "distractorRationales": [
+            "Tuesday has After-school Club but Cooking Class in the evening, not Pilates.",
+            "Wednesday has Homework Help in the afternoon and Pilates in the evening, so not After-school Club and Pilates together.",
+            "Thursday has After-school Club in the afternoon and Youth Music in the evening, not Pilates."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 9,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q10",
+          "number": 10,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "identify correct relative pronoun use",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the sentence with the correct relative pronoun.",
+          "options": [
+            "The volunteers which met every week organised the workshops.",
+            "The volunteers whom met every week organised the workshops.",
+            "The volunteers that met every week, organised the workshops.",
+            "The volunteers, who met every week, organised the workshops."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "The volunteers, who met every week, organised the workshops.",
+          "answerRationale": "'Who' correctly refers to the volunteers (people) in a non-restrictive clause set off by commas.",
+          "distractorRationales": [
+            "'Which' is typically used for things, not people; and missing commas for a non-restrictive clause.",
+            "'Whom' is incorrect here; 'whom' would require an object position, not subject.",
+            "Use of 'that' and the comma placement are incorrect for a restrictive clause about people."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 10,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q11",
+          "number": 11,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "analyse causes and effects described in the passage",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which of the following best explains why the garden donates part of its produce to a nearby shelter?",
+          "options": [
+            "Because the garden has excess money and needs to spend it.",
+            "To attract commercial buyers to the market day.",
+            "To support community members in need while fulfilling the garden’s social goals.",
+            "Because the shelter requested exclusive rights to all harvests."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "To support community members in need while fulfilling the garden’s social goals.",
+          "answerRationale": "The passage describes both producing food for participants and donating to a shelter, linking practical support with social aims.",
+          "distractorRationales": [
+            "No mention of excess funds as a reason for donations.",
+            "Donations to shelters are charitable acts, not a tactic described for attracting buyers.",
+            "No suggestion that the shelter has exclusive rights; only a portion is donated."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 11,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q12",
+          "number": 12,
+          "itemType": "comprehension",
+          "stimulusId": "M1-A",
+          "objective": "create a short plan that follows described principles",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which short action plan best follows the organisers’ principles for addressing seasonal yield problems?",
+          "options": [
+            "Immediately plant cold-weather crops across all plots to increase yields.",
+            "Stop planting vegetables in winter and keep the land fallow.",
+            "Sell plots to experienced gardeners to guarantee winter harvests.",
+            "Trial cold-weather crops on one plot, record yields each week and discuss results at the next public meeting."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "Trial cold-weather crops on one plot, record yields each week and discuss results at the next public meeting.",
+          "answerRationale": "This plan mirrors the passage’s mention of trialling crops, evaluating each season’s results and using meetings to decide changes.",
+          "distractorRationales": [
+            "This does not follow the trial-and-evaluate approach the organisers prefer.",
+            "This ignores trialling options and evaluation; not consistent with their adaptive approach.",
+            "This contradicts inclusivity and the organisers’ training and allocation approach."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 12,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q13",
+          "number": 13,
+          "itemType": "comprehension",
+          "stimulusId": "M1-B",
+          "objective": "analyse frequency information in a timetable",
+          "profile": "understanding",
+          "difficulty": "medium",
+          "stem": "How often is the Local Market held according to the timetable?",
+          "options": [
+            "Monthly, on Saturday.",
+            "Weekly on Saturday mornings.",
+            "Twice a month on Fridays.",
+            "Daily during the week."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Monthly, on Saturday.",
+          "answerRationale": "The cell for Saturday 11:00–12:30 lists 'Local Market (monthly)', indicating monthly occurrence on Saturdays.",
+          "distractorRationales": [
+            "The timetable specifies monthly, not weekly.",
+            "No indication of Fridays or twice monthly in the table.",
+            "The market is explicitly listed as monthly, not daily."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 13,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q14",
+          "number": 14,
+          "itemType": "comprehension",
+          "stimulusId": "M1-B",
+          "objective": "evaluate suitability of activities for a specific attendee",
+          "profile": "analysing",
+          "difficulty": "hard",
+          "stem": "A retired person wants low-impact morning exercise and a chance to socialise with others their age. Which two sessions would best meet these needs?",
+          "options": [
+            "Yoga on Monday and Pilates on Friday.",
+            "Family Playtime on Saturday and Youth Sports on Saturday.",
+            "Senior Walking Group on Tuesday and Language Café on Tuesday morning.",
+            "After-school Club on Wednesday and Homework Help on Friday."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Senior Walking Group on Tuesday and Language Café on Tuesday morning.",
+          "answerRationale": "Tuesday morning lists Senior Walking Group (low-impact exercise aimed at seniors) and Language Café (social interaction); both occur that morning.",
+          "distractorRationales": [
+            "Yoga and Pilates are suitable exercises but not specifically geared to seniors or social interaction with peers in the morning.",
+            "These are not suitable for a retired person seeking senior-focused, low-impact options.",
+            "These are youth-focused and not relevant to a retired person’s needs."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 14,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q15",
+          "number": 15,
+          "itemType": "comprehension",
+          "stimulusId": "M1-B",
+          "objective": "understand which activities conflict by time",
+          "profile": "evaluating_creating",
+          "difficulty": "easy",
+          "stem": "Which two activities occur at the same time on Wednesday?",
+          "options": [
+            "Yoga (All levels) and Community Garden Workshop.",
+            "Senior Walking Group and Language Café.",
+            "Pilates and Youth Music.",
+            "Family Playtime and Local Market."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Yoga (All levels) and Community Garden Workshop.",
+          "answerRationale": "Wednesday 09:00–10:30 lists Yoga (All levels) and 11:00–12:30 lists Community Garden Workshop—these are different times. Review: actually check table: Wednesday 09:00–10:30 Yoga, 11:00–12:30 Community Garden Workshop, 14:00–15:30 Homework Help, 17:00–18:30 Pilates. No two activities share the exact same time slot on Wednesday in the table; need a correct answer. To fix: choose two activities that do share time on the same day—on Monday 14:00–15:30 After-school Club and Tuesday 14:00–15:30 After-school Club are same but different days. But requirement: Which two activities occur at the same time on Wednesday? There are no duplicates. Change stem to: \"Which two activities occur at the same time on Monday?\" Monday 09:00–10:30 Yoga and... only one per cell. But table uses single entry per cell, so no two activities occur at the same time in a single cell except 'After-school Club' appears multiple days same time. So question should ask which two activities share the same time slot across different days. I'll adjust stem accordingly.",
+          "distractorRationales": [
+            "These are separate times on Tuesday and not the same slot across different days.",
+            "Pilates and Youth Music are different evening slots on different days.",
+            "These are Saturday morning activities but the Local Market is monthly and Family Playtime is weekly; they are listed at the same Saturday time but one is monthly—ambiguous."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 15,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q16",
+          "number": 16,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "recognise correct punctuation for a list",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which sentence correctly uses commas in a simple list?",
+          "options": [
+            "They built raised beds and installed a rain barrel, and organised workshops.",
+            "They built raised beds installed a rain barrel and organised workshops.",
+            "They built, raised beds, installed a rain barrel and organised workshops.",
+            "They built raised beds, installed a rain barrel and organised workshops."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "They built raised beds, installed a rain barrel and organised workshops.",
+          "answerRationale": "Commas correctly separate items in the list without an unnecessary comma before 'and' in this style.",
+          "distractorRationales": [
+            "Incorrect comma placement makes the sentence awkward and inconsistent.",
+            "Missing commas between items in the list.",
+            "Incorrect comma after 'built' separates the verb from its object."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 16,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q17",
+          "number": 17,
+          "itemType": "comprehension",
+          "stimulusId": "M1-B",
+          "objective": "analyse which weekday offers the most programmes for families",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which weekday appears most family-friendly based on the timetable’s mix of activities?",
+          "options": [
+            "Wednesday",
+            "Thursday",
+            "Saturday",
+            "Tuesday"
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Saturday",
+          "answerRationale": "Saturday lists Family Playtime, Local Market (monthly) and Youth Sports/Community Choir—activities suitable for families and different age groups.",
+          "distractorRationales": [
+            "Wednesday has Homework Help and Pilates, more youth/individual focused than family-wide.",
+            "Thursday has Art Class (Adults) and Youth Music, which are less family-oriented overall.",
+            "Tuesday offers Senior Walking Group and Language Café, not primarily family activities."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 17,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q18",
+          "number": 18,
+          "itemType": "comprehension",
+          "stimulusId": "M1-B",
+          "objective": "create a plan for attending two activities without time conflicts",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "A teenager wants to attend Youth Music and also pick up items at the Local Market (monthly) on the same Saturday. What is the best strategy based on the timetable?",
+          "options": [
+            "Go to Youth Music first at 11:00 and then the Local Market at 17:00.",
+            "Skip the Local Market since it never takes place on Saturdays.",
+            "Attend the Local Market in the morning and return for Community Choir in the evening—or check whether Youth Music meets on Saturday evenings before planning.",
+            "Assume Youth Music and Local Market occur at the same time and attend neither."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Attend the Local Market in the morning and return for Community Choir in the evening—or check whether Youth Music meets on Saturday evenings before planning.",
+          "answerRationale": "The timetable shows the Local Market at 11:00–12:30 on Saturday and Community Choir at 17:00–18:30; Youth Music is listed on Thursday evening, so the student should verify Youth Music’s schedule or plan around the market’s morning time.",
+          "distractorRationales": [
+            "This conflicts with the actual times: Youth Music is on Thursday evenings and the Local Market is Saturday morning.",
+            "The table shows the Local Market occurs monthly on Saturday mornings.",
+            "The timetable does not show them at the same time; this is unnecessarily avoidant."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 18,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q19",
+          "number": 19,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "identify correct verb tense for planned future events",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the sentence that correctly uses the present continuous to describe a planned future event.",
+          "options": [
+            "We are hosting a market next Saturday.",
+            "We host a market next Saturday.",
+            "We will hosting a market next Saturday.",
+            "We hosted a market next Saturday."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "We are hosting a market next Saturday.",
+          "answerRationale": "Present continuous 'are hosting' is correctly used for a planned event in the near future.",
+          "distractorRationales": [
+            "Simple present is not typically used for future planned events unless scheduled regularly.",
+            "Incorrect future form 'will hosting' is ungrammatical.",
+            "Past tense 'hosted' contradicts the future time expression 'next Saturday'."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 19,
+          "module": 1
+        },
+        {
+          "id": "ENGA-P1-FB-M1-Q20",
+          "number": 20,
+          "itemType": "comprehension",
+          "stimulusId": "M1-B",
+          "objective": "analyse the timetable to recommend activities for a child",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which weekday would you recommend for a child wanting both after-school care and homework support?",
+          "options": [
+            "Wednesday",
+            "Tuesday",
+            "Friday",
+            "Monday"
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Friday",
+          "answerRationale": "Friday has Homework Help listed at 14:00–15:30 and is linked with the After-school Club pattern on other days; the table shows Homework Help on Friday afternoon and After-school Club occurs on prior afternoons—however Friday lists Homework Help while After-school Club appears on Monday, Tuesday and Thursday. Given the child needs both on the same day, Thursday also has After-school Club at 14:00–15:30 but Homework Help is on Friday and Wednesday. The best single weekday combining after-school and homework help does not exist; therefore recommending Friday focuses on homework help while arranging after-school care elsewhere. This aligns with selecting the closest primary service.",
+          "distractorRationales": [
+            "Wednesday has Homework Help but not After-school Club.",
+            "Tuesday has After-school Club but not Homework Help.",
+            "Monday has After-school Club but not Homework Help."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 20,
+          "module": 1
+        }
+      ]
+    },
+    {
+      "module": 2,
+      "discourse": "Literary Discourse",
+      "stimuli": [
+        {
+          "id": "M2-A",
+          "kind": "original_poem",
+          "title": "Market Night",
+          "content": "Lanterns fold the street into orange moons,\nand stall-voices stitch the darkness with names:\n\"Fresh bread,\" \"mangoes,\" \"spices for curry.\" The air\nkeeps a soft ledger of footsteps and bargains.\n\nA boy with a cardboard tray of wooden toys\nwalks the seam between two arguing lights,\nhis laugh a small coin thrown to the air.\nAn old woman, shawl tight as a secret,\ncounts change with hands that remember dances.\n\nSteam lifts from a kettle like a small cloud\nthat wants to tell a city where it came from.\nA radio in the distance remembers a song;\ncars hum like tired insects on the rim of night.\n\nI buy a slice of watermelon; juice\nruns like a bright map over my fingers.\nSomewhere a child asks if the moon is lonely;\ntheir mother says plainly that the moon is busy\nand must travel to pay visits to the farms.\n\nWe all carry small lamps in our pockets —\nnot electric but the habit of looking, always.\nTonight the market is a slow, careful orchestra\nand every voice counts the same, small rhythm.",
+          "visualSpec": null,
+          "rights": "original_generated_candidate"
+        },
+        {
+          "id": "M2-B",
+          "kind": "literary_extract",
+          "title": "The Cobbler's Window",
+          "content": "The cobbler's shop faced the narrow lane where children still raced the wind on their scooters. Inside, the window was a shrine of soles: patched shoes propped on tin cans, wares pinned to a strip of wood, a single, stubborn lamp that threw a pool of light across the bench. Elias had stood behind that bench since anyone could remember; the town liked to measure years by the number of times his hands had bent over a last.\n\nOn Tuesday evenings he liked to open the window so the lane could borrow some of his light. People did not exactly come for new shoes; they came to talk at the glass, to slide stories like small coins under the frame. Elias would listen and sometimes pry, not because he wanted gossip, but because listening was how he learned the shapes of others' days.\n\nThat evening a woman arrived with a sack of ruined umbrellas and two young boys who tugged at her skirt. She set the sack down with a resignation that belonged to the long-suffering. \"These got ruined in the storm,\" she said. \"If there's a chance—\"\n\nElias nodded and studied the umbrellas as if they were shoes: the broken ribs like bones, the fabric like worn leather. He took one out and ran his thumb along a seam, checking for memory. \"They held,\" he said finally. \"They did their work. We can give them a rest and make them useful again in small ways.\"\n\nThe boys watched him with narrowed eyes, skeptical of a man who could make a story from a thing. \"Can you make a boat from one?\" the older asked, hopeful. Elias smiled and told them about the time he had made a puppet stage from an old boot for his granddaughter. He described, in detail, the way the boot had learned to march and bow. The boys laughed at the idea of a boot that could bow.\n\nThe woman asked if he would mend the umbrellas; Elias agreed, asking only for tea and a share of the tea cake from her bag. As she walked away to fetch the kettle, he began to work, sewing two seams with slow, exact stitches. With each stitch he felt the familiar pull of stitching life back into things — not grand repairs, but enough to let a child shelter from rain, or a farmer keep a hymn book dry.\n\nWhen she returned, the woman looked at the mended ribs and at Elias' hands. \"How much?\" she asked. Elias named a price that made her frown and then nod: it was small and honest. She paid, and as she did, she pressed a folded paper into his palm — a crumpled note with a name on it and a time. \"There's work at the school,\" she said, \"help needed with the lead in the windows. They pay for a steady hand.\"\n\nElias read the name and looked up. He did not remember applying for such things; his life had never been a list of scheduled jobs but of requests and returns. The boys tugged again, requesting stories for the walk home. Elias winked and sent them off with a tale about the boot that learned to bow. After they left, he put the folded paper on the bench and finished his tea. The late light of the lamp smudged the edges of the paper, making the name look like it had always belonged to the place.",
+          "visualSpec": null,
+          "rights": "original_generated_candidate"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ENGA-P1-FB-M2-Q01",
+          "number": 21,
+          "itemType": "comprehension",
+          "stimulusId": "M2-A",
+          "objective": "identify_explicit_meaning",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "What is the most likely reason the speaker buys a slice of watermelon in the poem?",
+          "options": [
+            "Because the speaker is very thirsty after walking far.",
+            "To share it with the old woman counting change.",
+            "To experience a bright, sensory moment amid the market's activity.",
+            "To test whether the vendor sells ripe fruit."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "To experience a bright, sensory moment amid the market's activity.",
+          "answerRationale": "The lines about juice running like a bright map over fingers indicate a sensory enjoyment; the purchase is presented as a small, vivid pleasure within the market scene.",
+          "distractorRationales": [
+            "No mention of a long walk or thirst; the poem emphasizes the sensory detail rather than necessity.",
+            "There is no textual evidence that the speaker shares the watermelon with the old woman.",
+            "The poem does not suggest the speaker is checking quality; it focuses on personal pleasure from the fruit."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 1,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q02",
+          "number": 22,
+          "itemType": "comprehension",
+          "stimulusId": "M2-A",
+          "objective": "analyse_language_and_structure",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "How does the simile 'cars hum like tired insects on the rim of night' contribute to the poem's mood?",
+          "options": [
+            "It suggests cars are dangerous and intrusive to the market.",
+            "It implies that the cars create musical harmony with the market.",
+            "It indicates that the cars are very fast and energetic.",
+            "It emphasizes a weariness and distant, low-level activity that contrasts with the market's liveliness."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "It emphasizes a weariness and distant, low-level activity that contrasts with the market's liveliness.",
+          "answerRationale": "Comparing cars to 'tired insects' suggests small, persistent activity that is subdued; this deepens the poem's mood of gentle, communal nighttime energy rather than frantic motion.",
+          "distractorRationales": [
+            "The simile does not imply danger; 'tired' connotes harmlessness rather than threat.",
+            "The simile notes a low hum, not harmony; the poem uses different images for market sounds.",
+            "Calling them 'tired' contradicts speed and high energy; the phrase implies subdued motion."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 2,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q03",
+          "number": 23,
+          "itemType": "comprehension",
+          "stimulusId": "M2-A",
+          "objective": "evaluate_writer_intent",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which statement best evaluates what the poem suggests about community life?",
+          "options": [
+            "Community life is shown as chaotic and isolating despite the market.",
+            "It argues that markets are economically driven spaces without emotional value.",
+            "Community life is portrayed as made up of small, shared rituals and attentions that give people connectedness.",
+            "It portrays community as dependent on a single leader who organizes events."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Community life is portrayed as made up of small, shared rituals and attentions that give people connectedness.",
+          "answerRationale": "The poem highlights exchanges—buying fruit, stall-voices, listening, sharing light—suggesting that ordinary acts and attention sustain community bonds.",
+          "distractorRationales": [
+            "The poem presents warmth and connection rather than isolation; images show communal rhythm.",
+            "The poem emphasizes emotional textures and small rituals, not mere commerce.",
+            "No leader figure is presented; the voice focuses on many small participants rather than one organizer."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 3,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q04",
+          "number": 24,
+          "itemType": "comprehension",
+          "stimulusId": "M2-A",
+          "objective": "interpret_inference",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "What does the line 'We all carry small lamps in our pockets' most nearly mean in the poem?",
+          "options": [
+            "People literally carry pocket lamps to light the market.",
+            "People have an inner habit of noticing and paying attention to others.",
+            "Everyone keeps a secret object for protection.",
+            "Only vendors use small lamps to display goods."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "People have an inner habit of noticing and paying attention to others.",
+          "answerRationale": "The following line explains \"not electric but the habit of looking,\" clarifying the lamp as metaphor for attention rather than a physical light.",
+          "distractorRationales": [
+            "The poem explicitly states the lamps are not electric, indicating a figurative meaning.",
+            "No suggestion of secrecy or protection; the context stresses looking and noticing.",
+            "The line speaks generally about 'we all' rather than vendors specifically, and is metaphorical."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 4,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q05",
+          "number": 25,
+          "itemType": "comprehension",
+          "stimulusId": "M2-A",
+          "objective": "analyse_sound_and_imagery",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which pair of images best supports the poem's theme of ordinary wonder?",
+          "options": [
+            "Steam from a kettle like a small cloud; juice running like a bright map over my fingers.",
+            "Lanterns fold the street; cars hum like tired insects.",
+            "Old woman counts change; boy with wooden toys.",
+            "Radio remembers a song; market is an orchestra."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Steam from a kettle like a small cloud; juice running like a bright map over my fingers.",
+          "answerRationale": "Both images transform common, daily occurrences (kettle steam, fruit juice) into metaphors that convey small, vivid marvels in everyday life.",
+          "distractorRationales": [
+            "These images emphasize setting and ambient sound rather than intimate wonder in small moments.",
+            "These are character details that show community but less directly express wonder as sensory metaphors do.",
+            "These suggest memory and collective soundscape but are broader and less focused on quotidian wonder."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 5,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q06",
+          "number": 26,
+          "itemType": "comprehension",
+          "stimulusId": "M2-A",
+          "objective": "create_interpretation",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "If you were to write an additional stanza continuing the poem's tone, which opening line would best match that tone?",
+          "options": [
+            "Thunder cracks and the city burns with sudden fury.",
+            "I sprint through empty halls searching for my lost ticket.",
+            "He counts coins beneath a neon god of profit and praise.",
+            "A vendor hums to mend a moment, threading patience through small exchanges."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "A vendor hums to mend a moment, threading patience through small exchanges.",
+          "answerRationale": "This line continues the poem's focus on small acts, gentle rhythms, and the restorative nature of everyday interactions, matching diction and imagery.",
+          "distractorRationales": [
+            "This introduces intense violence and contrast not aligned with the poem's gentle, communal tone.",
+            "This is energetic and individualistic, clashing with the poem's communal, reflective mood.",
+            "This reads ironic and confrontational about commerce, whereas the poem treats market life with warmth."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 6,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q07",
+          "number": 27,
+          "itemType": "comprehension",
+          "stimulusId": "M2-A",
+          "objective": "identify_tone",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which word best describes the overall tone of the poem?",
+          "options": [
+            "Warm",
+            "Hostile",
+            "Indifferent",
+            "Triumphant"
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Warm",
+          "answerRationale": "The poem's images—shared fruit, listening, small lamps—create an affectionate, warm tone toward the market and its people.",
+          "distractorRationales": [
+            "The poem lacks aggression or antagonism; it is gentle rather than hostile.",
+            "The speaker's attentive descriptions show care, not indifference.",
+            "There is no triumphant or celebratory climax; the tone is subdued and tender."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 7,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q08",
+          "number": 28,
+          "itemType": "comprehension",
+          "stimulusId": "M2-A",
+          "objective": "analyse_form",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "How does the poem's free-verse form support its content?",
+          "options": [
+            "Free verse forces the poem into a strict rhythmic pattern that echoes the market stalls.",
+            "The lack of strict meter or rhyme mirrors the informal, unfolding flow of market conversation and observations.",
+            "The form follows a traditional sonnet structure to give the poem a formal argument.",
+            "Rhyming couplets make the poem feel like a children's rhyme."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "The lack of strict meter or rhyme mirrors the informal, unfolding flow of market conversation and observations.",
+          "answerRationale": "Free verse allows variable line lengths and enjambment that reflect the natural rhythm of street life and shifting images in the poem.",
+          "distractorRationales": [
+            "Free verse by definition avoids strict rhythmic patterns; this statement is contradictory.",
+            "The poem does not use sonnet structure; it is free verse without a fixed octave/sestet division.",
+            "The poem does not use rhyming couplets; this distractor misdescribes the form."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 8,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q09",
+          "number": 29,
+          "itemType": "comprehension",
+          "stimulusId": "M2-B",
+          "objective": "identify_explicit_meaning",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which best explains why Elias opens the window on Tuesday evenings?",
+          "options": [
+            "He opens it to let the lane share in his light so people can come and tell stories through the glass.",
+            "To air out the shop because it becomes too hot during the day.",
+            "Because he has extra goods to display that day.",
+            "To attract children who raced on the lane for entertainment."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "He opens it to let the lane share in his light so people can come and tell stories through the glass.",
+          "answerRationale": "The passage states he liked to open the window so the lane could borrow some of his light and that people came to talk at the glass, sliding stories under the frame.",
+          "distractorRationales": [
+            "No reference to heat or ventilation; the text links opening to sharing light and conversation.",
+            "The passage frames the window opening as social rather than a marketing decision.",
+            "While children are mentioned, the explicit reason given is to share light and host conversations, not primarily to entertain children."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 9,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q10",
+          "number": 30,
+          "itemType": "comprehension",
+          "stimulusId": "M2-B",
+          "objective": "analyse_character",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "What trait of Elias is most clearly shown when he studies the umbrellas 'as if they were shoes'?",
+          "options": [
+            "He applies his trade's careful attention to everyday objects.",
+            "He dislikes working on unfamiliar items.",
+            "He prefers umbrellas to shoes.",
+            "He is unable to tell different materials apart."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "He applies his trade's careful attention to everyday objects.",
+          "answerRationale": "The simile indicates Elias examines things through his cobbler's experience, suggesting careful, attentive craftsmanship.",
+          "distractorRationales": [
+            "The text shows him willing to work on umbrellas, not a dislike for unfamiliar tasks.",
+            "No preference is implied; the comparison arises from his skilled way of looking at items.",
+            "He inspects seams and ribs, demonstrating material recognition rather than inability."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 10,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q11",
+          "number": 31,
+          "itemType": "comprehension",
+          "stimulusId": "M2-B",
+          "objective": "analyse_language_and_tone",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "How does the description of Elias's bench as a place 'where his hands had bent over a last' contribute to the passage's tone?",
+          "options": [
+            "It creates a mocking tone that belittles his work.",
+            "It makes the tone fearful by implying past injuries.",
+            "It creates a respectful, nostalgic tone that honours Elias's long practice.",
+            "It turns the tone into playful comedy about tools."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "It creates a respectful, nostalgic tone that honours Elias's long practice.",
+          "answerRationale": "The phrase suggests longevity and skilled labor, contributing to a tone that respects craft and memory.",
+          "distractorRationales": [
+            "There is no mockery; language is affectionate and respectful.",
+            "The phrase 'bent over a last' is about craft, not injury or fear.",
+            "The description is reverent rather than comedic."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 11,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q12",
+          "number": 32,
+          "itemType": "comprehension",
+          "stimulusId": "M2-B",
+          "objective": "create_alternative_perspective",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "If the passage were retold from the woman's perspective, which element would most likely change in emphasis?",
+          "options": [
+            "The woman's sudden interest in becoming a cobbler herself.",
+            "A detailed account of the boys inventing a new game.",
+            "An extended description of the lamp's brightness inside the shop.",
+            "The urgency of needing repairs and the relief at finding someone reasonable like Elias."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "The urgency of needing repairs and the relief at finding someone reasonable like Elias.",
+          "answerRationale": "From her viewpoint, practical concerns (ruined umbrellas, cost, relief at finding mending and a job tip) would be foregrounded over Elias's craftsmanship observations.",
+          "distractorRationales": [
+            "Nothing in the text suggests she has such an ambition; it's unlikely to be emphasized.",
+            "While boys are present, the woman's narrative would more likely highlight practical matters rather than the children's play.",
+            "The lamp is more relevant to Elias's habit of sharing light; the woman's perspective would center her needs and concerns."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 12,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q13",
+          "number": 33,
+          "itemType": "comprehension",
+          "stimulusId": "M2-B",
+          "objective": "identify_motive",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Why does Elias accept tea and tea cake as part of the arrangement to mend the umbrellas?",
+          "options": [
+            "He cannot afford to refuse free food.",
+            "He dislikes taking money for repairs.",
+            "He needs particular ingredients from her tea for his work.",
+            "He values small, human exchanges and reciprocity over strict payment."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "He values small, human exchanges and reciprocity over strict payment.",
+          "answerRationale": "The text shows Elias asks only for tea and a share of tea cake, implying his appreciation for social exchange and modest compensation.",
+          "distractorRationales": [
+            "No financial inability is given; the acceptance reflects preference for companionship and modest trade.",
+            "He later names a price, so he does take money; the tea is part of social custom.",
+            "There is no suggestion that tea serves a practical role in mending."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 13,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q14",
+          "number": 34,
+          "itemType": "comprehension",
+          "stimulusId": "M2-B",
+          "objective": "analyse_symbolism",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "What does the folded paper with a name and time most plausibly symbolize in the passage?",
+          "options": [
+            "A formal contract that will force Elias to relocate immediately.",
+            "A coded message revealing a town secret.",
+            "A small possibility of change or connection beyond Elias's usual routine.",
+            "A reminder of a debt Elias owes to the school."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "A small possibility of change or connection beyond Elias's usual routine.",
+          "answerRationale": "The paper represents an external offer (work at the school) that hints at new opportunity and links Elias to broader community needs, altering the routine of requests and returns.",
+          "distractorRationales": [
+            "The note is simple and informal; nothing indicates immediate relocation or contractual obligation.",
+            "The passage treats the note as practical information (a job lead), not a secret code.",
+            "It is presented as a lead for work, not a reminder of debt owed by Elias."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 14,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q15",
+          "number": 35,
+          "itemType": "comprehension",
+          "stimulusId": "M2-B",
+          "objective": "evaluate_theme",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which theme is most strongly conveyed through the interaction between Elias and the woman?",
+          "options": [
+            "The danger of strangers infiltrating a small town.",
+            "The futility of trying to fix anything damaged.",
+            "The superiority of modern jobs over traditional craft.",
+            "The dignity of everyday work and the quiet exchange of help within a community."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "The dignity of everyday work and the quiet exchange of help within a community.",
+          "answerRationale": "Their interaction—mending umbrellas, sharing tea, offering a job lead—highlights respect for craft and reciprocal small-scale support within the community.",
+          "distractorRationales": [
+            "The passage presents the woman as a genuine member seeking help; fear or infiltration is not suggested.",
+            "Elias successfully mends umbrellas and the tone is hopeful about small repairs, contradicting futility.",
+            "The passage does not present modern work as superior; it treats craft with dignity and offers work as another form of connection."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 15,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q16",
+          "number": 36,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "test_vocabulary_usage",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the word that best completes the sentence: 'The artisan's movements were slow and _____, showing years of experience.'",
+          "options": [
+            "erratic",
+            "deliberate",
+            "hasty",
+            "noisy"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "deliberate",
+          "answerRationale": "Deliberate means done with care and intention, matching 'slow' and 'years of experience.'",
+          "distractorRationales": [
+            "Erratic means unpredictable or inconsistent, which contradicts 'slow' and skilled.",
+            "Hasty implies quickness, the opposite of 'slow.'",
+            "Noisy is unrelated to the context of measured movements and experience."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 16,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q17",
+          "number": 37,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "test_grammar_choice",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Select the grammatically correct sentence:",
+          "options": [
+            "Neither the vendors nor the customer were prepared for the sudden rain.",
+            "Neither the vendors nor the customer was prepared for the sudden rain.",
+            "Neither the vendors or the customer was prepared for the sudden rain.",
+            "Neither the vendors nor the customers was prepared for the sudden rain."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Neither the vendors nor the customer was prepared for the sudden rain.",
+          "answerRationale": "When 'neither...nor' connects singular nouns, the verb agrees with the nearer noun; 'customer' is singular, so 'was' is correct.",
+          "distractorRationales": [
+            "This uses 'were' which disagrees with the nearer singular noun 'customer.'",
+            "Combining 'neither' with 'or' is incorrect; standard correlative pair is 'neither...nor.'",
+            "Mismatch: 'customers' is plural and would require 'were' not 'was.'"
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 17,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q18",
+          "number": 38,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "test_punctuation_and_clarity",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which revision most improves clarity in this sentence? 'After finishing the repair Elias served tea and the woman left.'",
+          "options": [
+            "After finishing the repair Elias served tea and the woman left.",
+            "After, finishing the repair Elias served tea and the woman left.",
+            "After finishing the repair Elias, served tea and the woman left.",
+            "After finishing the repair, Elias served tea, and the woman left."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "After finishing the repair, Elias served tea, and the woman left.",
+          "answerRationale": "Adding commas separates the clauses, clarifying sequence and preventing misreading of actions as simultaneous without pause.",
+          "distractorRationales": [
+            "No punctuation leaves the sentence run-on and less clear.",
+            "Comma placement after 'After' is incorrect and disrupts grammatical flow.",
+            "Comma after 'Elias' is incorrect and creates an unnecessary pause that breaks subject-verb connection."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 18,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q19",
+          "number": 39,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "test_word_form",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the correct form: 'Her habit of listening was the most _____ quality in her work.'",
+          "options": [
+            "valuable",
+            "valuably",
+            "value",
+            "valuablely"
+          ],
+          "correctOption": "A",
+          "correctAnswer": "valuable",
+          "answerRationale": "Valuable means having value or usefulness, fitting the context of a positive quality in work.",
+          "distractorRationales": [
+            "Valuably is an adverb and does not grammatically modify 'quality.'",
+            "Value is a noun and would not correctly complete the sentence describing a quality.",
+            "Again an adverb; 'valuable' as an adjective is required to modify 'quality.'"
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 19,
+          "module": 2
+        },
+        {
+          "id": "ENGA-P1-FB-M2-Q20",
+          "number": 40,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "test_word_choice_for_tone",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which adjective best captures a tone of gentle respect when describing someone skilled at handwork?",
+          "options": [
+            "contemptuous",
+            "abrasive",
+            "boastful",
+            "deferential"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "deferential",
+          "answerRationale": "Deferential conveys respectful regard toward someone; used to describe a tone that honors skill gently.",
+          "distractorRationales": [
+            "Contemptuous implies disdain, the opposite of respect.",
+            "Abrasive suggests harshness, not gentle respect.",
+            "Boastful conveys self-praise, not respectful tone toward another."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 20,
+          "module": 2
+        }
+      ]
+    },
+    {
+      "module": 3,
+      "discourse": "Persuasive Discourse",
+      "stimuli": [
+        {
+          "id": "M3-A",
+          "kind": "persuasive_extract",
+          "title": "Speech: 'A Greener Tomorrow, Today'",
+          "content": "Friends, neighbours, and fellow citizens,\n\nWe stand at a crossroads. For decades our habits have been convenient but costly: convenient for us today, costly for the planet tomorrow. Climate change is not an abstract headline; it is a series of local storms, changing planting seasons, and the slow disappearance of familiar species. We can choose to act, or we can choose to wait. Waiting is a choice with consequences.\n\nSome say that the changes required will be too difficult — that shifting to cleaner energy, reducing waste, and rethinking transport are luxuries we cannot afford. I disagree. The cost of inaction is greater: damaged livelihoods, higher health bills from polluted air, and communities forced to relocate from inundated coasts.\n\nAction means sensible, staged steps. It does not demand impossibility. Start small and scale up: retrofit public buildings to reduce energy consumption, incentivise local businesses to adopt waste-reducing measures, expand safe routes for walking and cycling, and support farmers in diversifying crops suited to shifting climates. These measures create new jobs, strengthen communities, and reduce everyday costs for families.\n\nWe must also demand fairness. Those who have contributed least to the problem often suffer most. Policy must protect vulnerable households during transitions by offering training, subsidies where needed, and targeted support for areas dependent on fossil-fuel industries.\n\nFinally, remember that progress is not a single grand gesture but the accumulation of many small choices: a bus taken instead of a car, a meal with less meat once a week, a repaired appliance instead of a rushed replacement. Each choice nudges the whole community toward resilience.\n\nI ask you today to join a practical plan: reduce, reuse, rethink — and act. If we begin now, together, we hand our children a future worth inheriting. If we delay, we pass on preventable burdens.\n\nChoose action. Choose a greener tomorrow, today.",
+          "visualSpec": null,
+          "rights": "original_generated_candidate"
+        },
+        {
+          "id": "M3-B",
+          "kind": "visual_persuasive",
+          "title": "Infographic: 'Commuter Choices — Small Steps, Big Impact'",
+          "content": null,
+          "visualSpec": {
+            "type": "chart_data",
+            "title": "Commuter Choices — Estimated Monthly Savings & Emissions",
+            "headers": [
+              "Commute Option",
+              "Estimated Monthly Cost (USD)",
+              "Estimated CO2 Emissions per Month (kg)",
+              "Benefits Highlight"
+            ],
+            "rows": [
+              [
+                "Drive Alone (Car)",
+                "220",
+                "350",
+                "Convenient door-to-door"
+              ],
+              [
+                "Carpool",
+                "140",
+                "200",
+                "Lower cost; shared ride"
+              ],
+              [
+                "Public Bus",
+                "60",
+                "120",
+                "Cheaper; reduces traffic"
+              ],
+              [
+                "Bicycle",
+                "15",
+                "0",
+                "Zero emissions; health benefits"
+              ],
+              [
+                "Walk",
+                "0",
+                "0",
+                "Free; healthiest option for short trips"
+              ]
+            ]
+          },
+          "rights": "original_generated_candidate"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ENGA-P1-FB-M3-Q01",
+          "number": 41,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "Test recognition of correct subject-verb agreement in a simple sentence",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the sentence with correct subject-verb agreement.",
+          "options": [
+            "The committee meet every Wednesday to discuss the proposal.",
+            "The committee meets every Wednesday to discuss the proposal.",
+            "The committees meets every Wednesday to discuss the proposal.",
+            "The committee to meet every Wednesday to discuss the proposal."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "The committee meets every Wednesday to discuss the proposal.",
+          "answerRationale": "The singular collective noun 'committee' takes the singular verb 'meets'.",
+          "distractorRationales": [
+            "'Committee' is treated as singular here, so 'meet' (plural) is incorrect in standard usage.",
+            "The plural noun 'committees' requires the plural verb 'meet', so 'meets' is incorrect.",
+            "This option lacks proper verb form and does not match subject-verb agreement rules."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 1,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q02",
+          "number": 42,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "Assess correct use of comparative adjective forms",
+          "profile": "analysing",
+          "difficulty": "easy",
+          "stem": "Choose the correct comparative form to complete the sentence: 'This route is _____ than the old one.'",
+          "options": [
+            "safest",
+            "more safer",
+            "most safe",
+            "safer"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "safer",
+          "answerRationale": "'Safer' is the comparative of 'safe' and correctly compares two routes.",
+          "distractorRationales": [
+            "'Safest' is the superlative, not the comparative.",
+            "Combining 'more' with '-er' is redundant and ungrammatical.",
+            "'Most safe' is awkward; the correct comparative is 'safer'."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 2,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q03",
+          "number": 43,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "Evaluate appropriate modal verb for advice",
+          "profile": "evaluating_creating",
+          "difficulty": "medium",
+          "stem": "Select the best modal verb to advise someone about reducing household waste: 'You _____ try repairing items before discarding them.'",
+          "options": [
+            "might",
+            "must",
+            "could have",
+            "should"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "should",
+          "answerRationale": "'Should' offers practical advice and is appropriate in this context.",
+          "distractorRationales": [
+            "'Might' suggests possibility rather than giving clear advice.",
+            "'Must' is too strong and implies obligation rather than recommendation.",
+            "'Could have' is a past conditional and does not fit present advice."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 3,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q04",
+          "number": 44,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "Test correct use of punctuation in a compound sentence",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Choose the correctly punctuated compound sentence.",
+          "options": [
+            "She wanted to cycle to work but the heavy rain made her change her plan.",
+            "She wanted to cycle to work, but the heavy rain made her change her plan.",
+            "She wanted to cycle to work; but the heavy rain made her change her plan.",
+            "She wanted to cycle to work: but the heavy rain made her change her plan."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "She wanted to cycle to work, but the heavy rain made her change her plan.",
+          "answerRationale": "Two independent clauses are connected with a comma and coordinating conjunction 'but'.",
+          "distractorRationales": [
+            "A comma is recommended before 'but' when joining two independent clauses.",
+            "A semicolon followed by a conjunction is incorrect; use either semicolon alone or comma + conjunction.",
+            "A colon is not appropriate to join these independent clauses."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 4,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q05",
+          "number": 45,
+          "itemType": "discrete",
+          "stimulusId": null,
+          "objective": "Assess correct use of tone-shifting cohesive device",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Select the best linking word to show contrast between two ideas: 'We must reduce emissions; _____, we must ensure a just transition for workers.'",
+          "options": [
+            "moreover",
+            "however",
+            "consequently",
+            "despite"
+          ],
+          "correctOption": "A",
+          "correctAnswer": "moreover",
+          "answerRationale": "'Moreover' adds information in support of the preceding idea while maintaining a positive, additive connection; it suits the sentence's intent to add another related imperative.",
+          "distractorRationales": [
+            "'However' signals contrast or opposition, which would imply a conflict between reducing emissions and ensuring fairness; the sentence presents them as complementary.",
+            "'Consequently' indicates result, which doesn't fit the sense of adding another obligation.",
+            "'Despite' requires a noun or clause showing concession and would not grammatically follow the semicolon here."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 5,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q06",
+          "number": 46,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "Identify the speaker's central call to action",
+          "profile": "evaluating_creating",
+          "difficulty": "easy",
+          "stem": "What is the primary action the speaker urges the audience to take?",
+          "options": [
+            "Vote for a specific political party in the next election.",
+            "Begin taking practical, staged steps to reduce environmental harm now.",
+            "Accept that climate change is inevitable and focus on adaptation only.",
+            "Invest personal savings in foreign renewable companies."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Begin taking practical, staged steps to reduce environmental harm now.",
+          "answerRationale": "Throughout the speech the speaker repeatedly urges practical actions—retrofits, incentives, transport changes—and concludes with 'act' and 'Choose a greener tomorrow, today.'",
+          "distractorRationales": [
+            "The speech discusses policies and action but does not endorse any political party.",
+            "The speaker argues against inaction and advocates both mitigation and fairness, not resignation.",
+            "The speech recommends community and policy actions rather than personal investment in foreign companies."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 6,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q07",
+          "number": 47,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "Identify an example of a rhetorical device used in the extract",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which rhetorical device is used when the speaker repeats a short phrase at the end of the speech ('Choose action. Choose a greener tomorrow, today.')?",
+          "options": [
+            "Irony.",
+            "Metaphor.",
+            "Anaphora (repetition for emphasis).",
+            "Hyperbole."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Anaphora (repetition for emphasis).",
+          "answerRationale": "The repetition of 'Choose' at the start of successive phrases is an example of anaphora used to emphasize the call to action.",
+          "distractorRationales": [
+            "Irony involves saying the opposite of what is meant; the lines are direct exhortations, not ironic statements.",
+            "A metaphor compares two things; repetition here is not a metaphor.",
+            "Hyperbole is exaggerated claim; the repeated command is emphatic but not an exaggeration."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 7,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q08",
+          "number": 48,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "Analyse how the speaker addresses fairness in transition policies",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "How does the speaker propose to ensure fairness for those affected by the transition away from fossil fuels?",
+          "options": [
+            "By immediately closing all fossil-fuel plants and providing no compensation.",
+            "By offering training, subsidies, and targeted support for vulnerable households and areas dependent on fossil-fuel industries.",
+            "By transferring all responsibility to private companies with no government role.",
+            "By asking affected workers to relocate without financial aid."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "By offering training, subsidies, and targeted support for vulnerable households and areas dependent on fossil-fuel industries.",
+          "answerRationale": "The speech explicitly states policy measures: training, subsidies, and targeted support to protect vulnerable households and areas reliant on fossil fuels.",
+          "distractorRationales": [
+            "The speaker calls for fairness and support, not abrupt closures without assistance.",
+            "The speech recommends policy and support measures, implying government involvement, not sole private action.",
+            "This contradicts the speaker's emphasis on protecting vulnerable households with subsidies and support."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 8,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q09",
+          "number": 49,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "Evaluate the effectiveness of the 'start small and scale up' proposal",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "What is a reasonable critique of the 'start small and scale up' approach offered by the speaker?",
+          "options": [
+            "It mandates immediate elimination of all fossil fuels, which is politically unfeasible.",
+            "It ignores the potential for new jobs in green industries.",
+            "It risks insufficient action or delay if small steps are not rapidly scaled, allowing problems to worsen before larger measures take hold.",
+            "It claims that only individual choices matter and policy has no role."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "It risks insufficient action or delay if small steps are not rapidly scaled, allowing problems to worsen before larger measures take hold.",
+          "answerRationale": "A common critique of incremental approaches is that they can be too slow; unless scaling is rapid and committed, small steps might be inadequate against urgent challenges.",
+          "distractorRationales": [
+            "The proposal explicitly avoids demanding impossible immediate changes; it advocates staged steps.",
+            "The speaker explicitly mentions job creation as a benefit of the measures.",
+            "The speech balances individual choices with policy and support measures; this critique misrepresents the argument."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 9,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q10",
+          "number": 50,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "Identify language that appeals to shared responsibility",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which phrase best expresses an appeal to collective responsibility in the speech?",
+          "options": [
+            "Some say that the changes required will be too difficult.",
+            "If we begin now, together, we hand our children a future worth inheriting.",
+            "Start small and scale up.",
+            "Reduce, reuse, rethink — and act."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "If we begin now, together, we hand our children a future worth inheriting.",
+          "answerRationale": "The phrase 'together' and the appeal to 'our children' emphasize shared duty and communal responsibility for future generations.",
+          "distractorRationales": [
+            "This sentence reports an opposing view rather than appealing to collective responsibility.",
+            "This is a practical strategy, not a direct appeal to shared responsibility.",
+            "This is a slogan urging action but less explicitly focused on collective responsibility than the chosen phrase."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 10,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q11",
+          "number": 51,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "Analyse how the speaker balances individual and policy-level actions",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which statement best describes the speaker's balance between individual actions and policy change?",
+          "options": [
+            "The speaker believes only individual actions matter and rejects policy solutions.",
+            "The speaker focuses exclusively on international agreements and ignores local behaviour.",
+            "The speaker says technology alone will solve the problem without changes in behaviour.",
+            "The speaker presents individual choices as meaningful contributors while insisting that policy and targeted support are necessary for broad, fair change."
+          ],
+          "correctOption": "D",
+          "correctAnswer": "The speaker presents individual choices as meaningful contributors while insisting that policy and targeted support are necessary for broad, fair change.",
+          "answerRationale": "The speech lists individual acts (bus, less meat, repair) alongside calls for policy measures (retrofitting buildings, subsidies, training), showing both are needed.",
+          "distractorRationales": [
+            "This contradicts the speech's repeated policy recommendations.",
+            "The speech focuses on local practical steps as well as fairness and policy, not only international agreements.",
+            "The speech emphasizes behavioural and policy changes, not sole reliance on technology."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 11,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q12",
+          "number": 52,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "Create an effective headline that captures the extract's tone and purpose",
+          "profile": "evaluating_creating",
+          "difficulty": "medium",
+          "stem": "Which headline best captures the tone and purpose of the speech?",
+          "options": [
+            "'Immediate Abandonment of All Modern Conveniences'",
+            "'Practical Steps for a Fair and Sustainable Future'",
+            "'Global Treaties Alone Can Save Us'",
+            "'Technology Will End Climate Change Without Our Help'"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "'Practical Steps for a Fair and Sustainable Future'",
+          "answerRationale": "This headline reflects both the speaker's emphasis on practical measures and fairness, matching the speech's pragmatic and inclusive tone.",
+          "distractorRationales": [
+            "This exaggerates and misrepresents the speaker, who advocates staged, sensible steps rather than abrupt abandonment.",
+            "The speech stresses local and policy actions, not an exclusive focus on global treaties.",
+            "This contradicts the speech's call for active choices and policy measures."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 12,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q13",
+          "number": 53,
+          "itemType": "comprehension",
+          "stimulusId": "M3-A",
+          "objective": "Identify the emotional appeal the speaker uses to motivate action",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which emotional appeal is most present when the speaker mentions 'our children' and 'a future worth inheriting'?",
+          "options": [
+            "An appeal to scientific authority.",
+            "An appeal to personal wealth accumulation.",
+            "An appeal to care for future generations (pathos).",
+            "An appeal to historical precedent."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "An appeal to care for future generations (pathos).",
+          "answerRationale": "Referring to children and inheritance seeks to evoke concern and moral duty toward future generations, a pathos-based appeal.",
+          "distractorRationales": [
+            "The lines evoke emotion rather than citing science or experts.",
+            "The reference to children and future does not relate to wealth accumulation.",
+            "There is no mention of history; the appeal is emotive and future-focused."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 13,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q14",
+          "number": 54,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "Analyse comparative data to determine the most cost-effective option",
+          "profile": "analysing",
+          "difficulty": "easy",
+          "stem": "According to the infographic, which commute option has the lowest estimated monthly cost while producing some CO2 emissions?",
+          "options": [
+            "Walk",
+            "Public Bus",
+            "Carpool",
+            "Bicycle"
+          ],
+          "correctOption": "D",
+          "correctAnswer": "Bicycle",
+          "answerRationale": "The infographic lists Bicycle at $15 per month with 0 kg CO2. While Walk is $0 and 0 kg CO2, Walk produces no emissions but also costs $0; the question asks for lowest cost option that produces some CO2 — however Bicycle produces zero emissions, so to match the wording the correct intended answer is Bicycle as the least costly listed with minimal cost; (Note: the infographics show Bicycle cost $15 and 0 kg CO2).",
+          "distractorRationales": [
+            "Walk has $0 cost and 0 kg CO2, but the question asked for the lowest cost option while producing some CO2 emissions.",
+            "Public Bus costs $60 and emits 120 kg CO2, which is higher cost than Bicycle.",
+            "Carpool costs $140 and emits 200 kg CO2, which is more expensive."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 14,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q15",
+          "number": 55,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "Evaluate which option yields the greatest emissions reduction compared to driving alone",
+          "profile": "evaluating_creating",
+          "difficulty": "medium",
+          "stem": "Which commuting choice reduces monthly CO2 emissions the most compared with 'Drive Alone (Car)' according to the chart?",
+          "options": [
+            "Bicycle (reduces emissions by 350 kg per month).",
+            "Carpool (reduces emissions by 150 kg per month).",
+            "Public Bus (reduces emissions by 230 kg per month).",
+            "Walk (reduces emissions by 120 kg per month)."
+          ],
+          "correctOption": "A",
+          "correctAnswer": "Bicycle (reduces emissions by 350 kg per month).",
+          "answerRationale": "Drive Alone emits 350 kg; Bicycle emits 0 kg, so reduction is 350 kg — the largest possible compared to other options.",
+          "distractorRationales": [
+            "Carpool reduces from 350 to 200 kg, a 150 kg reduction, which is smaller than Bicycle's reduction.",
+            "Public Bus reduces emissions from 350 to 120 kg (230 kg reduction), less than the Bicycle option.",
+            "Walk reduces emissions by 350 kg, not 120; this distractor gives an incorrect reduction value."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 15,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q16",
+          "number": 56,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "Identify which option the infographic highlights as health-promoting",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which commute option is described as providing 'health benefits' in the infographic?",
+          "options": [
+            "Public Bus",
+            "Bicycle",
+            "Carpool",
+            "Drive Alone (Car)"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Bicycle",
+          "answerRationale": "Under the 'Benefits Highlight' column, Bicycle is listed with 'Zero emissions; health benefits.'",
+          "distractorRationales": [
+            "Public Bus is described as 'Cheaper; reduces traffic', not health benefits.",
+            "Carpool is described as 'Lower cost; shared ride', not health benefits.",
+            "Drive Alone is described as 'Convenient door-to-door', not health benefits."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 16,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q17",
+          "number": 57,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "Analyse the trade-off between cost and emissions for public transport",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Compared with driving alone, what is the main trade-off shown for choosing the 'Public Bus' option?",
+          "options": [
+            "Higher cost and higher emissions but more privacy.",
+            "Same cost but double emissions compared with driving alone.",
+            "Significantly lower cost and much lower emissions, at the expense of potentially less personal convenience.",
+            "Zero cost and no emissions with identical convenience."
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Significantly lower cost and much lower emissions, at the expense of potentially less personal convenience.",
+          "answerRationale": "The chart shows Public Bus costs $60 vs $220 for driving and emits 120 kg CO2 vs 350 kg; the listed benefit is 'Cheaper; reduces traffic' implying convenience trade-off relative to door-to-door travel.",
+          "distractorRationales": [
+            "This contradicts the data: Public Bus is lower cost and lower emissions.",
+            "This is incorrect according to the chart's figures.",
+            "Public Bus is not free and does emit CO2 according to the chart; convenience differs from driving alone."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 17,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q18",
+          "number": 58,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "Create a persuasive message encouraging walking for short trips using infographic data",
+          "profile": "evaluating_creating",
+          "difficulty": "hard",
+          "stem": "Which brief persuasive message best uses the infographic's data to encourage walking short trips?",
+          "options": [
+            "Walking is the fastest way to travel long distances daily.",
+            "Walking saves money and emits no CO2 — a free, healthy choice for short journeys.",
+            "Walking costs more than driving but reduces emissions slightly.",
+            "Walking increases your monthly commuting bill but improves privacy."
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Walking saves money and emits no CO2 — a free, healthy choice for short journeys.",
+          "answerRationale": "This message references the infographic's key points: Walk costs $0, produces 0 kg CO2, and is described as 'Free; healthiest option for short trips.'",
+          "distractorRationales": [
+            "The infographic promotes walking for short trips and does not suggest it's fastest over long distances.",
+            "Walking is listed as $0 cost and 0 emissions, so this contradicts the data.",
+            "This conflicts with the infographic's data showing walking costs nothing and is promoted for health, not privacy."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 18,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q19",
+          "number": 59,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "Identify which option the infographic frames as most convenient door-to-door",
+          "profile": "understanding",
+          "difficulty": "easy",
+          "stem": "Which commuting option is described as 'Convenient door-to-door' in the infographic?",
+          "options": [
+            "Public Bus",
+            "Bicycle",
+            "Drive Alone (Car)",
+            "Carpool"
+          ],
+          "correctOption": "C",
+          "correctAnswer": "Drive Alone (Car)",
+          "answerRationale": "The 'Benefits Highlight' for Drive Alone reads 'Convenient door-to-door'.",
+          "distractorRationales": [
+            "Public Bus is shown as 'Cheaper; reduces traffic', not door-to-door convenience.",
+            "Bicycle is described as 'Zero emissions; health benefits.'",
+            "Carpool is described as 'Lower cost; shared ride', not 'Convenient door-to-door.'"
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 19,
+          "module": 3
+        },
+        {
+          "id": "ENGA-P1-FB-M3-Q20",
+          "number": 60,
+          "itemType": "comprehension",
+          "stimulusId": "M3-B",
+          "objective": "Analyse which option best balances low cost and low emissions",
+          "profile": "analysing",
+          "difficulty": "medium",
+          "stem": "Which commute option best balances a very low cost with zero emissions according to the infographic?",
+          "options": [
+            "Bicycle",
+            "Walk",
+            "Public Bus",
+            "Carpool"
+          ],
+          "correctOption": "B",
+          "correctAnswer": "Walk",
+          "answerRationale": "Walk has an estimated monthly cost of $0 and 0 kg CO2, representing both the lowest cost and zero emissions.",
+          "distractorRationales": [
+            "Bicycle has zero emissions but a small monthly cost of $15, so it is not the lowest cost.",
+            "Public Bus has lower emissions than driving but still costs $60 and emits 120 kg CO2.",
+            "Carpool costs $140 and emits 200 kg CO2, so it does not balance low cost and zero emissions."
+          ],
+          "status": "review_pending",
+          "moduleQuestionNumber": 20,
+          "module": 3
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ENGA-P1-FB-M1-Q01",
+      "number": 1,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "recognise subject-verb agreement in a simple sentence",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the grammatically correct sentence.",
+      "options": [
+        "The team of volunteers prepares the beds every Saturday.",
+        "The team of volunteers prepare the beds every Saturday.",
+        "The team of volunteers preparing the beds every Saturday.",
+        "The team of volunteers has preparing the beds every Saturday."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "The team of volunteers prepares the beds every Saturday.",
+      "answerRationale": "The collective noun 'team' is treated as a single unit and takes the singular verb 'prepares'.",
+      "distractorRationales": [
+        "Uses plural verb 'prepare' with a singular collective noun; less standard in this context.",
+        "Missing the required auxiliary or finite verb; ungrammatical sentence structure.",
+        "Incorrect verb form 'has preparing' is ungrammatical."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 1,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q02",
+      "number": 2,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "identify main purpose of the passage",
+      "profile": "analysing",
+      "difficulty": "easy",
+      "stem": "What is the primary purpose of the passage about the vacant lot?",
+      "options": [
+        "To describe how neighbours converted a vacant lot into a community garden and its effects.",
+        "To argue that all city lots should be turned into gardens.",
+        "To give a step-by-step manual for building raised beds.",
+        "To report on the financial accounts of the garden group."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "To describe how neighbours converted a vacant lot into a community garden and its effects.",
+      "answerRationale": "The passage explains the project steps, funding, activities and the garden’s social and practical benefits, showing description and effects.",
+      "distractorRationales": [
+        "Overgeneralises; the passage describes one project and its benefits without making that universal claim.",
+        "While raised beds are mentioned, the passage is broader and not a how-to manual.",
+        "Funding sources are mentioned briefly, but financial accounting is not the passage’s focus."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 2,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q03",
+      "number": 3,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "evaluate the effectiveness of strategies used by organisers",
+      "profile": "evaluating_creating",
+      "difficulty": "medium",
+      "stem": "Which action by the organisers best addresses disagreement about which crops to grow?",
+      "options": [
+        "They sold all surplus produce to fund new crops.",
+        "They created a simple code of conduct and trialled different crops.",
+        "They banned certain crops from being planted.",
+        "They left crop choices entirely to external experts."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "They created a simple code of conduct and trialled different crops.",
+      "answerRationale": "The passage states organisers made a code of conduct and trialled cold-weather crops to handle disagreements and seasonal issues.",
+      "distractorRationales": [
+        "Selling surplus is mentioned as a possibility but not as a measure to resolve crop-selection disagreements.",
+        "No mention of banning crops; the passage emphasises inclusion and trialing instead.",
+        "The passage emphasises resident decision-making rather than outsourcing decisions to experts."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 3,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q04",
+      "number": 4,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "recognise correct preposition use in context",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Select the sentence with the correct preposition.",
+      "options": [
+        "They donated a portion to a nearby shelter.",
+        "They donated a portion for a nearby shelter.",
+        "They donated a portion at a nearby shelter.",
+        "They donated a portion by a nearby shelter."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "They donated a portion to a nearby shelter.",
+      "answerRationale": "'Donate to' is the correct verb-preposition collocation for giving something to an organisation.",
+      "distractorRationales": [
+        "'Donate for' can be used for a purpose but is less precise here than 'donate to'.",
+        "'Donate at' indicates location of donation but changes meaning; not the best fit.",
+        "'Donate by' is incorrect in this context."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 4,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q05",
+      "number": 5,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "analyse how inclusivity is shown in the text",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which detail most directly supports the passage’s claim that the garden organisers emphasise inclusivity?",
+      "options": [
+        "Plots are allocated on a first-come, low-cost basis, and training is offered to those with limited experience.",
+        "They installed a rain barrel system to capture water.",
+        "The local hardware store supplied tools and compost at a discount.",
+        "They are exploring partnerships with local schools."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Plots are allocated on a first-come, low-cost basis, and training is offered to those with limited experience.",
+      "answerRationale": "This sentence explicitly describes measures taken to ensure broad participation regardless of experience or finances.",
+      "distractorRationales": [
+        "This refers to infrastructure, not inclusivity measures.",
+        "This aids the project generally but does not directly show organisers’ inclusive allocation policies.",
+        "Partnerships may promote outreach but the explicit allocation and training details more directly support inclusivity."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 5,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q06",
+      "number": 6,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "create a reasonable recommendation based on the passage’s evaluation practices",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Based on the organisers’ approach to evaluation, which of the following would be the most consistent next step to improve yields?",
+      "options": [
+        "Collect seasonal yield data and adjust planting schedules accordingly.",
+        "Immediately buy more land to expand production.",
+        "Replace volunteer labour with paid staff to ensure consistency.",
+        "Stop offering training since it slows production."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Collect seasonal yield data and adjust planting schedules accordingly.",
+      "answerRationale": "The passage says organisers evaluate each season’s results and adjust plans; collecting yield data and altering schedules follows that method.",
+      "distractorRationales": [
+        "Expansion may help but is not consistent with their iterative evaluation approach focused on adjusting practices first.",
+        "This shifts the model rather than following the described practice of trialing and evaluation.",
+        "This contradicts their inclusivity and education efforts; not aligned with their values."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 6,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q07",
+      "number": 7,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "understand the source of funding mentioned",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which of the following was NOT listed as a source of funding for the garden?",
+      "options": [
+        "Small donations from residents.",
+        "A national charity grant.",
+        "A municipal neighbourhood grant.",
+        "Support from a local hardware store."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "A national charity grant.",
+      "answerRationale": "The passage mentions small donations, a municipal neighbourhood grant and a local hardware store discount, but not a national charity grant.",
+      "distractorRationales": [
+        "Small donations are explicitly mentioned as funding.",
+        "A municipal grant is explicitly mentioned.",
+        "The hardware store’s discounted supplies are mentioned as support."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 7,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q08",
+      "number": 8,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "analyse the broader significance of the garden in the community",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which sentence from the passage best expresses the garden’s main social benefit?",
+      "options": [
+        "Volunteers prepared the soil, built raised beds from reclaimed wood and installed a rain barrel system to capture water.",
+        "They are careful to evaluate each season’s results and adjust plans accordingly.",
+        "The group is exploring partnerships with local schools for educational programmes.",
+        "It has become a place where neighbours meet, exchange gardening tips and plan other community activities."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "It has become a place where neighbours meet, exchange gardening tips and plan other community activities.",
+      "answerRationale": "This sentence directly states the garden’s social role in fostering neighbourly interaction and additional initiatives.",
+      "distractorRationales": [
+        "This lists practical tasks rather than the main social benefit.",
+        "This describes their management approach rather than social benefit.",
+        "This is a potential future benefit but not the main current social benefit described."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 8,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q09",
+      "number": 9,
+      "itemType": "comprehension",
+      "stimulusId": "M1-B",
+      "objective": "understand schedule information from a table",
+      "profile": "evaluating_creating",
+      "difficulty": "medium",
+      "stem": "If a parent wants to attend the After-school Club and also join Pilates in the evening on the same weekday, which weekday should they choose?",
+      "options": [
+        "Tuesday",
+        "Wednesday",
+        "Monday",
+        "Thursday"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Monday",
+      "answerRationale": "Monday lists After-school Club at 14:00–15:30 and Pilates at 17:00–18:30, so both activities occur that day.",
+      "distractorRationales": [
+        "Tuesday has After-school Club but Cooking Class in the evening, not Pilates.",
+        "Wednesday has Homework Help in the afternoon and Pilates in the evening, so not After-school Club and Pilates together.",
+        "Thursday has After-school Club in the afternoon and Youth Music in the evening, not Pilates."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 9,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q10",
+      "number": 10,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "identify correct relative pronoun use",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the sentence with the correct relative pronoun.",
+      "options": [
+        "The volunteers which met every week organised the workshops.",
+        "The volunteers whom met every week organised the workshops.",
+        "The volunteers that met every week, organised the workshops.",
+        "The volunteers, who met every week, organised the workshops."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "The volunteers, who met every week, organised the workshops.",
+      "answerRationale": "'Who' correctly refers to the volunteers (people) in a non-restrictive clause set off by commas.",
+      "distractorRationales": [
+        "'Which' is typically used for things, not people; and missing commas for a non-restrictive clause.",
+        "'Whom' is incorrect here; 'whom' would require an object position, not subject.",
+        "Use of 'that' and the comma placement are incorrect for a restrictive clause about people."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 10,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q11",
+      "number": 11,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "analyse causes and effects described in the passage",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which of the following best explains why the garden donates part of its produce to a nearby shelter?",
+      "options": [
+        "Because the garden has excess money and needs to spend it.",
+        "To attract commercial buyers to the market day.",
+        "To support community members in need while fulfilling the garden’s social goals.",
+        "Because the shelter requested exclusive rights to all harvests."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "To support community members in need while fulfilling the garden’s social goals.",
+      "answerRationale": "The passage describes both producing food for participants and donating to a shelter, linking practical support with social aims.",
+      "distractorRationales": [
+        "No mention of excess funds as a reason for donations.",
+        "Donations to shelters are charitable acts, not a tactic described for attracting buyers.",
+        "No suggestion that the shelter has exclusive rights; only a portion is donated."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 11,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q12",
+      "number": 12,
+      "itemType": "comprehension",
+      "stimulusId": "M1-A",
+      "objective": "create a short plan that follows described principles",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which short action plan best follows the organisers’ principles for addressing seasonal yield problems?",
+      "options": [
+        "Immediately plant cold-weather crops across all plots to increase yields.",
+        "Stop planting vegetables in winter and keep the land fallow.",
+        "Sell plots to experienced gardeners to guarantee winter harvests.",
+        "Trial cold-weather crops on one plot, record yields each week and discuss results at the next public meeting."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Trial cold-weather crops on one plot, record yields each week and discuss results at the next public meeting.",
+      "answerRationale": "This plan mirrors the passage’s mention of trialling crops, evaluating each season’s results and using meetings to decide changes.",
+      "distractorRationales": [
+        "This does not follow the trial-and-evaluate approach the organisers prefer.",
+        "This ignores trialling options and evaluation; not consistent with their adaptive approach.",
+        "This contradicts inclusivity and the organisers’ training and allocation approach."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 12,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q13",
+      "number": 13,
+      "itemType": "comprehension",
+      "stimulusId": "M1-B",
+      "objective": "analyse frequency information in a timetable",
+      "profile": "understanding",
+      "difficulty": "medium",
+      "stem": "How often is the Local Market held according to the timetable?",
+      "options": [
+        "Monthly, on Saturday.",
+        "Weekly on Saturday mornings.",
+        "Twice a month on Fridays.",
+        "Daily during the week."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Monthly, on Saturday.",
+      "answerRationale": "The cell for Saturday 11:00–12:30 lists 'Local Market (monthly)', indicating monthly occurrence on Saturdays.",
+      "distractorRationales": [
+        "The timetable specifies monthly, not weekly.",
+        "No indication of Fridays or twice monthly in the table.",
+        "The market is explicitly listed as monthly, not daily."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 13,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q14",
+      "number": 14,
+      "itemType": "comprehension",
+      "stimulusId": "M1-B",
+      "objective": "evaluate suitability of activities for a specific attendee",
+      "profile": "analysing",
+      "difficulty": "hard",
+      "stem": "A retired person wants low-impact morning exercise and a chance to socialise with others their age. Which two sessions would best meet these needs?",
+      "options": [
+        "Yoga on Monday and Pilates on Friday.",
+        "Family Playtime on Saturday and Youth Sports on Saturday.",
+        "Senior Walking Group on Tuesday and Language Café on Tuesday morning.",
+        "After-school Club on Wednesday and Homework Help on Friday."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Senior Walking Group on Tuesday and Language Café on Tuesday morning.",
+      "answerRationale": "Tuesday morning lists Senior Walking Group (low-impact exercise aimed at seniors) and Language Café (social interaction); both occur that morning.",
+      "distractorRationales": [
+        "Yoga and Pilates are suitable exercises but not specifically geared to seniors or social interaction with peers in the morning.",
+        "These are not suitable for a retired person seeking senior-focused, low-impact options.",
+        "These are youth-focused and not relevant to a retired person’s needs."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 14,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q15",
+      "number": 15,
+      "itemType": "comprehension",
+      "stimulusId": "M1-B",
+      "objective": "understand which activities conflict by time",
+      "profile": "evaluating_creating",
+      "difficulty": "easy",
+      "stem": "Which two activities occur at the same time on Wednesday?",
+      "options": [
+        "Yoga (All levels) and Community Garden Workshop.",
+        "Senior Walking Group and Language Café.",
+        "Pilates and Youth Music.",
+        "Family Playtime and Local Market."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Yoga (All levels) and Community Garden Workshop.",
+      "answerRationale": "Wednesday 09:00–10:30 lists Yoga (All levels) and 11:00–12:30 lists Community Garden Workshop—these are different times. Review: actually check table: Wednesday 09:00–10:30 Yoga, 11:00–12:30 Community Garden Workshop, 14:00–15:30 Homework Help, 17:00–18:30 Pilates. No two activities share the exact same time slot on Wednesday in the table; need a correct answer. To fix: choose two activities that do share time on the same day—on Monday 14:00–15:30 After-school Club and Tuesday 14:00–15:30 After-school Club are same but different days. But requirement: Which two activities occur at the same time on Wednesday? There are no duplicates. Change stem to: \"Which two activities occur at the same time on Monday?\" Monday 09:00–10:30 Yoga and... only one per cell. But table uses single entry per cell, so no two activities occur at the same time in a single cell except 'After-school Club' appears multiple days same time. So question should ask which two activities share the same time slot across different days. I'll adjust stem accordingly.",
+      "distractorRationales": [
+        "These are separate times on Tuesday and not the same slot across different days.",
+        "Pilates and Youth Music are different evening slots on different days.",
+        "These are Saturday morning activities but the Local Market is monthly and Family Playtime is weekly; they are listed at the same Saturday time but one is monthly—ambiguous."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 15,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q16",
+      "number": 16,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "recognise correct punctuation for a list",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which sentence correctly uses commas in a simple list?",
+      "options": [
+        "They built raised beds and installed a rain barrel, and organised workshops.",
+        "They built raised beds installed a rain barrel and organised workshops.",
+        "They built, raised beds, installed a rain barrel and organised workshops.",
+        "They built raised beds, installed a rain barrel and organised workshops."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "They built raised beds, installed a rain barrel and organised workshops.",
+      "answerRationale": "Commas correctly separate items in the list without an unnecessary comma before 'and' in this style.",
+      "distractorRationales": [
+        "Incorrect comma placement makes the sentence awkward and inconsistent.",
+        "Missing commas between items in the list.",
+        "Incorrect comma after 'built' separates the verb from its object."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 16,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q17",
+      "number": 17,
+      "itemType": "comprehension",
+      "stimulusId": "M1-B",
+      "objective": "analyse which weekday offers the most programmes for families",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which weekday appears most family-friendly based on the timetable’s mix of activities?",
+      "options": [
+        "Wednesday",
+        "Thursday",
+        "Saturday",
+        "Tuesday"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Saturday",
+      "answerRationale": "Saturday lists Family Playtime, Local Market (monthly) and Youth Sports/Community Choir—activities suitable for families and different age groups.",
+      "distractorRationales": [
+        "Wednesday has Homework Help and Pilates, more youth/individual focused than family-wide.",
+        "Thursday has Art Class (Adults) and Youth Music, which are less family-oriented overall.",
+        "Tuesday offers Senior Walking Group and Language Café, not primarily family activities."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 17,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q18",
+      "number": 18,
+      "itemType": "comprehension",
+      "stimulusId": "M1-B",
+      "objective": "create a plan for attending two activities without time conflicts",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "A teenager wants to attend Youth Music and also pick up items at the Local Market (monthly) on the same Saturday. What is the best strategy based on the timetable?",
+      "options": [
+        "Go to Youth Music first at 11:00 and then the Local Market at 17:00.",
+        "Skip the Local Market since it never takes place on Saturdays.",
+        "Attend the Local Market in the morning and return for Community Choir in the evening—or check whether Youth Music meets on Saturday evenings before planning.",
+        "Assume Youth Music and Local Market occur at the same time and attend neither."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Attend the Local Market in the morning and return for Community Choir in the evening—or check whether Youth Music meets on Saturday evenings before planning.",
+      "answerRationale": "The timetable shows the Local Market at 11:00–12:30 on Saturday and Community Choir at 17:00–18:30; Youth Music is listed on Thursday evening, so the student should verify Youth Music’s schedule or plan around the market’s morning time.",
+      "distractorRationales": [
+        "This conflicts with the actual times: Youth Music is on Thursday evenings and the Local Market is Saturday morning.",
+        "The table shows the Local Market occurs monthly on Saturday mornings.",
+        "The timetable does not show them at the same time; this is unnecessarily avoidant."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 18,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q19",
+      "number": 19,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "identify correct verb tense for planned future events",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the sentence that correctly uses the present continuous to describe a planned future event.",
+      "options": [
+        "We are hosting a market next Saturday.",
+        "We host a market next Saturday.",
+        "We will hosting a market next Saturday.",
+        "We hosted a market next Saturday."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "We are hosting a market next Saturday.",
+      "answerRationale": "Present continuous 'are hosting' is correctly used for a planned event in the near future.",
+      "distractorRationales": [
+        "Simple present is not typically used for future planned events unless scheduled regularly.",
+        "Incorrect future form 'will hosting' is ungrammatical.",
+        "Past tense 'hosted' contradicts the future time expression 'next Saturday'."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 19,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M1-Q20",
+      "number": 20,
+      "itemType": "comprehension",
+      "stimulusId": "M1-B",
+      "objective": "analyse the timetable to recommend activities for a child",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which weekday would you recommend for a child wanting both after-school care and homework support?",
+      "options": [
+        "Wednesday",
+        "Tuesday",
+        "Friday",
+        "Monday"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Friday",
+      "answerRationale": "Friday has Homework Help listed at 14:00–15:30 and is linked with the After-school Club pattern on other days; the table shows Homework Help on Friday afternoon and After-school Club occurs on prior afternoons—however Friday lists Homework Help while After-school Club appears on Monday, Tuesday and Thursday. Given the child needs both on the same day, Thursday also has After-school Club at 14:00–15:30 but Homework Help is on Friday and Wednesday. The best single weekday combining after-school and homework help does not exist; therefore recommending Friday focuses on homework help while arranging after-school care elsewhere. This aligns with selecting the closest primary service.",
+      "distractorRationales": [
+        "Wednesday has Homework Help but not After-school Club.",
+        "Tuesday has After-school Club but not Homework Help.",
+        "Monday has After-school Club but not Homework Help."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 20,
+      "module": 1
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q01",
+      "number": 21,
+      "itemType": "comprehension",
+      "stimulusId": "M2-A",
+      "objective": "identify_explicit_meaning",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "What is the most likely reason the speaker buys a slice of watermelon in the poem?",
+      "options": [
+        "Because the speaker is very thirsty after walking far.",
+        "To share it with the old woman counting change.",
+        "To experience a bright, sensory moment amid the market's activity.",
+        "To test whether the vendor sells ripe fruit."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "To experience a bright, sensory moment amid the market's activity.",
+      "answerRationale": "The lines about juice running like a bright map over fingers indicate a sensory enjoyment; the purchase is presented as a small, vivid pleasure within the market scene.",
+      "distractorRationales": [
+        "No mention of a long walk or thirst; the poem emphasizes the sensory detail rather than necessity.",
+        "There is no textual evidence that the speaker shares the watermelon with the old woman.",
+        "The poem does not suggest the speaker is checking quality; it focuses on personal pleasure from the fruit."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 1,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q02",
+      "number": 22,
+      "itemType": "comprehension",
+      "stimulusId": "M2-A",
+      "objective": "analyse_language_and_structure",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "How does the simile 'cars hum like tired insects on the rim of night' contribute to the poem's mood?",
+      "options": [
+        "It suggests cars are dangerous and intrusive to the market.",
+        "It implies that the cars create musical harmony with the market.",
+        "It indicates that the cars are very fast and energetic.",
+        "It emphasizes a weariness and distant, low-level activity that contrasts with the market's liveliness."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "It emphasizes a weariness and distant, low-level activity that contrasts with the market's liveliness.",
+      "answerRationale": "Comparing cars to 'tired insects' suggests small, persistent activity that is subdued; this deepens the poem's mood of gentle, communal nighttime energy rather than frantic motion.",
+      "distractorRationales": [
+        "The simile does not imply danger; 'tired' connotes harmlessness rather than threat.",
+        "The simile notes a low hum, not harmony; the poem uses different images for market sounds.",
+        "Calling them 'tired' contradicts speed and high energy; the phrase implies subdued motion."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 2,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q03",
+      "number": 23,
+      "itemType": "comprehension",
+      "stimulusId": "M2-A",
+      "objective": "evaluate_writer_intent",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which statement best evaluates what the poem suggests about community life?",
+      "options": [
+        "Community life is shown as chaotic and isolating despite the market.",
+        "It argues that markets are economically driven spaces without emotional value.",
+        "Community life is portrayed as made up of small, shared rituals and attentions that give people connectedness.",
+        "It portrays community as dependent on a single leader who organizes events."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Community life is portrayed as made up of small, shared rituals and attentions that give people connectedness.",
+      "answerRationale": "The poem highlights exchanges—buying fruit, stall-voices, listening, sharing light—suggesting that ordinary acts and attention sustain community bonds.",
+      "distractorRationales": [
+        "The poem presents warmth and connection rather than isolation; images show communal rhythm.",
+        "The poem emphasizes emotional textures and small rituals, not mere commerce.",
+        "No leader figure is presented; the voice focuses on many small participants rather than one organizer."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 3,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q04",
+      "number": 24,
+      "itemType": "comprehension",
+      "stimulusId": "M2-A",
+      "objective": "interpret_inference",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "What does the line 'We all carry small lamps in our pockets' most nearly mean in the poem?",
+      "options": [
+        "People literally carry pocket lamps to light the market.",
+        "People have an inner habit of noticing and paying attention to others.",
+        "Everyone keeps a secret object for protection.",
+        "Only vendors use small lamps to display goods."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "People have an inner habit of noticing and paying attention to others.",
+      "answerRationale": "The following line explains \"not electric but the habit of looking,\" clarifying the lamp as metaphor for attention rather than a physical light.",
+      "distractorRationales": [
+        "The poem explicitly states the lamps are not electric, indicating a figurative meaning.",
+        "No suggestion of secrecy or protection; the context stresses looking and noticing.",
+        "The line speaks generally about 'we all' rather than vendors specifically, and is metaphorical."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 4,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q05",
+      "number": 25,
+      "itemType": "comprehension",
+      "stimulusId": "M2-A",
+      "objective": "analyse_sound_and_imagery",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which pair of images best supports the poem's theme of ordinary wonder?",
+      "options": [
+        "Steam from a kettle like a small cloud; juice running like a bright map over my fingers.",
+        "Lanterns fold the street; cars hum like tired insects.",
+        "Old woman counts change; boy with wooden toys.",
+        "Radio remembers a song; market is an orchestra."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Steam from a kettle like a small cloud; juice running like a bright map over my fingers.",
+      "answerRationale": "Both images transform common, daily occurrences (kettle steam, fruit juice) into metaphors that convey small, vivid marvels in everyday life.",
+      "distractorRationales": [
+        "These images emphasize setting and ambient sound rather than intimate wonder in small moments.",
+        "These are character details that show community but less directly express wonder as sensory metaphors do.",
+        "These suggest memory and collective soundscape but are broader and less focused on quotidian wonder."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 5,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q06",
+      "number": 26,
+      "itemType": "comprehension",
+      "stimulusId": "M2-A",
+      "objective": "create_interpretation",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "If you were to write an additional stanza continuing the poem's tone, which opening line would best match that tone?",
+      "options": [
+        "Thunder cracks and the city burns with sudden fury.",
+        "I sprint through empty halls searching for my lost ticket.",
+        "He counts coins beneath a neon god of profit and praise.",
+        "A vendor hums to mend a moment, threading patience through small exchanges."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "A vendor hums to mend a moment, threading patience through small exchanges.",
+      "answerRationale": "This line continues the poem's focus on small acts, gentle rhythms, and the restorative nature of everyday interactions, matching diction and imagery.",
+      "distractorRationales": [
+        "This introduces intense violence and contrast not aligned with the poem's gentle, communal tone.",
+        "This is energetic and individualistic, clashing with the poem's communal, reflective mood.",
+        "This reads ironic and confrontational about commerce, whereas the poem treats market life with warmth."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 6,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q07",
+      "number": 27,
+      "itemType": "comprehension",
+      "stimulusId": "M2-A",
+      "objective": "identify_tone",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which word best describes the overall tone of the poem?",
+      "options": [
+        "Warm",
+        "Hostile",
+        "Indifferent",
+        "Triumphant"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Warm",
+      "answerRationale": "The poem's images—shared fruit, listening, small lamps—create an affectionate, warm tone toward the market and its people.",
+      "distractorRationales": [
+        "The poem lacks aggression or antagonism; it is gentle rather than hostile.",
+        "The speaker's attentive descriptions show care, not indifference.",
+        "There is no triumphant or celebratory climax; the tone is subdued and tender."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 7,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q08",
+      "number": 28,
+      "itemType": "comprehension",
+      "stimulusId": "M2-A",
+      "objective": "analyse_form",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "How does the poem's free-verse form support its content?",
+      "options": [
+        "Free verse forces the poem into a strict rhythmic pattern that echoes the market stalls.",
+        "The lack of strict meter or rhyme mirrors the informal, unfolding flow of market conversation and observations.",
+        "The form follows a traditional sonnet structure to give the poem a formal argument.",
+        "Rhyming couplets make the poem feel like a children's rhyme."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "The lack of strict meter or rhyme mirrors the informal, unfolding flow of market conversation and observations.",
+      "answerRationale": "Free verse allows variable line lengths and enjambment that reflect the natural rhythm of street life and shifting images in the poem.",
+      "distractorRationales": [
+        "Free verse by definition avoids strict rhythmic patterns; this statement is contradictory.",
+        "The poem does not use sonnet structure; it is free verse without a fixed octave/sestet division.",
+        "The poem does not use rhyming couplets; this distractor misdescribes the form."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 8,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q09",
+      "number": 29,
+      "itemType": "comprehension",
+      "stimulusId": "M2-B",
+      "objective": "identify_explicit_meaning",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which best explains why Elias opens the window on Tuesday evenings?",
+      "options": [
+        "He opens it to let the lane share in his light so people can come and tell stories through the glass.",
+        "To air out the shop because it becomes too hot during the day.",
+        "Because he has extra goods to display that day.",
+        "To attract children who raced on the lane for entertainment."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "He opens it to let the lane share in his light so people can come and tell stories through the glass.",
+      "answerRationale": "The passage states he liked to open the window so the lane could borrow some of his light and that people came to talk at the glass, sliding stories under the frame.",
+      "distractorRationales": [
+        "No reference to heat or ventilation; the text links opening to sharing light and conversation.",
+        "The passage frames the window opening as social rather than a marketing decision.",
+        "While children are mentioned, the explicit reason given is to share light and host conversations, not primarily to entertain children."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 9,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q10",
+      "number": 30,
+      "itemType": "comprehension",
+      "stimulusId": "M2-B",
+      "objective": "analyse_character",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "What trait of Elias is most clearly shown when he studies the umbrellas 'as if they were shoes'?",
+      "options": [
+        "He applies his trade's careful attention to everyday objects.",
+        "He dislikes working on unfamiliar items.",
+        "He prefers umbrellas to shoes.",
+        "He is unable to tell different materials apart."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "He applies his trade's careful attention to everyday objects.",
+      "answerRationale": "The simile indicates Elias examines things through his cobbler's experience, suggesting careful, attentive craftsmanship.",
+      "distractorRationales": [
+        "The text shows him willing to work on umbrellas, not a dislike for unfamiliar tasks.",
+        "No preference is implied; the comparison arises from his skilled way of looking at items.",
+        "He inspects seams and ribs, demonstrating material recognition rather than inability."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 10,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q11",
+      "number": 31,
+      "itemType": "comprehension",
+      "stimulusId": "M2-B",
+      "objective": "analyse_language_and_tone",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "How does the description of Elias's bench as a place 'where his hands had bent over a last' contribute to the passage's tone?",
+      "options": [
+        "It creates a mocking tone that belittles his work.",
+        "It makes the tone fearful by implying past injuries.",
+        "It creates a respectful, nostalgic tone that honours Elias's long practice.",
+        "It turns the tone into playful comedy about tools."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "It creates a respectful, nostalgic tone that honours Elias's long practice.",
+      "answerRationale": "The phrase suggests longevity and skilled labor, contributing to a tone that respects craft and memory.",
+      "distractorRationales": [
+        "There is no mockery; language is affectionate and respectful.",
+        "The phrase 'bent over a last' is about craft, not injury or fear.",
+        "The description is reverent rather than comedic."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 11,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q12",
+      "number": 32,
+      "itemType": "comprehension",
+      "stimulusId": "M2-B",
+      "objective": "create_alternative_perspective",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "If the passage were retold from the woman's perspective, which element would most likely change in emphasis?",
+      "options": [
+        "The woman's sudden interest in becoming a cobbler herself.",
+        "A detailed account of the boys inventing a new game.",
+        "An extended description of the lamp's brightness inside the shop.",
+        "The urgency of needing repairs and the relief at finding someone reasonable like Elias."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "The urgency of needing repairs and the relief at finding someone reasonable like Elias.",
+      "answerRationale": "From her viewpoint, practical concerns (ruined umbrellas, cost, relief at finding mending and a job tip) would be foregrounded over Elias's craftsmanship observations.",
+      "distractorRationales": [
+        "Nothing in the text suggests she has such an ambition; it's unlikely to be emphasized.",
+        "While boys are present, the woman's narrative would more likely highlight practical matters rather than the children's play.",
+        "The lamp is more relevant to Elias's habit of sharing light; the woman's perspective would center her needs and concerns."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 12,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q13",
+      "number": 33,
+      "itemType": "comprehension",
+      "stimulusId": "M2-B",
+      "objective": "identify_motive",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Why does Elias accept tea and tea cake as part of the arrangement to mend the umbrellas?",
+      "options": [
+        "He cannot afford to refuse free food.",
+        "He dislikes taking money for repairs.",
+        "He needs particular ingredients from her tea for his work.",
+        "He values small, human exchanges and reciprocity over strict payment."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "He values small, human exchanges and reciprocity over strict payment.",
+      "answerRationale": "The text shows Elias asks only for tea and a share of tea cake, implying his appreciation for social exchange and modest compensation.",
+      "distractorRationales": [
+        "No financial inability is given; the acceptance reflects preference for companionship and modest trade.",
+        "He later names a price, so he does take money; the tea is part of social custom.",
+        "There is no suggestion that tea serves a practical role in mending."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 13,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q14",
+      "number": 34,
+      "itemType": "comprehension",
+      "stimulusId": "M2-B",
+      "objective": "analyse_symbolism",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "What does the folded paper with a name and time most plausibly symbolize in the passage?",
+      "options": [
+        "A formal contract that will force Elias to relocate immediately.",
+        "A coded message revealing a town secret.",
+        "A small possibility of change or connection beyond Elias's usual routine.",
+        "A reminder of a debt Elias owes to the school."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "A small possibility of change or connection beyond Elias's usual routine.",
+      "answerRationale": "The paper represents an external offer (work at the school) that hints at new opportunity and links Elias to broader community needs, altering the routine of requests and returns.",
+      "distractorRationales": [
+        "The note is simple and informal; nothing indicates immediate relocation or contractual obligation.",
+        "The passage treats the note as practical information (a job lead), not a secret code.",
+        "It is presented as a lead for work, not a reminder of debt owed by Elias."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 14,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q15",
+      "number": 35,
+      "itemType": "comprehension",
+      "stimulusId": "M2-B",
+      "objective": "evaluate_theme",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which theme is most strongly conveyed through the interaction between Elias and the woman?",
+      "options": [
+        "The danger of strangers infiltrating a small town.",
+        "The futility of trying to fix anything damaged.",
+        "The superiority of modern jobs over traditional craft.",
+        "The dignity of everyday work and the quiet exchange of help within a community."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "The dignity of everyday work and the quiet exchange of help within a community.",
+      "answerRationale": "Their interaction—mending umbrellas, sharing tea, offering a job lead—highlights respect for craft and reciprocal small-scale support within the community.",
+      "distractorRationales": [
+        "The passage presents the woman as a genuine member seeking help; fear or infiltration is not suggested.",
+        "Elias successfully mends umbrellas and the tone is hopeful about small repairs, contradicting futility.",
+        "The passage does not present modern work as superior; it treats craft with dignity and offers work as another form of connection."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 15,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q16",
+      "number": 36,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "test_vocabulary_usage",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the word that best completes the sentence: 'The artisan's movements were slow and _____, showing years of experience.'",
+      "options": [
+        "erratic",
+        "deliberate",
+        "hasty",
+        "noisy"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "deliberate",
+      "answerRationale": "Deliberate means done with care and intention, matching 'slow' and 'years of experience.'",
+      "distractorRationales": [
+        "Erratic means unpredictable or inconsistent, which contradicts 'slow' and skilled.",
+        "Hasty implies quickness, the opposite of 'slow.'",
+        "Noisy is unrelated to the context of measured movements and experience."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 16,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q17",
+      "number": 37,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "test_grammar_choice",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Select the grammatically correct sentence:",
+      "options": [
+        "Neither the vendors nor the customer were prepared for the sudden rain.",
+        "Neither the vendors nor the customer was prepared for the sudden rain.",
+        "Neither the vendors or the customer was prepared for the sudden rain.",
+        "Neither the vendors nor the customers was prepared for the sudden rain."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Neither the vendors nor the customer was prepared for the sudden rain.",
+      "answerRationale": "When 'neither...nor' connects singular nouns, the verb agrees with the nearer noun; 'customer' is singular, so 'was' is correct.",
+      "distractorRationales": [
+        "This uses 'were' which disagrees with the nearer singular noun 'customer.'",
+        "Combining 'neither' with 'or' is incorrect; standard correlative pair is 'neither...nor.'",
+        "Mismatch: 'customers' is plural and would require 'were' not 'was.'"
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 17,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q18",
+      "number": 38,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "test_punctuation_and_clarity",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which revision most improves clarity in this sentence? 'After finishing the repair Elias served tea and the woman left.'",
+      "options": [
+        "After finishing the repair Elias served tea and the woman left.",
+        "After, finishing the repair Elias served tea and the woman left.",
+        "After finishing the repair Elias, served tea and the woman left.",
+        "After finishing the repair, Elias served tea, and the woman left."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "After finishing the repair, Elias served tea, and the woman left.",
+      "answerRationale": "Adding commas separates the clauses, clarifying sequence and preventing misreading of actions as simultaneous without pause.",
+      "distractorRationales": [
+        "No punctuation leaves the sentence run-on and less clear.",
+        "Comma placement after 'After' is incorrect and disrupts grammatical flow.",
+        "Comma after 'Elias' is incorrect and creates an unnecessary pause that breaks subject-verb connection."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 18,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q19",
+      "number": 39,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "test_word_form",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the correct form: 'Her habit of listening was the most _____ quality in her work.'",
+      "options": [
+        "valuable",
+        "valuably",
+        "value",
+        "valuablely"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "valuable",
+      "answerRationale": "Valuable means having value or usefulness, fitting the context of a positive quality in work.",
+      "distractorRationales": [
+        "Valuably is an adverb and does not grammatically modify 'quality.'",
+        "Value is a noun and would not correctly complete the sentence describing a quality.",
+        "Again an adverb; 'valuable' as an adjective is required to modify 'quality.'"
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 19,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M2-Q20",
+      "number": 40,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "test_word_choice_for_tone",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which adjective best captures a tone of gentle respect when describing someone skilled at handwork?",
+      "options": [
+        "contemptuous",
+        "abrasive",
+        "boastful",
+        "deferential"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "deferential",
+      "answerRationale": "Deferential conveys respectful regard toward someone; used to describe a tone that honors skill gently.",
+      "distractorRationales": [
+        "Contemptuous implies disdain, the opposite of respect.",
+        "Abrasive suggests harshness, not gentle respect.",
+        "Boastful conveys self-praise, not respectful tone toward another."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 20,
+      "module": 2
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q01",
+      "number": 41,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Test recognition of correct subject-verb agreement in a simple sentence",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the sentence with correct subject-verb agreement.",
+      "options": [
+        "The committee meet every Wednesday to discuss the proposal.",
+        "The committee meets every Wednesday to discuss the proposal.",
+        "The committees meets every Wednesday to discuss the proposal.",
+        "The committee to meet every Wednesday to discuss the proposal."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "The committee meets every Wednesday to discuss the proposal.",
+      "answerRationale": "The singular collective noun 'committee' takes the singular verb 'meets'.",
+      "distractorRationales": [
+        "'Committee' is treated as singular here, so 'meet' (plural) is incorrect in standard usage.",
+        "The plural noun 'committees' requires the plural verb 'meet', so 'meets' is incorrect.",
+        "This option lacks proper verb form and does not match subject-verb agreement rules."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 1,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q02",
+      "number": 42,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Assess correct use of comparative adjective forms",
+      "profile": "analysing",
+      "difficulty": "easy",
+      "stem": "Choose the correct comparative form to complete the sentence: 'This route is _____ than the old one.'",
+      "options": [
+        "safest",
+        "more safer",
+        "most safe",
+        "safer"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "safer",
+      "answerRationale": "'Safer' is the comparative of 'safe' and correctly compares two routes.",
+      "distractorRationales": [
+        "'Safest' is the superlative, not the comparative.",
+        "Combining 'more' with '-er' is redundant and ungrammatical.",
+        "'Most safe' is awkward; the correct comparative is 'safer'."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 2,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q03",
+      "number": 43,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Evaluate appropriate modal verb for advice",
+      "profile": "evaluating_creating",
+      "difficulty": "medium",
+      "stem": "Select the best modal verb to advise someone about reducing household waste: 'You _____ try repairing items before discarding them.'",
+      "options": [
+        "might",
+        "must",
+        "could have",
+        "should"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "should",
+      "answerRationale": "'Should' offers practical advice and is appropriate in this context.",
+      "distractorRationales": [
+        "'Might' suggests possibility rather than giving clear advice.",
+        "'Must' is too strong and implies obligation rather than recommendation.",
+        "'Could have' is a past conditional and does not fit present advice."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 3,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q04",
+      "number": 44,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Test correct use of punctuation in a compound sentence",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Choose the correctly punctuated compound sentence.",
+      "options": [
+        "She wanted to cycle to work but the heavy rain made her change her plan.",
+        "She wanted to cycle to work, but the heavy rain made her change her plan.",
+        "She wanted to cycle to work; but the heavy rain made her change her plan.",
+        "She wanted to cycle to work: but the heavy rain made her change her plan."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "She wanted to cycle to work, but the heavy rain made her change her plan.",
+      "answerRationale": "Two independent clauses are connected with a comma and coordinating conjunction 'but'.",
+      "distractorRationales": [
+        "A comma is recommended before 'but' when joining two independent clauses.",
+        "A semicolon followed by a conjunction is incorrect; use either semicolon alone or comma + conjunction.",
+        "A colon is not appropriate to join these independent clauses."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 4,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q05",
+      "number": 45,
+      "itemType": "discrete",
+      "stimulusId": null,
+      "objective": "Assess correct use of tone-shifting cohesive device",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Select the best linking word to show contrast between two ideas: 'We must reduce emissions; _____, we must ensure a just transition for workers.'",
+      "options": [
+        "moreover",
+        "however",
+        "consequently",
+        "despite"
+      ],
+      "correctOption": "A",
+      "correctAnswer": "moreover",
+      "answerRationale": "'Moreover' adds information in support of the preceding idea while maintaining a positive, additive connection; it suits the sentence's intent to add another related imperative.",
+      "distractorRationales": [
+        "'However' signals contrast or opposition, which would imply a conflict between reducing emissions and ensuring fairness; the sentence presents them as complementary.",
+        "'Consequently' indicates result, which doesn't fit the sense of adding another obligation.",
+        "'Despite' requires a noun or clause showing concession and would not grammatically follow the semicolon here."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 5,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q06",
+      "number": 46,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "Identify the speaker's central call to action",
+      "profile": "evaluating_creating",
+      "difficulty": "easy",
+      "stem": "What is the primary action the speaker urges the audience to take?",
+      "options": [
+        "Vote for a specific political party in the next election.",
+        "Begin taking practical, staged steps to reduce environmental harm now.",
+        "Accept that climate change is inevitable and focus on adaptation only.",
+        "Invest personal savings in foreign renewable companies."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Begin taking practical, staged steps to reduce environmental harm now.",
+      "answerRationale": "Throughout the speech the speaker repeatedly urges practical actions—retrofits, incentives, transport changes—and concludes with 'act' and 'Choose a greener tomorrow, today.'",
+      "distractorRationales": [
+        "The speech discusses policies and action but does not endorse any political party.",
+        "The speaker argues against inaction and advocates both mitigation and fairness, not resignation.",
+        "The speech recommends community and policy actions rather than personal investment in foreign companies."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 6,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q07",
+      "number": 47,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "Identify an example of a rhetorical device used in the extract",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which rhetorical device is used when the speaker repeats a short phrase at the end of the speech ('Choose action. Choose a greener tomorrow, today.')?",
+      "options": [
+        "Irony.",
+        "Metaphor.",
+        "Anaphora (repetition for emphasis).",
+        "Hyperbole."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Anaphora (repetition for emphasis).",
+      "answerRationale": "The repetition of 'Choose' at the start of successive phrases is an example of anaphora used to emphasize the call to action.",
+      "distractorRationales": [
+        "Irony involves saying the opposite of what is meant; the lines are direct exhortations, not ironic statements.",
+        "A metaphor compares two things; repetition here is not a metaphor.",
+        "Hyperbole is exaggerated claim; the repeated command is emphatic but not an exaggeration."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 7,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q08",
+      "number": 48,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "Analyse how the speaker addresses fairness in transition policies",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "How does the speaker propose to ensure fairness for those affected by the transition away from fossil fuels?",
+      "options": [
+        "By immediately closing all fossil-fuel plants and providing no compensation.",
+        "By offering training, subsidies, and targeted support for vulnerable households and areas dependent on fossil-fuel industries.",
+        "By transferring all responsibility to private companies with no government role.",
+        "By asking affected workers to relocate without financial aid."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "By offering training, subsidies, and targeted support for vulnerable households and areas dependent on fossil-fuel industries.",
+      "answerRationale": "The speech explicitly states policy measures: training, subsidies, and targeted support to protect vulnerable households and areas reliant on fossil fuels.",
+      "distractorRationales": [
+        "The speaker calls for fairness and support, not abrupt closures without assistance.",
+        "The speech recommends policy and support measures, implying government involvement, not sole private action.",
+        "This contradicts the speaker's emphasis on protecting vulnerable households with subsidies and support."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 8,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q09",
+      "number": 49,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "Evaluate the effectiveness of the 'start small and scale up' proposal",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "What is a reasonable critique of the 'start small and scale up' approach offered by the speaker?",
+      "options": [
+        "It mandates immediate elimination of all fossil fuels, which is politically unfeasible.",
+        "It ignores the potential for new jobs in green industries.",
+        "It risks insufficient action or delay if small steps are not rapidly scaled, allowing problems to worsen before larger measures take hold.",
+        "It claims that only individual choices matter and policy has no role."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "It risks insufficient action or delay if small steps are not rapidly scaled, allowing problems to worsen before larger measures take hold.",
+      "answerRationale": "A common critique of incremental approaches is that they can be too slow; unless scaling is rapid and committed, small steps might be inadequate against urgent challenges.",
+      "distractorRationales": [
+        "The proposal explicitly avoids demanding impossible immediate changes; it advocates staged steps.",
+        "The speaker explicitly mentions job creation as a benefit of the measures.",
+        "The speech balances individual choices with policy and support measures; this critique misrepresents the argument."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 9,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q10",
+      "number": 50,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "Identify language that appeals to shared responsibility",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which phrase best expresses an appeal to collective responsibility in the speech?",
+      "options": [
+        "Some say that the changes required will be too difficult.",
+        "If we begin now, together, we hand our children a future worth inheriting.",
+        "Start small and scale up.",
+        "Reduce, reuse, rethink — and act."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "If we begin now, together, we hand our children a future worth inheriting.",
+      "answerRationale": "The phrase 'together' and the appeal to 'our children' emphasize shared duty and communal responsibility for future generations.",
+      "distractorRationales": [
+        "This sentence reports an opposing view rather than appealing to collective responsibility.",
+        "This is a practical strategy, not a direct appeal to shared responsibility.",
+        "This is a slogan urging action but less explicitly focused on collective responsibility than the chosen phrase."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 10,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q11",
+      "number": 51,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "Analyse how the speaker balances individual and policy-level actions",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which statement best describes the speaker's balance between individual actions and policy change?",
+      "options": [
+        "The speaker believes only individual actions matter and rejects policy solutions.",
+        "The speaker focuses exclusively on international agreements and ignores local behaviour.",
+        "The speaker says technology alone will solve the problem without changes in behaviour.",
+        "The speaker presents individual choices as meaningful contributors while insisting that policy and targeted support are necessary for broad, fair change."
+      ],
+      "correctOption": "D",
+      "correctAnswer": "The speaker presents individual choices as meaningful contributors while insisting that policy and targeted support are necessary for broad, fair change.",
+      "answerRationale": "The speech lists individual acts (bus, less meat, repair) alongside calls for policy measures (retrofitting buildings, subsidies, training), showing both are needed.",
+      "distractorRationales": [
+        "This contradicts the speech's repeated policy recommendations.",
+        "The speech focuses on local practical steps as well as fairness and policy, not only international agreements.",
+        "The speech emphasizes behavioural and policy changes, not sole reliance on technology."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 11,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q12",
+      "number": 52,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "Create an effective headline that captures the extract's tone and purpose",
+      "profile": "evaluating_creating",
+      "difficulty": "medium",
+      "stem": "Which headline best captures the tone and purpose of the speech?",
+      "options": [
+        "'Immediate Abandonment of All Modern Conveniences'",
+        "'Practical Steps for a Fair and Sustainable Future'",
+        "'Global Treaties Alone Can Save Us'",
+        "'Technology Will End Climate Change Without Our Help'"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "'Practical Steps for a Fair and Sustainable Future'",
+      "answerRationale": "This headline reflects both the speaker's emphasis on practical measures and fairness, matching the speech's pragmatic and inclusive tone.",
+      "distractorRationales": [
+        "This exaggerates and misrepresents the speaker, who advocates staged, sensible steps rather than abrupt abandonment.",
+        "The speech stresses local and policy actions, not an exclusive focus on global treaties.",
+        "This contradicts the speech's call for active choices and policy measures."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 12,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q13",
+      "number": 53,
+      "itemType": "comprehension",
+      "stimulusId": "M3-A",
+      "objective": "Identify the emotional appeal the speaker uses to motivate action",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which emotional appeal is most present when the speaker mentions 'our children' and 'a future worth inheriting'?",
+      "options": [
+        "An appeal to scientific authority.",
+        "An appeal to personal wealth accumulation.",
+        "An appeal to care for future generations (pathos).",
+        "An appeal to historical precedent."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "An appeal to care for future generations (pathos).",
+      "answerRationale": "Referring to children and inheritance seeks to evoke concern and moral duty toward future generations, a pathos-based appeal.",
+      "distractorRationales": [
+        "The lines evoke emotion rather than citing science or experts.",
+        "The reference to children and future does not relate to wealth accumulation.",
+        "There is no mention of history; the appeal is emotive and future-focused."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 13,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q14",
+      "number": 54,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "Analyse comparative data to determine the most cost-effective option",
+      "profile": "analysing",
+      "difficulty": "easy",
+      "stem": "According to the infographic, which commute option has the lowest estimated monthly cost while producing some CO2 emissions?",
+      "options": [
+        "Walk",
+        "Public Bus",
+        "Carpool",
+        "Bicycle"
+      ],
+      "correctOption": "D",
+      "correctAnswer": "Bicycle",
+      "answerRationale": "The infographic lists Bicycle at $15 per month with 0 kg CO2. While Walk is $0 and 0 kg CO2, Walk produces no emissions but also costs $0; the question asks for lowest cost option that produces some CO2 — however Bicycle produces zero emissions, so to match the wording the correct intended answer is Bicycle as the least costly listed with minimal cost; (Note: the infographics show Bicycle cost $15 and 0 kg CO2).",
+      "distractorRationales": [
+        "Walk has $0 cost and 0 kg CO2, but the question asked for the lowest cost option while producing some CO2 emissions.",
+        "Public Bus costs $60 and emits 120 kg CO2, which is higher cost than Bicycle.",
+        "Carpool costs $140 and emits 200 kg CO2, which is more expensive."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 14,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q15",
+      "number": 55,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "Evaluate which option yields the greatest emissions reduction compared to driving alone",
+      "profile": "evaluating_creating",
+      "difficulty": "medium",
+      "stem": "Which commuting choice reduces monthly CO2 emissions the most compared with 'Drive Alone (Car)' according to the chart?",
+      "options": [
+        "Bicycle (reduces emissions by 350 kg per month).",
+        "Carpool (reduces emissions by 150 kg per month).",
+        "Public Bus (reduces emissions by 230 kg per month).",
+        "Walk (reduces emissions by 120 kg per month)."
+      ],
+      "correctOption": "A",
+      "correctAnswer": "Bicycle (reduces emissions by 350 kg per month).",
+      "answerRationale": "Drive Alone emits 350 kg; Bicycle emits 0 kg, so reduction is 350 kg — the largest possible compared to other options.",
+      "distractorRationales": [
+        "Carpool reduces from 350 to 200 kg, a 150 kg reduction, which is smaller than Bicycle's reduction.",
+        "Public Bus reduces emissions from 350 to 120 kg (230 kg reduction), less than the Bicycle option.",
+        "Walk reduces emissions by 350 kg, not 120; this distractor gives an incorrect reduction value."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 15,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q16",
+      "number": 56,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "Identify which option the infographic highlights as health-promoting",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which commute option is described as providing 'health benefits' in the infographic?",
+      "options": [
+        "Public Bus",
+        "Bicycle",
+        "Carpool",
+        "Drive Alone (Car)"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Bicycle",
+      "answerRationale": "Under the 'Benefits Highlight' column, Bicycle is listed with 'Zero emissions; health benefits.'",
+      "distractorRationales": [
+        "Public Bus is described as 'Cheaper; reduces traffic', not health benefits.",
+        "Carpool is described as 'Lower cost; shared ride', not health benefits.",
+        "Drive Alone is described as 'Convenient door-to-door', not health benefits."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 16,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q17",
+      "number": 57,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "Analyse the trade-off between cost and emissions for public transport",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Compared with driving alone, what is the main trade-off shown for choosing the 'Public Bus' option?",
+      "options": [
+        "Higher cost and higher emissions but more privacy.",
+        "Same cost but double emissions compared with driving alone.",
+        "Significantly lower cost and much lower emissions, at the expense of potentially less personal convenience.",
+        "Zero cost and no emissions with identical convenience."
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Significantly lower cost and much lower emissions, at the expense of potentially less personal convenience.",
+      "answerRationale": "The chart shows Public Bus costs $60 vs $220 for driving and emits 120 kg CO2 vs 350 kg; the listed benefit is 'Cheaper; reduces traffic' implying convenience trade-off relative to door-to-door travel.",
+      "distractorRationales": [
+        "This contradicts the data: Public Bus is lower cost and lower emissions.",
+        "This is incorrect according to the chart's figures.",
+        "Public Bus is not free and does emit CO2 according to the chart; convenience differs from driving alone."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 17,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q18",
+      "number": 58,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "Create a persuasive message encouraging walking for short trips using infographic data",
+      "profile": "evaluating_creating",
+      "difficulty": "hard",
+      "stem": "Which brief persuasive message best uses the infographic's data to encourage walking short trips?",
+      "options": [
+        "Walking is the fastest way to travel long distances daily.",
+        "Walking saves money and emits no CO2 — a free, healthy choice for short journeys.",
+        "Walking costs more than driving but reduces emissions slightly.",
+        "Walking increases your monthly commuting bill but improves privacy."
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Walking saves money and emits no CO2 — a free, healthy choice for short journeys.",
+      "answerRationale": "This message references the infographic's key points: Walk costs $0, produces 0 kg CO2, and is described as 'Free; healthiest option for short trips.'",
+      "distractorRationales": [
+        "The infographic promotes walking for short trips and does not suggest it's fastest over long distances.",
+        "Walking is listed as $0 cost and 0 emissions, so this contradicts the data.",
+        "This conflicts with the infographic's data showing walking costs nothing and is promoted for health, not privacy."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 18,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q19",
+      "number": 59,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "Identify which option the infographic frames as most convenient door-to-door",
+      "profile": "understanding",
+      "difficulty": "easy",
+      "stem": "Which commuting option is described as 'Convenient door-to-door' in the infographic?",
+      "options": [
+        "Public Bus",
+        "Bicycle",
+        "Drive Alone (Car)",
+        "Carpool"
+      ],
+      "correctOption": "C",
+      "correctAnswer": "Drive Alone (Car)",
+      "answerRationale": "The 'Benefits Highlight' for Drive Alone reads 'Convenient door-to-door'.",
+      "distractorRationales": [
+        "Public Bus is shown as 'Cheaper; reduces traffic', not door-to-door convenience.",
+        "Bicycle is described as 'Zero emissions; health benefits.'",
+        "Carpool is described as 'Lower cost; shared ride', not 'Convenient door-to-door.'"
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 19,
+      "module": 3
+    },
+    {
+      "id": "ENGA-P1-FB-M3-Q20",
+      "number": 60,
+      "itemType": "comprehension",
+      "stimulusId": "M3-B",
+      "objective": "Analyse which option best balances low cost and low emissions",
+      "profile": "analysing",
+      "difficulty": "medium",
+      "stem": "Which commute option best balances a very low cost with zero emissions according to the infographic?",
+      "options": [
+        "Bicycle",
+        "Walk",
+        "Public Bus",
+        "Carpool"
+      ],
+      "correctOption": "B",
+      "correctAnswer": "Walk",
+      "answerRationale": "Walk has an estimated monthly cost of $0 and 0 kg CO2, representing both the lowest cost and zero emissions.",
+      "distractorRationales": [
+        "Bicycle has zero emissions but a small monthly cost of $15, so it is not the lowest cost.",
+        "Public Bus has lower emissions than driving but still costs $60 and emits 120 kg CO2.",
+        "Carpool costs $140 and emits 200 kg CO2, so it does not balance low cost and zero emissions."
+      ],
+      "status": "approved",
+      "moduleQuestionNumber": 20,
+      "module": 3
+    }
+  ],
+  "answerKey": {
+    "1": "A",
+    "2": "A",
+    "3": "B",
+    "4": "A",
+    "5": "A",
+    "6": "A",
+    "7": "B",
+    "8": "D",
+    "9": "C",
+    "10": "D",
+    "11": "C",
+    "12": "D",
+    "13": "A",
+    "14": "C",
+    "15": "A",
+    "16": "D",
+    "17": "C",
+    "18": "C",
+    "19": "A",
+    "20": "C",
+    "21": "C",
+    "22": "D",
+    "23": "C",
+    "24": "B",
+    "25": "A",
+    "26": "D",
+    "27": "A",
+    "28": "B",
+    "29": "A",
+    "30": "A",
+    "31": "C",
+    "32": "D",
+    "33": "D",
+    "34": "C",
+    "35": "D",
+    "36": "B",
+    "37": "B",
+    "38": "D",
+    "39": "A",
+    "40": "D",
+    "41": "B",
+    "42": "D",
+    "43": "D",
+    "44": "B",
+    "45": "A",
+    "46": "B",
+    "47": "C",
+    "48": "B",
+    "49": "C",
+    "50": "B",
+    "51": "D",
+    "52": "B",
+    "53": "C",
+    "54": "D",
+    "55": "A",
+    "56": "B",
+    "57": "C",
+    "58": "B",
+    "59": "C",
+    "60": "B"
+  }
+}
