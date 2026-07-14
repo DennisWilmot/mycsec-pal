@@ -257,17 +257,50 @@ async function assembleQuestions(
   const recentlySeenCutoff = Date.now() - 180 * 24 * 60 * 60 * 1000;
   const used = new Set<string>();
   const lockedVersionByGroup = new Map<string, string>();
-  return slots.map((slot) => {
-    const lockedVersion = slot.selectionGroup?.startsWith("block:") ? lockedVersionByGroup.get(slot.selectionGroup) : null;
-    const eligible = candidates.filter(({ question, topicIds }) =>
-      !used.has(question.id)
-      && (!lockedVersion || question.paperVersionId === lockedVersion)
-      && question.moduleNumber === slot.moduleNumber
+  const matchesSlot = (candidate: typeof candidates[number], slot: typeof slots[number]) => {
+    const { question, topicIds } = candidate;
+    return question.moduleNumber === slot.moduleNumber
       && question.assessmentProfile === slot.assessmentProfile
       && question.difficulty === slot.difficulty
       && question.type === slot.questionType
       && question.totalMarks === slot.marks
-      && (!slot.topicId || topicIds.includes(slot.topicId))
+      && (!slot.topicId || topicIds.includes(slot.topicId));
+  };
+  const compatibleVersionsByGroup = new Map<string, Set<string>>();
+  for (const slot of slots) {
+    if (!slot.selectionGroup?.startsWith("block:") || compatibleVersionsByGroup.has(slot.selectionGroup)) continue;
+    const groupSlots = slots.filter((candidateSlot) => candidateSlot.selectionGroup === slot.selectionGroup);
+    const versionIds = [...new Set(candidates.map((candidate) => candidate.question.paperVersionId))];
+    const compatible = new Set(versionIds.filter((versionId) => {
+      const versionCandidates = candidates.filter((candidate) => candidate.question.paperVersionId === versionId);
+      const orderedSlots = [...groupSlots].sort((left, right) =>
+        versionCandidates.filter((candidate) => matchesSlot(candidate, left)).length
+        - versionCandidates.filter((candidate) => matchesSlot(candidate, right)).length);
+      const candidateToSlot = new Map<string, number>();
+      const assign = (slotIndex: number, visited: Set<string>): boolean => {
+        for (const candidate of versionCandidates) {
+          if (visited.has(candidate.question.id) || !matchesSlot(candidate, orderedSlots[slotIndex])) continue;
+          visited.add(candidate.question.id);
+          const previousSlot = candidateToSlot.get(candidate.question.id);
+          if (previousSlot === undefined || assign(previousSlot, visited)) {
+            candidateToSlot.set(candidate.question.id, slotIndex);
+            return true;
+          }
+        }
+        return false;
+      };
+      return orderedSlots.every((_, slotIndex) => assign(slotIndex, new Set()));
+    }));
+    compatibleVersionsByGroup.set(slot.selectionGroup, compatible);
+  }
+  return slots.map((slot) => {
+    const lockedVersion = slot.selectionGroup?.startsWith("block:") ? lockedVersionByGroup.get(slot.selectionGroup) : null;
+    const compatibleVersions = slot.selectionGroup ? compatibleVersionsByGroup.get(slot.selectionGroup) : null;
+    const eligible = candidates.filter((candidate) =>
+      !used.has(candidate.question.id)
+      && (!lockedVersion || candidate.question.paperVersionId === lockedVersion)
+      && (!compatibleVersions || compatibleVersions.has(candidate.question.paperVersionId))
+      && matchesSlot(candidate, slot)
     );
     eligible.sort((left, right) => {
       const leftRecent = left.lastSeenAt && left.lastSeenAt.getTime() >= recentlySeenCutoff ? 1 : 0;
