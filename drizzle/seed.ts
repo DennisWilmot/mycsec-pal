@@ -25,7 +25,10 @@ import {
 import { paperTwoRubrics } from "./seed-data/paper2-rubrics";
 
 const paper1Status = "published" as const;
-const paper2Status = "review" as const;
+// Paper 2 is part of the live MVP catalogue. Its questions and marking
+// rubrics have completed the same review gate used by the attempt service,
+// so expose it alongside Paper 1 on the Practice dashboard.
+const paper2Status = "published" as const;
 const profileMap = {
   CK: "conceptual_knowledge",
   AK: "algorithmic_knowledge",
