@@ -12,7 +12,7 @@ export const markSubmittedAttempt = inngest.createFunction(
   {
     id: "mark-submitted-attempt",
     retries: 5,
-    concurrency: [{ limit: 20 }],
+    concurrency: [{ limit: 5 }],
     triggers: [{ event: "attempt/submitted" }],
     onFailure: async ({ event, error }) => {
       const original = event.data.event.data as Record<string, unknown>;
