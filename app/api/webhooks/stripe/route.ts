@@ -13,25 +13,27 @@ type WebhookStage =
   | "persist_subscription"
   | "record_event";
 
+const HANDLER_VERSION = "2026-07-14-stage-diagnostics-v1";
+
 export async function POST(request: NextRequest) {
   const secret = process.env.STRIPE_WEBHOOK_SECRET;
   const signature = request.headers.get("stripe-signature");
   if (!secret || !signature) {
-    return NextResponse.json({ error: "Webhook is not configured." }, { status: 503 });
+    return NextResponse.json({ error: "Webhook is not configured.", handlerVersion: HANDLER_VERSION }, { status: 503 });
   }
 
   let event: Stripe.Event;
   try {
     event = getStripe().webhooks.constructEvent(await request.text(), signature, secret);
   } catch {
-    return NextResponse.json({ error: "Invalid signature." }, { status: 400 });
+    return NextResponse.json({ error: "Invalid signature.", handlerVersion: HANDLER_VERSION }, { status: 400 });
   }
 
   let stage: WebhookStage = "deduplicate";
   try {
     const sql = getDatabaseClient();
     const seen = await sql`select 1 from billing_events where stripe_event_id=${event.id}`;
-    if (seen.length) return NextResponse.json({ received: true, duplicate: true });
+    if (seen.length) return NextResponse.json({ received: true, duplicate: true, handlerVersion: HANDLER_VERSION });
 
     let subscription: Stripe.Subscription | null = null;
     if (event.type.startsWith("customer.subscription.")) {
@@ -79,7 +81,7 @@ export async function POST(request: NextRequest) {
       values(${event.id},${event.type},${JSON.stringify(event)})
       on conflict(stripe_event_id) do nothing
     `;
-    return NextResponse.json({ received: true });
+    return NextResponse.json({ received: true, handlerVersion: HANDLER_VERSION });
   } catch (error) {
     const errorType = error instanceof Error ? error.name : "UnknownError";
     console.error("stripe.webhook.failed", { eventId: event.id, type: event.type, stage, error });
@@ -88,6 +90,7 @@ export async function POST(request: NextRequest) {
       eventId: event.id,
       stage,
       errorType,
+      handlerVersion: HANDLER_VERSION,
     }, { status: 500 });
   }
 }
