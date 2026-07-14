@@ -10,6 +10,32 @@ import QuestionVisual from '../QuestionVisual';
 import { mathPaper2Demo } from '../../data/math-paper-2-demo';
 import { useAttemptSession } from '../../lib/attempts/use-attempt-session';
 
+function EnglishQuestionContext({ context }) {
+  if (!context || typeof context !== 'object') return null;
+  const choices = Array.isArray(context.choices) ? context.choices : [];
+  if (!context.extract && !context.purposePrompt && !context.scenario && !context.task && !choices.length) return null;
+  return <section className="english-question-context">
+    {context.title && <p className="eyebrow">Source extract</p>}
+    {context.title && <h3>{context.title}</h3>}
+    {context.extract && <div className="english-exam-passage">{String(context.extract).split(/\n\s*\n/).map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>}
+    {context.purposePrompt && <div className="english-context-question"><strong>Part A</strong><p>{context.purposePrompt}</p></div>}
+    {context.scenario && <div className="english-writing-scenario"><strong>Scenario</strong><p>{context.scenario}</p></div>}
+    {context.task && !choices.length && <div className="english-context-question"><strong>Writing task</strong><p>{context.task}</p></div>}
+    {choices.length > 0 && <div className="english-writing-choices">{choices.map((choice, index) => <article key={choice.number || index}><span>Option {choice.number || index + 1}</span>{choice.scenario && <p>{choice.scenario}</p>}<strong>{choice.task}</strong></article>)}</div>}
+  </section>;
+}
+
+function EnglishSummaryResponse({ purposePrompt, summaryPrompt, value, onChange }) {
+  const purpose = value[0] || '';
+  const summary = value.slice(1).join('\n');
+  const words = summary.trim() ? summary.trim().split(/\s+/).length : 0;
+  return <div className="english-summary-response">
+    <label><span>Part A response</span><small>{purposePrompt}</small><input value={purpose} onChange={(event) => onChange([event.target.value, summary])} placeholder="State the writer’s purpose or describe the setting…" /></label>
+    <label><span>Part B response</span><small>{summaryPrompt}</small><textarea value={summary} onChange={(event) => onChange([purpose, event.target.value])} rows={12} placeholder="Write your summary here…" /></label>
+    <p className={words > 50 ? 'over' : ''}>{words} / 50 words in your summary</p>
+  </div>;
+}
+
 export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
   const [attemptId, setAttemptId] = useState(null);
   useEffect(() => setAttemptId(new URLSearchParams(window.location.search).get('attemptId')), []);
@@ -30,6 +56,7 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
     displayNumber: item.snapshot?.questionNumber || item.position,
     marks: item.maxMarks,
     flagged: Boolean(item.response?.isFlagged),
+    context: item.snapshot?.prompt || null,
     parts: (item.snapshot?.parts || []).map((part) => ({
       id: part.id,
       label: part.label,
@@ -139,11 +166,12 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
         </aside>
         <article className="paper-sheet symmetric-paper-sheet paper2-generated-sheet">
           <div className="paper2-question-heading"><div><p className="eyebrow">Question {current} of {questions.length}</p><h2>Question {question.displayNumber || current}</h2></div><span>{question.marks} marks</span></div>
+          {subjectName.toLowerCase().includes('english') && <EnglishQuestionContext context={question.context} />}
           {question.parts.map((itemPart) => <section className="paper-question generated-paper2-part" key={itemPart.id}>
             <div className="prompt-row"><span><b>{itemPart.label}</b> {itemPart.prompt}</span><small>({itemPart.marks} {itemPart.marks === 1 ? 'mark' : 'marks'})</small></div>
             {itemPart.visual && itemPart.responseType !== 'graph' && <QuestionVisual spec={itemPart.visual} />}
             {itemPart.visual && itemPart.responseType === 'graph' && <InteractiveGraphResponse spec={itemPart.visual} points={graphResponses[itemPart.id] || []} onChange={(points) => setGraphResponse(itemPart.id, points)} />}
-            {itemPart.responseType === 'long' ? <label className="english-long-response"><span>Your response</span><textarea value={(responses[itemPart.id] || []).join('\n')} onChange={(event) => setResponse(itemPart.id, event.target.value.split('\n'))} rows={18} placeholder="Write your response here…"/></label> : <MathWorkingField value={responses[itemPart.id] || []} onChange={(lines) => setResponse(itemPart.id, lines)} label={itemPart.responseType === 'graph' ? 'Estimate and final answer' : 'Show your working and answer'} minimumLines={itemPart.responseType === 'short' ? 2 : 4} />}
+            {itemPart.responseType === 'long' ? (question.context?.purposePrompt ? <EnglishSummaryResponse purposePrompt={question.context.purposePrompt} summaryPrompt={itemPart.prompt} value={responses[itemPart.id] || []} onChange={(lines) => setResponse(itemPart.id, lines)} /> : <label className="english-long-response"><span>Your response</span><textarea value={(responses[itemPart.id] || []).join('\n')} onChange={(event) => setResponse(itemPart.id, event.target.value.split('\n'))} rows={18} placeholder="Write your response here…"/></label>) : <MathWorkingField value={responses[itemPart.id] || []} onChange={(lines) => setResponse(itemPart.id, lines)} label={itemPart.responseType === 'graph' ? 'Estimate and final answer' : 'Show your working and answer'} minimumLines={itemPart.responseType === 'short' ? 2 : 4} />}
           </section>)}
           <div className="paper-bottom functional-paper2-footer"><button className={`link-button ${question.flagged ? 'active' : ''}`} onClick={toggleFlag}><Flag size={15} />{question.flagged ? 'Flagged for review' : 'Flag this question'}</button><div><button className="button outline" disabled={current === 1} onClick={() => setCurrent(Math.max(1, current - 1))}><ArrowLeft size={17} />Previous</button><button className="button dark" disabled={current === questions.length} onClick={() => setCurrent(Math.min(questions.length, current + 1))}>Next<ArrowRight size={17} /></button></div></div>
           <footer className="paper2-submit-footer"><div><h2>Ready to finish Paper 2?</h2><p>{incompleteQuestions.length ? `${incompleteQuestions.length} questions still have blank parts.` : 'Every part has a response.'}</p>{submitNotice && <p className="paper2-submit-notice" role="status">Start this paper from Practice to save and mark your responses.</p>}</div><button className="button dark" disabled={submitting} onClick={() => setShowSubmit(true)}><Send size={17} />{submitting ? 'Submitting…' : 'Submit paper'}</button></footer>
