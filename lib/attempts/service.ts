@@ -360,7 +360,26 @@ export async function createAttempt(profileId: string, paperVersionId: string, i
         limit 1
       `);
       if (!paidAccess[0]) {
-        const dailyUsage = await tx.execute(sql`
+        const promotionAccess = await tx.execute(sql`
+          select pc.daily_attempt_limit, pr.expires_at
+          from promotion_redemptions pr
+          inner join promotion_codes pc on pc.id = pr.promotion_code_id
+          where pr.profile_id = ${profileId}
+            and pr.expires_at > now()
+            and pc.active = true
+            and (pc.starts_at is null or pc.starts_at <= now())
+            and (pc.ends_at is null or pc.ends_at > now())
+          order by pc.daily_attempt_limit desc, pr.expires_at desc
+          limit 1
+        `);
+        const betaAccess = promotionAccess[0] as { daily_attempt_limit?: number; expires_at?: string } | undefined;
+        const dailyUsage = betaAccess ? await tx.execute(sql`
+          select count(*)::int as used
+          from attempts
+          where profile_id = ${profileId}
+            and (created_at at time zone 'America/Jamaica')::date =
+                (now() at time zone 'America/Jamaica')::date
+        `) : await tx.execute(sql`
           select count(*)::int as used
           from attempts a
           inner join paper_versions pv on pv.id = a.paper_version_id
@@ -371,13 +390,16 @@ export async function createAttempt(profileId: string, paperVersionId: string, i
                 (now() at time zone 'America/Jamaica')::date
         `);
         const used = Number((dailyUsage[0] as { used?: number } | undefined)?.used ?? 0);
-        if (used >= 1) {
+        const dailyLimit = betaAccess ? Number(betaAccess.daily_attempt_limit) : 1;
+        if (used >= dailyLimit) {
           const paperNumber = paper.paperType === "paper_1" ? 1 : 2;
           throw new AttemptLifecycleError(
             429,
             "DAILY_ATTEMPT_LIMIT_REACHED",
-            `Your Guest plan includes one Paper ${paperNumber} attempt per day. Try again tomorrow or upgrade to Practice for unlimited attempts.`,
-            { plan: "guest", paperNumber, dailyLimit: 1, timeZone: "America/Jamaica" },
+            betaAccess
+              ? `Your beta access includes ${dailyLimit} paper attempts per day. Try again tomorrow.`
+              : `Your Guest plan includes one Paper ${paperNumber} attempt per day. Try again tomorrow or upgrade to Practice for unlimited attempts.`,
+            { plan: betaAccess ? "beta" : "guest", paperNumber, dailyLimit, timeZone: "America/Jamaica", expiresAt: betaAccess?.expires_at },
           );
         }
       }

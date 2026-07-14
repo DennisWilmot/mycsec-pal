@@ -52,6 +52,7 @@ export const completeOnboardingSchema = createOnboardingProfileSchema.extend({
   subjectIds: z.array(z.uuid("Each subject must have a valid ID."))
     .min(1, "Choose at least one subject.")
     .max(5, "You can select up to five subjects on the current plan."),
+  couponCode: z.string().trim().max(64, "Coupon code is too long.").optional(),
 }).strict().superRefine((value, context) => {
   if (value.role === "student" && !value.gradeForm?.trim()) {
     context.addIssue({ code: "custom", path: ["gradeForm"], message: "Enter your grade or form." });

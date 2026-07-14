@@ -113,8 +113,11 @@ export async function handleCompleteOnboarding(request: Request) {
     if (result.kind === "invalid_institution") return apiError(422, "VALIDATION_ERROR", "The institution does not match the selected country.", {
       institutionId: ["Choose an institution in the selected country."],
     });
+    if (result.kind === "invalid_coupon") return apiError(422, "INVALID_COUPON", "That beta code is not valid or is no longer active.", {
+      couponCode: ["Check the code and try again."],
+    });
     const profile = await readProfile(user.id);
-    return NextResponse.json({ data: { profile: { ...profile, ...publicIdentity(user) } } });
+    return NextResponse.json({ data: { profile: { ...profile, ...publicIdentity(user) }, betaAccess: result.betaAccess } });
   } catch (error) {
     return serverError(error);
   }

@@ -1,4 +1,4 @@
-import { and, asc, eq, inArray } from "drizzle-orm";
+import { and, asc, eq, inArray, sql } from "drizzle-orm";
 import { getDatabase } from "@/lib/db";
 import { consents, institutions, profileSubjects, profiles, subjects } from "@/drizzle/schema";
 
@@ -165,9 +165,25 @@ export async function completeOnboarding(args: {
   subjectIds: string[];
   termsVersion: string;
   privacyVersion: string;
+  couponCode?: string;
 }) {
   const db = getDatabase();
   return db.transaction(async (tx) => {
+    const normalizedCoupon = args.couponCode?.trim().toLocaleLowerCase("en") || null;
+    let promotion: { id: string; name: string; duration_days: number; daily_attempt_limit: number } | null = null;
+    if (normalizedCoupon) {
+      const promotionResult = await tx.execute(sql`
+        select id, name, duration_days, daily_attempt_limit
+        from promotion_codes
+        where code = ${normalizedCoupon}
+          and active = true
+          and (starts_at is null or starts_at <= now())
+          and (ends_at is null or ends_at > now())
+        limit 1
+      `);
+      promotion = (promotionResult[0] as typeof promotion | undefined) ?? null;
+      if (!promotion) return { kind: "invalid_coupon" as const };
+    }
     if (args.subjectIds.length > FREE_SUBJECT_LIMIT) return { kind: "limit" as const };
     const available = await tx.select({ id: subjects.id }).from(subjects).where(inArray(subjects.id, args.subjectIds));
     if (available.length !== args.subjectIds.length) return { kind: "invalid_subject" as const };
@@ -241,6 +257,25 @@ export async function completeOnboarding(args: {
       .set({ sortOrder })
       .where(and(eq(profileSubjects.profileId, args.id), eq(profileSubjects.subjectId, subjectId)))));
 
-    return { kind: "ok" as const, profile };
+    let betaAccess: { name: string; dailyAttemptLimit: number; expiresAt: Date } | null = null;
+    if (promotion) {
+      const existing = await tx.execute(sql`
+        select expires_at from promotion_redemptions
+        where promotion_code_id = ${promotion.id} and profile_id = ${args.id}
+        limit 1
+      `);
+      let expiresAt = existing[0]?.expires_at ? new Date(String(existing[0].expires_at)) : null;
+      if (!expiresAt) {
+        expiresAt = new Date(Date.now() + Number(promotion.duration_days) * 24 * 60 * 60 * 1000);
+        await tx.execute(sql`
+          insert into promotion_redemptions (promotion_code_id, profile_id, expires_at)
+          values (${promotion.id}, ${args.id}, ${expiresAt})
+          on conflict (promotion_code_id, profile_id) do nothing
+        `);
+      }
+      betaAccess = { name: promotion.name, dailyAttemptLimit: Number(promotion.daily_attempt_limit), expiresAt };
+    }
+
+    return { kind: "ok" as const, profile, betaAccess };
   });
 }
