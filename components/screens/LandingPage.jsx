@@ -40,7 +40,7 @@ export default function LandingPage({navigate}){
           <p className="eyebrow">Now welcoming beta learners</p>
           <h1>Practice for CSEC exams the way they’re actually written.</h1>
           <p>Join our beta to complete full papers online, show your working, receive detailed marking and help shape a better way to prepare for CSEC.</p>
-          <div className="hero-beta-actions"><button className="button dark hero-button" onClick={()=>navigate('onboarding')}>Join the beta <ArrowRight size={18}/></button><span>Use code <b>BETA</b> for 5 attempts a day for 14 days.</span></div>
+          <div className="hero-beta-actions"><button className="button dark hero-button" onClick={()=>navigate('onboarding')}>Join the beta <ArrowRight size={18}/></button></div>
         </div>
         <div className="hero-art"><img src="/assets/hero-pals-caribbean.png" alt="MyCSECPal study companions with Caribbean flags and palm leaves"/></div>
       </div>
