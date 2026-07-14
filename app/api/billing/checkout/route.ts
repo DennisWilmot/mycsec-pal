@@ -40,7 +40,7 @@ export async function POST() { try {
     custom_text:{
       submit:{message:"MyCSECPal is a learning product operated by Pelagic Systems, LLC. Your subscription includes unlimited Paper 1 and Paper 2 practice attempts for up to five subjects."},
     },
-    success_url:`${appUrl}/settings?billing=success`,
+    success_url:`${appUrl}/settings?billing=success&session_id={CHECKOUT_SESSION_ID}`,
     cancel_url:`${appUrl}/settings?billing=cancelled`,
   });
   return NextResponse.json({data:{url:session.url}});

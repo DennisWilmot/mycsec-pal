@@ -35,14 +35,19 @@ export default function SettingsPage({ navigate }) {
   const [subjectsNotice, setSubjectsNotice] = useState('');
   const [billing, setBilling] = useState(settingsCache?.billing || { plan: 'guest', subscription: null });
   const [billingBusy, setBillingBusy] = useState(false);
+  const [billingNotice, setBillingNotice] = useState('');
 
   useEffect(() => {
     let active = true;
-    Promise.all([fetch('/api/me/profile'), fetch('/api/catalog/subjects'), fetch('/api/me/subscription')])
+    const search = new URLSearchParams(window.location.search);
+    const checkoutSessionId = search.get('billing') === 'success' ? search.get('session_id') : null;
+    const subscriptionUrl = checkoutSessionId ? `/api/me/subscription?checkoutSessionId=${encodeURIComponent(checkoutSessionId)}` : '/api/me/subscription';
+    Promise.all([fetch('/api/me/profile'), fetch('/api/catalog/subjects'), fetch(subscriptionUrl, { cache: 'no-store' })])
       .then(async ([profileResponse, catalogueResponse, billingResponse]) => {
         const [profilePayload, cataloguePayload, billingPayload] = await Promise.all([profileResponse.json().catch(() => ({})), catalogueResponse.json().catch(() => ({})), billingResponse.json().catch(() => ({}))]);
         if (!profileResponse.ok) throw new Error(messageFrom(profileResponse, profilePayload, 'We could not load your profile.'));
         if (!catalogueResponse.ok) throw new Error(messageFrom(catalogueResponse, cataloguePayload, 'We could not load the subject catalogue.'));
+        if (!billingResponse.ok) throw new Error(messageFrom(billingResponse, billingPayload, 'We could not confirm your billing status. Refresh the page or contact support before purchasing again.'));
         if (!active) return;
         const data = profilePayload.data;
         const nextProfile = { displayName: data.displayName || '', phone: data.phone || '', countryCode: data.countryCode || '', gradeForm: data.gradeForm || '', institutionName: data.institutionName || data.institution?.name || '' };
@@ -50,9 +55,13 @@ export default function SettingsPage({ navigate }) {
         const nextSubjects = (data.subjects || []).map((subject) => subject.id);
         const nextLimit = data.subjectLimit || 5;
         const nextCatalogue = cataloguePayload.data || [];
-        const nextBilling = billingResponse.ok ? (billingPayload.data || { plan: 'guest', subscription: null }) : billing;
+        const nextBilling = billingPayload.data || { plan: 'guest', subscription: null };
         settingsCache = { profile: nextProfile, identity: nextIdentity, selectedSubjects: nextSubjects, subjectLimit: nextLimit, catalogue: nextCatalogue, billing: nextBilling };
         setProfile(nextProfile); setIdentity(nextIdentity); setSelectedSubjects(nextSubjects); setSubjectLimit(nextLimit); setCatalogue(nextCatalogue); setBilling(nextBilling);
+        if (checkoutSessionId && nextBilling.plan === 'practice') {
+          setBillingNotice('Payment confirmed. Practice access is now active.');
+          window.history.replaceState({}, '', '/settings');
+        }
       })
       .catch((loadError) => active && setError(loadError.message))
       .finally(() => active && setLoading(false));
@@ -122,7 +131,7 @@ export default function SettingsPage({ navigate }) {
           <div className="settings-actions"><button className="button dark" disabled={profileSaving}>{profileSaving ? <><LoaderCircle className="spin" size={16}/> Saving…</> : 'Save profile'}</button>{profileNotice && <span className="settings-success"><Check size={15}/>{profileNotice}</span>}</div></form>
       </article>
       <div className="settings-side-stack"><article className="settings-card"><div className="settings-card-heading"><div><h2>Your subjects</h2><p>{selectedSubjects.length} of {subjectLimit} selected</p></div></div><div className="settings-subject-list">{catalogue.map((subject) => <label className={selectedSubjects.includes(subject.id) ? 'selected' : ''} key={subject.id}><input type="checkbox" checked={selectedSubjects.includes(subject.id)} onChange={() => toggleSubject(subject.id)}/><span>{subject.name}</span>{selectedSubjects.includes(subject.id) && <Check size={16}/>}</label>)}</div><div className="settings-actions"><button type="button" className="button dark" onClick={saveSubjects} disabled={subjectsSaving}>{subjectsSaving ? <><LoaderCircle className="spin" size={16}/> Saving…</> : 'Save subjects'}</button>{subjectsNotice && <span className="settings-success"><Check size={15}/>{subjectsNotice}</span>}</div></article>
-        <article className="settings-card plan-card"><h2>Current access</h2><div className="plan-summary"><div><b>{billing.plan === 'practice' ? 'Practice' : 'Guest'}</b><span>{billing.plan === 'practice' ? 'Unlimited Paper 1 and Paper 2 attempts for five subjects' : 'One Paper 1 and one Paper 2 attempt each day'}</span></div><span className="success-pill">{billing.subscription?.status || 'Active'}</span></div><p>{billing.plan === 'practice' ? 'Manage payment details, invoices or cancellation in the secure billing portal.' : 'Reports, AI analysis, radar progress and question breakdowns are included. Upgrade for unlimited attempts.'}</p><button type="button" className="button dark" disabled={billingBusy} onClick={openBilling}>{billingBusy ? 'Opening…' : billing.plan === 'practice' ? 'Manage billing' : 'Upgrade to Practice'}</button></article>
+        <article className="settings-card plan-card"><h2>Current access</h2>{billingNotice && <p className="settings-success billing-confirmed"><Check size={15}/>{billingNotice}</p>}<div className="plan-summary"><div><b>{billing.plan === 'practice' ? 'Practice' : 'Guest'}</b><span>{billing.plan === 'practice' ? 'Unlimited Paper 1 and Paper 2 attempts for five subjects' : 'One Paper 1 and one Paper 2 attempt each day'}</span></div><span className="success-pill">{billing.subscription?.status || 'Active'}</span></div><p>{billing.plan === 'practice' ? 'Manage payment details, invoices or cancellation in the secure billing portal.' : 'Reports, AI analysis, radar progress and question breakdowns are included. Upgrade for unlimited attempts.'}</p><button type="button" className="button dark" disabled={billingBusy} onClick={openBilling}>{billingBusy ? 'Opening…' : billing.plan === 'practice' ? 'Manage billing' : 'Upgrade to Practice'}</button></article>
       </div>
     </section>}
   </main></div>;

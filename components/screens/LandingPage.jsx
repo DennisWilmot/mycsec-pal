@@ -67,7 +67,7 @@ export default function LandingPage({navigate}){
         <div className="section-heading-row"><div><p className="eyebrow">Choose your starting point</p><h2>Choose a subject to get started</h2></div></div>
         <div className="subject-grid">
           {subjects.map(({name,image,active})=><article key={name} className={`subject-card landing-subject-card ${active?'available':''}`}>
-            <img src={`/assets/subjects/${image}`} alt=""/><h3>{name}</h3>
+            <img src={`/assets/subjects/${image}`} alt=""/><div className="landing-subject-title"><h3>{name}</h3>{active && <span><Check size={13}/>Available now</span>}</div>
             {active?<><div className="pill-row"><span>Paper 1</span><span>Paper 2</span></div><button className="card-action" onClick={beginBeta}>Start now <ArrowRight size={17}/></button></>:<span className="status-pill">Coming soon</span>}
           </article>)}
         </div>
