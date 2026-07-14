@@ -1,3 +1,4 @@
+import { NonRetriableError } from "inngest";
 import { inngest } from "./client";
 import { dispatchOutboxBatch } from "./outbox";
 import { markPaperOneAttempt, recordMarkingFailure } from "./mark-paper-one";
@@ -26,7 +27,9 @@ export const markSubmittedAttempt = inngest.createFunction(
   async ({ event, step }) => {
     const attemptId = String(event.data.attemptId ?? "");
     const markingJobId = String(event.data.markingJobId ?? "");
-    if (!attemptId || !markingJobId) throw new Error("Missing attemptId or markingJobId.");
+    if (!attemptId || !markingJobId) {
+      throw new NonRetriableError("Malformed attempt/submitted event: missing attemptId or markingJobId.");
+    }
     return step.run("mark-paper", async () => {
       const result = await markPaperOneAttempt(attemptId, markingJobId);
       return result.status === "awaiting_paper_2_marker" ? markPaperTwoAttempt(attemptId, markingJobId) : result;

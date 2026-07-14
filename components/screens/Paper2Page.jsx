@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowLeft, ArrowRight, Clock, Flag, Pause, Send } from 'lucide-react';
+import { AlertTriangle, ArrowLeft, ArrowRight, Clock, Flag, Pause, Send, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useRef } from 'react';
 import AppSidebar from '../AppSidebar';
@@ -18,6 +18,7 @@ export default function Paper2Page({ navigate }) {
   const [responses, setResponses] = useState({});
   const [current, setCurrent] = useState(1);
   const [submitNotice, setSubmitNotice] = useState(false);
+  const [showSubmit, setShowSubmit] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [graphResponses, setGraphResponses] = useState({});
   const saveTimers = useRef(new Map());
@@ -94,6 +95,8 @@ export default function Paper2Page({ navigate }) {
   });
   const hasResponse = (partId) => (responses[partId] || []).some((line) => line.trim()) || (graphResponses[partId] || []).length > 0;
   const answeredQuestions = questions.filter((item) => item.parts.some((itemPart) => hasResponse(itemPart.id))).length;
+  const incompleteQuestions = questions.filter((item) => item.parts.some((itemPart) => !hasResponse(itemPart.id)));
+  const blankParts = incompleteQuestions.reduce((total, item) => total + item.parts.filter((itemPart) => !hasResponse(itemPart.id)).length, 0);
   const flushPendingSaves = async () => {
     for (const [questionId, persist] of Array.from(pendingSaves.current.entries())) {
       window.clearTimeout(saveTimers.current.get(questionId));
@@ -102,7 +105,7 @@ export default function Paper2Page({ navigate }) {
   };
   const pausePaper = async () => { if (attemptId) { try { await flushPendingSaves(); await pause(); } catch { return; } } navigate('practice'); };
   const submitPaper = async () => {
-    if (!attemptId) { setSubmitNotice(true); return; }
+    if (!attemptId) { setShowSubmit(false); setSubmitNotice(true); return; }
     setSubmitting(true);
     try {
       await flushPendingSaves();
@@ -142,9 +145,10 @@ export default function Paper2Page({ navigate }) {
             <MathWorkingField value={responses[itemPart.id] || []} onChange={(lines) => setResponse(itemPart.id, lines)} label={itemPart.responseType === 'graph' ? 'Estimate and final answer' : 'Show your working and answer'} minimumLines={itemPart.responseType === 'short' ? 2 : 4} />
           </section>)}
           <div className="paper-bottom functional-paper2-footer"><button className={`link-button ${question.flagged ? 'active' : ''}`} onClick={toggleFlag}><Flag size={15} />{question.flagged ? 'Flagged for review' : 'Flag this question'}</button><div><button className="button outline" disabled={current === 1} onClick={() => setCurrent(Math.max(1, current - 1))}><ArrowLeft size={17} />Previous</button><button className="button dark" disabled={current === questions.length} onClick={() => setCurrent(Math.min(questions.length, current + 1))}>Next<ArrowRight size={17} /></button></div></div>
-          <footer className="paper2-submit-footer"><div><h2>Ready to finish Paper 2?</h2><p>{answeredQuestions < questions.length ? `${questions.length - answeredQuestions} questions have not been started.` : 'All questions have a response.'}</p>{submitNotice && <p className="paper2-submit-notice" role="status">Start this paper from Practice to save and mark your responses.</p>}</div><button className="button dark" disabled={submitting} onClick={submitPaper}><Send size={17} />{submitting ? 'Submitting…' : 'Submit paper'}</button></footer>
+          <footer className="paper2-submit-footer"><div><h2>Ready to finish Paper 2?</h2><p>{incompleteQuestions.length ? `${incompleteQuestions.length} questions still have blank parts.` : 'Every part has a response.'}</p>{submitNotice && <p className="paper2-submit-notice" role="status">Start this paper from Practice to save and mark your responses.</p>}</div><button className="button dark" disabled={submitting} onClick={() => setShowSubmit(true)}><Send size={17} />{submitting ? 'Submitting…' : 'Submit paper'}</button></footer>
         </article>
       </div>
     </main>
+    {showSubmit && <div className="modal-backdrop"><section className="confirm-dialog paper2-submit-dialog" role="dialog" aria-modal="true" aria-labelledby="paper2-submit-title"><button className="dialog-close" onClick={() => setShowSubmit(false)} aria-label="Close submission confirmation"><X size={18} /></button><span className="dialog-icon"><AlertTriangle size={24} /></span><p className="eyebrow">Submit Paper 2</p><h2 id="paper2-submit-title">{incompleteQuestions.length ? `You still have ${blankParts} blank ${blankParts === 1 ? 'part' : 'parts'}.` : 'Your paper is ready to submit.'}</h2><p>{incompleteQuestions.length ? `Questions ${incompleteQuestions.map((item) => item.number).join(', ')} are incomplete. You can return to finish them, or submit now if you are done.` : 'Once submitted, your responses cannot be changed.'}</p><div className="submission-check"><span><strong>{questions.length - incompleteQuestions.length}</strong> complete</span><span><strong>{incompleteQuestions.length}</strong> incomplete</span><span><strong>{blankParts}</strong> blank parts</span></div><div className="dialog-actions"><button className="button outline" disabled={submitting} onClick={() => setShowSubmit(false)}>Return to paper</button><button className="button dark" disabled={submitting} onClick={submitPaper}>{submitting ? 'Submitting…' : incompleteQuestions.length ? 'Submit anyway' : 'Submit paper'}</button></div></section></div>}
   </div>;
 }

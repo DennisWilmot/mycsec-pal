@@ -2,7 +2,7 @@
 
 import { AlertCircle, CheckCircle2, ChevronDown, ChevronRight, Clock3, LoaderCircle } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import AppSidebar from "@/components/AppSidebar";
 
 type Report = {
@@ -32,12 +32,13 @@ function optionDetails(snapshot: any, optionId: string | null) {
   return option ? `${option.label}. ${text(option.content)}` : "No answer submitted";
 }
 
-function WorkingResponse({ value }: { value: unknown }) {
+function WorkingResponse({ value, snapshot }: { value: unknown; snapshot: any }) {
   if (!value || typeof value !== "object") return <span>No answer submitted</span>;
   const response = value as any;
-  if (response.parts && typeof response.parts === "object") return <div className="review-working">{Object.values(response.parts).map((part: any, index) => {
+  if (response.parts && typeof response.parts === "object") return <div className="review-working">{Object.entries(response.parts).map(([partId, part]: [string, any], index) => {
+    const definition = Array.isArray(snapshot?.parts) ? snapshot.parts.find((item: any) => item.id === partId) : null;
     const partLines = Array.isArray(part?.workingLines) ? part.workingLines.filter(Boolean) : [];
-    return <div key={index}><strong>Part {index + 1}</strong>{partLines.map((line: string, lineIndex: number) => <span key={lineIndex}>{line}</span>)}{Array.isArray(part?.graphPoints) && part.graphPoints.length > 0 && <span>{part.graphPoints.length} plotted points recorded</span>}{!partLines.length && !part?.graphPoints?.length && <span>No response</span>}</div>;
+    return <section className="review-part" key={partId}><strong>Part {definition?.label ?? index + 1}</strong><div>{partLines.map((line: string, lineIndex: number) => <span key={lineIndex}>{line}</span>)}{Array.isArray(part?.graphPoints) && part.graphPoints.length > 0 && <span>{part.graphPoints.length} plotted points recorded</span>}{!partLines.length && !part?.graphPoints?.length && <em>No response</em>}</div></section>;
   })}</div>;
   const lines = Array.isArray(response.workingLines) ? response.workingLines.filter(Boolean) : [];
   return <div className="review-working">
@@ -84,12 +85,6 @@ export default function AttemptResultsPage({ attemptId }: { attemptId: string })
     return () => events.close();
   }, [attemptId, load, report?.attempt.state]);
 
-  const summaryPoints = useMemo(() => report?.examinerSummary ? [
-    ...report.examinerSummary.strengths.map((item) => `Strength: ${item}`),
-    ...report.examinerSummary.misconceptions.map((item) => `Watch: ${item}`),
-    ...report.examinerSummary.patterns,
-    ...report.examinerSummary.nextSteps.map((item) => `Next: ${item}`),
-  ] : [], [report]);
   const navigate = (screen: string) => router.push(destinations[screen] ?? "/");
 
   return <div className="app-shell"><AppSidebar active="practice" onNavigate={navigate}/><main className="app-main results-page dynamic-results">
@@ -99,14 +94,19 @@ export default function AttemptResultsPage({ attemptId }: { attemptId: string })
     {!loading && report?.attempt.state === "marked" && report.result && <>
       <header className="results-title"><div><p className="eyebrow">Attempt report · {report.attempt.displayCode}</p><h1>{report.attempt.paperTitle}</h1><p>Completed {report.attempt.submittedAt ? new Date(report.attempt.submittedAt).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" }) : ""}</p></div><img src="/assets/math-pal.png" alt="Mathematics companion"/></header>
       <section className="attempt-summary-card"><article><span>Score</span><strong>{report.result.rawScore} <small>/ {report.result.maxScore}</small></strong><em>{Math.round(report.result.percentage)}%</em></article><article><span>Questions completed</span><strong>{report.result.questionsCompleted} <small>/ {report.result.totalQuestions}</small></strong><em className={report.result.questionsCompleted === report.result.totalQuestions ? "positive" : ""}>{report.result.questionsCompleted === report.result.totalQuestions ? "Complete" : `${report.result.totalQuestions - report.result.questionsCompleted} unanswered`}</em></article><article><span>Time used</span><strong>{formatDuration(report.result.timeUsedSeconds)}</strong><em>Recorded at submission</em></article></section>
-      <section className="examiner-summary detailed-summary"><img src="/assets/ai-marking.png" alt="Examiner notes"/><div><p className="eyebrow">Examiner summary</p>{report.examinerSummary ? <><h2>Your performance notes</h2><p>{report.examinerSummary.summary}</p>{report.examinerSummary.timeObservation && <p><strong>Time:</strong> {report.examinerSummary.timeObservation}</p>}{summaryPoints.length > 0 && <ul className="examiner-keynotes">{summaryPoints.map((point, index) => <li key={index}>{point}</li>)}</ul>}</> : <><h2>Your paper has been marked.</h2><p>Your score and question-by-question feedback are ready below. A personalised examiner summary has not been generated for this attempt.</p></>}</div></section>
+      <section className="examiner-summary detailed-summary"><img src="/assets/ai-marking.png" alt="Examiner notes"/><div><p className="eyebrow">Examiner summary</p>{report.examinerSummary ? <><h2>What this attempt shows</h2><p className="summary-narrative">{report.examinerSummary.summary}</p>{report.examinerSummary.timeObservation && <p className="summary-time"><Clock3 size={16}/><span>{report.examinerSummary.timeObservation}</span></p>}<div className="summary-insights"><InsightGroup title="What is working" items={report.examinerSummary.strengths}/><InsightGroup title="Ideas to rebuild" items={report.examinerSummary.misconceptions}/><InsightGroup title="Patterns across the paper" items={report.examinerSummary.patterns}/><InsightGroup title="Your next practice" items={report.examinerSummary.nextSteps}/></div></> : <><h2>Your paper has been marked.</h2><p>Your score and question-by-question feedback are ready below. A personalised examiner summary has not been generated for this attempt.</p></>}</div></section>
       <section className="breakdown"><div className="breakdown-title"><h2>Question review</h2></div>{report.questions.map((question) => {
         const isOpen = open === question.id;
         const isMcq = Array.isArray(question.snapshot?.options) && question.snapshot.options.length > 0;
-        return <article key={question.id} className={`breakdown-row paper1-review-row ${isOpen ? "expanded" : ""}`}><div className={`status-dot ${question.isCorrect ? "good" : "bad"}`}>{question.isCorrect ? "✓" : "×"}</div><b>Q{question.position}</b><span className="marks-total">{text(question.snapshot?.prompt) || `Question ${question.position}`}</span><strong>{question.awardedMarks} / {question.maxMarks}</strong><span>{question.isCorrect ? "Correct" : question.awardedMarks > 0 ? "Partly correct" : "Review"}</span><button onClick={() => setOpen(isOpen ? null : question.id)}>{isOpen ? "Hide details" : "Review"} {isOpen ? <ChevronDown size={15}/> : <ChevronRight size={15}/>}</button>{isOpen && <div className="expanded-detail paper1-review-detail"><div className="answer-comparison"><p><span>Your answer</span><strong className={question.isCorrect ? "correct-answer" : "incorrect-answer"}>{isMcq ? optionDetails(question.snapshot, question.response.selectedOptionId) : <WorkingResponse value={question.response.value}/>}</strong></p>{isMcq && <p><span>Correct answer</span><strong className="correct-answer">{optionDetails(question.snapshot, question.correctOptionId)}</strong></p>}</div><div className="what-happened"><h3>Examiner note</h3><p>{question.feedback ?? "No additional note was recorded."}</p></div></div>}</article>;
+        return <article key={question.id} className={`breakdown-row paper1-review-row ${isOpen ? "expanded" : ""}`}><div className={`status-dot ${question.isCorrect ? "good" : "bad"}`}>{question.isCorrect ? "✓" : "×"}</div><b>Q{question.position}</b><span className="marks-total">{text(question.snapshot?.prompt) || `Question ${question.position}`}</span><strong>{question.awardedMarks} / {question.maxMarks}</strong><span>{question.isCorrect ? "Correct" : question.awardedMarks > 0 ? "Partly correct" : "Review"}</span><button onClick={() => setOpen(isOpen ? null : question.id)}>{isOpen ? "Hide details" : "Review"} {isOpen ? <ChevronDown size={15}/> : <ChevronRight size={15}/>}</button>{isOpen && <div className="expanded-detail paper1-review-detail"><div className="answer-comparison"><p><span>Your answer</span><strong className={question.isCorrect ? "correct-answer" : "incorrect-answer"}>{isMcq ? optionDetails(question.snapshot, question.response.selectedOptionId) : <WorkingResponse value={question.response.value} snapshot={question.snapshot}/>}</strong></p>{isMcq && <p><span>Correct answer</span><strong className="correct-answer">{optionDetails(question.snapshot, question.correctOptionId)}</strong></p>}</div><div className="what-happened"><h3>Examiner note</h3><p>{question.feedback ?? "No additional note was recorded."}</p></div></div>}</article>;
       })}</section>
     </>}
   </main></div>;
+}
+
+function InsightGroup({ title, items }: { title: string; items: string[] }) {
+  if (!items.length) return null;
+  return <section><h3>{title}</h3><ul>{items.map((item, index) => <li key={index}>{item}</li>)}</ul></section>;
 }
 
 function StateCard({ icon, title, copy }: { icon: React.ReactNode; title: string; copy: string }) {
