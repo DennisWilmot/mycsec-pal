@@ -2,25 +2,12 @@
 import { ArrowRight, Check, ShieldCheck } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { createSupabaseBrowserClient } from '@/lib/supabase/browser';
-import RadarChart from '../RadarChart';
 
 const subjects=[
   {name:'Mathematics',image:'mathematics.png',active:true},
   {name:'English A',image:'english-a.png',active:true},
   {name:'Chemistry',image:'chemistry.png'},
   {name:'Physics',image:'physics.png'}
-];
-const sampleProgress=[
-  {label:'Number',value:78},
-  {label:'Algebra',value:64},
-  {label:'Graphs',value:52},
-  {label:'Geometry',value:71},
-  {label:'Statistics',value:59},
-];
-const sampleBreakdown=[
-  {question:'Question 8',type:'Conceptual knowledge',result:'Correct',score:'1 / 1',state:'good'},
-  {question:'Question 19',type:'Algorithmic knowledge',result:'Review',score:'0 / 1',state:'bad'},
-  {question:'Question 42',type:'Reasoning',result:'Partly correct',score:'3 / 5',state:'mid'},
 ];
 const journeySteps=[
   {number:'01',title:'Pick a subject',description:'Choose the CSEC subject you want to practice.',image:'pick-subject.png'},
@@ -72,25 +59,19 @@ export default function LandingPage({navigate}){
           </article>)}
         </div>
       </section>
-      <section className="container paper-demo section">
+      <section className="container paper-demo section landing-product-proof working-proof">
         <div className="demo-intro"><p className="eyebrow">Your working matters</p><h2>See how Paper 2 works</h2><p>Answer a question line by line and receive marks for the method—not only the final answer. Your feedback also highlights recurring habits and misconceptions so you know what to revisit.</p><button className="link-button">Try a sample question <ArrowRight size={16}/></button></div>
-        <div className="exam-sample">
-          <div className="question-row"><span className="q-tag">Q3</span><span><b>(a)</b> Factorise completely: <i>2x² − 7x + 3</i></span><small>(3 marks)</small></div>
-          <div className="question-row indent"><span><b>(b)</b> Hence, solve: <i>2x² − 7x + 3 = 0</i></span><small>(3 marks)</small></div>
-          <div className="working-lines">
-            {['2x² − 7x + 3','= 2x² − 6x − x + 3','= 2x(x − 3) − 1(x − 3)','= (2x − 1)(x − 3)'].map((x,i)=><div className="working-line" key={x}><span>{i+1}</span><em>{x}</em></div>)}
-          </div>
-        </div>
-        <div className="mark-card"><div className="mark-head"><span>Your mark</span><span className="success-pill">Great work!</span></div><div className="score">5 <small>/ 6</small></div><h4>Breakdown</h4><div className="score-row"><span>Part (a)</span><b>2 / 3</b></div><div className="score-row"><span>Part (b)</span><b>3 / 3</b></div><div className="feedback"><h4>Examiner feedback</h4><p>Good factorisation. Correct solutions.</p></div></div>
+        <figure className="product-shot product-shot-working"><img src="/landing%20page%20images/Short%20Answer%20practice%20paper%20ui%20math.png" alt="Mathematics Paper 2 workspace showing structured questions and line-by-line working fields"/><figcaption><span>Paper 2 workspace</span><strong>Show each step. Keep every method mark in reach.</strong></figcaption></figure>
       </section>
       <section className="container section journey-section" id="how"><p className="eyebrow">No complicated setup</p><h2>Simple steps. Serious results.</h2><div className="steps journey-steps">
         {journeySteps.map((step)=><article className="step journey-step" key={step.number}><img src={`/assets/steps/${step.image}`} alt=""/><div><span>{step.number}</span><h3>{step.title}</h3><p>{step.description}</p></div></article>)}
       </div></section>
       <section className="container section landing-progress-showcase">
         <div className="landing-progress-heading"><div><p className="eyebrow">More than a final score</p><h2>See exactly where progress is happening.</h2></div><p>Every learner receives a full report after each paper, with clear insights they can use for the next attempt.</p></div>
-        <div className="landing-progress-grid">
-          <article className="landing-radar-preview"><div><span className="preview-label">Student progress</span><h3>Your CSEC Mathematics profile</h3><p>Radar graphs turn marked attempts into a clear view of strengths and areas that need more practice.</p></div><RadarChart axes={sampleProgress}/></article>
-          <article className="landing-breakdown-preview"><div className="preview-card-heading"><div><span className="preview-label">Question-by-question report</span><h3>Understand every response</h3></div><span>68%</span></div><p className="preview-description">Review the result, marks and examiner feedback for each question and question type.</p><div className="preview-breakdown-head"><span>Question</span><span>Question type</span><span>Marks</span></div>{sampleBreakdown.map((row)=><div className="preview-breakdown-row" key={row.question}><span className={`preview-state ${row.state}`}>{row.state==='good'?'✓':row.state==='mid'?'~':'×'}</span><strong>{row.question}</strong><span><b>{row.type}</b><small>{row.result}</small></span><b>{row.score}</b></div>)}</article>
+        <div className="landing-report-gallery">
+          <figure className="product-shot report-shot examiner-shot"><img src="/landing%20page%20images/English%20attempt%20report%20exmainer%20summary.png" alt="English A attempt report with an individualized examiner summary and next actions"/><figcaption><span>Examiner analysis</span><strong>A report that explains the pattern—not just the percentage.</strong></figcaption></figure>
+          <figure className="product-shot report-shot review-shot"><img src="/landing%20page%20images/Attempt%20Report%20Question%20review.png" alt="Question-by-question report showing a learner response and specific examiner feedback"/><figcaption><span>Question review</span><strong>Open any response to see what happened and how to improve it.</strong></figcaption></figure>
+          <figure className="product-shot report-shot radar-shot"><img src="/landing%20page%20images/my%20progress%20-%20radar%20chart%20for%20math.png" alt="Mathematics progress dashboard with subject radar profile and recommended focus"/><figcaption><span>Progress over time</span><strong>Turn marked papers into a clear map of strengths and next priorities.</strong></figcaption></figure>
         </div>
       </section>
       <section className="container section pricing" id="pricing"><div className="pricing-head"><div><p className="eyebrow">Join the beta</p><h2>Real exam practice. Your feedback helps us improve it.</h2></div><span><ShieldCheck size={17}/> Free beta access. No card required.</span></div><div className="pricing-grid">
