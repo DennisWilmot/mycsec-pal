@@ -257,16 +257,16 @@ export async function completeOnboarding(args: {
       .set({ sortOrder })
       .where(and(eq(profileSubjects.profileId, args.id), eq(profileSubjects.subjectId, subjectId)))));
 
-    let betaAccess: { name: string; dailyAttemptLimit: number; expiresAt: Date } | null = null;
+    let betaAccess: { name: string; dailyAttemptLimit: number; expiresAt: string } | null = null;
     if (promotion) {
       const existing = await tx.execute(sql`
         select expires_at from promotion_redemptions
         where promotion_code_id = ${promotion.id} and profile_id = ${args.id}
         limit 1
       `);
-      let expiresAt = existing[0]?.expires_at ? new Date(String(existing[0].expires_at)) : null;
+      let expiresAt = existing[0]?.expires_at ? new Date(String(existing[0].expires_at)).toISOString() : null;
       if (!expiresAt) {
-        expiresAt = new Date(Date.now() + Number(promotion.duration_days) * 24 * 60 * 60 * 1000);
+        expiresAt = new Date(Date.now() + Number(promotion.duration_days) * 24 * 60 * 60 * 1000).toISOString();
         await tx.execute(sql`
           insert into promotion_redemptions (promotion_code_id, profile_id, expires_at)
           values (${promotion.id}, ${args.id}, ${expiresAt})
