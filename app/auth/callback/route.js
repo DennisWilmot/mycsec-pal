@@ -43,19 +43,23 @@ export async function GET(request) {
 
   const url = new URL(request.url);
   const code = url.searchParams.get('code');
+  const tokenHash = url.searchParams.get('token_hash');
+  const type = url.searchParams.get('type') || 'email';
   const next = safeNextPath(url.searchParams.get('next'));
 
-  if (!code) {
+  if (!code && !tokenHash) {
     return NextResponse.json(
-      { code: 'AUTH_CODE_MISSING', message: 'The authentication callback did not include a code.' },
+      { code: 'AUTH_CREDENTIAL_MISSING', message: 'The authentication callback did not include a code or token hash.' },
       { status: 400 },
     );
   }
 
   const supabase = await createSupabaseServerClient();
-  const { error } = await supabase.auth.exchangeCodeForSession(code);
+  const result = code
+    ? await supabase.auth.exchangeCodeForSession(code)
+    : await supabase.auth.verifyOtp({ token_hash: tokenHash, type });
 
-  if (error) {
+  if (result.error) {
     return NextResponse.json(
       { code: 'AUTH_CALLBACK_FAILED', message: 'We could not complete sign in. Please try again.' },
       { status: 400 },
