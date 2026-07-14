@@ -22,6 +22,7 @@ export default function Paper2Page({ navigate }) {
   const [graphResponses, setGraphResponses] = useState({});
   const saveTimers = useRef(new Map());
   const pendingSaves = useRef(new Map());
+  const hydratedAttemptId = useRef(null);
   const liveQuestions = (session?.questions || []).map((item) => ({
     id: item.id,
     number: item.position,
@@ -41,6 +42,11 @@ export default function Paper2Page({ navigate }) {
 
   useEffect(() => {
     if (!session) return;
+    const nextAttemptId = session.attempt?.id || attemptId;
+    // Autosaves update the shared session object. Rehydrating the controlled
+    // inputs after each save resets their values and can move the caret.
+    if (hydratedAttemptId.current === nextAttemptId) return;
+    hydratedAttemptId.current = nextAttemptId;
     setSeconds(session.attempt.remainingSeconds);
     const savedLines = {};
     const savedGraphs = {};
@@ -53,7 +59,7 @@ export default function Paper2Page({ navigate }) {
     });
     setResponses(savedLines);
     setGraphResponses(savedGraphs);
-  }, [session]);
+  }, [attemptId, session]);
 
   useEffect(() => {
     const timer = setInterval(() => setSeconds((value) => Math.max(0, value - 1)), 1000);

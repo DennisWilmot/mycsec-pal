@@ -59,13 +59,33 @@ export async function GET(request: Request, { params }: { params: Promise<{ atte
     ? suppliedCursor
     : await latestAttemptStreamId(redis, attemptId);
 
+  // The request abort handler and ReadableStream.cancel() can run for the same
+  // disconnect. Keep Redis shutdown shared and idempotent so a second cleanup
+  // does not call destroy() on an already-closed client.
+  let streamClosed = false;
+  let redisCleanup: Promise<void> | undefined;
+  const closeRedis = () => {
+    streamClosed = true;
+    if (redisCleanup) return redisCleanup;
+    redisCleanup = (async () => {
+      if (!redis.isOpen) return;
+      try {
+        await redis.quit();
+      } catch {
+        if (redis.isOpen) {
+          try { redis.destroy(); } catch {}
+        }
+      }
+    })();
+    return redisCleanup;
+  };
+
   const stream = new ReadableStream<Uint8Array>({
     start(controller) {
-      let closed = false;
       const close = async () => {
-        if (closed) return;
-        closed = true;
-        try { await redis.quit(); } catch { redis.destroy(); }
+        if (streamClosed) return closeRedis();
+        streamClosed = true;
+        await closeRedis();
         try { controller.close(); } catch {}
       };
 
@@ -83,12 +103,13 @@ export async function GET(request: Request, { params }: { params: Promise<{ atte
       }
 
       void (async () => {
-        while (!closed) {
+        while (!streamClosed) {
           try {
             const response = await redis.xRead(
               [{ key: attemptStreamKey(attemptId), id: cursor }],
               { BLOCK: HEARTBEAT_MS, COUNT: 50 },
             );
+            if (streamClosed) return;
             if (!response) {
               controller.enqueue(encoder.encode(": keep-alive\n\n"));
               continue;
@@ -107,7 +128,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ atte
               }
             }
           } catch (error) {
-            if (!closed) {
+            if (!streamClosed) {
               console.error("Attempt SSE stream failed", error);
               controller.enqueue(encodeSse("stream-error", { message: "Live updates were interrupted. Reconnecting…" }));
             }
@@ -117,7 +138,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ atte
       })();
     },
     cancel() {
-      return redis.quit().catch(() => redis.destroy());
+      return closeRedis();
     },
   });
 

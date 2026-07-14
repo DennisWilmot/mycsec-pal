@@ -150,6 +150,10 @@ export async function saveAttemptResponse(profileId: string, attemptId: string, 
   const client = getDatabaseClient();
   const selectedOptionId = isOptionResponse ? input.selectedOptionId : null;
   const responseJson = isOptionResponse ? {} : input.response;
+  // Bind JSON as text and cast it explicitly. Some production bundles have
+  // passed the wrapped object through without applying the JSONB serializer,
+  // which makes postgres.js reject Paper 2 autosaves at the wire boundary.
+  const encodedResponseJson = JSON.stringify(responseJson);
   const [saved] = await client<{
     id: string; client_revision: number; server_revision: number; answered_at: Date;
   }[]>`
@@ -163,7 +167,7 @@ export async function saveAttemptResponse(profileId: string, attemptId: string, 
     )
     insert into attempt_responses
       (attempt_question_id, profile_id, selected_option_id, response_json, answered_at, client_revision, server_revision)
-    select ${attemptQuestionId}::uuid, ${profileId}::uuid, ${selectedOptionId}::uuid, ${client.json(responseJson)}, now(), ${input.clientRevision}, 1
+    select ${attemptQuestionId}::uuid, ${profileId}::uuid, ${selectedOptionId}::uuid, ${encodedResponseJson}::jsonb, now(), ${input.clientRevision}, 1
     from writable_attempt
     on conflict (attempt_question_id) do update set
       selected_option_id = excluded.selected_option_id,
@@ -199,7 +203,7 @@ export async function setAttemptQuestionFlag(profileId: string, attemptId: strin
     )
     insert into attempt_responses
       (attempt_question_id, profile_id, response_json, is_flagged, client_revision, server_revision)
-    select ${attemptQuestionId}::uuid, ${profileId}::uuid, ${client.json({})}, ${input.isFlagged}, ${input.clientRevision}, 1
+    select ${attemptQuestionId}::uuid, ${profileId}::uuid, ${JSON.stringify({})}::jsonb, ${input.isFlagged}, ${input.clientRevision}, 1
     from writable_attempt
     on conflict (attempt_question_id) do update set
       is_flagged = excluded.is_flagged,
