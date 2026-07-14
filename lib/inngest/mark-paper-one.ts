@@ -30,7 +30,7 @@ function optionDescription(value: unknown) {
   return [label && `${label}.`, content].filter(Boolean).join(" ") || "the recorded option";
 }
 
-async function reviewPaperOneAnswers(answers: PaperOneAnswer[]) {
+async function reviewPaperOneAnswers(answers: PaperOneAnswer[], subjectName: string) {
   const reviewTargets = answers.filter((answer) => answer.selected_option_id !== answer.correct_option_id);
   if (!reviewTargets.length) return new Map<string, string>();
   const apiKey = process.env.OPENROUTER_API_KEY;
@@ -47,7 +47,7 @@ async function reviewPaperOneAnswers(answers: PaperOneAnswer[]) {
         properties: { reviews: { type: "array", maxItems: 60, items: { type: "object", additionalProperties: false, required: ["attemptQuestionId", "feedback"], properties: { attemptQuestionId: { type: "string" }, feedback: { type: "string" } } } } },
       } } },
       messages: [
-        { role: "system", content: "You are an insightful CSEC Mathematics teacher reviewing multiple-choice errors. Scoring has already been determined; never change it. For each item, use the exact prompt, selected option, and correct option to infer the likely misconception. Explain what the learner may have been trying to do, identify why that reasoning leads to the chosen distractor, and demonstrate the correct method or decisive check. Refer to the actual values and notation. For an unanswered item, teach the first useful step. Write one compact teaching paragraph per item; never say only that the candidate chose the wrong answer, never shame the learner, and never invent work that is not evidenced by the selected option." },
+        { role: "system", content: `You are an insightful CSEC ${subjectName} teacher reviewing multiple-choice errors. Scoring has already been determined; never change it. For each item, use the exact prompt, selected option, and correct option to infer the likely misunderstanding or decision. Explain what the learner may have been trying to do, why the chosen option does not satisfy this particular question, and demonstrate the better reasoning, textual evidence, language principle, or mathematical method. Refer to the actual wording, values, or notation. For an unanswered item, teach the first useful step. Write one compact teaching paragraph per item that could not apply to a different question; never merely say the candidate chose the wrong answer, never shame the learner, and never invent unseen working.` },
         { role: "user", content: JSON.stringify(reviewTargets.map((answer) => ({ attemptQuestionId: answer.attempt_question_id, question: answer.position, prompt: answer.prompt, selectedOption: answer.selected_option, correctOption: answer.correct_option }))) },
       ],
     }),
@@ -68,11 +68,12 @@ export async function markPaperOneAttempt(attemptId: string, markingJobId: strin
   const db = getDatabase();
   const claimed = await db.transaction(async (tx) => {
     const header = await tx.execute(sql`
-      select a.id, a.status, a.elapsed_seconds, p.paper_type,
+      select a.id, a.status, a.elapsed_seconds, p.paper_type, p.title paper_title, s.name subject_name,
              mj.status as marking_job_status
       from attempts a
       join paper_versions pv on pv.id = a.paper_version_id
       join papers p on p.id = pv.paper_id
+      join subjects s on s.id = p.subject_id
       join marking_jobs mj on mj.attempt_id = a.id
       where a.id = ${attemptId} and mj.id = ${markingJobId}
       for update of a, mj
@@ -99,7 +100,7 @@ export async function markPaperOneAttempt(attemptId: string, markingJobId: strin
     `);
     const answers = answerRows as unknown as PaperOneAnswer[];
     if (!answers.length || answers.some((answer) => !answer.correct_option_id)) throw new NonRetriableError("Paper 1 answer key is incomplete.");
-    return { status: "ready" as const, elapsedSeconds: Number(attempt.elapsed_seconds), answers };
+    return { status: "ready" as const, elapsedSeconds: Number(attempt.elapsed_seconds), subjectName: String(attempt.subject_name), paperTitle: String(attempt.paper_title), answers };
   });
   if (claimed.status !== "ready") return { status: claimed.status, attemptId };
 
@@ -108,8 +109,8 @@ export async function markPaperOneAttempt(attemptId: string, markingJobId: strin
   const maxScore=answers.reduce((total,answer)=>total+Number(answer.max_marks),0);
   const completed=answers.filter((answer)=>answer.selected_option_id!==null).length;
   const percentage=Number(((rawScore/maxScore)*100).toFixed(2));
-  const reviews=await reviewPaperOneAnswers(answers);
-  const generatedSummary=await generateExaminerSummary({paper:"CSEC Mathematics Paper 1",score:{awarded:rawScore,maximum:maxScore,percentage,questionsAnswered:completed,totalQuestions:answers.length},questions:answers.map((answer)=>({question:answer.position,prompt:answer.prompt,selectedOption:answer.selected_option,correctOption:answer.correct_option,isCorrect:answer.selected_option_id===answer.correct_option_id,examinerFeedback:reviews.get(answer.attempt_question_id)??null}))}).catch((error)=>{console.error("Paper 1 examiner summary generation failed",error);return null;});
+  const reviews=await reviewPaperOneAnswers(answers,claimed.subjectName);
+  const generatedSummary=await generateExaminerSummary({subject:claimed.subjectName,paper:claimed.paperTitle,score:{awarded:rawScore,maximum:maxScore,percentage,questionsAnswered:completed,totalQuestions:answers.length},questions:answers.map((answer)=>({question:answer.position,prompt:answer.prompt,selectedOption:answer.selected_option,correctOption:answer.correct_option,isCorrect:answer.selected_option_id===answer.correct_option_id,examinerFeedback:reviews.get(answer.attempt_question_id)??null}))}).catch((error)=>{console.error("Paper 1 examiner summary generation failed",error);return null;});
 
   return db.transaction(async (tx) => {
     const [attempt]=await tx.execute(sql`select status from attempts where id=${attemptId} for update`) as unknown as Record<string,unknown>[];

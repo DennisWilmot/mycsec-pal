@@ -2,11 +2,13 @@ import { sql } from "drizzle-orm";
 import { z } from "zod";
 
 const generatedSummarySchema = z.object({
-  summary: z.string().min(80).max(1600),
-  strengths: z.array(z.string().min(20).max(500)).max(5),
-  misconceptions: z.array(z.string().min(20).max(500)).max(5),
-  patterns: z.array(z.string().min(20).max(500)).max(5),
-  nextSteps: z.array(z.string().min(20).max(500)).min(1).max(5),
+  summary: z.string().min(100).max(1800),
+  findings: z.array(z.object({
+    heading: z.string().min(5).max(100),
+    insight: z.string().min(40).max(900),
+    evidence: z.array(z.string().min(15).max(500)).min(1).max(4),
+    action: z.string().min(20).max(500).nullable(),
+  })).min(1).max(8),
 });
 
 export type GeneratedExaminerSummary = z.infer<typeof generatedSummarySchema>;
@@ -21,19 +23,20 @@ export async function generateExaminerSummary(evidence: unknown): Promise<Genera
     body: JSON.stringify({
       model,
       temperature: 0.25,
-      response_format: { type: "json_schema", json_schema: { name: "examiner_summary", strict: true, schema: {
+      response_format: { type: "json_schema", json_schema: { name: "examiner_report", strict: true, schema: {
         type: "object", additionalProperties: false,
-        required: ["summary", "strengths", "misconceptions", "patterns", "nextSteps"],
+        required: ["summary", "findings"],
         properties: {
           summary: { type: "string" },
-          strengths: { type: "array", maxItems: 5, items: { type: "string" } },
-          misconceptions: { type: "array", maxItems: 5, items: { type: "string" } },
-          patterns: { type: "array", maxItems: 5, items: { type: "string" } },
-          nextSteps: { type: "array", minItems: 1, maxItems: 5, items: { type: "string" } },
+          findings: { type: "array", minItems: 1, maxItems: 8, items: { type: "object", additionalProperties: false, required: ["heading", "insight", "evidence", "action"], properties: {
+            heading: { type: "string" }, insight: { type: "string" },
+            evidence: { type: "array", minItems: 1, maxItems: 4, items: { type: "string" } },
+            action: { type: ["string", "null"] },
+          } } },
         },
       } } },
       messages: [
-        { role: "system", content: "You are a perceptive CSEC Mathematics teacher writing an end-of-paper report. Synthesize the complete marking evidence into an individualized teaching report. Explain what the learner appears to understand, the approaches they attempted, exactly where their reasoning repeatedly broke down, and how to improve. Connect patterns across questions instead of restating scores. Every claim must be supported by the supplied responses, marks, or examiner feedback. Use plain, encouraging Caribbean classroom English; be candid but never shaming. Vary the number of insights to match the evidence and avoid generic advice such as 'check your work' unless you name what to check and how." },
+        { role: "system", content: "You are a perceptive CSEC examiner and teacher writing a genuinely individualized end-of-paper report for the subject named in the evidence. Synthesize the question-level notes and learner responses; do not fill a standard template or sort observations into predetermined categories. Write a coherent opening interpretation, then create only the findings the evidence genuinely supports. Give each finding a specific, natural heading. Explain the learner's apparent thinking, connect evidence across named questions or parts, distinguish an isolated slip from a repeated pattern, and prescribe a concrete next move when useful. Evidence strings must cite question numbers and the learner's actual response, approach, wording, or examiner note—not merely marks. Do not manufacture strengths to balance weaknesses, repeat the score, or use generic advice. For English A, discuss comprehension, inference, language, organization, audience, purpose, evidence, and writing choices as applicable. For Mathematics, discuss concepts, representations, methods, and reasoning as applicable. Use plain, encouraging Caribbean classroom English; be candid but never shaming." },
         { role: "user", content: JSON.stringify(evidence) },
       ],
     }),
@@ -58,5 +61,5 @@ export async function writeEvidenceSummary(tx: any, resultId: string, generated?
   const nextSteps=focus?[`Practise 3–5 questions from ${focus.name}, showing every step.`,"Retry missed questions without looking at the original response."]:["Review the question-level examiner notes and retry missed items."];
   const usedMinutes=Math.max(1,Math.round(Number(header.time_used_seconds)/60)),allowedMinutes=Math.max(1,Math.round(Number(header.duration_seconds)/60)),remainingMinutes=Math.max(0,allowedMinutes-usedMinutes);
   const timeObservation=remainingMinutes?`You used approximately ${usedMinutes} of ${allowedMinutes} minutes, leaving about ${remainingMinutes} minutes for checking or unfinished parts.`:`You used approximately the full ${allowedMinutes}-minute session.`;
-  await tx.execute(sql`insert into examiner_summaries(result_id,summary,strengths_json,misconceptions_json,time_observation,patterns_json,next_steps_json,prompt_version) values(${resultId},${summary},${JSON.stringify(generated?.strengths ?? strengths)}::jsonb,${JSON.stringify(generated?.misconceptions ?? misconceptions)}::jsonb,${timeObservation},${JSON.stringify(generated?.patterns ?? patterns)}::jsonb,${JSON.stringify(generated?.nextSteps ?? nextSteps)}::jsonb,${generated ? 'paper2-teaching-summary-v2' : 'evidence-summary-v1'}) on conflict(result_id) do update set summary=excluded.summary,strengths_json=excluded.strengths_json,misconceptions_json=excluded.misconceptions_json,time_observation=excluded.time_observation,patterns_json=excluded.patterns_json,next_steps_json=excluded.next_steps_json,prompt_version=excluded.prompt_version,updated_at=now()`);
+  await tx.execute(sql`insert into examiner_summaries(result_id,summary,strengths_json,misconceptions_json,time_observation,patterns_json,next_steps_json,report_json,prompt_version) values(${resultId},${summary},${JSON.stringify(strengths)}::jsonb,${JSON.stringify(misconceptions)}::jsonb,${timeObservation},${JSON.stringify(patterns)}::jsonb,${JSON.stringify(nextSteps)}::jsonb,${generated ? JSON.stringify(generated) : null}::jsonb,${generated ? 'dynamic-evidence-report-v3' : 'evidence-summary-v1'}) on conflict(result_id) do update set summary=excluded.summary,strengths_json=excluded.strengths_json,misconceptions_json=excluded.misconceptions_json,time_observation=excluded.time_observation,patterns_json=excluded.patterns_json,next_steps_json=excluded.next_steps_json,report_json=excluded.report_json,prompt_version=excluded.prompt_version,updated_at=now()`);
 }

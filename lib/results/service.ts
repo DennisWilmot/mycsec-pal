@@ -26,6 +26,7 @@ type ResultHeader = {
   time_observation: string | null;
   patterns: unknown;
   next_steps: unknown;
+  report_json: unknown;
 };
 
 function stringArray(value: unknown): string[] {
@@ -51,7 +52,8 @@ export async function readOwnedResult(profileId: string, attemptId: string) {
       r.questions_completed, r.time_used_seconds, r.published_at,
       (select count(*)::int from attempt_questions aq where aq.attempt_id = a.id) as total_questions,
       es.summary, es.strengths_json as strengths, es.misconceptions_json as misconceptions,
-      es.time_observation, es.patterns_json as patterns, es.next_steps_json as next_steps
+      es.time_observation, es.patterns_json as patterns, es.next_steps_json as next_steps,
+      es.report_json
     from attempts a
     join paper_versions pv on pv.id = a.paper_version_id
     join papers p on p.id = pv.paper_id
@@ -115,6 +117,9 @@ export async function readOwnedResult(profileId: string, attemptId: string) {
     } : null,
     examinerSummary: header.summary ? {
       summary: header.summary,
+      findings: header.report_json && typeof header.report_json === "object" && Array.isArray((header.report_json as { findings?: unknown }).findings)
+        ? (header.report_json as { findings: unknown[] }).findings
+        : [],
       strengths: stringArray(header.strengths),
       misconceptions: stringArray(header.misconceptions),
       timeObservation: header.time_observation,

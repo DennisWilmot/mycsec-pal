@@ -111,6 +111,7 @@ export const examinerSummaries = pgTable(
     timeObservation: text("time_observation"),
     patternsJson: jsonb("patterns_json").notNull().default(sql`'[]'::jsonb`),
     nextStepsJson: jsonb("next_steps_json").notNull().default(sql`'[]'::jsonb`),
+    reportJson: jsonb("report_json"),
     promptVersion: varchar("prompt_version", { length: 80 }).notNull(),
     createdAt: createdAt(),
     updatedAt: updatedAt(),
