@@ -60,3 +60,9 @@ body,button,input,select,textarea{font-family:var(--font-sans)!important}h1,h2,h
 @media(max-width:680px){.beta-code-panel{grid-template-columns:1fr}.hero-beta-actions{align-items:flex-start;flex-direction:column;gap:12px}}
 .landing-subject-title{display:flex;align-items:center;justify-content:space-between;gap:12px}.landing-subject-title h3{margin:4px 0}.landing-subject-title>span{display:inline-flex;align-items:center;gap:5px;color:oklch(42% .09 145);font-size:.68rem;font-weight:800;white-space:nowrap}.billing-confirmed{display:flex;margin:0 0 18px;padding:10px 12px;border:1px solid oklch(78% .07 145);border-radius:10px;background:oklch(95% .035 145);color:oklch(38% .08 145)}
 .dynamic-findings{display:grid;gap:0;margin-top:22px;border-top:1px solid var(--line)}.dynamic-findings>article{display:grid;grid-template-columns:38px minmax(0,1fr);gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}.dynamic-findings>article>span{font:600 16px var(--font-display);color:#a28c4e}.dynamic-findings h3{margin:0 0 7px;font-size:16px}.dynamic-findings p{margin:0 0 10px!important}.dynamic-findings ul{display:grid;gap:7px;margin:10px 0;padding-left:18px}.dynamic-findings li{font-size:12px;line-height:1.5;color:#625a4d}.finding-action{display:flex;gap:9px;padding:10px 12px;border-radius:9px;background:#fff7dc}.finding-action strong{flex:none;color:#745e20}
+
+/* Larger chart and wrapped axis labels make dense syllabus profiles readable. */
+.progress-profile-card .radar{max-width:760px;height:430px}
+.radar-label{font-size:12px;font-weight:700;fill:#4f493d;letter-spacing:-.01em}
+.radar-tooltip text{font-size:10px;font-weight:700}
+@media(max-width:720px){.progress-profile-card .radar{height:360px}.radar-label{font-size:11px}}
