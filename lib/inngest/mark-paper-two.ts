@@ -2,7 +2,7 @@ import { sql } from "drizzle-orm";
 import { NonRetriableError } from "inngest";
 import { z } from "zod";
 import { getDatabase } from "@/lib/db";
-import { generatePaperTwoSummary, writeEvidenceSummary } from "./examiner-summary";
+import { generateExaminerSummary, writeEvidenceSummary } from "./examiner-summary";
 
 const outputSchema = z.object({
   parts: z.array(z.object({
@@ -54,7 +54,7 @@ export async function markPaperTwoAttempt(attemptId:string,markingJobId:string){
   for(const part of parts){const current=questions.get(part.attemptQuestionId)??{position:part.position,max:part.questionMax,parts:[]};current.parts.push(part);questions.set(part.attemptQuestionId,current);}
   const totals=[...questions.entries()].map(([attemptQuestionId,question])=>({attemptQuestionId,question,score:question.parts.reduce((sum,part)=>sum+(markByPart.get(part.id)?.awardedMarks??0),0)}));
   const rawScore=totals.reduce((sum,item)=>sum+item.score,0),maxScore=totals.reduce((sum,item)=>sum+item.question.max,0),completed=totals.filter((item)=>item.question.parts.some((part)=>JSON.stringify(part.response)!==JSON.stringify({workingLines:[],graphPoints:[]}))).length,percentage=Number((100*rawScore/maxScore).toFixed(2));
-  const generatedSummary=await generatePaperTwoSummary({score:{awarded:rawScore,maximum:maxScore,percentage},questions:totals.map((item)=>({question:item.question.position,awardedMarks:item.score,maximumMarks:item.question.max,parts:item.question.parts.map((part)=>({label:part.label,prompt:part.prompt,learnerResponse:part.response,awardedMarks:markByPart.get(part.id)?.awardedMarks,maximumMarks:part.marks,examinerFeedback:markByPart.get(part.id)?.feedback,matchedCriteria:markByPart.get(part.id)?.matchedCriteria,missedCriteria:markByPart.get(part.id)?.missedCriteria}))}))}).catch((error)=>{console.error("Paper 2 examiner summary generation failed",error);return null;});
+  const generatedSummary=await generateExaminerSummary({score:{awarded:rawScore,maximum:maxScore,percentage},questions:totals.map((item)=>({question:item.question.position,awardedMarks:item.score,maximumMarks:item.question.max,parts:item.question.parts.map((part)=>({label:part.label,prompt:part.prompt,learnerResponse:part.response,awardedMarks:markByPart.get(part.id)?.awardedMarks,maximumMarks:part.marks,examinerFeedback:markByPart.get(part.id)?.feedback,matchedCriteria:markByPart.get(part.id)?.matchedCriteria,missedCriteria:markByPart.get(part.id)?.missedCriteria}))}))}).catch((error)=>{console.error("Paper 2 examiner summary generation failed",error);return null;});
   return db.transaction(async(tx)=>{
     const [attempt]=await tx.execute(sql`select status,elapsed_seconds from attempts where id=${attemptId} for update`) as unknown as Row[];
     if(attempt?.status==="marked") return {status:"already_marked",attemptId};

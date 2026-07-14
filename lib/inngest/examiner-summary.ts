@@ -11,7 +11,7 @@ const generatedSummarySchema = z.object({
 
 export type GeneratedExaminerSummary = z.infer<typeof generatedSummarySchema>;
 
-export async function generatePaperTwoSummary(evidence: unknown): Promise<GeneratedExaminerSummary | null> {
+export async function generateExaminerSummary(evidence: unknown): Promise<GeneratedExaminerSummary | null> {
   const apiKey = process.env.OPENROUTER_API_KEY;
   const model = process.env.OPENROUTER_REVIEW_MODEL || process.env.OPENROUTER_MARKING_MODEL;
   if (!apiKey || !model) return null;
