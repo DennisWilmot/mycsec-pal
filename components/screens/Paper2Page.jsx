@@ -68,7 +68,8 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
   }));
   const questions = attemptId ? liveQuestions : mathPaper2Demo.questions;
   const question = questions[current - 1];
-  const isEnglish = subjectName.toLowerCase().includes('english');
+  const resolvedSubjectName = session?.attempt?.subjectName || subjectName;
+  const isEnglish = resolvedSubjectName.toLowerCase().includes('english');
   const blockExternalText = (event) => {
     event.preventDefault();
     setPasteNotice('Pasting or dropping text is disabled for Paper 2 responses. Type your answer directly.');
@@ -173,7 +174,7 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
     <AppSidebar active="practice" onNavigate={navigate} />
     <main className={`app-main paper2-workspace ${isEnglish ? 'english-paper2-workspace' : ''}`}>
       <header className="exam-workspace-header simplified-exam-header">
-        <div><p className="eyebrow">CSEC practice paper</p><h1>{subjectName} · Paper 2</h1></div>
+        <div><p className="eyebrow">CSEC practice paper</p><h1>{resolvedSubjectName} · Paper 2</h1></div>
         <div className="exam-workspace-controls">{attemptId && <span className={`answer-sync-state ${syncState}`} role="status">{syncState === 'offline' ? `${queuedCount} change${queuedCount === 1 ? '' : 's'} saved on this device` : syncState === 'saving' ? 'Saving…' : 'Saved'}</span>}<div className="compact-status exam-clock"><Clock size={18} /><span><strong>{format(seconds)}</strong><small>Time remaining</small></span></div><button className="icon-action" onClick={pausePaper} title="Pause paper" aria-label="Pause paper"><Pause size={18} /></button></div>
       </header>
       {error && <div className="integrity-note">{error}</div>}
@@ -188,7 +189,7 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
           })}
         </aside>
         <article className={`paper-sheet symmetric-paper-sheet paper2-generated-sheet ${isEnglish ? 'english-paper2-sheet' : ''}`}>
-          <div className="paper2-question-heading"><div><p className="eyebrow">English A · Paper 2</p><h2>Question {(question.context?.choices?.length || 0) > 1 ? question.context.choices.map((choice) => choice.number).join(' or ') : question.displayNumber || current}</h2></div><span>{question.marks} marks</span></div>
+          <div className="paper2-question-heading"><div><p className="eyebrow">{resolvedSubjectName} · Paper 2</p><h2>Question {(question.context?.choices?.length || 0) > 1 ? question.context.choices.map((choice) => choice.number).join(' or ') : question.displayNumber || current}</h2></div><span>{question.marks} marks</span></div>
           {isEnglish && <EnglishQuestionContext context={question.context} selectedChoiceId={selectedChoices[question.id]} onSelectChoice={(choiceId) => setSelectedChoice(question.id, choiceId)} />}
           {question.parts.map((itemPart) => <section className="paper-question generated-paper2-part" key={itemPart.id}>
             {!isEnglish && <div className="prompt-row"><span><b>{itemPart.label}</b> {itemPart.prompt}</span><small>({itemPart.marks} {itemPart.marks === 1 ? 'mark' : 'marks'})</small></div>}
