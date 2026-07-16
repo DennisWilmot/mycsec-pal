@@ -73,13 +73,13 @@ export async function readOwnedResult(profileId: string, attemptId: string) {
       selected_option_id: string | null; response: unknown; is_flagged: boolean | null;
       awarded_marks: string; marked_max_marks: string; is_correct: boolean; feedback: string | null;
       marking_evidence: unknown;
-      correct_option_id: string | null;
+      live_correct_option_id: string | null;
     }[]>`
       select aq.id, aq.position, aq.max_marks, aq.question_snapshot_json as snapshot,
         ar.selected_option_id, ar.response_json as response, ar.is_flagged,
         qm.awarded_marks, qm.max_marks as marked_max_marks, qm.is_correct, qm.feedback,
         qm.marking_evidence_json as marking_evidence,
-        correct_option.id as correct_option_id
+        correct_option.id as live_correct_option_id
       from attempt_questions aq
       join question_marks qm on qm.attempt_question_id = aq.id and qm.result_id = ${header.result_id}::uuid
       left join attempt_responses ar on ar.attempt_question_id = aq.id
@@ -130,21 +130,26 @@ export async function readOwnedResult(profileId: string, attemptId: string) {
       message: "We could not finish marking this paper. Your answers are safe and the marking job can be retried.",
       reference: header.display_code,
     } : null,
-    questions: questions.map((question) => ({
-      id: question.id,
-      position: question.position,
-      maxMarks: Number(question.marked_max_marks),
-      awardedMarks: Number(question.awarded_marks),
-      isCorrect: question.is_correct,
-      feedback: question.feedback,
-      markingEvidence: question.marking_evidence,
-      snapshot: question.snapshot,
-      response: {
-        selectedOptionId: question.selected_option_id,
-        value: question.response,
-        isFlagged: Boolean(question.is_flagged),
-      },
-      correctOptionId: question.correct_option_id,
-    })),
+    questions: questions.map((question) => {
+      const options = Array.isArray(question.snapshot?.options)
+        ? question.snapshot.options as Array<{ id?: string; isCorrect?: boolean }>
+        : [];
+      return {
+        id: question.id,
+        position: question.position,
+        maxMarks: Number(question.marked_max_marks),
+        awardedMarks: Number(question.awarded_marks),
+        isCorrect: question.is_correct,
+        feedback: question.feedback,
+        markingEvidence: question.marking_evidence,
+        snapshot: question.snapshot,
+        response: {
+          selectedOptionId: question.selected_option_id,
+          value: question.response,
+          isFlagged: Boolean(question.is_flagged),
+        },
+        correctOptionId: options.find((option) => option.isCorrect)?.id ?? question.live_correct_option_id,
+      };
+    }),
   };
 }

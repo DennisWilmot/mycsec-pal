@@ -1,6 +1,5 @@
 import { sql } from "drizzle-orm";
 import { getDatabase } from "@/lib/db";
-import { publishAttemptEvent } from "@/lib/events/attempt-stream";
 import { inngest } from "./client";
 
 type ClaimedEvent = {
@@ -23,8 +22,10 @@ export async function dispatchOutboxBatch(limit = 50) {
       with candidates as (
         select id
         from outbox_events
-        where status in ('pending', 'failed')
-          and available_at <= now()
+        where (
+          (status in ('pending', 'failed') and available_at <= now())
+          or (status = 'publishing' and updated_at < now() - interval '5 minutes')
+        )
           and attempts < ${MAX_ATTEMPTS}
         order by created_at
         limit ${limit}
@@ -51,10 +52,6 @@ export async function dispatchOutboxBatch(limit = 50) {
         name: event.event_type,
         data: event.payload_json,
       });
-      const attemptId = event.payload_json.attemptId;
-      if (event.event_type.startsWith("attempt/") && typeof attemptId === "string") {
-        await publishAttemptEvent(attemptId, event.event_type, event.payload_json);
-      }
       await db.execute(sql`
         update outbox_events
         set status = 'published', published_at = now(), updated_at = now()

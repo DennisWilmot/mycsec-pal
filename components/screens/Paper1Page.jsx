@@ -6,6 +6,7 @@ import AppSidebar from '../AppSidebar';
 import QuestionVisual from '../QuestionVisual';
 import { mathPaper1Demo } from '../../data/math-paper-1-demo';
 import { useAttemptSession } from '../../lib/attempts/use-attempt-session';
+import { useAttemptCountdown } from '../../lib/attempts/use-attempt-countdown';
 
 const letters=['A','B','C','D'];
 function EnglishStimulus({stimulus}) {
@@ -16,9 +17,10 @@ function EnglishStimulus({stimulus}) {
 export default function Paper1Page({navigate,subjectName='Mathematics'}){
  const [attemptId,setAttemptId]=useState(null);useEffect(()=>setAttemptId(new URLSearchParams(window.location.search).get('attemptId')),[]);const {session,loading,error,setError,saveResponse,pause,resume,submit}=useAttemptSession(attemptId);
  const liveQuestions=(session?.questions||[]).map((item)=>({id:item.id,number:item.position,prompt:item.snapshot?.prompt?.text||'',visual:item.snapshot?.prompt?.visual||null,stimulus:item.snapshot?.prompt?.stimulus||null,options:item.options.map((option)=>({id:option.id,label:option.label,text:option.content?.text||''})),selectedOptionId:item.response?.selectedOptionId||null}));
- const questions=attemptId?liveQuestions:mathPaper1Demo.questions.map((item)=>({...item,options:item.options.map((text,index)=>({id:letters[index],label:letters[index],text})),selectedOptionId:null}));const [answers,setAnswers]=useState({});const [seconds,setSeconds]=useState(mathPaper1Demo.durationSeconds);const [showSubmit,setShowSubmit]=useState(false);const [submitting,setSubmitting]=useState(false);const [tabSwitches,setTabSwitches]=useState(0);
- useEffect(()=>{if(session){setSeconds(session.attempt.remainingSeconds);setAnswers(Object.fromEntries(session.questions.filter((item)=>item.response?.selectedOptionId).map((item)=>[item.position,item.response.selectedOptionId]))) }},[session]);
- useEffect(()=>{const timer=setInterval(()=>setSeconds((value)=>Math.max(0,value-1)),1000);return()=>clearInterval(timer)},[]);useEffect(()=>{const track=()=>{if(document.hidden)setTabSwitches((count)=>count+1)};document.addEventListener('visibilitychange',track);return()=>document.removeEventListener('visibilitychange',track)},[]);
+ const questions=attemptId?liveQuestions:mathPaper1Demo.questions.map((item)=>({...item,options:item.options.map((text,index)=>({id:letters[index],label:letters[index],text})),selectedOptionId:null}));const [answers,setAnswers]=useState({});const seconds=useAttemptCountdown(session?.attempt,mathPaper1Demo.durationSeconds);const [showSubmit,setShowSubmit]=useState(false);const [submitting,setSubmitting]=useState(false);const [tabSwitches,setTabSwitches]=useState(0);
+ useEffect(()=>{if(session){setAnswers(Object.fromEntries(session.questions.filter((item)=>item.response?.selectedOptionId).map((item)=>[item.position,item.response.selectedOptionId]))) }},[session]);
+ useEffect(()=>{if(attemptId&&['submitted','marking','marked','marking_failed'].includes(session?.attempt?.status))window.location.assign(`/results/${attemptId}`)},[attemptId,session?.attempt?.status]);
+ useEffect(()=>{const track=()=>{if(document.hidden)setTabSwitches((count)=>count+1)};document.addEventListener('visibilitychange',track);return()=>document.removeEventListener('visibilitychange',track)},[]);
  const total=questions.length||60;const formatTime=(value)=>`${String(Math.floor(value/3600)).padStart(2,'0')}:${String(Math.floor(value%3600/60)).padStart(2,'0')}:${String(value%60).padStart(2,'0')}`;const answered=Object.keys(answers).length;const progress=Math.round(answered/total*100);
  const goToQuestion=(number)=>document.getElementById(`question-${number}`)?.scrollIntoView({behavior:'smooth',block:'start'});
  const chooseAnswer=async(question,optionId)=>{setError('');setAnswers((current)=>({...current,[question.number]:optionId}));if(attemptId){try{if(session?.attempt?.status==='paused')await resume();await saveResponse(question.id,{selectedOptionId:optionId})}catch{setAnswers((current)=>({...current,[question.number]:question.selectedOptionId}))}}};

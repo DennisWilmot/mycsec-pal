@@ -8,6 +8,7 @@ const PROTECTED_PREFIXES = [
   '/results',
   '/paper-1',
   '/paper-2',
+  '/admin',
 ];
 
 export async function middleware(request) {
@@ -29,5 +30,16 @@ export async function middleware(request) {
 }
 
 export const config = {
-  matcher: ['/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)'],
+  // API routes authenticate inside their handlers. Running the auth proxy for
+  // them as well would verify every API request twice and doubles outbound
+  // Auth traffic on the exam hot path.
+  matcher: [
+    '/practice/:path*',
+    '/progress/:path*',
+    '/settings/:path*',
+    '/results/:path*',
+    '/paper-1/:path*',
+    '/paper-2/:path*',
+    '/admin/:path*',
+  ],
 };

@@ -54,6 +54,7 @@ export default function AttemptResultsPage({ attemptId }: { attemptId: string })
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
   const [open, setOpen] = useState<string | null>(null);
+  const [retrying, setRetrying] = useState(false);
 
   const load = useCallback(async () => {
     try {
@@ -69,28 +70,49 @@ export default function AttemptResultsPage({ attemptId }: { attemptId: string })
     }
   }, [attemptId]);
 
+  const retryMarking = useCallback(async () => {
+    setRetrying(true);
+    setError("");
+    try {
+      const response = await fetch(`/api/attempts/${attemptId}/retry-marking`, { method: "POST" });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(payload?.error?.message ?? "Could not retry marking.");
+      await load();
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : "Could not retry marking.");
+    } finally {
+      setRetrying(false);
+    }
+  }, [attemptId, load]);
+
   useEffect(() => { void load(); }, [load]);
   useEffect(() => {
     if (!report || ["marked", "failed", "not_submitted"].includes(report.attempt.state)) return;
-    const events = new EventSource(`/api/attempts/${attemptId}/events`);
-    const refresh = () => void load();
-    const refreshFromSnapshot = (event: MessageEvent) => {
-      try {
-        const snapshot = JSON.parse(event.data);
-        if (snapshot.status && snapshot.status !== report.attempt.state) void load();
-      } catch {}
+    let cancelled = false;
+    let timer: ReturnType<typeof setTimeout>;
+    const interval = report.attempt.state === "marking" ? 5_000 : 10_000;
+    const schedule = () => { timer = setTimeout(poll, interval); };
+    const poll = async () => {
+      if (cancelled) return;
+      if (!document.hidden) await load();
+      if (!cancelled) schedule();
     };
-    events.addEventListener("snapshot", refreshFromSnapshot as EventListener);
-    ["attempt/marked", "marked", "attempt/marking-failed", "marking_failed", "attempt/marking"].forEach((name) => events.addEventListener(name, refresh));
-    return () => events.close();
-  }, [attemptId, load, report?.attempt.state]);
+    const onVisibility = () => { if (!document.hidden) void load(); };
+    schedule();
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+      document.removeEventListener("visibilitychange", onVisibility);
+    };
+  }, [attemptId, load, report]);
 
   const navigate = (screen: string) => router.push(destinations[screen] ?? "/");
 
   return <div className="app-shell"><AppSidebar active="practice" onNavigate={navigate}/><main className="app-main results-page dynamic-results">
     {loading && <StateCard icon={<LoaderCircle className="state-spin"/>} title="Loading your report" copy="Retrieving the latest marking status…"/>}
     {!loading && error && <StateCard icon={<AlertCircle/>} title="We could not open this report" copy={error}/>}
-    {!loading && report && report.attempt.state !== "marked" && <PendingReport report={report}/>}
+    {!loading && !error && report && report.attempt.state !== "marked" && <PendingReport report={report} retrying={retrying} onRetry={retryMarking}/>}
     {!loading && report?.attempt.state === "marked" && report.result && <>
       <header className="results-title"><div><p className="eyebrow">Attempt report · {report.attempt.displayCode}</p><h1>{report.attempt.paperTitle}</h1><p>Completed {report.attempt.submittedAt ? new Date(report.attempt.submittedAt).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" }) : ""}</p></div><img src="/assets/math-pal.png" alt="Mathematics companion"/></header>
       <section className="attempt-summary-card"><article><span>Score</span><strong>{report.result.rawScore} <small>/ {report.result.maxScore}</small></strong><em>{Math.round(report.result.percentage)}%</em></article><article><span>Questions completed</span><strong>{report.result.questionsCompleted} <small>/ {report.result.totalQuestions}</small></strong><em className={report.result.questionsCompleted === report.result.totalQuestions ? "positive" : ""}>{report.result.questionsCompleted === report.result.totalQuestions ? "Complete" : `${report.result.totalQuestions - report.result.questionsCompleted} unanswered`}</em></article><article><span>Time used</span><strong>{formatDuration(report.result.timeUsedSeconds)}</strong><em>Recorded at submission</em></article></section>
@@ -109,12 +131,12 @@ function InsightGroup({ title, items }: { title: string; items: string[] }) {
   return <section><h3>{title}</h3><ul>{items.map((item, index) => <li key={index}>{item}</li>)}</ul></section>;
 }
 
-function StateCard({ icon, title, copy }: { icon: React.ReactNode; title: string; copy: string }) {
-  return <section className="result-state-card"><div className="result-state-icon">{icon}</div><p className="eyebrow">Attempt report</p><h1>{title}</h1><p>{copy}</p></section>;
+function StateCard({ icon, title, copy, children }: { icon: React.ReactNode; title: string; copy: string; children?: React.ReactNode }) {
+  return <section className="result-state-card"><div className="result-state-icon">{icon}</div><p className="eyebrow">Attempt report</p><h1>{title}</h1><p>{copy}</p>{children}</section>;
 }
 
-function PendingReport({ report }: { report: Report }) {
-  if (report.attempt.state === "failed") return <StateCard icon={<AlertCircle/>} title="Marking is taking longer than expected" copy={report.failure?.message ?? "Your answers are safe. Please try again shortly."}/>;
+function PendingReport({ report, retrying, onRetry }: { report: Report; retrying: boolean; onRetry: () => Promise<void> }) {
+  if (report.attempt.state === "failed") return <StateCard icon={<AlertCircle/>} title="Marking is taking longer than expected" copy={report.failure?.message ?? "Your answers are safe. Please try again shortly."}><button className="button dark" type="button" disabled={retrying} onClick={() => void onRetry()}>{retrying ? "Retrying…" : "Retry marking"}</button></StateCard>;
   if (report.attempt.state === "not_submitted") return <StateCard icon={<Clock3/>} title="This paper has not been submitted" copy="Submit the paper before opening its report."/>;
   return <StateCard icon={report.attempt.state === "marking" ? <LoaderCircle className="state-spin"/> : <CheckCircle2/>} title={report.attempt.state === "marking" ? "Marking your paper" : "Your paper is in the marking queue"} copy="You can keep this page open. Your report will appear automatically when marking is complete."/>;
 }

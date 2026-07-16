@@ -6,7 +6,11 @@ import { markPaperTwoAttempt } from "./mark-paper-two";
 
 export const dispatchOutbox = inngest.createFunction(
   { id: "dispatch-transactional-outbox", retries: 3, triggers: [{ cron: "* * * * *" }] },
-  async ({ step }) => step.run("claim-and-publish", () => dispatchOutboxBatch()),
+  async ({ step }) => step.run("claim-and-publish", () => {
+    const configured = Number(process.env.OUTBOX_BATCH_SIZE ?? 250);
+    const batchSize = Number.isFinite(configured) ? Math.min(500, Math.max(1, Math.floor(configured))) : 250;
+    return dispatchOutboxBatch(batchSize);
+  }),
 );
 
 export const markSubmittedAttempt = inngest.createFunction(

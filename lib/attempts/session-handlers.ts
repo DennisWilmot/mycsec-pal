@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { apiError, parseJson, serverError, validationError } from "@/lib/api/responses";
-import { requireAuthenticatedUser } from "@/lib/supabase/auth";
+import { requireAuthenticatedIdentity } from "@/lib/supabase/auth";
 import { allowRequest } from "@/lib/security/rate-limit";
 import { autoSubmitExpiredAttempt, isAttemptLifecycleError } from "./service";
 import { patchAttemptFlagSchema, putAttemptResponseSchema } from "./response-validation";
@@ -32,7 +32,7 @@ export async function handleGetAttemptSession(attemptId: string) {
   try {
     const parsedId = validId(attemptId, "attemptId");
     if (parsedId.response) return parsedId.response;
-    const { user } = await requireAuthenticatedUser();
+    const { user } = await requireAuthenticatedIdentity();
     const attempt = await autoSubmitExpiredAttempt(user.id, parsedId.value);
     if (attempt.status === "submitted") {
       return NextResponse.json({
@@ -52,7 +52,7 @@ export async function handlePutAttemptResponse(request: Request, attemptId: stri
     if (parsedAttemptId.response) return parsedAttemptId.response;
     const parsedQuestionId = validId(attemptQuestionId, "attemptQuestionId");
     if (parsedQuestionId.response) return parsedQuestionId.response;
-    const { user } = await requireAuthenticatedUser();
+    const { user } = await requireAuthenticatedIdentity();
     if (!(await allowRequest(`answer-save:${user.id}`, 240, 60)).allowed) return apiError(429, "RATE_LIMITED", "Answers are saving too quickly. Pause briefly and continue.");
     const json = await parseJson(request);
     if (json.response) return json.response;
@@ -71,7 +71,7 @@ export async function handlePatchAttemptFlag(request: Request, attemptId: string
     if (parsedAttemptId.response) return parsedAttemptId.response;
     const parsedQuestionId = validId(attemptQuestionId, "attemptQuestionId");
     if (parsedQuestionId.response) return parsedQuestionId.response;
-    const { user } = await requireAuthenticatedUser();
+    const { user } = await requireAuthenticatedIdentity();
     const json = await parseJson(request);
     if (json.response) return json.response;
     const parsed = patchAttemptFlagSchema.safeParse(json.data);
@@ -87,7 +87,7 @@ export async function handleGetSubmissionCheck(attemptId: string) {
   try {
     const parsedId = validId(attemptId, "attemptId");
     if (parsedId.response) return parsedId.response;
-    const { user } = await requireAuthenticatedUser();
+    const { user } = await requireAuthenticatedIdentity();
     return NextResponse.json({ data: await readSubmissionCheck(user.id, parsedId.value) });
   } catch (error) {
     return lifecycleError(error) ?? serverError(error);

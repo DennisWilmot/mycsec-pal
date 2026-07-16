@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { AlertTriangle, Calculator, Check, ChevronDown, ChevronUp, GitBranch, ShieldAlert } from 'lucide-react';
+import { Calculator, Check, ChevronDown, ChevronUp, GitBranch, ShieldAlert } from 'lucide-react';
 import { mathPaper1Demo as paperOne } from '@/data/math-paper-1-demo';
 import { mathPaper2Demo as paperTwo } from '@/data/math-paper-2-demo';
 import { mathPaper1FormB } from '@/data/mathematics/paper-1-form-b-review-candidate';

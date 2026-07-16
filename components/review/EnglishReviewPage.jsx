@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { AlertTriangle, BookOpen, Check, ChevronDown, ChevronUp, Circle, FileText, ShieldAlert } from 'lucide-react';
+import { BookOpen, Check, ChevronDown, ChevronUp, FileText, ShieldAlert } from 'lucide-react';
 import paperOneA from '@/data/english/paper-1-form-a-review-candidate.json';
 import paperOneB from '@/data/english/paper-1-form-b-review-candidate.json';
 import paperOneC from '@/data/english/paper-1-form-c-review-candidate.json';
@@ -41,8 +41,8 @@ function PaperOneReview() {
   const [moduleNumber, setModuleNumber] = useState(1);
   const [formId, setFormId] = useState('A');
   const paperOne = paperOneForms[formId];
-  const module = paperOne.modules.find((item) => item.module === moduleNumber);
-  const stimulusMap = useMemo(() => Object.fromEntries(module.stimuli.map((item) => [item.id, item])), [module]);
+  const moduleData = paperOne.modules.find((item) => item.module === moduleNumber);
+  const stimulusMap = useMemo(() => Object.fromEntries(moduleData.stimuli.map((item) => [item.id, item])), [moduleData]);
   return <section className="english-review-workspace">
     <aside className="english-review-outline">
       <p className="eyebrow">Paper 1 proof</p><h2>Module</h2>
@@ -50,10 +50,10 @@ function PaperOneReview() {
       <div className="english-answer-pattern"><span>Answer pattern</span><code>ABCD × 15</code><small>Release blocker</small></div>
     </aside>
     <div className="english-review-paper">
-      <header><div><p className="eyebrow">Module {moduleNumber} · release copy</p><h2>{module.discourse} · Form {formId}</h2></div><span className="review-status">Approved</span></header>
+      <header><div><p className="eyebrow">Module {moduleNumber} · release copy</p><h2>{moduleData.discourse} · Form {formId}</h2></div><span className="review-status">Approved</span></header>
       <div className="math-form-switch" aria-label="English Paper 1 form">{Object.keys(paperOneForms).map((id) => <button className={formId === id ? 'active' : ''} onClick={() => setFormId(id)} key={id}>Form {id}</button>)}</div>
-      <section className="english-stimulus-grid">{module.stimuli.map((stimulus) => <article key={stimulus.id}><small>{stimulus.kind.replaceAll('_',' ')}</small><h3>{stimulus.title}</h3>{stimulus.content ? <p>{stimulus.content}</p> : <div className="english-visual-proof"><FileText size={25}/><span>Structured visual specification</span><pre>{JSON.stringify(stimulus.visualSpec, null, 2)}</pre></div>}</article>)}</section>
-      <div className="english-question-list">{module.questions.map((question) => <QuestionProof key={question.id} question={question} stimulus={stimulusMap[question.stimulusId]} />)}</div>
+      <section className="english-stimulus-grid">{moduleData.stimuli.map((stimulus) => <article key={stimulus.id}><small>{stimulus.kind.replaceAll('_',' ')}</small><h3>{stimulus.title}</h3>{stimulus.content ? <p>{stimulus.content}</p> : <div className="english-visual-proof"><FileText size={25}/><span>Structured visual specification</span><pre>{JSON.stringify(stimulus.visualSpec, null, 2)}</pre></div>}</article>)}</section>
+      <div className="english-question-list">{moduleData.questions.map((question) => <QuestionProof key={question.id} question={question} stimulus={stimulusMap[question.stimulusId]} />)}</div>
     </div>
   </section>;
 }

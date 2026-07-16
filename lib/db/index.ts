@@ -23,6 +23,12 @@ function createDatabaseClient(): DatabaseClient {
     max: Number(process.env.DATABASE_POOL_SIZE ?? 5),
     idle_timeout: 20,
     connect_timeout: 10,
+    connection: {
+      application_name: process.env.DATABASE_APPLICATION_NAME ?? "mycsecpal-web",
+      statement_timeout: Number(process.env.DATABASE_STATEMENT_TIMEOUT_MS ?? 5_000),
+      lock_timeout: Number(process.env.DATABASE_LOCK_TIMEOUT_MS ?? 1_500),
+      idle_in_transaction_session_timeout: Number(process.env.DATABASE_IDLE_TRANSACTION_TIMEOUT_MS ?? 5_000),
+    },
   });
 
   return {

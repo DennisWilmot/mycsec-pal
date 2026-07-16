@@ -1,14 +1,14 @@
 'use client';
 
 import { AlertTriangle, ArrowLeft, ArrowRight, Clock, Flag, Pause, Send, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { useRef } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import AppSidebar from '../AppSidebar';
 import InteractiveGraphResponse from '../InteractiveGraphResponse';
 import MathWorkingField from '../MathWorkingField';
 import QuestionVisual from '../QuestionVisual';
 import { mathPaper2Demo } from '../../data/math-paper-2-demo';
 import { useAttemptSession } from '../../lib/attempts/use-attempt-session';
+import { useAttemptCountdown } from '../../lib/attempts/use-attempt-countdown';
 
 function EnglishQuestionContext({ context, selectedChoiceId, onSelectChoice }) {
   if (!context || typeof context !== 'object') return null;
@@ -38,7 +38,7 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
   const [attemptId, setAttemptId] = useState(null);
   useEffect(() => setAttemptId(new URLSearchParams(window.location.search).get('attemptId')), []);
   const { session, loading, error, saveResponse, setFlag, pause, submit, syncState, queuedCount } = useAttemptSession(attemptId);
-  const [seconds, setSeconds] = useState(mathPaper2Demo.durationSeconds);
+  const seconds = useAttemptCountdown(session?.attempt, mathPaper2Demo.durationSeconds);
   const [responses, setResponses] = useState({});
   const [current, setCurrent] = useState(1);
   const [submitNotice, setSubmitNotice] = useState(false);
@@ -90,7 +90,6 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
     // inputs after each save resets their values and can move the caret.
     if (hydratedAttemptId.current === nextAttemptId) return;
     hydratedAttemptId.current = nextAttemptId;
-    setSeconds(session.attempt.remainingSeconds);
     const savedLines = {};
     const savedGraphs = {};
     const savedChoices = {};
@@ -106,11 +105,11 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
     setGraphResponses(savedGraphs);
     setSelectedChoices(savedChoices);
   }, [attemptId, session]);
-
   useEffect(() => {
-    const timer = setInterval(() => setSeconds((value) => Math.max(0, value - 1)), 1000);
-    return () => clearInterval(timer);
-  }, []);
+    if (attemptId && ['submitted', 'marking', 'marked', 'marking_failed'].includes(session?.attempt?.status)) {
+      window.location.assign(`/results/${attemptId}`);
+    }
+  }, [attemptId, session?.attempt?.status]);
 
   const format = (value) => `${String(Math.floor(value / 3600)).padStart(2, '0')}:${String(Math.floor(value % 3600 / 60)).padStart(2, '0')}:${String(value % 60).padStart(2, '0')}`;
   const persistQuestion = (questionId, nextResponses, nextGraphs, nextChoices = selectedChoices) => {
@@ -147,12 +146,23 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
   const hasResponse = (partId) => (responses[partId] || []).some((line) => line.trim()) || (graphResponses[partId] || []).length > 0;
   const answeredQuestions = questions.filter((item) => item.parts.some((itemPart) => hasResponse(itemPart.id))).length;
   const incompleteQuestions = questions.filter((item) => item.parts.some((itemPart) => !hasResponse(itemPart.id)) || ((item.context?.choices?.length || 0) > 1 && !selectedChoices[item.id]));
-  const flushPendingSaves = async () => {
+  const flushPendingSaves = useCallback(async () => {
     for (const [questionId, persist] of Array.from(pendingSaves.current.entries())) {
       window.clearTimeout(saveTimers.current.get(questionId));
       await persist();
     }
-  };
+  }, []);
+  useEffect(() => {
+    if (!attemptId) return undefined;
+    const flushWhenHidden = () => { if (document.hidden) void flushPendingSaves(); };
+    const flushWhenLeaving = () => { void flushPendingSaves(); };
+    document.addEventListener('visibilitychange', flushWhenHidden);
+    window.addEventListener('pagehide', flushWhenLeaving);
+    return () => {
+      document.removeEventListener('visibilitychange', flushWhenHidden);
+      window.removeEventListener('pagehide', flushWhenLeaving);
+    };
+  }, [attemptId, flushPendingSaves]);
   const pausePaper = async () => { if (attemptId) { try { await flushPendingSaves(); await pause(); } catch { return; } } navigate('practice'); };
   const submitPaper = async () => {
     if (!attemptId) { setShowSubmit(false); setSubmitNotice(true); return; }
@@ -185,7 +195,7 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
           {questions.map((item) => {
             const started = item.parts.some((itemPart) => hasResponse(itemPart.id));
             const label = (item.context?.choices?.length || 0) > 1 ? item.context.choices.map((choice) => choice.number).join(' or ') : item.displayNumber || item.number;
-            return <button onClick={() => setCurrent(item.number)} className={`${started ? 'done' : ''} ${item.number === current ? 'current' : ''}`} key={item.id}><span><b>Question {label}</b></span><em>{started ? '✓' : item.number === current ? '●' : '○'}</em></button>;
+            return <button onClick={async () => { await flushPendingSaves(); setCurrent(item.number); }} className={`${started ? 'done' : ''} ${item.number === current ? 'current' : ''}`} key={item.id}><span><b>Question {label}</b></span><em>{started ? '✓' : item.number === current ? '●' : '○'}</em></button>;
           })}
         </aside>
         <article className={`paper-sheet symmetric-paper-sheet paper2-generated-sheet ${isEnglish ? 'english-paper2-sheet' : ''}`}>
@@ -197,7 +207,7 @@ export default function Paper2Page({ navigate, subjectName = 'Mathematics' }) {
             {itemPart.visual && itemPart.responseType === 'graph' && <InteractiveGraphResponse spec={itemPart.visual} points={graphResponses[itemPart.id] || []} onChange={(points) => setGraphResponse(itemPart.id, points)} />}
             {itemPart.responseType === 'long' ? (question.context?.purposePrompt ? <EnglishSummaryResponse purposePrompt={question.context.purposePrompt} summaryPrompt={itemPart.prompt} value={responses[itemPart.id] || []} onChange={(lines) => setResponse(itemPart.id, lines)} inputGuards={responseInputGuards} /> : <label className="english-long-response"><span>Your response</span><small>Type your response directly. Pasting and dropped text are disabled.</small><textarea {...responseInputGuards} value={(responses[itemPart.id] || []).join('\n')} onChange={(event) => setResponse(itemPart.id, event.target.value.split('\n'))} rows={18} placeholder="Write your response here…"/></label>) : <MathWorkingField value={responses[itemPart.id] || []} onChange={(lines) => setResponse(itemPart.id, lines)} label={itemPart.responseType === 'graph' ? 'Estimate and final answer' : 'Show your working and answer'} minimumLines={itemPart.responseType === 'short' ? 2 : 4} />}
           </section>)}
-          <div className="paper-bottom functional-paper2-footer"><button className={`link-button ${question.flagged ? 'active' : ''}`} onClick={toggleFlag}><Flag size={15} />{question.flagged ? 'Flagged for review' : 'Flag this question'}</button><div><button className="button outline" disabled={current === 1} onClick={() => setCurrent(Math.max(1, current - 1))}><ArrowLeft size={17} />Previous</button><button className="button dark" disabled={current === questions.length} onClick={() => setCurrent(Math.min(questions.length, current + 1))}>Next<ArrowRight size={17} /></button></div></div>
+          <div className="paper-bottom functional-paper2-footer"><button className={`link-button ${question.flagged ? 'active' : ''}`} onClick={toggleFlag}><Flag size={15} />{question.flagged ? 'Flagged for review' : 'Flag this question'}</button><div><button className="button outline" disabled={current === 1} onClick={async () => { await flushPendingSaves(); setCurrent(Math.max(1, current - 1)); }}><ArrowLeft size={17} />Previous</button><button className="button dark" disabled={current === questions.length} onClick={async () => { await flushPendingSaves(); setCurrent(Math.min(questions.length, current + 1)); }}>Next<ArrowRight size={17} /></button></div></div>
           <footer className="paper2-submit-footer"><div><h2>Ready to finish Paper 2?</h2><p>{incompleteQuestions.length ? `${incompleteQuestions.length} questions still have blank parts.` : 'Every part has a response.'}</p>{submitNotice && <p className="paper2-submit-notice" role="status">Start this paper from Practice to save and mark your responses.</p>}</div><button className="button dark" disabled={submitting} onClick={() => setShowSubmit(true)}><Send size={17} />{submitting ? 'Submitting…' : 'Submit paper'}</button></footer>
         </article>
       </div>

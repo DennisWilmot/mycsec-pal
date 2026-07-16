@@ -143,7 +143,7 @@ export async function updateProfile(args: {
       if (!institution) return { kind: "invalid_institution" as const };
     }
 
-    const { institutionName: _institutionName, ...updates } = args;
+    const updates = Object.fromEntries(Object.entries(args).filter(([key]) => key !== "institutionName")) as Omit<typeof args, "institutionName">;
     const [profile] = await tx.update(profiles).set({
       ...updates,
       institutionId,

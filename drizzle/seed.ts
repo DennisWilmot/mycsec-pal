@@ -1,4 +1,3 @@
-import { eq } from "drizzle-orm";
 import { getDatabase, getDatabaseClient } from "../lib/db";
 import {
   markSchemes,

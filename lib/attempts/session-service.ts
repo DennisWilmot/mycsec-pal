@@ -1,9 +1,8 @@
-import { and, asc, eq, inArray } from "drizzle-orm";
+import { and, asc, eq } from "drizzle-orm";
 import { getDatabase, getDatabaseClient } from "@/lib/db";
 import {
   attemptQuestions,
   attemptResponses,
-  questionOptions,
   questions,
 } from "@/drizzle/schema";
 import {
@@ -45,6 +44,7 @@ async function ownedAttemptQuestion(profileId: string, attemptId: string, attemp
   const [row] = await getDatabase().select({
     id: attemptQuestions.id,
     questionId: attemptQuestions.questionId,
+    snapshot: attemptQuestions.questionSnapshotJson,
     questionType: questions.type,
   }).from(attemptQuestions)
     .innerJoin(questions, eq(questions.id, attemptQuestions.questionId))
@@ -79,25 +79,6 @@ export async function readAttemptSession(profileId: string, attemptId: string) {
     .where(eq(attemptQuestions.attemptId, attempt.id))
     .orderBy(asc(attemptQuestions.position));
 
-  const questionIds = rows.map((row) => row.questionId);
-  const options = questionIds.length
-    ? await getDatabase().select({
-      id: questionOptions.id,
-      questionId: questionOptions.questionId,
-      label: questionOptions.label,
-      content: questionOptions.contentJson,
-      sortOrder: questionOptions.sortOrder,
-    }).from(questionOptions)
-      .where(inArray(questionOptions.questionId, questionIds))
-      .orderBy(asc(questionOptions.sortOrder))
-    : [];
-  const optionsByQuestion = new Map<string, typeof options>();
-  for (const option of options) {
-    const list = optionsByQuestion.get(option.questionId) ?? [];
-    list.push(option);
-    optionsByQuestion.set(option.questionId, list);
-  }
-
   return {
     attempt: {
       id: attempt.id,
@@ -107,24 +88,31 @@ export async function readAttemptSession(profileId: string, attemptId: string) {
       expiresAt: attempt.expiresAt,
       ...timing,
     },
-    questions: rows.map((row) => ({
-      id: row.attemptQuestionId,
-      position: row.position,
-      maxMarks: row.maxMarks,
-      type: row.type,
-      snapshot: safeSnapshot(row.snapshot),
-      options: row.type === "multiple_choice"
-        ? (optionsByQuestion.get(row.questionId) ?? []).map(({ questionId: _questionId, sortOrder: _sortOrder, ...option }) => option)
-        : [],
-      response: row.responseId ? {
-        selectedOptionId: row.selectedOptionId,
-        response: row.response,
-        isFlagged: row.isFlagged,
-        clientRevision: row.clientRevision,
-        serverRevision: row.serverRevision,
-        answeredAt: row.answeredAt,
-      } : null,
-    })),
+    questions: rows.map((row) => {
+      const publicSnapshot = safeSnapshot(row.snapshot) as Record<string, unknown>;
+      const snapshotOptions = Array.isArray(publicSnapshot?.options) ? publicSnapshot.options : [];
+      return {
+        id: row.attemptQuestionId,
+        position: row.position,
+        maxMarks: row.maxMarks,
+        type: row.type,
+        snapshot: publicSnapshot,
+        options: row.type === "multiple_choice"
+          ? snapshotOptions.map((option) => {
+            const value = option as { id?: unknown; label?: unknown; content?: unknown };
+            return { id: value.id, label: value.label, content: value.content };
+          })
+          : [],
+        response: row.responseId ? {
+          selectedOptionId: row.selectedOptionId,
+          response: row.response,
+          isFlagged: row.isFlagged,
+          clientRevision: row.clientRevision,
+          serverRevision: row.serverRevision,
+          answeredAt: row.answeredAt,
+        } : null,
+      };
+    }),
   };
 }
 
@@ -141,9 +129,8 @@ export async function saveAttemptResponse(profileId: string, attemptId: string, 
       : "Submit structured working for this question.");
   }
   if (isOptionResponse) {
-    const [validOption] = await getDatabase().select({ id: questionOptions.id }).from(questionOptions)
-      .where(and(eq(questionOptions.id, input.selectedOptionId), eq(questionOptions.questionId, question.questionId)))
-      .limit(1);
+    const snapshot = question.snapshot as { options?: Array<{ id?: string }> } | null;
+    const validOption = snapshot?.options?.some((option) => option.id === input.selectedOptionId);
     if (!validOption) throw new AttemptLifecycleError(422, "INVALID_OPTION", "Choose an option from this question.");
   }
 

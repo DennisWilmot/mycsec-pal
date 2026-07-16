@@ -28,6 +28,25 @@ export async function requireAuthenticatedUser(): Promise<{ user: User }> {
   return { user };
 }
 
+export type AuthenticatedIdentity = {
+  id: string;
+};
+
+/**
+ * Authenticates high-volume API requests from verified JWT claims.
+ *
+ * With asymmetric Supabase signing keys, getClaims verifies against cached
+ * JWKS rather than making a remote Auth request for every answer or heartbeat.
+ * Authorization still belongs to the database queries, which always scope
+ * attempt data to this identity.
+ */
+export async function requireAuthenticatedIdentity(): Promise<{ user: AuthenticatedIdentity }> {
+  const claims = await getAuthenticatedClaims();
+  const subject = claims?.sub;
+  if (typeof subject !== 'string' || !subject) throw new AuthenticationRequiredError();
+  return { user: { id: subject } };
+}
+
 /**
  * Returns verified JWT claims without trusting browser-supplied user data.
  * Supabase may return null claims for an expired or absent session.

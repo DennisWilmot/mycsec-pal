@@ -12,6 +12,8 @@ public/CSEC Pastpapers/
 .env
 .env.local
 .env.*.local
+load/load-users.json
+supabase/.temp/
 
 # Operating system files
 .DS_Store

@@ -1,0 +1,14 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "ignorePatterns": [".next/", "node_modules/", "load/", "next-env.d.ts"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "@next/next/no-img-element": "off"
+  },
+  "overrides": [
+    {
+      "files": ["drizzle/seed-data/mathematics.js"],
+      "rules": { "@next/next/no-assign-module-variable": "off" }
+    }
+  ]
+}

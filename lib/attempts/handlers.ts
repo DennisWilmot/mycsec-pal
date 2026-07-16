@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { apiError, parseJson, serverError, validationError } from "@/lib/api/responses";
-import { requireAuthenticatedUser } from "@/lib/supabase/auth";
+import { requireAuthenticatedIdentity } from "@/lib/supabase/auth";
 import { allowRequest } from "@/lib/security/rate-limit";
 import {
   createAttempt,
@@ -35,7 +35,7 @@ function lifecycleError(error: unknown) {
 
 export async function handleCreateAttempt(request: Request) {
   try {
-    const { user } = await requireAuthenticatedUser();
+    const { user } = await requireAuthenticatedIdentity();
     if (!(await allowRequest(`attempt-create:${user.id}`, 8, 60)).allowed) return apiError(429, "RATE_LIMITED", "Too many paper starts. Wait a moment and try again.");
     const key = idempotencyKeySchema.safeParse(request.headers.get("idempotency-key"));
     if (!key.success) {
@@ -62,7 +62,7 @@ export async function handleCreateAttempt(request: Request) {
 
 export async function handleGetActiveAttempt() {
   try {
-    const { user } = await requireAuthenticatedUser();
+    const { user } = await requireAuthenticatedIdentity();
     return NextResponse.json({ data: { attempt: await getActiveAttempt(user.id) } });
   } catch (error) {
     return lifecycleError(error);
@@ -74,7 +74,7 @@ export async function handleAttemptTransition(
   action: "pause" | "resume" | "cancel" | "heartbeat",
 ) {
   try {
-    const { user } = await requireAuthenticatedUser();
+    const { user } = await requireAuthenticatedIdentity();
     const { attemptId } = await params;
     if (!attemptIdSchema.safeParse(attemptId).success) {
       return apiError(404, "ATTEMPT_NOT_FOUND", "Attempt not found.");

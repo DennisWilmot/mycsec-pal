@@ -1,5 +1,5 @@
 import { readOwnedResult } from "@/lib/results/service";
-import { requireAuthenticatedUser } from "@/lib/supabase/auth";
+import { requireAuthenticatedIdentity } from "@/lib/supabase/auth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -9,7 +9,7 @@ const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-
 export async function GET(_request: Request, { params }: { params: Promise<{ attemptId: string }> }) {
   let user;
   try {
-    ({ user } = await requireAuthenticatedUser());
+    ({ user } = await requireAuthenticatedIdentity());
   } catch {
     return Response.json({ error: { code: "AUTHENTICATION_REQUIRED", message: "You must be signed in to view this report." } }, { status: 401 });
   }

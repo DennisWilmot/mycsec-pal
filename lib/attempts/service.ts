@@ -1,10 +1,11 @@
-import { and, asc, eq, inArray, sql } from "drizzle-orm";
+import { and, asc, eq, gt, inArray, sql } from "drizzle-orm";
 import { getDatabase } from "@/lib/db";
 import {
   attemptEvents,
   attemptQuestions,
   attempts,
   idempotencyKeys,
+  markSchemes,
   markingJobs,
   outboxEvents,
   paperBlueprintSlots,
@@ -448,6 +449,13 @@ export async function createAttempt(profileId: string, paperVersionId: string, i
         tx.select().from(questionParts).where(inArray(questionParts.questionId, questionIds)).orderBy(asc(questionParts.sortOrder)),
         tx.select().from(questionOptions).where(inArray(questionOptions.questionId, questionIds)).orderBy(asc(questionOptions.sortOrder)),
       ]);
+      const partIds = parts.map((part) => part.id);
+      const schemes = partIds.length
+        ? await tx.select().from(markSchemes)
+          .where(inArray(markSchemes.questionPartId, partIds))
+          .orderBy(asc(markSchemes.version))
+        : [];
+      const schemeByPart = new Map(schemes.map((scheme) => [scheme.questionPartId, scheme]));
       const now = new Date();
       const [created] = await tx.insert(attempts).values({
         displayCode: displayCode(),
@@ -464,6 +472,7 @@ export async function createAttempt(profileId: string, paperVersionId: string, i
         position,
         maxMarks: question.totalMarks,
         questionSnapshotJson: {
+          snapshotVersion: 2,
           externalId: question.externalId,
           questionNumber: question.questionNumber,
           moduleNumber: question.moduleNumber,
@@ -473,21 +482,27 @@ export async function createAttempt(profileId: string, paperVersionId: string, i
           type: question.type,
           prompt: question.promptJson,
           assetUrl: question.assetUrl,
-          parts: parts.filter((part) => part.questionId === question.id).map((part) => ({
-            id: part.id,
-            externalId: part.externalId,
-            parentPartId: part.parentPartId,
-            label: part.label,
-            prompt: part.promptJson,
-            responseType: part.responseType,
-            marks: part.marks,
-            sortOrder: part.sortOrder,
-          })),
+          parts: parts.filter((part) => part.questionId === question.id).map((part) => {
+            const scheme = schemeByPart.get(part.id);
+            return {
+              id: part.id,
+              externalId: part.externalId,
+              parentPartId: part.parentPartId,
+              label: part.label,
+              prompt: part.promptJson,
+              responseType: part.responseType,
+              marks: part.marks,
+              sortOrder: part.sortOrder,
+              markScheme: scheme?.schemeJson ?? null,
+              markSchemeVersion: scheme?.version ?? null,
+            };
+          }),
           options: options.filter((option) => option.questionId === question.id).map((option) => ({
             id: option.id,
             label: option.label,
             content: option.contentJson,
             sortOrder: option.sortOrder,
+            isCorrect: option.isCorrect,
           })),
         },
       })));
@@ -533,6 +548,8 @@ export async function transitionAttempt(
   attemptId: string,
   action: "pause" | "resume" | "cancel" | "heartbeat",
 ) {
+  if (action === "heartbeat") return heartbeatAttempt(profileId, attemptId);
+
   return getDatabase().transaction(async (tx) => {
     const result = await tx.execute(sql`
       select * from attempts where id = ${attemptId} and profile_id = ${profileId} limit 1 for update
@@ -543,17 +560,6 @@ export async function transitionAttempt(
     const current = await expireLockedAttempt(tx, attempt, now);
     if (current.status === "submitted" && attempt.status !== "submitted") {
       throw new AttemptLifecycleError(409, "ATTEMPT_EXPIRED", "Time ended and the paper was submitted for marking.");
-    }
-
-    if (action === "heartbeat") {
-      if (current.status !== "in_progress") throw invalidTransition(current.status, action);
-      const timing = calculateAttemptTiming(current, now);
-      const [updated] = await tx.update(attempts).set({
-        elapsedSeconds: timing.elapsedSeconds,
-        lastActivityAt: now,
-        updatedAt: now,
-      }).where(eq(attempts.id, current.id)).returning();
-      return publicAttempt(updated, now);
     }
 
     if (action === "pause") {
@@ -599,6 +605,37 @@ export async function transitionAttempt(
     await tx.insert(attemptEvents).values({ attemptId, type: "cancelled", metadataJson: { previousStatus: current.status } });
     return publicAttempt(updated, now);
   });
+}
+
+async function heartbeatAttempt(profileId: string, attemptId: string) {
+  const now = new Date();
+  const [updated] = await getDatabase().update(attempts).set({
+    elapsedSeconds: sql`${attempts.elapsedSeconds} + greatest(
+      0,
+      floor(extract(epoch from (now() - ${attempts.lastActivityAt})))::integer
+    )`,
+    lastActivityAt: now,
+    updatedAt: now,
+  }).where(and(
+    eq(attempts.id, attemptId),
+    eq(attempts.profileId, profileId),
+    eq(attempts.status, "in_progress"),
+    gt(attempts.expiresAt, now),
+  )).returning();
+
+  if (updated) return publicAttempt(updated, now);
+
+  // State transitions and timer expiry are uncommon. Keep their stricter
+  // locking path out of the normal heartbeat request.
+  const attempt = await getOwnedAttempt(profileId, attemptId);
+  if (!attempt) throw new AttemptLifecycleError(404, "ATTEMPT_NOT_FOUND", "Attempt not found.");
+  if (attempt.status === "in_progress" && calculateAttemptTiming(attempt, now).isExpired) {
+    const expired = await autoSubmitExpiredAttempt(profileId, attemptId);
+    if (expired.status === "submitted") {
+      throw new AttemptLifecycleError(409, "ATTEMPT_EXPIRED", "Time ended and the paper was submitted for marking.");
+    }
+  }
+  throw invalidTransition(attempt.status, "heartbeat");
 }
 
 function invalidTransition(status: string, action: string) {

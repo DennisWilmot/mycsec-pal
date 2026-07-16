@@ -60,6 +60,7 @@ export const attemptQuestions = pgTable(
   (table) => [
     uniqueIndex("attempt_questions_attempt_position_unique").on(table.attemptId, table.position),
     uniqueIndex("attempt_questions_attempt_question_unique").on(table.attemptId, table.questionId),
+    index("attempt_questions_question_idx").on(table.questionId),
     check("attempt_questions_values_valid", sql`${table.position} > 0 and ${table.maxMarks} >= 0`),
   ],
 );
