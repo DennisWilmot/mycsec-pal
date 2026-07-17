@@ -1,0 +1,4 @@
+interface:
+  display_name: "MyCSECPal Workflow"
+  short_description: "Run reliable MyCSECPal engineering sessions"
+  default_prompt: "Use the MyCSECPal workflow to plan, implement, validate, review, and hand off this repository change."

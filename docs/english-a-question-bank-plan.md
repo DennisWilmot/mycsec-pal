@@ -1,5 +1,9 @@
 # English A Question Bank Plan
 
+Summary: English A sources, form architecture, validation, review, and release-readiness plan.
+Use when: Creating, validating, reviewing, seeding, or releasing English A Paper 1 or Paper 2.
+Owner: English content and assessment quality.
+Last verified: 16 July 2026.
 Status: first implementation slice  
 Authority: CSEC English syllabus revised 2025  
 Supporting evidence: May/June 2024 English A subject report
@@ -71,4 +75,3 @@ The first batch is Module 1 Paper 1:
 - one original informative passage with eight questions;
 - one original visual-information specification with seven questions;
 - 20 total items with a 7/7/6 profile balance.
-

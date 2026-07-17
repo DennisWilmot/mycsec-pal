@@ -1,4 +1,5 @@
 import { DM_Sans, Fraunces } from 'next/font/google';
+import PostHogIdentity from '@/components/PostHogIdentity';
 import './globals.css';
 import './question-visuals.css';
 
@@ -20,7 +21,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} ${fraunces.variable}`}>{children}</body>
+      <body className={`${dmSans.variable} ${fraunces.variable}`}>
+        <PostHogIdentity />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,5 +1,9 @@
 # MyCSECPal System Architecture
 
+Summary: Route-by-route backend, API, data-model, authorization, and lifecycle inventory.
+Use when: Changing application boundaries, routes, states, APIs, persistence, auth, billing, or operations.
+Owner: Application architecture.
+Last verified: 16 July 2026.
 Status: planning baseline  
 Last updated: 12 July 2026  
 Scope: route-by-route backend, API, and data-model inventory for the current application
@@ -19,6 +23,7 @@ Question sourcing, syllabus ingestion, generation, validation and runtime test a
 | Payments | Stripe + webhook | Practice subscriptions unlock unlimited Paper 1 and Paper 2 attempts for up to five subjects. Supabase stores a local subscription projection. |
 | AI marking | Background marking job | Submission should return quickly, then move the attempt from `submitted` to `marking` to `marked`. Paper 1 can be marked synchronously; Paper 2 should use a job. |
 | Analytics | Derived queries/materialised summaries | Attempt responses remain the source of truth. Dashboard statistics can be cached in aggregate tables as volume grows. |
+| Product analytics and replay | PostHog browser SDK | Captures page navigation and privacy-masked session replay. Identify with the Supabase user UUID only; never send answers or profile fields as person properties. |
 
 ## 2. Core business rules
 

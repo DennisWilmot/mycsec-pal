@@ -1,5 +1,10 @@
 # Runtime database-role cutover
 
+Summary: Procedure for replacing privileged application database access with a restricted runtime role.
+Use when: Auditing database privilege or preparing the production runtime-role cutover.
+Owner: Database security.
+Last verified: 16 July 2026.
+
 The configured application connection currently uses a role that bypasses RLS. Application queries include profile ownership predicates, but the credential has more authority than the deployed server requires.
 
 ## Safe cutover

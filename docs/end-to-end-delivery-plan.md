@@ -1,5 +1,9 @@
 # MyCSECPal End-to-End Delivery Plan
 
+Summary: Product delivery sequence and acceptance framing across learner journeys and release surfaces.
+Use when: Planning cross-system delivery or checking whether a learner journey is complete end to end.
+Owner: Product delivery.
+Last verified: 16 July 2026.
 Status: active execution plan
 
 Last audited: 13 July 2026

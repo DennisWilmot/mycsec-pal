@@ -1,5 +1,9 @@
 # MyCSECPal release-hardening plan
 
+Summary: Risk-ranked beta release hardening tasks, evidence, and operational follow-ups.
+Use when: Assessing launch readiness, selecting critical fixes, or handing off release risks.
+Owner: Release engineering.
+Last verified: 16 July 2026.
 Updated: 15 July 2026
 
 ## Release position

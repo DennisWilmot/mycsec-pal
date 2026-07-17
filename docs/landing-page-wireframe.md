@@ -1,5 +1,9 @@
 # MyCSECPal Landing Page — Iteration Wireframe
 
+Summary: Approved landing-page hierarchy, messaging intent, and responsive section structure.
+Use when: Changing landing content, layout, calls to action, pricing, or product imagery.
+Owner: Product design and marketing.
+Last verified: 16 July 2026.
 Status: proposed layout for review
 Scope: landing page only
 Direction: warm Caribbean exam companion; editorial, credible and product-led

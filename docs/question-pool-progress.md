@@ -1,5 +1,10 @@
 # Question Pool Progress
 
+Summary: Snapshot of subject question counts, forms, blueprints, and release-pool coverage.
+Use when: Assessing whether content pools support paper assembly and release.
+Owner: Assessment content operations.
+Last verified: 16 July 2026.
+
 This is the human-readable release ledger for the practice-paper bank. The machine-readable source is [`data/question-pool-progress.json`](../data/question-pool-progress.json), regenerated with `npm run pool:progress:update`.
 
 ## Current approved pool

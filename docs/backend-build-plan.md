@@ -1,5 +1,9 @@
 # MyCSECPal Backend Build Plan
 
+Summary: Historical and active checklist for building the backend from the architecture baseline.
+Use when: Assessing backend status or planning remaining API, data, auth, and operational work.
+Owner: Backend maintainers.
+Last verified: 16 July 2026.
 Status: execution plan  
 Created: 12 July 2026  
 Initial scope: CSEC Mathematics, Paper 1 and Paper 2

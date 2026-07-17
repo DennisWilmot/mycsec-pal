@@ -1,5 +1,9 @@
 # MyCSECPal Question Bank Strategy
 
+Summary: Cross-subject strategy for sourcing, validating, versioning, assembling, and releasing questions.
+Use when: Changing a question pipeline, blueprint, seed format, review process, or publication rule.
+Owner: Assessment content systems.
+Last verified: 16 July 2026.
 Status: proposed content-production plan  
 Last updated: 12 July 2026  
 Initial target: CSEC Mathematics Paper 1 and Paper 2
